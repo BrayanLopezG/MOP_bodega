@@ -1478,3 +1478,33 @@ JBAS014777: Servicios que no lograron iniciar:      service jboss.web.connector.
 15:28:05,551 INFO  [org.jboss.web] (ServerService Thread Pool -- 82) JBAS018224: Borrar el registro del contexto web: /Mop
 15:28:05,572 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-10) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 28ms
 15:28:05,575 INFO  [org.jboss.as] (MSC service thread 1-13) JBAS015950: JBoss EAP 6.1.0.GA (AS 7.2.0.Final-redhat-8) detenido en 26ms
+15:48:26,833 INFO  [org.jboss.as.connector.logging] (MSC service thread 1-15) JBAS010408: Iniciando JCA sub-sistema (IronJacamar 1.0.17.Final-redhat-1)
+15:48:26,833 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 42) JBAS013171: Activando el sub-sistema de seguridad
+15:48:26,849 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 29) JBAS010280: Activando el sub-sistema Infinispan.
+15:48:26,849 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 46) JBAS015537: Activando WebServices Extension
+15:48:26,849 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 37) JBAS011800: Activando el sub-sistema de nombrado
+15:48:26,849 INFO  [org.jboss.as.security] (MSC service thread 1-16) JBAS013170: Versión PicketBox actual=4.0.17.Final-redhat-1
+15:48:26,896 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 35) JBAS012605: Se activaron las siguientes implementaciones JSF: [main, 1.2]
+15:48:26,911 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 25) JBAS010403: Implementación del controlador que cumple con los requerimientos de JDBC class org.h2.Driver (versión 1.3)
+15:48:26,927 INFO  [org.jboss.as.naming] (MSC service thread 1-10) JBAS011802: Iniciando el servicio de nombrado
+15:48:26,943 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-14) JBAS015400: Sesión de correo enlazada [java:jboss/mail/Default]
+15:48:27,192 INFO  [org.jboss.ws.common.management] (MSC service thread 1-4) JBWS022052: Starting JBoss Web Services - Stack CXF Server 4.1.3.Final-redhat-3
+15:48:27,255 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-3) JBAS015012: Inició FileSystemDeploymentService para el directorio C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\deployments
+15:48:27,271 INFO  [org.jboss.as.remoting] (MSC service thread 1-9) JBAS017100: Escuchando en 127.0.0.1:9999
+15:48:27,271 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-10) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+15:48:27,271 INFO  [org.jboss.as.remoting] (MSC service thread 1-11) JBAS017100: Escuchando en 127.0.0.1:4447
+15:48:27,286 INFO  [org.apache.coyote.http11] (MSC service thread 1-12) JBWEB003001: Coyote HTTP/1.1 initializing on : http-/127.0.0.1:8080
+15:48:27,286 INFO  [org.apache.coyote.http11] (MSC service thread 1-12) JBWEB003000: Coyote HTTP/1.1 starting on: http-/127.0.0.1:8080
+15:48:27,427 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-4) JBAS010400: Fuente de datos enlazados [java:jboss/datasources/ExampleDS]
+15:48:27,599 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-10) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+15:48:27,630 INFO  [org.jboss.web] (ServerService Thread Pool -- 52) JBAS018210: Registrar el contexto web: /Mop
+15:48:27,692 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 26) JBAS018559: Implementado "Mop.war" (runtime-name : "Mop.war")
+15:48:28,536 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015961: Interfaz de administración http escuchando en http://127.0.0.1:9990/management
+15:48:28,536 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015951: Consola de administración escuchando en http://127.0.0.1:9990
+15:48:28,552 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015874: JBoss EAP 6.1.0.GA (AS 7.2.0.Final-redhat-8) inició en 2921ms - Inició 165 de 222 servicios (56 servicios son pasivos o por demanda)
+15:50:03,012 INFO  [org.jboss.web] (ServerService Thread Pool -- 54) JBAS018224: Borrar el registro del contexto web: /Mop
+15:50:03,028 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 26ms
+15:50:03,028 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+15:50:03,106 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-15) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+15:50:03,106 INFO  [org.jboss.web] (ServerService Thread Pool -- 56) JBAS018210: Registrar el contexto web: /Mop
+15:50:03,762 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"

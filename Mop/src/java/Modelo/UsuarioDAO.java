@@ -11,5 +11,5 @@ package Modelo;
  * @author usuario
  */
 public class UsuarioDAO {
-    
+    String usuarios = "SELECT idUsuario,nombre_usuario,contrasenha,perfil_id FROM usuario";
 }
