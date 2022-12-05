@@ -14,7 +14,7 @@ public class PerfilUsuarioDAO {
     
     public PerfilUsuarioDAO(){
         Conexion con = new Conexion();
-        con.getConexion();
+        conexion = con.getConexion();
 }
     public List<PerfilUsuario> listarPerfil(){
         PreparedStatement ps;
@@ -46,8 +46,8 @@ public class PerfilUsuarioDAO {
             rs = ps.executeQuery();
             while (rs.next()){
                 int id_p = rs.getInt("idPerfil_usuario");
-                String descipcion = rs.getString("descripcion_perfil");
-                pusuario = new PerfilUsuario(id_p, descipcion);
+                String descripcion = rs.getString("descripcion_perfil");
+                pusuario = new PerfilUsuario(id_p, descripcion);
             }
             return pusuario;
         } catch (SQLException e) {
@@ -59,7 +59,7 @@ public class PerfilUsuarioDAO {
         PreparedStatement ps;
         try {
             ps = conexion.prepareStatement(insertar_perfil);
-            ps.setString(1,pusuario.getDesripcion_perfil());
+            ps.setString(1,pusuario.getDescripcion_perfil());
             ps.execute();
             return true;
         } catch (SQLException e) {

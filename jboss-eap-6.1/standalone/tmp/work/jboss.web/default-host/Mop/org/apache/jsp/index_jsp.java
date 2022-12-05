@@ -58,22 +58,10 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<html>\n");
       out.write("    <head>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
-      out.write("        <title>Login</title>\n");
+      out.write("        <title>JSP Page</title>\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
-      out.write("        <h1>Iniciar Session</h1>\n");
-      out.write("        <br>\n");
-      out.write("        <div>\n");
-      out.write("            <label>Usuario: </label>\n");
-      out.write("            <br>\n");
-      out.write("            <input type=\"text\" placeholder=\"Nombre de usuario\">\n");
-      out.write("            <br>\n");
-      out.write("            <label>Contraseña: </label>\n");
-      out.write("            <br>\n");
-      out.write("            <input type=\"password\" placeholder=\"Contraseña\">\n");
-      out.write("            <br>\n");
-      out.write("            <button id=\"ingresar\" name=\"login\">Ingresar</button>\n");
-      out.write("        </div>\n");
+      out.write("        <h1>Hello World!</h1>\n");
       out.write("    </body>\n");
       out.write("</html>\n");
     } catch (Throwable t) {
