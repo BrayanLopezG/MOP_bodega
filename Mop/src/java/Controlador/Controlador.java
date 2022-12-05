@@ -28,33 +28,37 @@ public class Controlador extends HttpServlet {
         RequestDispatcher dispatcher = null;
         accion = request.getParameter("accion");
         if(accion == null || accion.isEmpty()){
-            dispatcher = request.getRequestDispatcher("Login/inicio.jsp");
+            dispatcher = request.getRequestDispatcher("inicio.jsp");
             List<Usuario> listausuario = usuariodao.listaUsuario();
             request.setAttribute("lista", listausuario);
         }else if(accion.equals("login")){
             dispatcher = request.getRequestDispatcher("Login/login.jsp");
         }else if(accion.equals("atras")){
-            dispatcher = request.getRequestDispatcher("Login/inicio.jsp");
+            dispatcher = request.getRequestDispatcher("inicio.jsp");
             List<Usuario> listausuario = usuariodao.listaUsuario();
             request.setAttribute("lista", listausuario);
         }else if("registrar".equals(accion)){
             dispatcher = request.getRequestDispatcher("Login/registrar.jsp");
         }else if("guardar".equals(accion)){
+            String cargo;
             int id = usuariodao.AutoID();
             int perfilid = Integer.parseInt(request.getParameter("perfilU"));
             String nombre_usuario = request.getParameter("txtusuario");
             String contrasenha1 = request.getParameter("txtcontra");
             String contrasenha2 = request.getParameter("txtcontra2");
             if(contrasenha1.equals(contrasenha2)){
-                Usuario usuario = new Usuario(id, perfilid, nombre_usuario, contrasenha1);
+                if (perfilid == 1){
+                    cargo = "Administrador";
+                }else if (perfilid == 2){
+                    cargo = "Bienes";
+                }else{
+                    cargo = "Prevención de Riesgo";
+                }
+                Usuario usuario = new Usuario(id, perfilid, nombre_usuario, contrasenha1, perfilid,cargo);
                 usuariodao.insertarUsuario(usuario);
-                dispatcher = request.getRequestDispatcher("Login/inicio.jsp");
-                List<Usuario> listausuario = usuariodao.listaUsuario();
-                request.setAttribute("lista", listausuario);
+                dispatcher = request.getRequestDispatcher("Login/login.jsp"); 
             }else{
-                dispatcher = request.getRequestDispatcher("Login/inicio.jsp");
-                List<Usuario> listausuario = usuariodao.listaUsuario();
-                request.setAttribute("lista", listausuario);
+                dispatcher = request.getRequestDispatcher("Login/login.jsp");
             }
                 
         }

@@ -18,21 +18,22 @@
     </head>
     <body>
         <div class="container">
-        <h1>Inciar Sesion</h1>
-        <br>
-        <form action="" method="POST">
-            <div class="form-group">
-            <label>Usuario</label>
-            <input class="form-control" id="usuario" name="usuario" type="text" placeholder="Ingresar Usuario">
-            <label>Contraseña</label>
-            <input class="form-control" id="contraseña" name="contraseña" type="password" placeholder="Ingresar Contraseña">
+            <h1>Inciar Sesion</h1>
             <br>
-            <a href="Controlador?accion=registrar">Registrar</a>
-            <br>
-            <br>
-            <button type="submit" class="btn btn-primary">Ingresar</button>
-            <a href="Controlador?accion=atras" class="btn btn-secondary" role="button">Atras</a>
-            </div>
-        </form>
+            <form action="" method="POST">
+                <div class="form-group">
+                    <label>Usuario</label>
+                    <input class="form-control" id="txtusuario" name="txtusuario" type="text" placeholder="Ingresar Usuario">
+                    <label>Contraseña</label>
+                    <input class="form-control" id="txtcontra" name="txtcontra" type="password" placeholder="Ingresar Contraseña">
+                    <br>
+                    <a href="Controlador?accion=registrar">Registrar</a>
+                    <br>
+                    <br>
+                    <button type="submit" class="btn btn-primary">Ingresar</button>
+                    <a href="Controlador?accion=atras" class="btn btn-secondary" role="button">Atras</a>
+                </div>
+            </form>
+        </div>
     </body>
 </html>

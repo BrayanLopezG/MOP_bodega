@@ -35,7 +35,8 @@
                     <select name="perfilU" class="custom-select">
                         <option selected> Seleccionar </option>
                         <option value="1">Administrador</option>
-                        <option value="2">Estandar</option>
+                        <option value="2">Bienes</option>
+                        <option value="3">Prevención de Riesgo</option>
                     </select>
                     <br>
                     <br>

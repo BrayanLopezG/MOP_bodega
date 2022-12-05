@@ -87,7 +87,8 @@ public final class registrar_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    <select name=\"perfilU\" class=\"custom-select\">\n");
       out.write("                        <option selected> Seleccionar </option>\n");
       out.write("                        <option value=\"1\">Administrador</option>\n");
-      out.write("                        <option value=\"2\">Estandar</option>\n");
+      out.write("                        <option value=\"2\">Bienes</option>\n");
+      out.write("                        <option value=\"3\">Prevención de Riesgo</option>\n");
       out.write("                    </select>\n");
       out.write("                    <br>\n");
       out.write("                    <br>\n");

@@ -27,11 +27,13 @@ public class UsuarioDAO {
                 String nombre = rs.getString("usuario.nombre_usuario");
                 String contrasenha = rs.getString("usuario.contrasenha");
                 int perfil = rs.getInt("usuario.perfil_id");
+                int perfil_id = rs.getInt("usuario.perfil_id");
                 String cargo = rs.getString("perfil_usuario.descripcion_perfil");
-                Usuario usuario = new Usuario(id, perfil, nombre, contrasenha);
-                lista.add(usuario);
-                
+                Usuario usuario = new Usuario(id, perfil, nombre, contrasenha, perfil_id, cargo);
+                lista.add(usuario); 
             }
+            ps.close();
+            rs.close();
             return lista;
         } catch (SQLException e) {
             System.out.println(e.toString());
@@ -48,6 +50,8 @@ public class UsuarioDAO {
             while (rs.next()){
                 id = rs.getInt("COUNT(idUsuario)");
             }
+            ps.close();
+            rs.close();
             return id;
         } catch (SQLException e) {
             System.out.println(e.toString());
@@ -65,6 +69,7 @@ public class UsuarioDAO {
             ps.setString(3,usuario.getContrasenha());
             ps.setInt(4, usuario.getPerfil_id());
             ps.execute();
+            ps.close();
             return true;
         } catch (SQLException e) {
             System.out.println(e.toString());

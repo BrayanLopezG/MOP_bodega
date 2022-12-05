@@ -1,16 +1,20 @@
 package Modelo;
-
-public class Usuario {
+public class Usuario extends PerfilUsuario{
     int idusuario,perfil_id;
     String nombre_usuario,contrasenha;
 
-    public Usuario(int idusuario, int perfil_id, String nombre_usuario, String contrasenha) {
+    public Usuario(int idperfil, String descripcion_perfil) {
+        super(idperfil, descripcion_perfil);
+    }
+
+    public Usuario(int idusuario, int perfil_id, String nombre_usuario, String contrasenha, int idperfil, String descripcion_perfil) {
+        super(idperfil, descripcion_perfil);
         this.idusuario = idusuario;
         this.perfil_id = perfil_id;
         this.nombre_usuario = nombre_usuario;
         this.contrasenha = contrasenha;
     }
-    
+
     public int getIdusuario() {
         return idusuario;
     }
