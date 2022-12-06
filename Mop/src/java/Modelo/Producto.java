@@ -3,6 +3,7 @@ package Modelo;
 public class Producto extends Factura{
     int idproducto,tipo_medida,facturaid,bodegaid;
     String descripcion,estado,fecha_ingreso;
+
     
 
     public int getIdproducto() {
@@ -59,7 +60,5 @@ public class Producto extends Factura{
 
     public void setFecha_ingreso(String fecha_ingreso) {
         this.fecha_ingreso = fecha_ingreso;
-    }
-    
-    
+    } 
 }

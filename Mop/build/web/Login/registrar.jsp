@@ -4,9 +4,6 @@
     Author     : usuario
 --%>
 
-<%@page import="java.util.ArrayList"%>
-<%@page import="Modelo.PerfilUsuario"%>
-<%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
@@ -23,7 +20,7 @@
     <body>
         <div class="container">
             <h1>Nuevo Bodeguero</h1>
-            <div class="from-group">
+            <div class="form-group">
                 <form action="Controlador?accion=guardar" method="POST">
                     <label>Usuario:</label>
                     <input class="form-control" id="txtusuario" name="txtusuario" type="text" placeholder="Ingresar Usuario">

@@ -2,16 +2,21 @@ package Controlador;
 
 import Modelo.PerfilUsuario;
 import Modelo.PerfilUsuarioDAO;
+import Modelo.Proveedor;
+import Modelo.ProveedorDAO;
 import Modelo.Usuario;
 import Modelo.UsuarioDAO;
 import java.io.IOException;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
+@MultipartConfig
 public class Controlador extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -24,13 +29,12 @@ public class Controlador extends HttpServlet {
             throws ServletException, IOException {
         processRequest(request, response); 
         UsuarioDAO usuariodao = new UsuarioDAO();
+        ProveedorDAO proveedordao = new ProveedorDAO();
         String accion;
         RequestDispatcher dispatcher = null;
         accion = request.getParameter("accion");
         if(accion == null || accion.isEmpty()){
             dispatcher = request.getRequestDispatcher("inicio.jsp");
-            List<Usuario> listausuario = usuariodao.listaUsuario();
-            request.setAttribute("lista", listausuario);
         }else if(accion.equals("login")){
             dispatcher = request.getRequestDispatcher("Login/login.jsp");
         }else if(accion.equals("atras")){
@@ -59,8 +63,25 @@ public class Controlador extends HttpServlet {
                 dispatcher = request.getRequestDispatcher("Login/login.jsp"); 
             }else{
                 dispatcher = request.getRequestDispatcher("Login/login.jsp");
-            }
-                
+            }     
+        }else if(accion.equals("proveedor")){
+            dispatcher = request.getRequestDispatcher("Proveedor/Proveedor.jsp");
+            List<Proveedor> listaproveedor = proveedordao.listaProveedor();
+            request.setAttribute("lista", listaproveedor);
+        }else if(accion.equals("nuevoproveedor")){
+            String rut = request.getParameter("txtrutproveedor");
+            String nombre = request.getParameter("txtnombreproveedor");
+            String telefono = request.getParameter("txttelefono");
+            String direccion = request.getParameter("txtdireccion");
+            Proveedor proveedor = new Proveedor(0, rut, nombre, telefono, direccion);
+            proveedordao.nuevoProveedor(proveedor);
+            dispatcher = request.getRequestDispatcher("Proveedor/Proveedor.jsp");
+            List<Proveedor> listaproveedor = proveedordao.listaProveedor();
+            request.setAttribute("lista", listaproveedor);
+        }else if(accion.equals("ingreso")){
+            dispatcher = request.getRequestDispatcher("Bodega/Producto.jsp");
+        }else if(accion.equals("salida")){
+            
         }
         dispatcher.forward(request, response);
     }

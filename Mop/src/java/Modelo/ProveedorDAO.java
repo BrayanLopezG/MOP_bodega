@@ -8,7 +8,7 @@ import java.util.List;
 public class ProveedorDAO {
     String Auto_ID = "SELECT COUNT(idProveedor) FROM proveedor";
     String insertar_proveedor = "INSERT INTO proveedor(idProveedor,rut_proveedor,nombre_proveedor,telefono_proveedor,direccion_proveedor) VALUES(?,?,?,?,?)";
-    String lista_proveedores = "SELECT * FROM proveedor";
+    String lista_proveedores = "SELECT idProveedor,rut_proveedor,nombre_proveedor,telefono_proveedor,direccion_proveedor FROM proveedor";
     String busqueda_rut_proveedor = "SELECT * FROM proveedor WHERE rut_proveedor = (?)";
     
     Connection conexion;
@@ -64,11 +64,11 @@ public class ProveedorDAO {
             ps = conexion.prepareStatement(lista_proveedores);
             rs = ps.executeQuery();
             while(rs.next()){
-                int id = rs.getInt(1);
-                String rut = rs.getString(2);
-                String nombre = rs.getString(3);
-                String telefono = rs.getString(4);
-                String direccion = rs.getString(5);
+                int id = rs.getInt("idProveedor");
+                String rut = rs.getString("rut_proveedor");
+                String nombre = rs.getString("nombre_proveedor");
+                String telefono = rs.getString("telefono_proveedor");
+                String direccion = rs.getString("direccion_proveedor");
                 Proveedor proveedor = new Proveedor(id, rut, nombre, telefono, direccion);
                 lista.add(proveedor);
             }

@@ -75,7 +75,7 @@ public final class registrar_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <body>\n");
       out.write("        <div class=\"container\">\n");
       out.write("            <h1>Nuevo Bodeguero</h1>\n");
-      out.write("            <div class=\"from-group\">\n");
+      out.write("            <div class=\"form-group\">\n");
       out.write("                <form action=\"Controlador?accion=guardar\" method=\"POST\">\n");
       out.write("                    <label>Usuario:</label>\n");
       out.write("                    <input class=\"form-control\" id=\"txtusuario\" name=\"txtusuario\" type=\"text\" placeholder=\"Ingresar Usuario\">\n");

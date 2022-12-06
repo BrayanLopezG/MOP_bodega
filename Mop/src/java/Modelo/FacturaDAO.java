@@ -7,7 +7,8 @@ import java.util.List;
 
 public class FacturaDAO {
     String Auto_ID = "SELECT COUNT(idFactura) FROM factura";
-    String nueva_factura = "INSERT INTO factura (idFactura,nro_factura,cantidad,fecha_factura,proveedor_id) VALUES(?,?,?,?,?)";
+    String ID_provedor = "SELECT idProveedor FROM proveedor WHERE rut_proveedor = ?";
+    String nueva_factura = "INSERT INTO factura (idFactura,nro_factura,orden_compra,fecha_factura,archivo_factura,proveedor_id) VALUES(?,?,?,?,?,?)";
     String filtro_factura = "SELECT * FROM factura WHERE nro_factura = ?";
     String lista_factura = "SELECT * FROM factura";
 
@@ -35,6 +36,25 @@ public class FacturaDAO {
             return id;
         } 
     }
+    public int ID_proveedor(String rut){
+        PreparedStatement ps;
+        ResultSet rs;
+        int id = 0;
+        try {
+            ps = conexion.prepareStatement(ID_provedor);
+            ps.setString(1,rut);
+            rs = ps.executeQuery();
+            while(rs.next()){
+                id = rs.getInt(1);
+            }
+            ps.close();
+            rs.close();
+            return id;
+        } catch (SQLException e) {
+            System.out.println(e.toString());
+            return id;
+        }
+    }
     public List<Factura> listaFactura(){
         PreparedStatement ps;
         ResultSet rs;
@@ -45,10 +65,11 @@ public class FacturaDAO {
             while(rs.next()){
                 int id = rs.getInt(1);
                 String nro_factura = rs.getString(2);
-                int cantidad = rs.getInt(3);
+                String orden_compra = rs.getString(3);
                 String fecha = rs.getString(4);
                 int proveedor = rs.getInt(5);
-                Factura factura = new Factura(id, cantidad, proveedor, nro_factura,fecha);
+                String archivo_factura = rs.getString(6);
+                Factura factura = new Factura(id, proveedor, nro_factura, orden_compra, fecha, archivo_factura);
                 lista.add(factura);
             }
             return lista;
@@ -68,10 +89,11 @@ public class FacturaDAO {
             while(rs.next()){
                 int id = rs.getInt(1);
                 String nro_factura = rs.getString(2);
-                int cantidad = rs.getInt(3);
+                String orden_compra = rs.getString(3);
                 String fecha = rs.getString(4);
                 int proveedor = rs.getInt(5);
-                factura = new Factura(id, cantidad, proveedor, nro_factura,fecha);
+                String archivo_factura = rs.getString(6);
+                factura = new Factura(id, proveedor, nro_factura, orden_compra,fecha,archivo_factura);
             }
             ps.close();
             rs.close();
@@ -81,16 +103,18 @@ public class FacturaDAO {
             return null;
         }
     }
-    public boolean nuevaFactura(Factura factura){
+    public boolean nuevaFactura(Factura factura, String rut){
         PreparedStatement ps;
         int id = AutoID();
+        int id_proveedor = ID_proveedor(rut);
         try {
             ps = conexion.prepareStatement(nueva_factura);
             ps.setInt(1, id);
             ps.setString(2, factura.getNro_factura());
-            ps.setInt(3, factura.getValor());
+            ps.setString(3, factura.getOrden_compra());
             ps.setString(4, factura.getFecha_factura());
-            ps.setInt(5, factura.getProveedor_id());
+            ps.setString(5, factura.getArchivo_factura());
+            ps.setInt(6, id_proveedor);
             ps.execute();
             ps.close();
             return true;
