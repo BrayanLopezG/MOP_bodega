@@ -3,6 +3,10 @@ package org.apache.jsp.Bodega;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import Modelo.Medicion;
+import Modelo.MedicionDAO;
+import Modelo.Medida;
+import Modelo.MedidaDAO;
 import java.util.Iterator;
 import Modelo.BodegaDAO;
 import java.util.List;
@@ -62,6 +66,10 @@ public final class Producto_jsp extends org.apache.jasper.runtime.HttpJspBase
       out = pageContext.getOut();
       _jspx_out = out;
 
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
       out.write("\n");
       out.write("\n");
       out.write("\n");
@@ -194,11 +202,47 @@ public final class Producto_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                </select>\n");
       out.write("                                <label>Seleccionar Medida</label>\n");
       out.write("                                <select class=\"form-control\" id=\"medida\">\n");
-      out.write("                                    <option>1</option>\n");
+      out.write("                                    ");
+
+                                        MedidaDAO medidadao = new MedidaDAO();
+                                        List<Medida> listamedida = medidadao.listaMedida();
+                                        Iterator<Medida> itera = listamedida.iterator();
+                                        Medida medida = null;
+                                        while (itera.hasNext()){
+                                            medida = itera.next();
+                                    
+      out.write("\n");
+      out.write("                                    <option value=\"");
+      out.print( medida.getId_medida());
+      out.write('"');
+      out.write('>');
+      out.print( medida.getDescripcion());
+      out.write("</option>\n");
+      out.write("                                    ");
+}
+      out.write("\n");
       out.write("                                </select>\n");
       out.write("                                <label>Selecccionar Volumen</label>\n");
       out.write("                                <select class=\"form-control\">\n");
-      out.write("                                    <option>1</option>\n");
+      out.write("                                    ");
+
+                                        MedicionDAO mediciondao = new MedicionDAO();
+                                        List<Medicion> listamedicion = mediciondao.listaMedicion();
+                                        Iterator<Medicion> iterat = listamedicion.iterator();
+                                        Medicion medicion = null;
+                                        while (iterat.hasNext()){
+                                            medicion = iterat.next();
+                                    
+      out.write("\n");
+      out.write("                                    <option value=\"");
+      out.print( medicion.getId_medicion());
+      out.write('"');
+      out.write('>');
+      out.print( medicion.getDescripcion_medicion());
+      out.write("</option>\n");
+      out.write("                                    ");
+}
+      out.write("\n");
       out.write("                                </select>\n");
       out.write("                                <br>\n");
       out.write("                                <div style=\"text-align: center\">\n");
@@ -233,10 +277,10 @@ public final class Producto_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_005fforEach_005f0 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvar_005fitems.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_005fforEach_005f0.setPageContext(_jspx_page_context);
     _jspx_th_c_005fforEach_005f0.setParent(null);
-    // /Bodega/Producto.jsp(83,32) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
+    // /Bodega/Producto.jsp(87,32) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
     _jspx_th_c_005fforEach_005f0.setVar("proveedor");
-    // /Bodega/Producto.jsp(83,32) name = items type = javax.el.ValueExpression reqTime = true required = false fragment = false deferredValue = true deferredMethod = false expectedTypeName = java.lang.Object methodSignature = null 
-    _jspx_th_c_005fforEach_005f0.setItems(new org.apache.jasper.el.JspValueExpression("/Bodega/Producto.jsp(83,32) '${lista}'",_el_expressionfactory.createValueExpression(_jspx_page_context.getELContext(),"${lista}",java.lang.Object.class)).getValue(_jspx_page_context.getELContext()));
+    // /Bodega/Producto.jsp(87,32) name = items type = javax.el.ValueExpression reqTime = true required = false fragment = false deferredValue = true deferredMethod = false expectedTypeName = java.lang.Object methodSignature = null 
+    _jspx_th_c_005fforEach_005f0.setItems(new org.apache.jasper.el.JspValueExpression("/Bodega/Producto.jsp(87,32) '${lista}'",_el_expressionfactory.createValueExpression(_jspx_page_context.getELContext(),"${lista}",java.lang.Object.class)).getValue(_jspx_page_context.getELContext()));
     int[] _jspx_push_body_count_c_005fforEach_005f0 = new int[] { 0 };
     try {
       int _jspx_eval_c_005fforEach_005f0 = _jspx_th_c_005fforEach_005f0.doStartTag();
@@ -292,7 +336,7 @@ public final class Producto_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_005fout_005f0 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_005fout_005f0.setPageContext(_jspx_page_context);
     _jspx_th_c_005fout_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fforEach_005f0);
-    // /Bodega/Producto.jsp(86,95) name = value type = null reqTime = true required = true fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
+    // /Bodega/Producto.jsp(90,95) name = value type = null reqTime = true required = true fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
     _jspx_th_c_005fout_005f0.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${proveedor.id_proveedor}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
     int _jspx_eval_c_005fout_005f0 = _jspx_th_c_005fout_005f0.doStartTag();
     if (_jspx_th_c_005fout_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -311,7 +355,7 @@ public final class Producto_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_005fout_005f1 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_005fout_005f1.setPageContext(_jspx_page_context);
     _jspx_th_c_005fout_005f1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fforEach_005f0);
-    // /Bodega/Producto.jsp(88,103) name = value type = null reqTime = true required = true fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
+    // /Bodega/Producto.jsp(92,103) name = value type = null reqTime = true required = true fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
     _jspx_th_c_005fout_005f1.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${proveedor.nombre_proveedor}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
     int _jspx_eval_c_005fout_005f1 = _jspx_th_c_005fout_005f1.doStartTag();
     if (_jspx_th_c_005fout_005f1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -330,7 +374,7 @@ public final class Producto_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_005fout_005f2 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_005fout_005f2.setPageContext(_jspx_page_context);
     _jspx_th_c_005fout_005f2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fforEach_005f0);
-    // /Bodega/Producto.jsp(90,107) name = value type = null reqTime = true required = true fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
+    // /Bodega/Producto.jsp(94,107) name = value type = null reqTime = true required = true fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
     _jspx_th_c_005fout_005f2.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${proveedor.telefono_proveedor}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
     int _jspx_eval_c_005fout_005f2 = _jspx_th_c_005fout_005f2.doStartTag();
     if (_jspx_th_c_005fout_005f2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -349,7 +393,7 @@ public final class Producto_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_005fout_005f3 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_005fout_005f3.setPageContext(_jspx_page_context);
     _jspx_th_c_005fout_005f3.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fforEach_005f0);
-    // /Bodega/Producto.jsp(92,109) name = value type = null reqTime = true required = true fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
+    // /Bodega/Producto.jsp(96,109) name = value type = null reqTime = true required = true fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
     _jspx_th_c_005fout_005f3.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${proveedor.direccion_proveedor}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
     int _jspx_eval_c_005fout_005f3 = _jspx_th_c_005fout_005f3.doStartTag();
     if (_jspx_th_c_005fout_005f3.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {

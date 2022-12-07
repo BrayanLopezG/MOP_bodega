@@ -4,6 +4,10 @@
     Author     : usuario
 --%>
 
+<%@page import="Modelo.Medicion"%>
+<%@page import="Modelo.MedicionDAO"%>
+<%@page import="Modelo.Medida"%>
+<%@page import="Modelo.MedidaDAO"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="Modelo.BodegaDAO"%>
 <%@page import="java.util.List"%>
@@ -132,11 +136,29 @@
                                 </select>
                                 <label>Seleccionar Medida</label>
                                 <select class="form-control" id="medida">
-                                    <option>1</option>
+                                    <%
+                                        MedidaDAO medidadao = new MedidaDAO();
+                                        List<Medida> listamedida = medidadao.listaMedida();
+                                        Iterator<Medida> itera = listamedida.iterator();
+                                        Medida medida = null;
+                                        while (itera.hasNext()){
+                                            medida = itera.next();
+                                    %>
+                                    <option value="<%= medida.getId_medida()%>"><%= medida.getDescripcion()%></option>
+                                    <%}%>
                                 </select>
                                 <label>Selecccionar Volumen</label>
                                 <select class="form-control">
-                                    <option>1</option>
+                                    <%
+                                        MedicionDAO mediciondao = new MedicionDAO();
+                                        List<Medicion> listamedicion = mediciondao.listaMedicion();
+                                        Iterator<Medicion> iterat = listamedicion.iterator();
+                                        Medicion medicion = null;
+                                        while (iterat.hasNext()){
+                                            medicion = iterat.next();
+                                    %>
+                                    <option value="<%= medicion.getId_medicion()%>"><%= medicion.getDescripcion_medicion()%></option>
+                                    <%}%>
                                 </select>
                                 <br>
                                 <div style="text-align: center">
