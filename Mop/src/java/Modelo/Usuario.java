@@ -3,6 +3,10 @@ public class Usuario extends PerfilUsuario{
     int idusuario,perfil_id;
     String nombre_usuario,contrasenha;
 
+    public Usuario() {
+    }
+    
+
     public Usuario(int idperfil, String descripcion_perfil) {
         super(idperfil, descripcion_perfil);
     }

@@ -4,8 +4,6 @@ public class Producto extends Factura{
     int idproducto,tipo_medida,facturaid,bodegaid;
     String descripcion,estado,fecha_ingreso;
 
-    
-
     public int getIdproducto() {
         return idproducto;
     }

@@ -65,9 +65,9 @@ public class Controlador extends HttpServlet {
                 dispatcher = request.getRequestDispatcher("Login/login.jsp");
             }     
         }else if(accion.equals("proveedor")){
+            List<Proveedor> proveedor = proveedordao.listaProveedor();
+            request.setAttribute("lista", proveedor);
             dispatcher = request.getRequestDispatcher("Proveedor/Proveedor.jsp");
-            List<Proveedor> listaproveedor = proveedordao.listaProveedor();
-            request.setAttribute("lista", listaproveedor);
         }else if(accion.equals("nuevoproveedor")){
             String rut = request.getParameter("txtrutproveedor");
             String nombre = request.getParameter("txtnombreproveedor");
@@ -76,12 +76,18 @@ public class Controlador extends HttpServlet {
             Proveedor proveedor = new Proveedor(0, rut, nombre, telefono, direccion);
             proveedordao.nuevoProveedor(proveedor);
             dispatcher = request.getRequestDispatcher("Proveedor/Proveedor.jsp");
-            List<Proveedor> listaproveedor = proveedordao.listaProveedor();
-            request.setAttribute("lista", listaproveedor);
         }else if(accion.equals("ingreso")){
             dispatcher = request.getRequestDispatcher("Bodega/Producto.jsp");
-        }else if(accion.equals("salida")){
-            
+        }else if(accion.equals("buscar")){
+            String filtro = request.getParameter("txtbuscar");
+            List<Proveedor> listaproveedor = proveedordao.filtroProveedor(filtro);
+            request.setAttribute("lista",listaproveedor);
+            dispatcher = request.getRequestDispatcher("Proveedor/Proveedor.jsp");
+        }else if(accion.equals("buscarproveedor")){
+            String filtro = request.getParameter("txtrut");
+            List<Proveedor> listaproveedor = proveedordao.filtroRutProveedor(filtro);
+            request.setAttribute("lista", listaproveedor);
+            dispatcher = request.getRequestDispatcher("Bodega/Producto.jsp");
         }
         dispatcher.forward(request, response);
     }

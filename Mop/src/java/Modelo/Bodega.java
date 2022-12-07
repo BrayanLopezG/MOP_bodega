@@ -1,8 +1,28 @@
 package Modelo;
 
-public class Bodega {
-    int id_bodega,stock,stock_min,usuario,perfil_bodega;
+public class Bodega extends Usuario{
+    int id_bodega,stock,usuario;
     String nombre_bodega,direccion_bodega;
+
+    public Bodega() {
+    }
+
+    public Bodega(int id_bodega, int stock, int usuario, String nombre_bodega, String direccion_bodega) {
+        this.id_bodega = id_bodega;
+        this.stock = stock;
+        this.usuario = usuario;
+        this.nombre_bodega = nombre_bodega;
+        this.direccion_bodega = direccion_bodega;
+    }
+
+    public Bodega(int id_bodega, int stock,  int usuario, String nombre_bodega, String direccion_bodega, int idusuario, int perfil_id, String nombre_usuario, String contrasenha, int idperfil, String descripcion_perfil) {
+        super(idusuario, perfil_id, nombre_usuario, contrasenha, idperfil, descripcion_perfil);
+        this.id_bodega = id_bodega;
+        this.stock = stock;
+        this.usuario = usuario;
+        this.nombre_bodega = nombre_bodega;
+        this.direccion_bodega = direccion_bodega;
+    }
 
     public int getId_bodega() {
         return id_bodega;
@@ -20,28 +40,12 @@ public class Bodega {
         this.stock = stock;
     }
 
-    public int getStock_min() {
-        return stock_min;
-    }
-
-    public void setStock_min(int stock_min) {
-        this.stock_min = stock_min;
-    }
-
     public int getUsuario() {
         return usuario;
     }
 
     public void setUsuario(int usuario) {
         this.usuario = usuario;
-    }
-
-    public int getPerfil_bodega() {
-        return perfil_bodega;
-    }
-
-    public void setPerfil_bodega(int perfil_bodega) {
-        this.perfil_bodega = perfil_bodega;
     }
 
     public String getNombre_bodega() {

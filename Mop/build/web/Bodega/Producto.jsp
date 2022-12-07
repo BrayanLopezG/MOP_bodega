@@ -4,6 +4,11 @@
     Author     : usuario
 --%>
 
+<%@page import="java.util.Iterator"%>
+<%@page import="Modelo.BodegaDAO"%>
+<%@page import="java.util.List"%>
+<%@page import="Modelo.Bodega"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -43,46 +48,106 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
-                    <h2>Ingreso de Producto</h2>
                     <br>
                     <h3>Datos Factura</h3>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Rut Proveedor">
-                        <div class="input-group-append">
-                            <button class="btn btn-outline-primary" type="button">Buscar</button>
-                            <a href="Controlador?accion=proveedor" class="btn btn-outline-secondary" role="button">Agregar</a>
+                    <form action="Controlador?accion=buscarproveedor" method="POST">
+                        <div class="input-group mb-3">
+                            <input type="text" class="sm-form-control" id="txtrut" name="txtrut" placeholder="Rut Proveedor">
+                            <div class="input-group-append">
+                                <input class="btn btn-outline-success" type="submit" value="Buscar">
+                                <a href="Controlador?accion=proveedor" class="btn btn-outline-secondary" role="button">Agregar</a>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                     <div class="row">
                         <div class="col-6">
                             <div class="form-group">
-                                <form action="Controlador?accion=nuevafactura">
-                                    <h3>Completar Datos Factura</h3>
-                                    <label>Numero Factura</label>
-                                    <input class="form-control" id="txtnrofactura" name="txtnrofactura" type="text" placeholder="Ingresar Numero Factura">
-                                    <label>Orden de Compra</label>
-                                    <input class="form-control" id="txtcompra" name="txtcompra" type="text" placeholder="Ingresar Orden de Compra">
-                                    <div class="col_one_third col_last c-azul">
-                                        <label>Fecha Factura</label>
-                                        <input class="form-control" id="txtfecha" name="txtfecha" type="date">
-                                    </div>
-                                </form>
+                                <h3>Completar Datos Factura</h3>
+                                <label>Numero Factura</label>
+                                <input class="form-control" id="txtnrofactura" name="txtnrofactura" type="text" placeholder="Ingresar Numero Factura">
+                                <label>Orden de Compra</label>
+                                <input class="form-control" id="txtcompra" name="txtcompra" type="text" placeholder="Ingresar Orden de Compra">
+                                <div class="col_one_third col_last c-azul">
+                                    <label>Fecha Factura</label>
+                                    <input class="form-control" id="txtfecha" name="txtfecha" type="date">
+                                </div>
+                                <br>
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="factura">
+                                    <label class="custom-file-label" for="customFile">Adjuntar Factura</label>
+                                </div>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="form-group">
-                                <h3>Informacion Proveedor</h3>
-                                <label>Nombre</label>
-                                <input class="form-control" id="txtnombre" name="txtnombre" disabled>
-                                <label>Telefono</label>
-                                <input class="form-control" id="txttelefono" name="txttelefono" disabled>
-                                <label>Direccion</label>
-                                <input class="form-control" id="txtdireccion" name="txtdireccion" disabled>
+                                <c:forEach var="proveedor" items="${lista}">
+                                    <h3>Informacion Proveedor</h3>
+                                    <label>Codigo Proveedor</label>
+                                    <input class="form-control" id="txtid" name="txtid" value="<c:out value="${proveedor.id_proveedor}"/>" disabled>
+                                    <label>Nombre</label>
+                                    <input class="form-control" id="txtnombre" name="txtnombre" value="<c:out value="${proveedor.nombre_proveedor}"/>" disabled>
+                                    <label>Telefono</label>
+                                    <input class="form-control" id="txttelefono" name="txttelefono" value="<c:out value="${proveedor.telefono_proveedor}"/>" disabled>
+                                    <label>Direccion</label>
+                                    <input class="form-control" id="txtdireccion" name="txtdireccion" value="<c:out value="${proveedor.direccion_proveedor}"/>" disabled>
+                                </c:forEach>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="row">
+                <div class="col-12">
+                    <br>
+                    <h1 style="text-align: center">Agregar Producto</h1>
+                    <br>
+                    <div class="row">
+                        <div class="col-6">
+                            <label>Producto</label>
+                            <input class="form-control" id="txtdescripcion" name="txtdescripcion" type="text" placeholder="Ingresar nombre del producto">
+                            <label>Estado</label>
+                            <input class="form-control" id="txtestado" name="txtestado" type="text" placeholder="Ingresar estado de producto">
+                            <label>Cantidad</label>
+                            <input class="form-control" id="txtcantidad" name="txtcantidad" type="text" placeholder="Ingresar cantidad">
+                            <div class="col_one_third col_last c-azul">
+                                <label>Fecha Producto</label>
+                                <input class="form-control" id="txtfechaproducto" name="txtfechaproducto" type="date">
+                            </div>
+                            <br>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label>Seleccionar Bodega</label>
+                                <select class="form-control" id="bodega">
+                                    <%
+                                        BodegaDAO bodegadao = new BodegaDAO();
+                                        List<Bodega> listabodega = bodegadao.listaBodega();
+                                        Iterator<Bodega> iter = listabodega.iterator();
+                                        Bodega bodega = null;
+                                        while (iter.hasNext()) {
+                                            bodega = iter.next();
+                                    %>
+                                    <option value="<%= bodega.getId_bodega()%>"><%= bodega.getNombre_bodega()%></option>
+                                    <%}%>
+                                </select>
+                                <label>Seleccionar Medida</label>
+                                <select class="form-control" id="medida">
+                                    <option>1</option>
+                                </select>
+                                <label>Selecccionar Volumen</label>
+                                <select class="form-control">
+                                    <option>1</option>
+                                </select>
+                                <br>
+                                <div style="text-align: center">
+                                    <button type="submit" class="btn btn-outline-primary">Registrar</button>
+                                    <a href="Controlador?accion=atras" class="btn btn-outline-secondary" role="button">Atras</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                
+                </div>
+            </div>
+        </div>                         
     </body>
 </html>

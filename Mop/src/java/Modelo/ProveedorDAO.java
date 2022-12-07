@@ -9,7 +9,6 @@ public class ProveedorDAO {
     String Auto_ID = "SELECT COUNT(idProveedor) FROM proveedor";
     String insertar_proveedor = "INSERT INTO proveedor(idProveedor,rut_proveedor,nombre_proveedor,telefono_proveedor,direccion_proveedor) VALUES(?,?,?,?,?)";
     String lista_proveedores = "SELECT idProveedor,rut_proveedor,nombre_proveedor,telefono_proveedor,direccion_proveedor FROM proveedor";
-    String busqueda_rut_proveedor = "SELECT * FROM proveedor WHERE rut_proveedor = (?)";
     
     Connection conexion;
     
@@ -80,13 +79,12 @@ public class ProveedorDAO {
             return null;
         }
     }
-    public Proveedor filtroProveedor(String rut){
+    public List<Proveedor> filtroProveedor(String filtro){
         PreparedStatement ps;
         ResultSet rs;
-        Proveedor proveedor = null;
+        List<Proveedor> lista = new ArrayList();
         try {
-            ps = conexion.prepareStatement(busqueda_rut_proveedor);
-            ps.setString(1, rut);
+            ps = conexion.prepareStatement("SELECT * FROM proveedor WHERE rut_proveedor LIKE '%"+filtro+"%' OR nombre_proveedor LIKE '%"+filtro+"%'");
             rs = ps.executeQuery();
             while(rs.next()){
                 int id = rs.getInt(1);
@@ -94,11 +92,36 @@ public class ProveedorDAO {
                 String nombre = rs.getString(3);
                 String telefono = rs.getString(4);
                 String direccion = rs.getString(5);
-                proveedor = new Proveedor(id, rut_proveedor, nombre, telefono, direccion);
+                Proveedor proveedor = new Proveedor(id, rut_proveedor, nombre, telefono, direccion);
+                lista.add(proveedor);
             }
             ps.close();
             rs.close();
-            return proveedor;
+            return lista;
+        } catch (SQLException e) {
+            System.out.println(e.toString());
+            return null;
+        }
+    }
+    public List<Proveedor> filtroRutProveedor(String rut){
+        PreparedStatement ps;
+        ResultSet rs;
+        List<Proveedor> lista = new ArrayList();
+        try {
+            ps = conexion.prepareStatement("SELECT * FROM proveedor WHERE rut_proveedor = "+rut);
+            rs = ps.executeQuery();
+            while(rs.next()){
+                int id = rs.getInt(1);
+                String rut_proveedor = rs.getString(2);
+                String nombre = rs.getString(3);
+                String telefono = rs.getString(4);
+                String direccion = rs.getString(5);
+                Proveedor proveedor = new Proveedor(id, rut_proveedor, nombre, telefono, direccion);
+                lista.add(proveedor);
+            }
+            ps.close();
+            rs.close();
+            return lista;
         } catch (SQLException e) {
             System.out.println(e.toString());
             return null;

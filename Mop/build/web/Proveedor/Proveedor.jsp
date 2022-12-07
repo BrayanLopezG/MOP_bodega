@@ -4,6 +4,11 @@
     Author     : usuario
 --%>
 
+<%@page import="java.util.Iterator"%>
+<%@page import="java.util.List"%>
+<%@page import="Modelo.Proveedor"%>
+<%@page import="Modelo.ProveedorDAO"%>
+<%@page import="Conexion.Conexion"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
@@ -45,6 +50,7 @@
                 <div class="col">
                     <form action="Controlador?accion=nuevoproveedor" method="POST">
                         <div class="form-group">
+                            <br>
                             <h3>Datos Proveedor</h3>
                             <label>Rut</label>
                             <input class="form-control" id="txtrutproveedor" name="txtrutproveedor" type="text" placeholder="Ingresar Rut Proveedor">
@@ -61,6 +67,15 @@
                     </form>
                 </div>
                 <div class="col-lg-8">
+                    <br>
+                    <form class="form-inline" action="Controlador?accion=buscar" method="POST">
+                        <div class="input-group mb-3">
+                            <input type="search" id="txtbuscar" name="txtbuscar" class="sm-form-control" placeholder="Buscar">
+                            <div class="input-group-append">
+                                <input class="btn btn-outline-success" type="submit"  value="Buscar">
+                            </div>
+                        </div>
+                    </form>
                     <table class="table table-hover">
                         <thead>
                             <tr>
@@ -80,7 +95,7 @@
                                     <td><c:out value="${proveedor.telefono_proveedor}"/></td>
                                     <td><c:out value="${proveedor.direccion_proveedor}"/></td>
                                 </tr>
-                            </c:forEach>
+                            </c:forEach>    
                         </tbody>
                     </table>    
                 </div>
