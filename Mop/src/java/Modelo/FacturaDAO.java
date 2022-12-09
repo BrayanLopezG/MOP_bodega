@@ -68,7 +68,7 @@ public class FacturaDAO {
                 String orden_compra = rs.getString(3);
                 String fecha = rs.getString(4);
                 int proveedor = rs.getInt(5);
-                String archivo_factura = rs.getString(6);
+                byte[] archivo_factura = rs.getBytes(6);
                 Factura factura = new Factura(id, proveedor, nro_factura, orden_compra, fecha, archivo_factura);
                 lista.add(factura);
             }
@@ -91,9 +91,9 @@ public class FacturaDAO {
                 String nro_factura = rs.getString(2);
                 String orden_compra = rs.getString(3);
                 String fecha = rs.getString(4);
-                int proveedor = rs.getInt(5);
-                String archivo_factura = rs.getString(6);
-                factura = new Factura(id, proveedor, nro_factura, orden_compra,fecha,archivo_factura);
+                byte[] facturapdf = rs.getBytes(5);
+                int proveedor = rs.getInt(6);
+                factura = new Factura(id, proveedor, nro_factura, orden_compra,fecha,facturapdf);
             }
             ps.close();
             rs.close();
@@ -113,7 +113,7 @@ public class FacturaDAO {
             ps.setString(2, factura.getNro_factura());
             ps.setString(3, factura.getOrden_compra());
             ps.setString(4, factura.getFecha_factura());
-            ps.setString(5, factura.getArchivo_factura());
+            ps.setBlob(5, factura.getFacturapdf());
             ps.setInt(6, id_proveedor);
             ps.execute();
             ps.close();

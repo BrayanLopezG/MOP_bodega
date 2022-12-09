@@ -117,8 +117,8 @@ public final class Producto_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <div class=\"row\">\n");
       out.write("                <div class=\"col-12\">\n");
       out.write("                    <br>\n");
-      out.write("                    <h3>Datos Factura</h3>\n");
       out.write("                    <form action=\"Controlador?accion=buscarproveedor\" method=\"POST\">\n");
+      out.write("                        <h3>Buscar Proveedor</h3>\n");
       out.write("                        <div class=\"input-group mb-3\">\n");
       out.write("                            <input type=\"text\" class=\"sm-form-control\" id=\"txtrut\" name=\"txtrut\" placeholder=\"Rut Proveedor\">\n");
       out.write("                            <div class=\"input-group-append\">\n");
@@ -130,131 +130,36 @@ public final class Producto_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    <div class=\"row\">\n");
       out.write("                        <div class=\"col-6\">\n");
       out.write("                            <div class=\"form-group\">\n");
-      out.write("                                <h3>Completar Datos Factura</h3>\n");
-      out.write("                                <label>Numero Factura</label>\n");
-      out.write("                                <input class=\"form-control\" id=\"txtnrofactura\" name=\"txtnrofactura\" type=\"text\" placeholder=\"Ingresar Numero Factura\">\n");
-      out.write("                                <label>Orden de Compra</label>\n");
-      out.write("                                <input class=\"form-control\" id=\"txtcompra\" name=\"txtcompra\" type=\"text\" placeholder=\"Ingresar Orden de Compra\">\n");
-      out.write("                                <div class=\"col_one_third col_last c-azul\">\n");
-      out.write("                                    <label>Fecha Factura</label>\n");
-      out.write("                                    <input class=\"form-control\" id=\"txtfecha\" name=\"txtfecha\" type=\"date\">\n");
-      out.write("                                </div>\n");
-      out.write("                                <br>\n");
-      out.write("                                <div class=\"custom-file\">\n");
-      out.write("                                    <input type=\"file\" class=\"custom-file-input\" id=\"factura\">\n");
-      out.write("                                    <label class=\"custom-file-label\" for=\"customFile\">Adjuntar Factura</label>\n");
-      out.write("                                </div>\n");
-      out.write("                            </div>\n");
-      out.write("                        </div>\n");
-      out.write("                        <div class=\"col-6\">\n");
-      out.write("                            <div class=\"form-group\">\n");
       out.write("                                ");
       if (_jspx_meth_c_005fforEach_005f0(_jspx_page_context))
         return;
       out.write("\n");
       out.write("                            </div>\n");
       out.write("                        </div>\n");
+      out.write("                        <div class=\"col-6\">\n");
+      out.write("                            <div class=\"form-group\">\n");
+      out.write("                                <form action=\"Controlador?accion=nuevafactura\" method=\"POST\" enctype=\"multipart/form-data\">\n");
+      out.write("                                    <h3>Completar Datos Factura</h3>\n");
+      out.write("                                    <label>Numero Factura</label>\n");
+      out.write("                                    <input class=\"form-control\" id=\"txtnrofactura\" name=\"txtnrofactura\" type=\"text\" placeholder=\"Ingresar Numero Factura\">\n");
+      out.write("                                    <label>Orden de Compra</label>\n");
+      out.write("                                    <input class=\"form-control\" id=\"txtcompra\" name=\"txtcompra\" type=\"text\" placeholder=\"Ingresar Orden de Compra\">\n");
+      out.write("                                    <div class=\"col_one_third col_last c-azul\">\n");
+      out.write("                                        <label>Fecha Factura</label>\n");
+      out.write("                                        <input class=\"form-control\" id=\"txtfecha\" name=\"txtfecha\" type=\"date\">\n");
+      out.write("                                    </div>\n");
+      out.write("                                    <br>\n");
+      out.write("                                    <input type=\"file\" class=\"form-control-file border\" id=\"factura\" name=\"factura\">\n");
+      out.write("                                    <br>\n");
+      out.write("                                    <button type=\"submit\" class=\"btn btn-outline-primary\">Guardar</button>\n");
+      out.write("                                    <a href=\"Controlador?acccion=atras\" class=\"btn btn-outline-secondary\" role=\"button\">Atras</a>\n");
+      out.write("                                </form>\n");
+      out.write("                            </div>\n");
+      out.write("                        </div>\n");
       out.write("                    </div>\n");
       out.write("                </div>\n");
       out.write("            </div>\n");
-      out.write("            <div class=\"row\">\n");
-      out.write("                <div class=\"col-12\">\n");
-      out.write("                    <br>\n");
-      out.write("                    <h1 style=\"text-align: center\">Agregar Producto</h1>\n");
-      out.write("                    <br>\n");
-      out.write("                    <div class=\"row\">\n");
-      out.write("                        <div class=\"col-6\">\n");
-      out.write("                            <label>Producto</label>\n");
-      out.write("                            <input class=\"form-control\" id=\"txtdescripcion\" name=\"txtdescripcion\" type=\"text\" placeholder=\"Ingresar nombre del producto\">\n");
-      out.write("                            <label>Estado</label>\n");
-      out.write("                            <input class=\"form-control\" id=\"txtestado\" name=\"txtestado\" type=\"text\" placeholder=\"Ingresar estado de producto\">\n");
-      out.write("                            <label>Cantidad</label>\n");
-      out.write("                            <input class=\"form-control\" id=\"txtcantidad\" name=\"txtcantidad\" type=\"text\" placeholder=\"Ingresar cantidad\">\n");
-      out.write("                            <div class=\"col_one_third col_last c-azul\">\n");
-      out.write("                                <label>Fecha Producto</label>\n");
-      out.write("                                <input class=\"form-control\" id=\"txtfechaproducto\" name=\"txtfechaproducto\" type=\"date\">\n");
-      out.write("                            </div>\n");
-      out.write("                            <br>\n");
-      out.write("                        </div>\n");
-      out.write("                        <div class=\"col-6\">\n");
-      out.write("                            <div class=\"form-group\">\n");
-      out.write("                                <label>Seleccionar Bodega</label>\n");
-      out.write("                                <select class=\"form-control\" id=\"bodega\">\n");
-      out.write("                                    ");
-
-                                        BodegaDAO bodegadao = new BodegaDAO();
-                                        List<Bodega> listabodega = bodegadao.listaBodega();
-                                        Iterator<Bodega> iter = listabodega.iterator();
-                                        Bodega bodega = null;
-                                        while (iter.hasNext()) {
-                                            bodega = iter.next();
-                                    
-      out.write("\n");
-      out.write("                                    <option value=\"");
-      out.print( bodega.getId_bodega());
-      out.write('"');
-      out.write('>');
-      out.print( bodega.getNombre_bodega());
-      out.write("</option>\n");
-      out.write("                                    ");
-}
-      out.write("\n");
-      out.write("                                </select>\n");
-      out.write("                                <label>Seleccionar Medida</label>\n");
-      out.write("                                <select class=\"form-control\" id=\"medida\">\n");
-      out.write("                                    ");
-
-                                        MedidaDAO medidadao = new MedidaDAO();
-                                        List<Medida> listamedida = medidadao.listaMedida();
-                                        Iterator<Medida> itera = listamedida.iterator();
-                                        Medida medida = null;
-                                        while (itera.hasNext()){
-                                            medida = itera.next();
-                                    
-      out.write("\n");
-      out.write("                                    <option value=\"");
-      out.print( medida.getId_medida());
-      out.write('"');
-      out.write('>');
-      out.print( medida.getDescripcion());
-      out.write("</option>\n");
-      out.write("                                    ");
-}
-      out.write("\n");
-      out.write("                                </select>\n");
-      out.write("                                <label>Selecccionar Volumen</label>\n");
-      out.write("                                <select class=\"form-control\">\n");
-      out.write("                                    ");
-
-                                        MedicionDAO mediciondao = new MedicionDAO();
-                                        List<Medicion> listamedicion = mediciondao.listaMedicion();
-                                        Iterator<Medicion> iterat = listamedicion.iterator();
-                                        Medicion medicion = null;
-                                        while (iterat.hasNext()){
-                                            medicion = iterat.next();
-                                    
-      out.write("\n");
-      out.write("                                    <option value=\"");
-      out.print( medicion.getId_medicion());
-      out.write('"');
-      out.write('>');
-      out.print( medicion.getDescripcion_medicion());
-      out.write("</option>\n");
-      out.write("                                    ");
-}
-      out.write("\n");
-      out.write("                                </select>\n");
-      out.write("                                <br>\n");
-      out.write("                                <div style=\"text-align: center\">\n");
-      out.write("                                    <button type=\"submit\" class=\"btn btn-outline-primary\">Registrar</button>\n");
-      out.write("                                    <a href=\"Controlador?accion=atras\" class=\"btn btn-outline-secondary\" role=\"button\">Atras</a>\n");
-      out.write("                                </div>\n");
-      out.write("                            </div>\n");
-      out.write("                        </div>\n");
-      out.write("                    </div>                \n");
-      out.write("                </div>\n");
-      out.write("            </div>\n");
-      out.write("        </div>                         \n");
+      out.write("        </div>\n");
       out.write("    </body>\n");
       out.write("</html>\n");
     } catch (Throwable t) {
@@ -277,10 +182,10 @@ public final class Producto_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_005fforEach_005f0 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvar_005fitems.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_005fforEach_005f0.setPageContext(_jspx_page_context);
     _jspx_th_c_005fforEach_005f0.setParent(null);
-    // /Bodega/Producto.jsp(87,32) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
+    // /Bodega/Producto.jsp(69,32) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
     _jspx_th_c_005fforEach_005f0.setVar("proveedor");
-    // /Bodega/Producto.jsp(87,32) name = items type = javax.el.ValueExpression reqTime = true required = false fragment = false deferredValue = true deferredMethod = false expectedTypeName = java.lang.Object methodSignature = null 
-    _jspx_th_c_005fforEach_005f0.setItems(new org.apache.jasper.el.JspValueExpression("/Bodega/Producto.jsp(87,32) '${lista}'",_el_expressionfactory.createValueExpression(_jspx_page_context.getELContext(),"${lista}",java.lang.Object.class)).getValue(_jspx_page_context.getELContext()));
+    // /Bodega/Producto.jsp(69,32) name = items type = javax.el.ValueExpression reqTime = true required = false fragment = false deferredValue = true deferredMethod = false expectedTypeName = java.lang.Object methodSignature = null 
+    _jspx_th_c_005fforEach_005f0.setItems(new org.apache.jasper.el.JspValueExpression("/Bodega/Producto.jsp(69,32) '${lista}'",_el_expressionfactory.createValueExpression(_jspx_page_context.getELContext(),"${lista}",java.lang.Object.class)).getValue(_jspx_page_context.getELContext()));
     int[] _jspx_push_body_count_c_005fforEach_005f0 = new int[] { 0 };
     try {
       int _jspx_eval_c_005fforEach_005f0 = _jspx_th_c_005fforEach_005f0.doStartTag();
@@ -336,7 +241,7 @@ public final class Producto_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_005fout_005f0 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_005fout_005f0.setPageContext(_jspx_page_context);
     _jspx_th_c_005fout_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fforEach_005f0);
-    // /Bodega/Producto.jsp(90,95) name = value type = null reqTime = true required = true fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
+    // /Bodega/Producto.jsp(72,95) name = value type = null reqTime = true required = true fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
     _jspx_th_c_005fout_005f0.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${proveedor.id_proveedor}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
     int _jspx_eval_c_005fout_005f0 = _jspx_th_c_005fout_005f0.doStartTag();
     if (_jspx_th_c_005fout_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -355,7 +260,7 @@ public final class Producto_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_005fout_005f1 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_005fout_005f1.setPageContext(_jspx_page_context);
     _jspx_th_c_005fout_005f1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fforEach_005f0);
-    // /Bodega/Producto.jsp(92,103) name = value type = null reqTime = true required = true fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
+    // /Bodega/Producto.jsp(74,103) name = value type = null reqTime = true required = true fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
     _jspx_th_c_005fout_005f1.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${proveedor.nombre_proveedor}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
     int _jspx_eval_c_005fout_005f1 = _jspx_th_c_005fout_005f1.doStartTag();
     if (_jspx_th_c_005fout_005f1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -374,7 +279,7 @@ public final class Producto_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_005fout_005f2 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_005fout_005f2.setPageContext(_jspx_page_context);
     _jspx_th_c_005fout_005f2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fforEach_005f0);
-    // /Bodega/Producto.jsp(94,107) name = value type = null reqTime = true required = true fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
+    // /Bodega/Producto.jsp(76,107) name = value type = null reqTime = true required = true fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
     _jspx_th_c_005fout_005f2.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${proveedor.telefono_proveedor}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
     int _jspx_eval_c_005fout_005f2 = _jspx_th_c_005fout_005f2.doStartTag();
     if (_jspx_th_c_005fout_005f2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -393,7 +298,7 @@ public final class Producto_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_005fout_005f3 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_005fout_005f3.setPageContext(_jspx_page_context);
     _jspx_th_c_005fout_005f3.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fforEach_005f0);
-    // /Bodega/Producto.jsp(96,109) name = value type = null reqTime = true required = true fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
+    // /Bodega/Producto.jsp(78,109) name = value type = null reqTime = true required = true fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
     _jspx_th_c_005fout_005f3.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${proveedor.direccion_proveedor}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
     int _jspx_eval_c_005fout_005f3 = _jspx_th_c_005fout_005f3.doStartTag();
     if (_jspx_th_c_005fout_005f3.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {

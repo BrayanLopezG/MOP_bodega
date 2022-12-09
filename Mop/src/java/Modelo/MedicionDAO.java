@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MedicionDAO {
-    String Lista_Medicion = "SELECT * FROM tipo_medicion"; 
+    String Lista_Medicion = "SELECT * FROM tipo_medida"; 
     Connection conexion;
     
     public MedicionDAO(){

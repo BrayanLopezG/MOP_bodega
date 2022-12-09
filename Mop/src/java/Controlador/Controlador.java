@@ -1,5 +1,7 @@
 package Controlador;
 
+import Modelo.Factura;
+import Modelo.FacturaDAO;
 import Modelo.PerfilUsuario;
 import Modelo.PerfilUsuarioDAO;
 import Modelo.Proveedor;
@@ -7,16 +9,19 @@ import Modelo.ProveedorDAO;
 import Modelo.Usuario;
 import Modelo.UsuarioDAO;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 
-
-@MultipartConfig
+@WebServlet(name = "Controlador",urlPatterns = "/Controlador")
+@MultipartConfig(maxFileSize = 16177215)
 public class Controlador extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -30,8 +35,10 @@ public class Controlador extends HttpServlet {
         processRequest(request, response); 
         UsuarioDAO usuariodao = new UsuarioDAO();
         ProveedorDAO proveedordao = new ProveedorDAO();
+        FacturaDAO facturadao = new FacturaDAO();
         String accion;
         RequestDispatcher dispatcher = null;
+        InputStream inputStream = null;
         accion = request.getParameter("accion");
         if(accion == null || accion.isEmpty()){
             dispatcher = request.getRequestDispatcher("inicio.jsp");
@@ -87,10 +94,25 @@ public class Controlador extends HttpServlet {
             String filtro = request.getParameter("txtrut");
             List<Proveedor> listaproveedor = proveedordao.filtroRutProveedor(filtro);
             request.setAttribute("lista", listaproveedor);
-            dispatcher = request.getRequestDispatcher("Bodega/Producto.jsp");
+            dispatcher = request.getRequestDispatcher("Bodega/Factura.jsp");
+        }else if(accion.equals("nuevafactura")){
+            String numerofactura = request.getParameter("txtnrofactura");
+            String ordencompra = request.getParameter("txtcompra");
+            String fecha = request.getParameter("txtfecha");
+            Part facturapdf = request.getPart("factura");
+            String codigo = request.getParameter("txtid");
+            if(facturapdf.getSize() > 0){
+                inputStream = facturapdf.getInputStream();
+                Factura factura = new Factura(0,0, numerofactura, ordencompra, fecha,inputStream);
+                facturadao.nuevaFactura(factura,codigo);
+                dispatcher = request.getRequestDispatcher("Bodega/Producto.jsp");
+            }else{
+                System.out.println("Error carga de archivo");
+            }
         }
         dispatcher.forward(request, response);
     }
+    
     
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

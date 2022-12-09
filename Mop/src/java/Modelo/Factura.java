@@ -1,36 +1,59 @@
 package Modelo;
 
+import java.io.InputStream;
+
 public class Factura extends Proveedor{
     int id_factura,proveedor_id;
-    String nro_factura,orden_compra,fecha_factura,archivo_factura;
-    
-    public Factura(){
-        
-    }
-    
-    public Factura(int id_factura, int proveedor_id, String nro_factura, String orden_compra, String fecha_factura, String archivo_factura) {
+    String nro_factura,orden_compra,fecha_factura;
+    InputStream facturapdf;
+    private byte[] factura;
+
+    public Factura(int id_factura, int proveedor_id, String nro_factura, String orden_compra, String fecha_factura, InputStream facturapdf) {
         this.id_factura = id_factura;
         this.proveedor_id = proveedor_id;
         this.nro_factura = nro_factura;
         this.orden_compra = orden_compra;
         this.fecha_factura = fecha_factura;
-        this.archivo_factura = archivo_factura;
+        this.facturapdf = facturapdf;
     }
 
-    public Factura(int id_factura, int proveedor_id, String nro_factura, String orden_compra, String fecha_factura, String archivo_factura, int id_proveedor, String rut_proveedor, String nombre_proveedor, String telefono_proveedor, String direccion_proveedor) {
+    public Factura(int id_factura, int proveedor_id, String nro_factura, String orden_compra, String fecha_factura, byte[] factura) {
+        this.id_factura = id_factura;
+        this.proveedor_id = proveedor_id;
+        this.nro_factura = nro_factura;
+        this.orden_compra = orden_compra;
+        this.fecha_factura = fecha_factura;
+        this.factura = factura;
+    }
+
+    public Factura(int id_factura, int proveedor_id, String nro_factura, String orden_compra, String fecha_factura, InputStream facturapdf, byte[] factura, int id_proveedor, String rut_proveedor, String nombre_proveedor, String telefono_proveedor, String direccion_proveedor) {
         super(id_proveedor, rut_proveedor, nombre_proveedor, telefono_proveedor, direccion_proveedor);
         this.id_factura = id_factura;
         this.proveedor_id = proveedor_id;
         this.nro_factura = nro_factura;
         this.orden_compra = orden_compra;
         this.fecha_factura = fecha_factura;
-        this.archivo_factura = archivo_factura;
+        this.facturapdf = facturapdf;
+        this.factura = factura;
     }
-    
+
+    public Factura(int id_factura, int proveedor_id, String nro_factura, String orden_compra, String fecha_factura, InputStream facturapdf, byte[] factura) {
+        this.id_factura = id_factura;
+        this.proveedor_id = proveedor_id;
+        this.nro_factura = nro_factura;
+        this.orden_compra = orden_compra;
+        this.fecha_factura = fecha_factura;
+        this.facturapdf = facturapdf;
+        this.factura = factura;
+    }
+
     public Factura(int id_proveedor, String rut_proveedor, String nombre_proveedor, String telefono_proveedor, String direccion_proveedor) {
         super(id_proveedor, rut_proveedor, nombre_proveedor, telefono_proveedor, direccion_proveedor);
     }
 
+    public Factura() {
+    }
+   
     public int getId_factura() {
         return id_factura;
     }
@@ -71,12 +94,21 @@ public class Factura extends Proveedor{
         this.fecha_factura = fecha_factura;
     }
 
-    public String getArchivo_factura() {
-        return archivo_factura;
+    public InputStream getFacturapdf() {
+        return facturapdf;
     }
 
-    public void setArchivo_factura(String archivo_factura) {
-        this.archivo_factura = archivo_factura;
+    public void setFacturapdf(InputStream facturapdf) {
+        this.facturapdf = facturapdf;
     }
+
+    public byte[] getFactura() {
+        return factura;
+    }
+
+    public void setFactura(byte[] factura) {
+        this.factura = factura;
+    }
+    
 
 }   
