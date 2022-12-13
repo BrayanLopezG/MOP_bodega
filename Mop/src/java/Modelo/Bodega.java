@@ -15,8 +15,7 @@ public class Bodega extends Usuario{
         this.direccion_bodega = direccion_bodega;
     }
 
-    public Bodega(int id_bodega, int stock,  int usuario, String nombre_bodega, String direccion_bodega, int idusuario, int perfil_id, String nombre_usuario, String contrasenha, int idperfil, String descripcion_perfil) {
-        super(idusuario, perfil_id, nombre_usuario, contrasenha, idperfil, descripcion_perfil);
+    public Bodega(int id_bodega, int stock,  int usuario, String nombre_bodega, String direccion_bodega, int idusuario, int perfil_id, String nombre_usuario, String contrasenha) {
         this.id_bodega = id_bodega;
         this.stock = stock;
         this.usuario = usuario;

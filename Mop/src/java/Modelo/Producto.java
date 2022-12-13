@@ -1,8 +1,36 @@
 package Modelo;
 
+import java.io.InputStream;
+
 public class Producto extends Factura{
-    int idproducto,tipo_medida,facturaid,bodegaid;
-    String descripcion,estado,fecha_ingreso;
+    int idproducto,facturaid,medida_id,bodegaid;
+    String descripcion,cantidad;
+
+    public Producto(int idproducto, int facturaid, int medida_id, int bodegaid, String descripcion, String cantidad) {
+        this.idproducto = idproducto;
+        this.facturaid = facturaid;
+        this.medida_id = medida_id;
+        this.bodegaid = bodegaid;
+        this.descripcion = descripcion;
+        this.cantidad = cantidad;
+    }
+
+    public Producto(int idproducto, int facturaid, int medida_id, int bodegaid, String descripcion, String cantidad, int id_factura, int proveedor_id, String nro_factura, String orden_compra, String fecha_factura, InputStream facturapdf, byte[] factura, int id_proveedor, String rut_proveedor, String nombre_proveedor, String telefono_proveedor, String direccion_proveedor) {
+        super(id_factura, proveedor_id, nro_factura, orden_compra, fecha_factura, facturapdf, factura, id_proveedor, rut_proveedor, nombre_proveedor, telefono_proveedor, direccion_proveedor);
+        this.idproducto = idproducto;
+        this.facturaid = facturaid;
+        this.medida_id = medida_id;
+        this.bodegaid = bodegaid;
+        this.descripcion = descripcion;
+        this.cantidad = cantidad;
+    }
+
+    public Producto(int id_factura, int proveedor_id, String nro_factura, String orden_compra, String fecha_factura, InputStream facturapdf, byte[] factura, int id_proveedor, String rut_proveedor, String nombre_proveedor, String telefono_proveedor, String direccion_proveedor) {
+        super(id_factura, proveedor_id, nro_factura, orden_compra, fecha_factura, facturapdf, factura, id_proveedor, rut_proveedor, nombre_proveedor, telefono_proveedor, direccion_proveedor);
+    }
+
+    public Producto() {
+    }
 
     public int getIdproducto() {
         return idproducto;
@@ -12,20 +40,20 @@ public class Producto extends Factura{
         this.idproducto = idproducto;
     }
 
-    public int getTipo_medida() {
-        return tipo_medida;
-    }
-
-    public void setTipo_medida(int tipo_medida) {
-        this.tipo_medida = tipo_medida;
-    }
-
     public int getFacturaid() {
         return facturaid;
     }
 
     public void setFacturaid(int facturaid) {
         this.facturaid = facturaid;
+    }
+
+    public int getMedida_id() {
+        return medida_id;
+    }
+
+    public void setMedida_id(int medida_id) {
+        this.medida_id = medida_id;
     }
 
     public int getBodegaid() {
@@ -44,19 +72,12 @@ public class Producto extends Factura{
         this.descripcion = descripcion;
     }
 
-    public String getEstado() {
-        return estado;
+    public String getCantidad() {
+        return cantidad;
     }
 
-    public void setEstado(String estado) {
-        this.estado = estado;
+    public void setCantidad(String cantidad) {
+        this.cantidad = cantidad;
     }
-
-    public String getFecha_ingreso() {
-        return fecha_ingreso;
-    }
-
-    public void setFecha_ingreso(String fecha_ingreso) {
-        this.fecha_ingreso = fecha_ingreso;
-    } 
+ 
 }

@@ -3,11 +3,8 @@ package org.apache.jsp.Login;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
-import java.util.ArrayList;
-import Modelo.PerfilUsuario;
-import java.util.List;
 
-public final class registrar_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class Registrar_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -54,9 +51,6 @@ public final class registrar_jsp extends org.apache.jasper.runtime.HttpJspBase
       out = pageContext.getOut();
       _jspx_out = out;
 
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
       out.write("\n");
       out.write("\n");
       out.write("\n");

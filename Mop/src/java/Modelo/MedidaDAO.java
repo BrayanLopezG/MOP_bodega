@@ -27,8 +27,7 @@ public class MedidaDAO {
             while(rs.next()){
                 int id = rs.getInt(1);
                 String descripcion = rs.getString(2);
-                int id_medicion = rs.getInt(3);
-                Medida medida = new Medida(id,id_medicion, descripcion);
+                Medida medida = new Medida(id, descripcion);
                 lista.add(medida);
             }
             return lista;

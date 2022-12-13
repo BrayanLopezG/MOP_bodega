@@ -1,22 +1,34 @@
 package Modelo;
 public class Usuario extends PerfilUsuario{
     int idusuario,perfil_id;
-    String nombre_usuario,contrasenha;
+    String nombre,apellido,rut,nombre_usuario,contrasenha;
 
-    public Usuario() {
+    public Usuario(int idusuario, int perfil_id, String nombre, String apellido, String rut, String nombre_usuario, String contrasenha, int idperfil, String descripcion_perfil) {
+        super(idperfil, descripcion_perfil);
+        this.idusuario = idusuario;
+        this.perfil_id = perfil_id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.rut = rut;
+        this.nombre_usuario = nombre_usuario;
+        this.contrasenha = contrasenha;
     }
-    
+
+    public Usuario(int idusuario, int perfil_id, String nombre, String apellido, String rut, String nombre_usuario, String contrasenha) {
+        this.idusuario = idusuario;
+        this.perfil_id = perfil_id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.rut = rut;
+        this.nombre_usuario = nombre_usuario;
+        this.contrasenha = contrasenha;
+    }
 
     public Usuario(int idperfil, String descripcion_perfil) {
         super(idperfil, descripcion_perfil);
     }
 
-    public Usuario(int idusuario, int perfil_id, String nombre_usuario, String contrasenha, int idperfil, String descripcion_perfil) {
-        super(idperfil, descripcion_perfil);
-        this.idusuario = idusuario;
-        this.perfil_id = perfil_id;
-        this.nombre_usuario = nombre_usuario;
-        this.contrasenha = contrasenha;
+    public Usuario() {
     }
 
     public int getIdusuario() {
@@ -35,6 +47,30 @@ public class Usuario extends PerfilUsuario{
         this.perfil_id = perfil_id;
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getRut() {
+        return rut;
+    }
+
+    public void setRut(String rut) {
+        this.rut = rut;
+    }
+
     public String getNombre_usuario() {
         return nombre_usuario;
     }
@@ -50,5 +86,7 @@ public class Usuario extends PerfilUsuario{
     public void setContrasenha(String contrasenha) {
         this.contrasenha = contrasenha;
     }
+
+
 
 }

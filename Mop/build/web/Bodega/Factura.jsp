@@ -4,14 +4,6 @@
     Author     : usuario
 --%>
 
-<%@page import="Modelo.Medicion"%>
-<%@page import="Modelo.MedicionDAO"%>
-<%@page import="Modelo.Medida"%>
-<%@page import="Modelo.MedidaDAO"%>
-<%@page import="java.util.Iterator"%>
-<%@page import="Modelo.BodegaDAO"%>
-<%@page import="java.util.List"%>
-<%@page import="Modelo.Bodega"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -23,43 +15,20 @@
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-        <title>JSP Page</title>
+        <title>Factura</title>
     </head>
     <body>
-        <header>
-            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-                <a class="navbar-brand" href="#">Logo</a>
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="bodega" data-toggle="dropdown">Bodega</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="Controlador?accion=ingreso">Ingreso</a>
-                            <a class="dropdown-item" href="Controlador?accion=salida">Salida</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Controlador?accion=proveedor" id="proveedores">Proveedores</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Controlador?accion=consultar" id="consulta">Consultar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Controlador?accion=login">Iniciar Sesion</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
                     <br>
-                    <form action="Controlador?accion=buscarproveedor" method="POST">
+                    <form action="Controlador?menu=listarproveedor" method="POST">
                         <h3>Buscar Proveedor</h3>
                         <div class="input-group mb-3">
                             <input type="text" class="sm-form-control" id="txtrut" name="txtrut" placeholder="Rut Proveedor">
                             <div class="input-group-append">
                                 <input class="btn btn-outline-success" type="submit" value="Buscar">
-                                <a href="Controlador?accion=proveedor" class="btn btn-outline-secondary" role="button">Agregar</a>
+                                <a href="Controlador?menu=proveedor" class="btn btn-outline-secondary" role="button">Agregar</a>
                             </div>
                         </div>
                     </form>
@@ -81,7 +50,7 @@
                         </div>
                         <div class="col-6">
                             <div class="form-group">
-                                <form action="Controlador?accion=nuevafactura" method="POST" enctype="multipart/form-data">
+                                <form action="Controlador?menu=nuevafactura" method="POST" enctype="multipart/form-data">
                                     <h3>Completar Datos Factura</h3>
                                     <label>Numero Factura</label>
                                     <input class="form-control" id="txtnrofactura" name="txtnrofactura" type="text" placeholder="Ingresar Numero Factura">
@@ -94,8 +63,7 @@
                                     <br>
                                     <input type="file" class="form-control-file border" id="factura" name="factura">
                                     <br>
-                                    <button type="submit" class="btn btn-outline-primary">Guardar</button>
-                                    <a href="Controlador?acccion=atras" class="btn btn-outline-secondary" role="button">Atras</a>
+                                    <button type="submit" class="btn btn-outline-primary">Siguiente</button>
                                 </form>
                             </div>
                         </div>

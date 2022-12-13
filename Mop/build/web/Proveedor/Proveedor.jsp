@@ -22,29 +22,6 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
         <title>Proveedores</title>
     <body>
-        <header>
-            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-                <a class="navbar-brand" href="#">Logo</a>
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="bodega" data-toggle="dropdown">Bodega</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="Controlador?accion=ingreso">Ingreso</a>
-                            <a class="dropdown-item" href="Controlador?accion=salida">Salida</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Controlador?accion=proveedor" id="proveedores">Proveedores</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Controlador?accion=consultar" id="consulta">Consultar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Controlador?accion=login">Iniciar Sesion</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
         <div class="container-fluid">
             <div class="row">
                 <div class="col">

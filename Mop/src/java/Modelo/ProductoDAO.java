@@ -8,7 +8,8 @@ import java.util.List;
 public class ProductoDAO {
     String Auto_ID = "SELECT COUNT(idProducto) FROM producto";
     String lista_producto = "SELECT * FROM producto";
-    String agregar_producto = "INSERT INTO producto(idProducto,descripcion,estado,fecha_ingreso,tipo_medida_id,factura_id,bodega_id) VALUES(?,?,?,?,?,?,?)";
+    String producto_factura = "SELECT * FROM producto WHERE factura_id = ?";
+    String agregar_producto = "INSERT INTO producto(idProducto,descripcion,cantidad,factura_id,bodega_id,medida_id) VALUES(?,?,?,?,?,?)";
     BodegaDAO bodega;
     Connection conexion;
     
@@ -34,7 +35,6 @@ public class ProductoDAO {
             return id;
         } 
     }
-    /* terminar funcion primero terminar el insertar */
     public List<Producto> listaProducto (){
         PreparedStatement ps;
         ResultSet rs;
@@ -47,12 +47,46 @@ public class ProductoDAO {
             return null;
         }
     }
+    
+    public List listaproductofactura(int idfactura){
+        PreparedStatement ps;
+        ResultSet rs;
+        List<Producto> lista = new ArrayList();
+        try {
+            ps = conexion.prepareStatement(producto_factura);
+            ps.setInt(1,idfactura);
+            rs = ps.executeQuery();
+            while(rs.next()){
+                Producto producto = new Producto();
+                producto.setIdproducto(rs.getInt(1));
+                producto.setDescripcion(rs.getString(2));
+                producto.setCantidad(rs.getString(3));
+                producto.setFacturaid(rs.getInt(4));
+                producto.setBodegaid(rs.getInt(5));
+                producto.setMedida_id(rs.getInt(6));
+                lista.add(producto);
+            }
+        } catch (SQLException e) {
+            System.out.println(e.toString());
+            return null;
+        }
+        return lista;
+    }
+    
     public boolean agregarProducto(Producto producto){
         PreparedStatement ps;
+        ResultSet rs;
         int id = AutoID();
         try {
             ps = conexion.prepareStatement(agregar_producto);
-            
+            ps.setInt(1,id);
+            ps.setString(2,producto.getDescripcion());
+            ps.setString(3,producto.getCantidad());
+            ps.setInt(4,producto.getFacturaid());
+            ps.setInt(5,producto.getBodegaid());
+            ps.setInt(6,producto.getMedida_id());
+            ps.execute();
+            ps.close();
             return true;
         } catch (SQLException e) {
             System.out.println(e.toString());

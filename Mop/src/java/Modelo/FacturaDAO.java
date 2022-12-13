@@ -9,7 +9,7 @@ public class FacturaDAO {
     String Auto_ID = "SELECT COUNT(idFactura) FROM factura";
     String ID_provedor = "SELECT idProveedor FROM proveedor WHERE rut_proveedor = ?";
     String nueva_factura = "INSERT INTO factura (idFactura,nro_factura,orden_compra,fecha_factura,archivo_factura,proveedor_id) VALUES(?,?,?,?,?,?)";
-    String filtro_factura = "SELECT * FROM factura WHERE nro_factura = ?";
+    String filtro_factura = "SELECT * FROM factura WHERE orden_compra = ?";
     String lista_factura = "SELECT * FROM factura";
 
     Connection conexion;
@@ -67,8 +67,8 @@ public class FacturaDAO {
                 String nro_factura = rs.getString(2);
                 String orden_compra = rs.getString(3);
                 String fecha = rs.getString(4);
-                int proveedor = rs.getInt(5);
-                byte[] archivo_factura = rs.getBytes(6);
+                byte[] archivo_factura = rs.getBytes(5);
+                int proveedor = rs.getInt(6);
                 Factura factura = new Factura(id, proveedor, nro_factura, orden_compra, fecha, archivo_factura);
                 lista.add(factura);
             }
@@ -78,13 +78,13 @@ public class FacturaDAO {
             return null;
         }
     }
-    public Factura filtroFactura(String filtro_facturas){
+    public Factura filtroFactura(String id_factura){
         PreparedStatement ps;
         ResultSet rs;
         Factura factura = null;
         try {
             ps = conexion.prepareStatement(filtro_factura);
-            ps.setString(1,filtro_facturas);
+            ps.setString(1,id_factura);
             rs = ps.executeQuery();
             while(rs.next()){
                 int id = rs.getInt(1);
