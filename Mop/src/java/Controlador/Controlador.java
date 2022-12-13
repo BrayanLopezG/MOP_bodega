@@ -32,6 +32,7 @@ public class Controlador extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String menu = request.getParameter("menu");
+        int idf;
         if (menu.equals("principal")) {
             request.getRequestDispatcher("principal.jsp").forward(request, response);
         } else if (menu.equals("ingreso")) {
@@ -57,18 +58,29 @@ public class Controlador extends HttpServlet {
                 System.out.println("Error carga de archivo");
             }
         } else if(menu.equals("nuevoproducto")){
+            System.out.println(request.getParameter("bodega"));
+            System.out.println(request.getParameter("medida"));
+            System.out.println(request.getParameter("txtfacturaid"));
             int idbodega = Integer.parseInt(request.getParameter("bodega"));
             int idmedida = Integer.parseInt(request.getParameter("medida"));
             String descripcion = request.getParameter("txtdescripcion");
             String cantidad = request.getParameter("txtcantidad");
-            String factura = request.getParameter("txtfactura");
-            fact = fdao.filtroFactura(factura);
-            int idfactura = fact.getId_factura();
-            pro = new Producto(0, idfactura, idmedida, idbodega, descripcion, cantidad);
-            List<Producto> listaproducto = prdao.listaproductofactura(idfactura);
+            String idfactura = request.getParameter("txtfacturaid");
+            fact = fdao.filtroFactura(idfactura);
+            int facturaid = fact.getId_factura();
+            pro = new Producto(0, facturaid, idmedida, idbodega, descripcion, cantidad);
+            List<Producto> listaproducto = prdao.listaproductofactura(facturaid);
             request.setAttribute("listar", listaproducto);
             request.getRequestDispatcher("Bodega/Producto.jsp").forward(request, response);  
-        } else if (menu.equals("salida")) {
+        }else if(menu.equals("quitarproducto")){
+            idf = Integer.parseInt(request.getParameter("id"));
+            int factura = Integer.parseInt(request.getParameter("txtfacturaid"));
+            prdao.eliminarProducto(idf);
+            List<Producto> listaproducto = prdao.listaproductofactura(factura);
+            request.setAttribute("listar", listaproducto);
+            request.getRequestDispatcher("Bodega/Producto.jsp").forward(request, response);  
+        } 
+        else if (menu.equals("salida")) {
             request.getRequestDispatcher("Bodega/Solicitud.jsp").forward(request, response);
         } else if (menu.equals("proveedor")) {
             request.getRequestDispatcher("Proveedor/Proveedor.jsp").forward(request, response);

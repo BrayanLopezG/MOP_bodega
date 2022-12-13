@@ -78,13 +78,13 @@ public class FacturaDAO {
             return null;
         }
     }
-    public Factura filtroFactura(String id_factura){
+    public Factura filtroFactura(String ordencompra){
         PreparedStatement ps;
         ResultSet rs;
         Factura factura = null;
         try {
             ps = conexion.prepareStatement(filtro_factura);
-            ps.setString(1,id_factura);
+            ps.setString(1,ordencompra);
             rs = ps.executeQuery();
             while(rs.next()){
                 int id = rs.getInt(1);

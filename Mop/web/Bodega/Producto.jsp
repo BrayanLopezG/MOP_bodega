@@ -32,7 +32,7 @@
                         <br>
                         <h3>Agregar Producto</h3>
                         <br>
-                        <select id="bodega" class="custom-select">
+                        <select id="bodega" name="bodega" class="custom-select">
                             <%
                                 BodegaDAO bdao = new BodegaDAO();
                                 List<Bodega> listabodega = bdao.listaBodega();
@@ -44,11 +44,11 @@
                             <option value="<%= bodega.getId_bodega()%>"><%= bodega.getNombre_bodega()%></option>
                             <%}%>
                         </select>
-                        <br>
                         <div class="input-group mb-3">
+                            <br>
                             <input type="text" class="form-control" id="txtdescripcion" name="txtdescripcion" placeholder="Descripcion del Producto">
                             <div class="input-group-append">
-                                <select id="medida" class="custom-select">
+                                <select id="medida" name="medida" class="custom-select">
                                     <%
                                         MedidaDAO medidadao = new MedidaDAO();
                                         List<Medida> listamedida = medidadao.listaMedida();
@@ -61,9 +61,10 @@
                                     <%}%>
                                 </select>
                             </div>
-                            <input type="text" class="form-control" id="txtfacturaid" name="txtfactura" value="${factura.getOrden_compra()}" disabled>
+                            <input type="text" class="form-control" id="txtfacturaid" name="txtfacturaid" value="${factura.getOrden_compra()}" disabled>
                             <input type="text" class="form-control" id="txtcantidad" name="txtcantidad" placeholder="Cantidad">
-                            <button type="submit" class="btn btn-outline-success">Agregar +</button>
+                            <input type="submit" name="accion" value="Agregar" class="btn btn-outline-success">
+                            <input type="submit" name="accion" value="Actualizar" class="btn btn-outline-secondary">
                         </div>
                     </div>
                 </div>
