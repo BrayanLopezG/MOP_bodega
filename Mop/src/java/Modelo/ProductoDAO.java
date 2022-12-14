@@ -10,7 +10,7 @@ public class ProductoDAO {
     String lista_producto = "SELECT * FROM producto";
     String producto_factura = "SELECT * FROM producto WHERE factura_id = ?";
     String agregar_producto = "INSERT INTO producto(idProducto,descripcion,cantidad,factura_id,bodega_id,medida_id) VALUES(?,?,?,?,?,?)";
-    String borrar_producto = "DELETE FROM producto where idProducto = ?";
+    String borrar_producto = "DELETE FROM producto WHERE idProducto = ?";
     BodegaDAO bodega;
     Connection conexion;
     
@@ -26,7 +26,7 @@ public class ProductoDAO {
             ps = conexion.prepareStatement(Auto_ID);
             rs = ps.executeQuery();
             while (rs.next()){
-                id = rs.getInt("COUNT(idFactura)");
+                id = rs.getInt(1);
             }
             ps.close();
             rs.close();

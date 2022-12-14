@@ -50,7 +50,7 @@
                         </div>
                         <div class="col-6">
                             <div class="form-group">
-                                <form action="Controlador?menu=nuevafactura" method="POST" enctype="multipart/form-data">
+                                <form action="Controlador?menu=nuevafactura&accion=lista" method="POST" enctype="multipart/form-data">
                                     <h3>Completar Datos Factura</h3>
                                     <label>Numero Factura</label>
                                     <input class="form-control" id="txtnrofactura" name="txtnrofactura" type="text" placeholder="Ingresar Numero Factura">

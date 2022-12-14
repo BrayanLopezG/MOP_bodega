@@ -99,7 +99,7 @@ public final class Factura_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        </div>\n");
       out.write("                        <div class=\"col-6\">\n");
       out.write("                            <div class=\"form-group\">\n");
-      out.write("                                <form action=\"Controlador?menu=nuevafactura\" method=\"POST\" enctype=\"multipart/form-data\">\n");
+      out.write("                                <form action=\"Controlador?menu=nuevafactura&accion=lista\" method=\"POST\" enctype=\"multipart/form-data\">\n");
       out.write("                                    <h3>Completar Datos Factura</h3>\n");
       out.write("                                    <label>Numero Factura</label>\n");
       out.write("                                    <input class=\"form-control\" id=\"txtnrofactura\" name=\"txtnrofactura\" type=\"text\" placeholder=\"Ingresar Numero Factura\">\n");

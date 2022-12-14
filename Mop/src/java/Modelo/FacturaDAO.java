@@ -26,7 +26,7 @@ public class FacturaDAO {
             ps = conexion.prepareStatement(Auto_ID);
             rs = ps.executeQuery();
             while (rs.next()){
-                id = rs.getInt("COUNT(idFactura)");
+                id = rs.getInt(1);
             }
             ps.close();
             rs.close();
@@ -91,9 +91,9 @@ public class FacturaDAO {
                 String nro_factura = rs.getString(2);
                 String orden_compra = rs.getString(3);
                 String fecha = rs.getString(4);
-                byte[] facturapdf = rs.getBytes(5);
-                int proveedor = rs.getInt(6);
-                factura = new Factura(id, proveedor, nro_factura, orden_compra,fecha,facturapdf);
+                byte[] archivo = rs.getBytes(5);
+                int id_proveedor = rs.getInt(6);
+                factura = new Factura(id, id_proveedor, nro_factura, orden_compra, fecha, archivo);
             }
             ps.close();
             rs.close();

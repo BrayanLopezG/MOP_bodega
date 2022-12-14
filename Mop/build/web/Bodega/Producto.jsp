@@ -28,26 +28,38 @@
         <div class="container">
             <form action="Controlador?menu=nuevoproducto" method="POST">
                 <div class="row">
-                    <div class="col">
-                        <br>
+                    <div class="col-12">
                         <h3>Agregar Producto</h3>
                         <br>
-                        <select id="bodega" name="bodega" class="custom-select">
-                            <%
-                                BodegaDAO bdao = new BodegaDAO();
-                                List<Bodega> listabodega = bdao.listaBodega();
-                                Iterator<Bodega> iteratorbodega = listabodega.iterator();
-                                Bodega bodega = null;
-                                while (iteratorbodega.hasNext()) {
-                                    bodega = iteratorbodega.next();
-                            %>
-                            <option value="<%= bodega.getId_bodega()%>"><%= bodega.getNombre_bodega()%></option>
-                            <%}%>
-                        </select>
-                        <div class="input-group mb-3">
-                            <br>
-                            <input type="text" class="form-control" id="txtdescripcion" name="txtdescripcion" placeholder="Descripcion del Producto">
-                            <div class="input-group-append">
+                        <div class="row">
+                            <div class="col-6">
+                                <p>Seleccionar bodega</p>
+                                <select id="bodega" name="bodega" class="custom-select">
+                                    <%
+                                        BodegaDAO bdao = new BodegaDAO();
+                                        List<Bodega> listabodega = bdao.listaBodega();
+                                        Iterator<Bodega> iteratorbodega = listabodega.iterator();
+                                        Bodega bodega = null;
+                                        while (iteratorbodega.hasNext()) {
+                                            bodega = iteratorbodega.next();
+                                    %>
+                                    <option value="<%= bodega.getId_bodega()%>"><%= bodega.getNombre_bodega()%></option>
+                                    <%}%>
+                                </select>
+                            </div>
+                            <div class="col-6">
+                                <p>Orden de compra</p>
+                                <input type="text" class="form-control" id="txtfactura" name="txtfactura" value="${factura.getOrden_compra()}" disabled>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-3">
+                                <p>Descripcion del Producto</p>
+                                <input type="text" class="form-control" id="txtdescripcion" name="txtdescripcion" placeholder="Descripcion del Producto">
+                            </div>
+                            <div class="col-3">
+                                <p>Seleccionar Medida</p>
                                 <select id="medida" name="medida" class="custom-select">
                                     <%
                                         MedidaDAO medidadao = new MedidaDAO();
@@ -61,14 +73,19 @@
                                     <%}%>
                                 </select>
                             </div>
-                            <input type="text" class="form-control" id="txtfacturaid" name="txtfacturaid" value="${factura.getOrden_compra()}" disabled>
-                            <input type="text" class="form-control" id="txtcantidad" name="txtcantidad" placeholder="Cantidad">
-                            <input type="submit" name="accion" value="Agregar" class="btn btn-outline-success">
-                            <input type="submit" name="accion" value="Actualizar" class="btn btn-outline-secondary">
+                            <div class="col-3">
+                                <p>Indique la Cantidad</p>
+                                <input type="text" class="form-control" id="txtcantidad" name="txtcantidad" placeholder="Cantidad">
+                            </div>
+                            <div class="col-3">
+                                <p>Finalizar Registro</p>
+                                <input type="submit" name="accion" value="Agregar" class="btn btn-outline-success">
+                            </div>
                         </div>
                     </div>
                 </div>
             </form>
+            <br>
             <div class="row">
                 <div class="col-12">
                     <table class="table table-hover">
@@ -86,24 +103,20 @@
                         <tbody>
                             <c:forEach var="producto" items="${listar}">
                                 <tr>
-                                    <td><c:out value="${producto.id_producto}"></c:out></td>
+                                    <td><c:out value="${producto.idproducto}"></c:out></td>
                                     <td><c:out value="${producto.descripcion}"></c:out></td>
                                     <td><c:out value="${producto.cantidad}"></c:out></td>
                                     <td><c:out value="${producto.facturaid}"></c:out></td>
                                     <td><c:out value="${producto.bodegaid}"></c:out></td>
                                     <td><c:out value="${producto.medida_id}"></c:out></td>
-                                    <td>
-                                        <a href="Controlador?menu=modificar&id=${producto.id_producto}" role="button" class="btn btn-outline-warning">Modificar</a>
-                                        <a href="Controlador?menu=eliminar&id=${producto.id_producto}" role="button" class="btn btn-outline-danger">Eliminar</a>
+                                        <td>
+                                            <a href="Controlador?menu=eliminar&id=${producto.idproducto}" role="button" class="btn btn-outline-danger">Eliminar</a>
                                     </td>
                                 </tr>
                             </c:forEach>
                         </tbody>
                     </table>
                 </div>
-            </div>
-            <div class="d-flex justify-content-start">
-                <a href="" class="btn btn-outline-primary">Finalizar</a>
             </div>
         </div>
     </body>

@@ -18,21 +18,32 @@
     </head>
     <body>
         <div class="container">
-            <h1>Inciar Sesion</h1>
             <br>
-            <form action="Validar" method="POST">
-                <div class="form-group">
-                    <label>Usuario</label>
-                    <input class="form-control" id="txtusuario" name="txtusuario" type="text" placeholder="Ingresar Usuario">
-                    <label>Contraseña</label>
-                    <input class="form-control" id="txtcontra" name="txtcontra" type="password" placeholder="Ingresar Contraseña">
-                    <br>
-                    <a href="Controlador?accion=registrar">Registrar</a>
-                    <br>
-                    <br>
-                    <button type="submit" name="accion" value="ingresar" class="btn btn-primary">Ingresar</button>
+            <div class="d-flex justify-content-center">
+                <div class="card" style="width: 500px;">
+                    <div class="card-header">
+                        <h1 style="text-align: center;">Inciar Sesion</h1>
+                        <div class="d-flex justify-content-center">
+                            <img src="img/vialidad.jpg" alt="logo">
+                        </div>
+                        <div class="card-body">
+                            <form action="Validar" method="POST">
+                                <div class="form-group">
+                                    <label>Usuario</label>
+                                    <input class="form-control" id="txtusuario" name="txtusuario" type="text" placeholder="Ingresar Usuario">
+                                    <br>
+                                    <label>Contraseña</label>
+                                    <input class="form-control" id="txtcontra" name="txtcontra" type="password" placeholder="Ingresar Contraseña">
+                                    <br>
+                                    <div style="text-align: center;">
+                                        <button type="submit" name="accion" value="ingresar" class="btn btn-lg btn-outline-primary">Ingresar</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-            </form>
+            </div>
         </div>
     </body>
 </html>

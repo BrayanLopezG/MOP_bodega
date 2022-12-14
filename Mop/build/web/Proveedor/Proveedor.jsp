@@ -25,34 +25,39 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col">
-                    <form action="Controlador?accion=nuevoproveedor" method="POST">
-                        <div class="form-group">
-                            <br>
-                            <h3>Datos Proveedor</h3>
-                            <label>Rut</label>
-                            <input class="form-control" id="txtrutproveedor" name="txtrutproveedor" type="text" placeholder="Ingresar Rut Proveedor">
-                            <label>Nombre</label>
-                            <input class="form-control" id="txtnombreproveedor" name="txtnombreproveedor" type="text" placeholder="Ingresar Nombre Proveedor">
-                            <label>Telefono</label>
-                            <input class="form-control" id="txttelefono" name="txttelefono" type="text" placeholder="Ingresar Telefono Proveedor">
-                            <label>Direccion</label>
-                            <input class="form-control" id="txtdireccion" name="txtdireccion" type="text" placeholder="Ingresar Direccion Proveedor">
-                            <br>
-                            <button type="submit" class="btn btn-primary">Registrar</button>
-                            <a href="Controlador?acccion=atras" class="btn btn-secondary" role="button">Atras</a>
+                    <form action="Controlador?menu=proveedor" method="POST">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 style="text-align: center;">Datos Proveedor</h3>
+                            </div>
+                            <div class="card-body">
+                                <label>Rut</label>
+                                <input class="form-control" id="txtrutproveedor" name="txtrutproveedor" type="text" placeholder="Ingresar Rut Proveedor">
+                                <label>Nombre</label>
+                                <input class="form-control" id="txtnombreproveedor" name="txtnombreproveedor" type="text" placeholder="Ingresar Nombre Proveedor">
+                                <label>Telefono</label>
+                                <input class="form-control" id="txttelefono" name="txttelefono" type="text" placeholder="Ingresar Telefono Proveedor">
+                                <label>Direccion</label>
+                                <input class="form-control" id="txtdireccion" name="txtdireccion" type="text" placeholder="Ingresar Direccion Proveedor">
+                            </div> 
+                            <div class="card-footer" style="text-align: center;">
+                                <input type="submit" name="accion" value="Registrar" class="btn btn-outline-primary">
+                            </div>
                         </div>
                     </form>
                 </div>
                 <div class="col-lg-8">
                     <br>
-                    <form class="form-inline" action="Controlador?accion=buscar" method="POST">
-                        <div class="input-group mb-3">
-                            <input type="search" id="txtbuscar" name="txtbuscar" class="sm-form-control" placeholder="Buscar">
-                            <div class="input-group-append">
-                                <input class="btn btn-outline-success" type="submit"  value="Buscar">
+                    <div class="d-flex justify-content-center">
+                        <form class="form-inline" action="Controlador?menu=proveedor&accion=buscar" method="POST">
+                            <div class="input-group mb-3">
+                                <input type="search" id="txtbuscar" name="txtbuscar" class="sm-form-control" placeholder="Buscar">
+                                <div class="input-group-append">
+                                    <input class="btn btn-outline-success" type="submit"  value="Buscar">
+                                </div>
                             </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                     <table class="table table-hover">
                         <thead>
                             <tr>
