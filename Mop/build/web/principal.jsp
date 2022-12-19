@@ -49,7 +49,7 @@
                                     <div class="dropdown-menu" aria-labelledby="dropdownbuttonbodega">
                                         <a class="dropdown-item" href="Controlador?menu=usuario" target="bodega">Nuevo Usuario</a>
                                         <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="Controlador?menu=lista" target="bodega">Lista Usuario</a>   
+                                        <a class="dropdown-item" href="Controlador?menu=listausuario" target="bodega">Lista Usuario</a>   
                                     </div>
                                 </div>
                             </li>

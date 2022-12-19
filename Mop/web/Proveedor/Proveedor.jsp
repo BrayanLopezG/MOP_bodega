@@ -25,7 +25,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col">
-                    <form action="Controlador?menu=proveedor" method="POST">
+                    <form action="Controlador?menu=nuevoproveedor" method="POST">
                         <div class="card">
                             <div class="card-header">
                                 <h3 style="text-align: center;">Datos Proveedor</h3>
@@ -41,7 +41,7 @@
                                 <input class="form-control" id="txtdireccion" name="txtdireccion" type="text" placeholder="Ingresar Direccion Proveedor">
                             </div> 
                             <div class="card-footer" style="text-align: center;">
-                                <input type="submit" name="accion" value="Registrar" class="btn btn-outline-primary">
+                                <input type="submit" value="Registrar" class="btn btn-outline-primary">
                             </div>
                         </div>
                     </form>
@@ -49,7 +49,7 @@
                 <div class="col-lg-8">
                     <br>
                     <div class="d-flex justify-content-center">
-                        <form class="form-inline" action="Controlador?menu=proveedor&accion=buscar" method="POST">
+                        <form class="form-inline" action="Controlador?menu=buscar" method="POST">
                             <div class="input-group mb-3">
                                 <input type="search" id="txtbuscar" name="txtbuscar" class="sm-form-control" placeholder="Buscar">
                                 <div class="input-group-append">

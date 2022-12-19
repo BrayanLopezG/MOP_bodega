@@ -19,21 +19,32 @@
     </head>
     <body>
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <br>
-                    <form action="Controlador?menu=listarproveedor" method="POST">
-                        <h3>Buscar Proveedor</h3>
-                        <div class="input-group mb-3">
-                            <input type="text" class="sm-form-control" id="txtrut" name="txtrut" placeholder="Rut Proveedor">
-                            <div class="input-group-append">
-                                <input class="btn btn-outline-success" type="submit" value="Buscar">
-                                <a href="Controlador?menu=proveedor" class="btn btn-outline-secondary" role="button">Agregar</a>
-                            </div>
-                        </div>
-                    </form>
+            <div class="card">
+                <div class="card-header">
+                    <div class="d-flex justify-content-between">
+                        <h3>Nueva Factura</h3>
+                        <img src="img/vialidad.jpg" alt="Logo" style="width: 80px;">
+                    </div>
+                </div>
+                <div class="card-body">
                     <div class="row">
                         <div class="col-6">
+                            <div class="d-flex justify-content-center">
+                                <form action="Controlador?menu=listarproveedor" method="POST">
+                                    <div class="d-flex justify-content-center">
+                                        <h3>Buscar Proveedor</h3>
+                                    </div>
+                                    <div>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="sm-form-control" id="txtrut" name="txtrut" placeholder="Rut Proveedor">
+                                            <div class="input-group-append">
+                                                <input class="btn btn-outline-success" type="submit" value="Buscar">
+                                                <a href="Controlador?menu=proveedor" class="btn btn-outline-secondary" role="button">Agregar</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
                             <div class="form-group">
                                 <c:forEach var="proveedor" items="${lista}">
                                     <h3>Informacion Proveedor</h3>
@@ -49,9 +60,10 @@
                             </div>
                         </div>
                         <div class="col-6">
+                            <br><br><br><br>
                             <div class="form-group">
-                                <form action="Controlador?menu=nuevafactura&accion=lista" method="POST" enctype="multipart/form-data">
-                                    <h3>Completar Datos Factura</h3>
+                                <form action="Controlador?menu=nuevafactura" method="POST" enctype="multipart/form-data">
+                                    <h3>Completar Informacion de Factura</h3>
                                     <label>Numero Factura</label>
                                     <input class="form-control" id="txtnrofactura" name="txtnrofactura" type="text" placeholder="Ingresar Numero Factura">
                                     <label>Orden de Compra</label>
@@ -60,7 +72,7 @@
                                         <label>Fecha Factura</label>
                                         <input class="form-control" id="txtfecha" name="txtfecha" type="date">
                                     </div>
-                                    <br>
+                                    <label>Adjuntar Factura</label>
                                     <input type="file" class="form-control-file border" id="factura" name="factura">
                                     <br>
                                     <button type="submit" class="btn btn-outline-primary">Siguiente</button>

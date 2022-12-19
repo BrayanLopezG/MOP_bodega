@@ -162,7 +162,7 @@ public final class principal_jsp extends org.apache.jasper.runtime.HttpJspBase
         out.write("                                    <div class=\"dropdown-menu\" aria-labelledby=\"dropdownbuttonbodega\">\n");
         out.write("                                        <a class=\"dropdown-item\" href=\"Controlador?menu=usuario\" target=\"bodega\">Nuevo Usuario</a>\n");
         out.write("                                        <div class=\"dropdown-divider\"></div>\n");
-        out.write("                                        <a class=\"dropdown-item\" href=\"Controlador?menu=lista\" target=\"bodega\">Lista Usuario</a>   \n");
+        out.write("                                        <a class=\"dropdown-item\" href=\"Controlador?menu=listausuario\" target=\"bodega\">Lista Usuario</a>   \n");
         out.write("                                    </div>\n");
         out.write("                                </div>\n");
         out.write("                            </li>\n");

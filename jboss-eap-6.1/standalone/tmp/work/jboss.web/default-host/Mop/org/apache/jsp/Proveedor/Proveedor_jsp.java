@@ -86,7 +86,7 @@ public final class Proveedor_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <div class=\"container-fluid\">\n");
       out.write("            <div class=\"row\">\n");
       out.write("                <div class=\"col\">\n");
-      out.write("                    <form action=\"Controlador?menu=proveedor\" method=\"POST\">\n");
+      out.write("                    <form action=\"Controlador?menu=nuevoproveedor\" method=\"POST\">\n");
       out.write("                        <div class=\"card\">\n");
       out.write("                            <div class=\"card-header\">\n");
       out.write("                                <h3 style=\"text-align: center;\">Datos Proveedor</h3>\n");
@@ -102,7 +102,7 @@ public final class Proveedor_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                <input class=\"form-control\" id=\"txtdireccion\" name=\"txtdireccion\" type=\"text\" placeholder=\"Ingresar Direccion Proveedor\">\n");
       out.write("                            </div> \n");
       out.write("                            <div class=\"card-footer\" style=\"text-align: center;\">\n");
-      out.write("                                <input type=\"submit\" name=\"accion\" value=\"Registrar\" class=\"btn btn-outline-primary\">\n");
+      out.write("                                <input type=\"submit\" value=\"Registrar\" class=\"btn btn-outline-primary\">\n");
       out.write("                            </div>\n");
       out.write("                        </div>\n");
       out.write("                    </form>\n");
@@ -110,7 +110,7 @@ public final class Proveedor_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <div class=\"col-lg-8\">\n");
       out.write("                    <br>\n");
       out.write("                    <div class=\"d-flex justify-content-center\">\n");
-      out.write("                        <form class=\"form-inline\" action=\"Controlador?menu=proveedor&accion=buscar\" method=\"POST\">\n");
+      out.write("                        <form class=\"form-inline\" action=\"Controlador?menu=buscar\" method=\"POST\">\n");
       out.write("                            <div class=\"input-group mb-3\">\n");
       out.write("                                <input type=\"search\" id=\"txtbuscar\" name=\"txtbuscar\" class=\"sm-form-control\" placeholder=\"Buscar\">\n");
       out.write("                                <div class=\"input-group-append\">\n");

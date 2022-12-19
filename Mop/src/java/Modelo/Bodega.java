@@ -1,23 +1,31 @@
 package Modelo;
 
 public class Bodega extends Usuario{
-    int id_bodega,stock,usuario;
+    int id_bodega,usuario;
     String nombre_bodega,direccion_bodega;
 
     public Bodega() {
     }
 
-    public Bodega(int id_bodega, int stock, int usuario, String nombre_bodega, String direccion_bodega) {
+    public Bodega(int id_bodega, String nombre, String apellido, String descripcion_perfil) {
+        super(nombre, apellido, descripcion_perfil);
         this.id_bodega = id_bodega;
-        this.stock = stock;
+    }
+
+    public Bodega(int id_bodega, int usuario, String nombre_bodega, String direccion_bodega) {
+        this.id_bodega = id_bodega;
         this.usuario = usuario;
         this.nombre_bodega = nombre_bodega;
         this.direccion_bodega = direccion_bodega;
     }
 
-    public Bodega(int id_bodega, int stock,  int usuario, String nombre_bodega, String direccion_bodega, int idusuario, int perfil_id, String nombre_usuario, String contrasenha) {
+    public Bodega(int idusuario, int perfil_id, String nombre, String apellido, String rut, String nombre_usuario, String contrasenha, int idperfil, String descripcion_perfil) {
+        super(idusuario, perfil_id, nombre, apellido, rut, nombre_usuario, contrasenha, idperfil, descripcion_perfil);
+    }
+
+    public Bodega(int id_bodega, int usuario, String nombre_bodega, String direccion_bodega, int idusuario, int perfil_id, String nombre, String apellido, String rut, String nombre_usuario, String contrasenha, int idperfil, String descripcion_perfil) {
+        super(idusuario, perfil_id, nombre, apellido, rut, nombre_usuario, contrasenha, idperfil, descripcion_perfil);
         this.id_bodega = id_bodega;
-        this.stock = stock;
         this.usuario = usuario;
         this.nombre_bodega = nombre_bodega;
         this.direccion_bodega = direccion_bodega;
@@ -29,14 +37,6 @@ public class Bodega extends Usuario{
 
     public void setId_bodega(int id_bodega) {
         this.id_bodega = id_bodega;
-    }
-
-    public int getStock() {
-        return stock;
-    }
-
-    public void setStock(int stock) {
-        this.stock = stock;
     }
 
     public int getUsuario() {
@@ -62,5 +62,5 @@ public class Bodega extends Usuario{
     public void setDireccion_bodega(String direccion_bodega) {
         this.direccion_bodega = direccion_bodega;
     }
-    
+
 }

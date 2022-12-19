@@ -6,6 +6,10 @@ public class PerfilUsuario {
 
     public PerfilUsuario() {
     }
+
+    public PerfilUsuario(String descripcion_perfil) {
+        this.descripcion_perfil = descripcion_perfil;
+    }
     
     public PerfilUsuario(int idperfil, String descripcion_perfil) {
         this.idperfil = idperfil;

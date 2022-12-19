@@ -17,6 +17,55 @@
         <title>Solicitud</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 style="text-align: center;">Solicitud</h4>
+                        </div>
+                        <div class="card-body">
+                            <label>Descripcion</label>
+                            <input class="form-control" id="txtproducto" name="txtproducto">
+                            <label>Medida</label>
+                            <input class="form-control" id="txtmedida" name="txtmedida">
+                            <label>Cantidad</label>
+                            <input class="form-control" id="txtcantidad" name="txtcantidad">
+                            <label>Stock</label>
+                            <input class="form-control" id="txtstock" name="txtstock">
+                            <label>Bodega</label>
+                            <input class="form-control" id="txtbodega" name="txtbodega">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <div class="d-flex justify-content-center">
+                        <form class="form-inline" action="Controlador?menu=buscarproducto" method="POST">
+                            <div class="input-group mb-3">
+                                <input type="search" id="txtbuscar" name="txtbuscar" class="sm-form-control" placeholder="Buscar">
+                                <div class="input-group-append">
+                                    <input class="btn btn-outline-success" type="submit"  value="Buscar">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Medida</th>
+                                <th>Cantidad</th>
+                                <th>Bodega</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>       
     </body>
 </html>

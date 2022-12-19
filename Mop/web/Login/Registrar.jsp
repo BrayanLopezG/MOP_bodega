@@ -19,28 +19,50 @@
     </head>
     <body>
         <div class="container">
-            <h1>Nuevo Bodeguero</h1>
-            <div class="form-group">
-                <form action="Controlador?accion=guardar" method="POST">
-                    <label>Usuario:</label>
-                    <input class="form-control" id="txtusuario" name="txtusuario" type="text" placeholder="Ingresar Usuario">
-                    <label>Contraseña:</label>
-                    <input class="form-control" id="txtcontra" name="txtcontra" type="password" placeholder="Ingresar Contraseña">
-                    <label>Repetir Contraseña:</label>
-                    <input class="form-control" id="txtcontra2" name="txtcontra2" type="password" placeholder="Repetir Contraseña">                         
-                    <label>Cargo:</label>
-                    <select name="perfilU" class="custom-select">
-                        <option selected> Seleccionar </option>
-                        <option value="1">Administrador</option>
-                        <option value="2">Bienes</option>
-                        <option value="3">Prevención de Riesgo</option>
-                    </select>
-                    <br>
-                    <br>
-                    <button type="submit" class="btn btn-primary">Registrar</button>
-                    <a href="Controlador?accion=atras" class="btn btn-secondary" role="button">Atras</a>
-                </form>
-            </div>
-        </div>
+            <form action="Controlador?menu=guardar" method="POST">
+                <div class="card">
+                    <div class="card-header bg-light">
+                        <div class="d-flex justify-content-between">
+                            <h1>Nuevo Usuario</h1>
+                            <img src="img/vialidad.jpg" alt="Logo" style="width: 100px">
+                        </div>    
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-6">
+                                    <h3 style="text-align: center">Información de la cuenta</h3>
+                                    <label>Usuario:</label>
+                                    <input class="form-control" id="txtusuario" name="txtusuario" type="text" placeholder="Ingresar Usuario">
+                                    <label>Contraseña:</label>
+                                    <input class="form-control" id="txtcontra1" name="txtcontra1" type="password" placeholder="Ingresar Contraseña">
+                                    <label>Repetir Contraseña:</label>
+                                    <input class="form-control" id="txtcontra2" name="txtcontra2" type="password" placeholder="Repetir Contraseña">                         
+                                    <label>Cargo:</label>
+                                    <select name="perfilU" class="custom-select">
+                                        <option selected> Seleccionar </option>
+                                        <option value="1">Administrador</option>
+                                        <option value="2">Bienes</option>
+                                        <option value="3">Prevención de Riesgo</option>
+                                    </select>
+                                </div>
+                                <div class="col-6">
+                                    <h3 style="text-align: center">Información Personal</h3>                                    
+                                    <label>Nombre:</label>
+                                    <input class="form-control" id="txtnombre" name="txtnombre" type="text" placeholder="Ingresar Nombre del Funcionario">
+                                    <label>Apellido:</label>
+                                    <input class="form-control" id="txtapellido" name="txtapellido" type="text" placeholder="Ingresar Apellido del Funcionario">
+                                    <label>RUN:</label>
+                                    <input class="form-control" id="txtrut" name="txtrut" type="text" placeholder="Ingresar RUN del Funcionario">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer" style="text-align: center;">
+                        <button type="submit" class="btn btn-lg btn-outline-primary">Registrar</button>
+                    </div>
+                </div>
+            </form>
+        </div>  
     </body>
 </html>

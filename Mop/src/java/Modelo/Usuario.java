@@ -24,6 +24,12 @@ public class Usuario extends PerfilUsuario{
         this.contrasenha = contrasenha;
     }
 
+    public Usuario(String nombre, String apellido, String descripcion_perfil) {
+        super(descripcion_perfil);
+        this.nombre = nombre;
+        this.apellido = apellido;
+    }
+
     public Usuario(int idperfil, String descripcion_perfil) {
         super(idperfil, descripcion_perfil);
     }

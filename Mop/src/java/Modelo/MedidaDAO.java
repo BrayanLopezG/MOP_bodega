@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MedidaDAO {
-    String Lista_Medida = "SELECT * FROM medida";
+    String Lista_Medida = "SELECT * FROM tipo_medida";
     Connection conexion;
     
     public MedidaDAO(){

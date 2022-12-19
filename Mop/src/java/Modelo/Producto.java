@@ -4,7 +4,20 @@ import java.io.InputStream;
 
 public class Producto extends Factura{
     int idproducto,facturaid,medida_id,bodegaid;
-    String descripcion,cantidad;
+    String descripcion,cantidad,pnombre_bodega,pdireccion_bodega,pdescripcion_medida; 
+
+    public Producto(int id_proveedor, String rut_proveedor, String nombre_proveedor, String telefono_proveedor, String direccion_proveedor) {
+        super(id_proveedor, rut_proveedor, nombre_proveedor, telefono_proveedor, direccion_proveedor);
+    }
+
+    public Producto(int idproducto, String descripcion, String cantidad, String pnombre_bodega, String pdescripcion_medida, String orden_compra) {
+        super(orden_compra);
+        this.idproducto = idproducto;
+        this.descripcion = descripcion;
+        this.cantidad = cantidad;
+        this.pnombre_bodega = pnombre_bodega;
+        this.pdescripcion_medida = pdescripcion_medida;
+    }
 
     public Producto(int idproducto, int facturaid, int medida_id, int bodegaid, String descripcion, String cantidad) {
         this.idproducto = idproducto;
@@ -15,22 +28,9 @@ public class Producto extends Factura{
         this.cantidad = cantidad;
     }
 
-    public Producto(int idproducto, int facturaid, int medida_id, int bodegaid, String descripcion, String cantidad, int id_factura, int proveedor_id, String nro_factura, String orden_compra, String fecha_factura, InputStream facturapdf, byte[] factura, int id_proveedor, String rut_proveedor, String nombre_proveedor, String telefono_proveedor, String direccion_proveedor) {
-        super(id_factura, proveedor_id, nro_factura, orden_compra, fecha_factura, facturapdf, factura, id_proveedor, rut_proveedor, nombre_proveedor, telefono_proveedor, direccion_proveedor);
-        this.idproducto = idproducto;
-        this.facturaid = facturaid;
-        this.medida_id = medida_id;
-        this.bodegaid = bodegaid;
-        this.descripcion = descripcion;
-        this.cantidad = cantidad;
-    }
-
-    public Producto(int id_factura, int proveedor_id, String nro_factura, String orden_compra, String fecha_factura, InputStream facturapdf, byte[] factura, int id_proveedor, String rut_proveedor, String nombre_proveedor, String telefono_proveedor, String direccion_proveedor) {
-        super(id_factura, proveedor_id, nro_factura, orden_compra, fecha_factura, facturapdf, factura, id_proveedor, rut_proveedor, nombre_proveedor, telefono_proveedor, direccion_proveedor);
-    }
-
     public Producto() {
     }
+    
 
     public int getIdproducto() {
         return idproducto;
@@ -79,5 +79,31 @@ public class Producto extends Factura{
     public void setCantidad(String cantidad) {
         this.cantidad = cantidad;
     }
+
+    public String getPnombre_bodega() {
+        return pnombre_bodega;
+    }
+
+    public void setPnombre_bodega(String pnombre_bodega) {
+        this.pnombre_bodega = pnombre_bodega;
+    }
+
+    public String getPdireccion_bodega() {
+        return pdireccion_bodega;
+    }
+
+    public void setPdireccion_bodega(String pdireccion_bodega) {
+        this.pdireccion_bodega = pdireccion_bodega;
+    }
+
+    public String getPdescripcion_medida() {
+        return pdescripcion_medida;
+    }
+
+    public void setPdescripcion_medida(String pdescripcion_medida) {
+        this.pdescripcion_medida = pdescripcion_medida;
+    }
+
+    
  
 }

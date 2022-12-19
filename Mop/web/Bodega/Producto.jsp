@@ -5,12 +5,6 @@
 --%>
 
 
-<%@page import="Modelo.Bodega"%>
-<%@page import="Modelo.BodegaDAO"%>
-<%@page import="java.util.Iterator"%>
-<%@page import="Modelo.Medida"%>
-<%@page import="java.util.List"%>
-<%@page import="Modelo.MedidaDAO"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -26,97 +20,89 @@
     </head>
     <body>
         <div class="container">
-            <form action="Controlador?menu=nuevoproducto" method="POST">
-                <div class="row">
-                    <div class="col-12">
-                        <h3>Agregar Producto</h3>
-                        <br>
-                        <div class="row">
-                            <div class="col-6">
-                                <p>Seleccionar bodega</p>
-                                <select id="bodega" name="bodega" class="custom-select">
-                                    <%
-                                        BodegaDAO bdao = new BodegaDAO();
-                                        List<Bodega> listabodega = bdao.listaBodega();
-                                        Iterator<Bodega> iteratorbodega = listabodega.iterator();
-                                        Bodega bodega = null;
-                                        while (iteratorbodega.hasNext()) {
-                                            bodega = iteratorbodega.next();
-                                    %>
-                                    <option value="<%= bodega.getId_bodega()%>"><%= bodega.getNombre_bodega()%></option>
-                                    <%}%>
-                                </select>
-                            </div>
-                            <div class="col-6">
-                                <p>Orden de compra</p>
-                                <input type="text" class="form-control" id="txtfactura" name="txtfactura" value="${factura.getOrden_compra()}" disabled>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row">
-                            <div class="col-3">
-                                <p>Descripcion del Producto</p>
-                                <input type="text" class="form-control" id="txtdescripcion" name="txtdescripcion" placeholder="Descripcion del Producto">
-                            </div>
-                            <div class="col-3">
-                                <p>Seleccionar Medida</p>
-                                <select id="medida" name="medida" class="custom-select">
-                                    <%
-                                        MedidaDAO medidadao = new MedidaDAO();
-                                        List<Medida> listamedida = medidadao.listaMedida();
-                                        Iterator<Medida> iteratormedida = listamedida.iterator();
-                                        Medida medida = null;
-                                        while (iteratormedida.hasNext()) {
-                                            medida = iteratormedida.next();
-                                    %>
-                                    <option value="<%= medida.getId_medida()%>"><%= medida.getDescripcion()%></option>
-                                    <%}%>
-                                </select>
-                            </div>
-                            <div class="col-3">
-                                <p>Indique la Cantidad</p>
-                                <input type="text" class="form-control" id="txtcantidad" name="txtcantidad" placeholder="Cantidad">
-                            </div>
-                            <div class="col-3">
-                                <p>Finalizar Registro</p>
-                                <input type="submit" name="accion" value="Agregar" class="btn btn-outline-success">
-                            </div>
-                        </div>
+            <div class="card">
+                <div class="card-header">
+                    <div class="d-flex justify-content-between">
+                        <h3>Nueva Factura</h3>
+                        <img src="img/vialidad.jpg" alt="Logo" style="width: 80px;">
                     </div>
                 </div>
-            </form>
-            <br>
-            <div class="row">
-                <div class="col-12">
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th>Codigo Producto</th>
-                                <th>Descripcion</th>
-                                <th>Cantidad</th>
-                                <th>Codigo Factura</th>
-                                <th>Bodega</th>
-                                <th>Medida</th>
-                                <th>Configuracion</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <c:forEach var="producto" items="${listar}">
-                                <tr>
-                                    <td><c:out value="${producto.idproducto}"></c:out></td>
-                                    <td><c:out value="${producto.descripcion}"></c:out></td>
-                                    <td><c:out value="${producto.cantidad}"></c:out></td>
-                                    <td><c:out value="${producto.facturaid}"></c:out></td>
-                                    <td><c:out value="${producto.bodegaid}"></c:out></td>
-                                    <td><c:out value="${producto.medida_id}"></c:out></td>
-                                        <td>
-                                            <a href="Controlador?menu=eliminar&id=${producto.idproducto}" role="button" class="btn btn-outline-danger">Eliminar</a>
-                                    </td>
-                                </tr>
-                            </c:forEach>
-                        </tbody>
-                    </table>
+                <div class="card-body">
+                    <form action="Controlador?menu=nuevoproducto" method="POST">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <p>Seleccionar bodega</p>
+                                        <select id="bodega" name="bodega" class="custom-select">
+                                            <c:forEach var="bodega" items="${bodega}">
+                                                <option value="<c:out value="${bodega.id_bodega}"></c:out>"><c:out value="${bodega.nombre_bodega}"></c:out></option>
+                                            </c:forEach>
+                                        </select>
+                                    </div>
+                                    <div class="col-6">
+                                        <p>Orden de compra</p>
+                                        <input type="text" class="form-control" id="txtfactura" name="txtfactura" value="${factura.getOrden_compra()}" disabled>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <p>Descripcion del Producto</p>
+                                        <input type="text" class="form-control" id="txtdescripcion" name="txtdescripcion" placeholder="Descripcion del Producto">
+                                    </div>
+                                    <div class="col-3">
+                                        <p>Seleccionar Medida</p>
+                                        <select id="medida" name="medida" class="custom-select">
+                                            <c:forEach var="medida" items="${medida}">
+                                                <option value="<c:out value="${medida.id_medida}"></c:out>"><c:out value="${medida.descripcion}"></c:out></option>
+                                            </c:forEach>
+                                        </select>
+                                    </div>
+                                    <div class="col-3">
+                                        <p>Indique la Cantidad</p>
+                                        <input type="text" class="form-control" id="txtcantidad" name="txtcantidad" placeholder="Cantidad">
+                                    </div>
+                                    <div class="col-3">
+                                        <p>Finalizar Registro</p>
+                                        <input type="submit" name="accion" value="Agregar" class="btn btn-outline-success">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
+                <br>
+            </div>
+            <div>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Codigo</th>
+                            <th>Descripcion</th>
+                            <th>Orden de Compra</th>
+                            <th>Cantidad</th>
+                            <th>Bodega</th>
+                            <th>Medida</th>
+                            <th>Opciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <c:forEach var="producto" items="${listar}">
+                            <tr>
+                                <td><c:out value="${producto.idproducto}"></c:out></td>
+                                <td><c:out value="${producto.descripcion}"></c:out></td>
+                                <td><c:out value="${producto.orden_compra}"></c:out></td>
+                                <td><c:out value="${producto.cantidad}"></c:out></td>
+                                <td><c:out value="${producto.pnombre_bodega}"></c:out></td>
+                                <td><c:out value="${producto.pdescripcion_medida}"></c:out></td>
+                                <td>
+                                    <a href="Controlador?menu=eliminar&id=<c:out value="${producto.idproducto}"></c:out>" class="btn btn-outline-danger">Quitar</a>
+                                </td>
+                            </tr>
+                        </c:forEach>
+                    </tbody>
+                </table>
             </div>
         </div>
     </body>

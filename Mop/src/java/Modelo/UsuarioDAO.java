@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UsuarioDAO {
-    String insertar_usuario = "INSERT INTO usuario(idUsuario,nombre_usuario,contrasenha,perfil_id) VALUES(?,?,?,?)";
+    String insertar_usuario = "INSERT INTO usuario(idUsuario,nombre,apellido,rut,nombre_usuario,contrasenha,perfil_id) VALUES(?,?,?,?,?,?,?)";
     String validar_usuario = "SELECT usuario.nombre,usuario.apellido,usuario.rut,usuario.nombre_usuario, usuario.contrasenha, perfil_usuario.descripcion_perfil FROM usuario JOIN perfil_usuario ON perfil_usuario.idPerfil_usuario = usuario.perfil_id WHERE usuario.nombre_usuario = ? and usuario.contrasenha = ?" ;
     String id_usuario = "SELECT COUNT(idUsuario) FROM usuario";
     Connection conexion;
@@ -27,7 +27,7 @@ public class UsuarioDAO {
                 int id = rs.getInt("usuario.idUsuario");
                 String nombre = rs.getString("usuario.nombre");
                 String apellido = rs.getString("usuario.apellido");
-                String rut = rs.getString("usaurio.rut");
+                String rut = rs.getString("usuario.rut");
                 String nombre_usuario = rs.getString("usuario.nombre_usuario");
                 String contrasenha = rs.getString("usuario.contrasenha");
                 int perfil = rs.getInt("usuario.perfil_id");
@@ -69,9 +69,12 @@ public class UsuarioDAO {
         try {
             ps = conexion.prepareStatement(insertar_usuario);
             ps.setInt(1,id);
-            ps.setString(2,usuario.getNombre_usuario());
-            ps.setString(3,usuario.getContrasenha());
-            ps.setInt(4, usuario.getPerfil_id());
+            ps.setString(2,usuario.getNombre());
+            ps.setString(3,usuario.getApellido());
+            ps.setString(4,usuario.getRut());
+            ps.setString(5,usuario.getNombre_usuario());
+            ps.setString(6,usuario.getContrasenha());
+            ps.setInt(7, usuario.getPerfil_id());
             ps.execute();
             ps.close();
             return true;
