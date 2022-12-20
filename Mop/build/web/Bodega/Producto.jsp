@@ -41,12 +41,30 @@
                                         </select>
                                     </div>
                                     <div class="col-4">
-                                        <p>Orden de compra</p>
-                                        <input type="text" class="form-control" id="txtfactura" name="txtfactura" value="${factura.getOrden_compra()}" disabled>
+                                        <p>Seleccionar Departamento</p>
+                                        <c:choose>
+                                            <c:when test="${usua.getPerfil_id() == 0}">
+                                                <select id="departamento" name="departamento" class="custom-select">
+                                                    <option>Seleccionar</option>
+                                                    <option value="Bienes">Bienes</option>
+                                                    <option value="Prevencion de Riesgo">Prevencion de Riesgo</option>
+                                                </select>
+                                            </c:when>
+                                            <c:when test="${usua.getPerfil_id() == 1}">
+                                                <select id="departamento" name="departamento" class="custom-select">
+                                                    <option value="Bienes">Bienes</option>
+                                                </select>
+                                            </c:when>
+                                            <c:otherwise>
+                                                <select id="departamento" name="departamento" class="custom-select">
+                                                    <option value="Prevencion de Riesgo">Prevencion de Riesgo</option>
+                                                </select>
+                                            </c:otherwise>
+                                        </c:choose>
                                     </div>
                                     <div class="col-4">
-                                        <p>Usuario Responsable</p>
-                                        <input type="text" class="form-control" id="txtusuario" name="txtusuario" value="${usuario.getNombre_usuario()}" disabled>
+                                        <p>Orden de compra</p>
+                                        <input type="text" class="form-control" id="txtfactura" name="txtfactura" value="${factura.getOrden_compra()}" disabled>
                                     </div>
                                 </div>
                                 <br>
@@ -88,6 +106,7 @@
                             <th>Cantidad</th>
                             <th>Bodega</th>
                             <th>Medida</th>
+                            <th>Departamento</th>
                             <th>Opciones</th>
                         </tr>
                     </thead>
@@ -100,8 +119,9 @@
                                 <td><c:out value="${producto.cantidad}"></c:out></td>
                                 <td><c:out value="${producto.pnombre_bodega}"></c:out></td>
                                 <td><c:out value="${producto.pdescripcion_medida}"></c:out></td>
-                                <td>
-                                    <a href="Controlador?menu=eliminar&id=<c:out value="${producto.idproducto}"></c:out>" class="btn btn-outline-danger">Quitar</a>
+                                <td><c:out value="${producto.departamento}"></c:out></td>
+                                    <td>
+                                        <a href="Controlador?menu=eliminar&id=${producto.idproducto}" class="btn btn-outline-danger">Quitar</a>
                                 </td>
                             </tr>
                         </c:forEach>

@@ -6,9 +6,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UsuarioDAO {
-    String insertar_usuario = "INSERT INTO usuario(idUsuario,nombre_usuario,contrasenha,nombre,apellido,run,bodega_id,perfil_id) VALUES(?,?,?,?,?,?,?,?)";
-    String validar_usuario = "SELECT usuario.nombre,usuario.apellido,usuario.run,usuario.nombre_usuario, usuario.contrasenha, perfil_usuario.descripcion_perfil, bodega.nombre_bodega FROM usuario JOIN perfil_usuario ON perfil_usuario.idPerfil_usuario = usuario.perfil_id JOIN bodega ON usuario.bodega_id = bodega.idBodega WHERE usuario.nombre_usuario = ? and usuario.contrasenha = ?" ;
-    String lista_usuario = "SELECT usuario.idUsuario,usuario.nombre,usuario.apellido,usuario.run,usuario.nombre_usuario, perfil_usuario.descripcion_perfil, bodega.nombre_bodega FROM usuario JOIN perfil_usuario ON perfil_usuario.idPerfil_usuario = usuario.perfil_id JOIN bodega ON usuario.bodega_id = bodega.idBodega";
+    String insertar_usuario = "INSERT INTO usuario(idUsuario,nombre_usuario,contrasenha,nombre,apellido,run,bodegaid,perfil_id) VALUES(?,?,?,?,?,?,?,?)";
+    String validar_usuario = "SELECT usuario.idUsuario,usuario.nombre,usuario.apellido,usuario.run,usuario.nombre_usuario, usuario.contrasenha, perfil_usuario.descripcion_perfil, bodega.nombre_bodega FROM usuario JOIN perfil_usuario ON perfil_usuario.idPerfil_usuario = usuario.perfil_id JOIN bodega ON usuario.bodegaid = bodega.idBodega WHERE usuario.nombre_usuario = ? and usuario.contrasenha = ?" ;
+    String lista_usuario = "SELECT usuario.idUsuario,usuario.nombre,usuario.apellido,usuario.run,usuario.nombre_usuario, perfil_usuario.descripcion_perfil, bodega.nombre_bodega FROM usuario JOIN perfil_usuario ON perfil_usuario.idPerfil_usuario = usuario.perfil_id JOIN bodega ON usuario.bodegaid = bodega.idBodega";
+    String filtro_usuario = "SELECT idUsuario, nombre, apellido, run, nombre_usuario, contrasenha,bodegaid,perfil_id FROM usuario WHERE usuario.idUsuario = ?";
+    String filtro_id_usuario = "SELECT idUsuario, nombre, apellido, run, nombre_usuario,bodegaid,perfil_id from usuario WHERE nombre_usuario = ?";
     String id_usuario = "SELECT COUNT(idUsuario) FROM usuario";
     Connection conexion;
     
@@ -64,7 +66,7 @@ public class UsuarioDAO {
     
     public boolean insertarUsuario(Usuario usuario){
         PreparedStatement ps;
-        int id = AutoID();
+        int id = AutoID()+1;
         try {
             ps = conexion.prepareStatement(insertar_usuario);
             ps.setInt(1,id);
@@ -93,6 +95,7 @@ public class UsuarioDAO {
             ps.setString(2, pass);
             rs = ps.executeQuery();
             while(rs.next()){
+                usuario.setIdusuario(rs.getInt("usuario.idUsuario"));
                 usuario.setNombre(rs.getString("usuario.nombre"));
                 usuario.setApellido(rs.getString("usuario.apellido"));
                 usuario.setRut(rs.getString("usuario.run"));
@@ -106,6 +109,59 @@ public class UsuarioDAO {
             System.out.println(e.toString());
             return null;
         }
-        
     }
+    public Usuario filtroUsuario(int idu){
+        PreparedStatement ps;
+        ResultSet rs;
+        Usuario usuario = null;
+        try {
+            ps = conexion.prepareStatement(filtro_usuario);
+            ps.setInt(1, idu);
+            rs = ps.executeQuery();
+            while(rs.next()){
+                int id = rs.getInt(1);
+                String nombre = rs.getString(2);
+                String apellido = rs.getString(3);
+                String run = rs.getString(4);
+                String nombre_usuario = rs.getString(5);
+                String contra = rs.getString(6);
+                int bodega = rs.getInt(7);
+                int perfil = rs.getInt(8);
+                usuario = new Usuario(id, bodega, perfil, nombre, apellido, run, nombre_usuario, contra);
+            }
+            ps.close();
+            rs.close();
+            return usuario;
+        } catch (SQLException e) {
+            System.out.println(e.toString());
+            return null;
+        }
+    }
+    public Usuario filtroUsuario(String nom_usuario){
+        PreparedStatement ps;
+        ResultSet rs;
+        Usuario usuario = null;
+        try {
+            ps = conexion.prepareStatement(filtro_usuario);
+            ps.setString(1, nom_usuario);
+            rs = ps.executeQuery();
+            while(rs.next()){
+                int id = rs.getInt(1);
+                String nombre = rs.getString(2);
+                String apellido = rs.getString(3);
+                String run = rs.getString(4);
+                String nombre_usuario = rs.getString(5);
+                int bodega = rs.getInt(6);
+                int perfil = rs.getInt(7);
+                usuario = new Usuario(id, bodega, perfil, nombre, apellido, run, nombre_usuario);
+            }
+            ps.close();
+            rs.close();
+            return usuario;
+        } catch (SQLException e) {
+            System.out.println(e.toString());
+            return null;
+        }
+    }
+    
 }

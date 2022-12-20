@@ -64,6 +64,7 @@
                             <div class="form-group">
                                 <form action="Controlador?menu=nuevafactura" method="POST" enctype="multipart/form-data">
                                     <h3>Completar Informacion de Factura</h3>
+                                    <label>${funcionario.getIdusuario()}</label>
                                     <label>Numero Factura</label>
                                     <input class="form-control" id="txtnrofactura" name="txtnrofactura" type="text" placeholder="Ingresar Numero Factura">
                                     <label>Orden de Compra</label>

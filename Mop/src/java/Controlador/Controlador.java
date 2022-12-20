@@ -47,6 +47,7 @@ public class Controlador extends HttpServlet {
     InputStream inputStreamorden;
     int idf = 0;
     int idp = 0;
+    int idu = 0;
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -54,6 +55,8 @@ public class Controlador extends HttpServlet {
         if (menu.equals("principal")) {
             request.getRequestDispatcher("principal.jsp").forward(request, response);
         } else if (menu.equals("ingreso")) {
+            idu = Integer.parseInt(request.getParameter("id"));
+            usua = udao.filtroUsuario(idu);
             request.getRequestDispatcher("Bodega/Factura.jsp").forward(request, response);
         } else if (menu.equals("listarproveedor")) {
             String filtro = request.getParameter("txtrut");
@@ -79,6 +82,7 @@ public class Controlador extends HttpServlet {
             List<Bodega> listabodega = bdao.listaBodega();
             List<Medida> listamedida = mdao.listaMedida();
             request.setAttribute("factura", fact);
+            request.setAttribute("usua", usua);
             request.setAttribute("bodega", listabodega);
             request.setAttribute("medida", listamedida);
             request.getRequestDispatcher("Bodega/Producto.jsp").forward(request, response);
@@ -87,11 +91,13 @@ public class Controlador extends HttpServlet {
             int idmedida = Integer.parseInt(request.getParameter("medida"));
             String descripcion = request.getParameter("txtdescripcion");
             String cantidad = request.getParameter("txtcantidad");
+            String departamento = request.getParameter("departamento");
             idf = fact.getId_factura();
-            pro = new Producto(0, idf, idmedida, idbodega, descripcion, cantidad);
+            pro = new Producto(0, idf, idmedida, idbodega, descripcion, cantidad, departamento);
             prdao.agregarProducto(pro);
             List<Producto> listaproducto = prdao.listaproductofactura(idf);
             request.setAttribute("factura", fact);
+            request.setAttribute("usua", usua);
             request.setAttribute("listar", listaproducto);
             List<Bodega> listabodega = bdao.listaBodega();
             List<Medida> listamedida = mdao.listaMedida();
@@ -103,6 +109,7 @@ public class Controlador extends HttpServlet {
             prdao.eliminarProducto(idp);
             List<Producto> listaproducto = prdao.listaproductofactura(idf);
             request.setAttribute("factura", fact);
+            request.setAttribute("usua", usua);
             request.setAttribute("listar", listaproducto);
             List<Bodega> listabodega = bdao.listaBodega();
             List<Medida> listamedida = mdao.listaMedida();
@@ -130,8 +137,26 @@ public class Controlador extends HttpServlet {
             List<Proveedor> listaproveedor = pdao.filtroProveedor(filtro);
             request.setAttribute("lista", listaproveedor);
             request.getRequestDispatcher("Proveedor/Proveedor.jsp").forward(request, response);
-        } else if (menu.equals("consulta")) {
+        } else if (menu.equals("consultaproducto")) {
+            int id = Integer.parseInt(request.getParameter("id"));
+            usua = udao.filtroUsuario(id);
+            int perfil = usua.getPerfil_id();
+            System.out.println(perfil);
+            List<Producto> listaproducto;
+            String departamento;
+            if (perfil == 0) {
+                listaproducto = prdao.productosAdmin();
+            } else if (perfil == 1) {
+                departamento = perfdao.Perfil(perfil);
+                listaproducto = prdao.productosDepto(departamento);
+            } else {
+                departamento = perfdao.Perfil(perfil);
+                listaproducto = prdao.productosDepto(departamento);
+            }
+            request.setAttribute("producto", listaproducto);
             request.getRequestDispatcher("Consulta/ListaProducto.jsp").forward(request, response);
+        } else if (menu.equals("consultasolicitud")) {
+            request.getRequestDispatcher("Consulta/ListaSolicitud.jsp").forward(request, response);
         } else if (menu.equals("usuario")) {
             List<Bodega> listabodega = bdao.listaBodega();
             List<PerfilUsuario> listaperfil = perfdao.listarPerfil();
@@ -150,7 +175,7 @@ public class Controlador extends HttpServlet {
             if (contrasenha1.equals(contrasenha2)) {
                 usua = new Usuario(0, bodega, perfil, nombre, apellido, run, usuario, contrasenha1);
                 udao.insertarUsuario(usua);
-                request.getRequestDispatcher("Login/Registrar.jsp").forward(request, response);
+                request.getRequestDispatcher("Login/Usuarios.jsp").forward(request, response);
             } else {
                 System.out.println("Error contraseña incorrecta");
             }
@@ -159,7 +184,7 @@ public class Controlador extends HttpServlet {
             request.setAttribute("listar", listausuario);
             request.getRequestDispatcher("Login/Usuarios.jsp").forward(request, response);
         } else if (menu.equals("eliminarusuario")) {
-            int idu = Integer.parseInt(request.getParameter("id"));
+            int idusuario = Integer.parseInt(request.getParameter("id"));
             request.getRequestDispatcher("Login/Usuarios.jsp").forward(request, response);
         }
     }

@@ -7,7 +7,7 @@ import java.util.List;
 
 public class PerfilUsuarioDAO {
     String all_perfil = "SELECT idPerfil_usuario, descripcion_perfil FROM perfil_usuario";
-    String perfil_por_id = "SELECT idPerfil_usuario,descripcion_perfil FROM perfil_usuario WHERE idPerfil_usuario = ?";
+    String perfil_por_id = "SELECT descripcion_perfil FROM perfil_usuario WHERE idPerfil_usuario = ?";
     String insertar_perfil = "INSERT INTO perfil_usuario (descripcion_perfil)VALUE(?)";
     
     Connection conexion;
@@ -36,20 +36,18 @@ public class PerfilUsuarioDAO {
             return null;
         }
     }
-    public PerfilUsuario Perfil(int id){
+    public String Perfil(int id){
         PreparedStatement ps;
         ResultSet rs;
-        PerfilUsuario pusuario = null;
+        String perfil = "";
         try {
             ps = conexion.prepareStatement(perfil_por_id);
             ps.setInt(1,id);
             rs = ps.executeQuery();
             while (rs.next()){
-                int id_p = rs.getInt("idPerfil_usuario");
-                String descripcion = rs.getString("descripcion_perfil");
-                pusuario = new PerfilUsuario(id_p, descripcion);
+                perfil = rs.getString(1);
             }
-            return pusuario;
+            return perfil;
         } catch (SQLException e) {
             System.out.println(e.toString());
             return null;

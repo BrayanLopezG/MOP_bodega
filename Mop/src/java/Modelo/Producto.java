@@ -4,33 +4,14 @@ import java.io.InputStream;
 
 public class Producto extends Factura{
     int idproducto,facturaid,medida_id,bodegaid;
-    String descripcion,cantidad,pnombre_bodega,pdireccion_bodega,pdescripcion_medida; 
+    String descripcion,cantidad,departamento,pnombre_bodega,pdireccion_bodega,pdescripcion_medida;
 
-    public Producto(int id_proveedor, String rut_proveedor, String nombre_proveedor, String telefono_proveedor, String direccion_proveedor) {
-        super(id_proveedor, rut_proveedor, nombre_proveedor, telefono_proveedor, direccion_proveedor);
-    }
-
-    public Producto(int idproducto, String descripcion, String cantidad, String pnombre_bodega, String pdescripcion_medida, String orden_compra) {
-        super(orden_compra);
-        this.idproducto = idproducto;
+    public Producto(String descripcion, String cantidad, String pnombre_bodega, String pdescripcion_medida) {
         this.descripcion = descripcion;
         this.cantidad = cantidad;
         this.pnombre_bodega = pnombre_bodega;
         this.pdescripcion_medida = pdescripcion_medida;
     }
-
-    public Producto(int idproducto, int facturaid, int medida_id, int bodegaid, String descripcion, String cantidad) {
-        this.idproducto = idproducto;
-        this.facturaid = facturaid;
-        this.medida_id = medida_id;
-        this.bodegaid = bodegaid;
-        this.descripcion = descripcion;
-        this.cantidad = cantidad;
-    }
-
-    public Producto() {
-    }
-    
 
     public int getIdproducto() {
         return idproducto;
@@ -80,6 +61,14 @@ public class Producto extends Factura{
         this.cantidad = cantidad;
     }
 
+    public String getDepartamento() {
+        return departamento;
+    }
+
+    public void setDepartamento(String departamento) {
+        this.departamento = departamento;
+    }
+
     public String getPnombre_bodega() {
         return pnombre_bodega;
     }
@@ -104,6 +93,49 @@ public class Producto extends Factura{
         this.pdescripcion_medida = pdescripcion_medida;
     }
 
-    
- 
+    public Producto() {
+    }
+
+    public Producto(int idproducto, int facturaid, int medida_id, int bodegaid, String descripcion, String cantidad, String departamento) {
+        this.idproducto = idproducto;
+        this.facturaid = facturaid;
+        this.medida_id = medida_id;
+        this.bodegaid = bodegaid;
+        this.descripcion = descripcion;
+        this.cantidad = cantidad;
+        this.departamento = departamento;
+    }
+
+    public Producto(int idproducto, String descripcion, String cantidad, String departamento, String pnombre_bodega, String pdescripcion_medida, String orden_compra) {
+        super(orden_compra);
+        this.idproducto = idproducto;
+        this.descripcion = descripcion;
+        this.cantidad = cantidad;
+        this.departamento = departamento;
+        this.pnombre_bodega = pnombre_bodega;
+        this.pdescripcion_medida = pdescripcion_medida;
+    }
+
+    public Producto(int idproducto, String descripcion, String cantidad, String departamento, String pnombre_bodega, String pdireccion_bodega, String pdescripcion_medida, int id_proveedor, String rut_proveedor, String nombre_proveedor, String telefono_proveedor, String direccion_proveedor) {
+        super(id_proveedor, rut_proveedor, nombre_proveedor, telefono_proveedor, direccion_proveedor);
+        this.idproducto = idproducto;
+        this.descripcion = descripcion;
+        this.cantidad = cantidad;
+        this.departamento = departamento;
+        this.pnombre_bodega = pnombre_bodega;
+        this.pdireccion_bodega = pdireccion_bodega;
+        this.pdescripcion_medida = pdescripcion_medida;
+    }
+
+    public Producto(int idproducto, String descripcion, String cantidad, String departamento, String pnombre_bodega, String pdireccion_bodega, String pdescripcion_medida, int id_factura, int proveedor_id, String nro_factura, String orden_compra, String fecha_factura, InputStream facturapdf, InputStream orden_comprapdf) {
+        super(id_factura, proveedor_id, nro_factura, orden_compra, fecha_factura, facturapdf, orden_comprapdf);
+        this.idproducto = idproducto;
+        this.descripcion = descripcion;
+        this.cantidad = cantidad;
+        this.departamento = departamento;
+        this.pnombre_bodega = pnombre_bodega;
+        this.pdireccion_bodega = pdireccion_bodega;
+        this.pdescripcion_medida = pdescripcion_medida;
+    }
+
 }

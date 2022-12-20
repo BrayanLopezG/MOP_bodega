@@ -30,9 +30,9 @@
                             <div class="dropdown">
                                 <button style="margin-left: 10px; border: none;" class="dropdown-toggle btn btn-outline-light" type="button" id="dropdownbuttonbodega" data-toggle="dropdown">Bodega</button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownbuttonbodega">
-                                    <a class="dropdown-item" href="Controlador?menu=ingreso" target="bodega">Ingresar Producto</a>
+                                    <a class="dropdown-item" href="Controlador?menu=ingreso&id=${usuario.getIdusuario()}" target="bodega">Ingresar Producto</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="Controlador?menu=salida" target="bodega">Salida Producto</a>    
+                                    <a class="dropdown-item" href="Controlador?menu=salida&id=${usuario.getIdusuario()}" target="bodega">Salida Producto</a>    
                                 </div>
                             </div>
                         </li>
@@ -40,7 +40,14 @@
                             <a style="margin-left: 10px; border: none" class="btn btn-outline-light" href="Controlador?menu=proveedor&accion=lista" target="bodega">Proveedor</a>
                         </li>
                         <li class="nav-item">
-                            <a style="margin-left: 10px; border: none" class="btn btn-outline-light" href="Controlador?menu=consulta" target="bodega">Consulta</a>
+                            <div class="dropdown">
+                                <button style="margin-left: 10px; border: none;" class="dropdown-toggle btn btn-outline-light" type="button" id="dropdownbuttonbodega" data-toggle="dropdown">Consultar Bodega</button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownbuttonbodega">
+                                    <a class="dropdown-item" href="Controlador?menu=consultaproducto&id=${usuario.getIdusuario()}" target="bodega">Productos</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="Controlador?menu=consultasolicitud&id=${usuario.getIdusuario()}" target="bodega">Solicitudes</a>    
+                                </div>
+                            </div>
                         </li>
                         <c:if test="${usuario.descripcion_perfil == 'Administrador'}">
                             <li class="nav-item">
@@ -56,7 +63,7 @@
                         </c:if>
                     </ul>
                 </div>
-                <div class="dropdown">
+                <div class="dropdown dropleft float-right">
                     <button style="border: none" class="dropdown-toggle btn btn-outline-light" type="button" id="dropdownbutton" data-toggle="dropdown">${usuario.getNombre()} ${usuario.getApellido()}</button>
                     <div class="dropdown-menu" aria-labelledby="dropdownbutton">
                         <a class="dropdown-item" href="#">${usuario.getNombre_usuario()}</a>
