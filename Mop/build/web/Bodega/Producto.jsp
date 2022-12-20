@@ -32,7 +32,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="row">
-                                    <div class="col-6">
+                                    <div class="col-4">
                                         <p>Seleccionar bodega</p>
                                         <select id="bodega" name="bodega" class="custom-select">
                                             <c:forEach var="bodega" items="${bodega}">
@@ -40,9 +40,13 @@
                                             </c:forEach>
                                         </select>
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-4">
                                         <p>Orden de compra</p>
                                         <input type="text" class="form-control" id="txtfactura" name="txtfactura" value="${factura.getOrden_compra()}" disabled>
+                                    </div>
+                                    <div class="col-4">
+                                        <p>Usuario Responsable</p>
+                                        <input type="text" class="form-control" id="txtusuario" name="txtusuario" value="${usuario.getNombre_usuario()}" disabled>
                                     </div>
                                 </div>
                                 <br>

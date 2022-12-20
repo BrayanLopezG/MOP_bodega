@@ -6,8 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UsuarioDAO {
-    String insertar_usuario = "INSERT INTO usuario(idUsuario,nombre,apellido,rut,nombre_usuario,contrasenha,perfil_id) VALUES(?,?,?,?,?,?,?)";
-    String validar_usuario = "SELECT usuario.nombre,usuario.apellido,usuario.rut,usuario.nombre_usuario, usuario.contrasenha, perfil_usuario.descripcion_perfil FROM usuario JOIN perfil_usuario ON perfil_usuario.idPerfil_usuario = usuario.perfil_id WHERE usuario.nombre_usuario = ? and usuario.contrasenha = ?" ;
+    String insertar_usuario = "INSERT INTO usuario(idUsuario,nombre_usuario,contrasenha,nombre,apellido,run,bodega_id,perfil_id) VALUES(?,?,?,?,?,?,?,?)";
+    String validar_usuario = "SELECT usuario.nombre,usuario.apellido,usuario.run,usuario.nombre_usuario, usuario.contrasenha, perfil_usuario.descripcion_perfil, bodega.nombre_bodega FROM usuario JOIN perfil_usuario ON perfil_usuario.idPerfil_usuario = usuario.perfil_id JOIN bodega ON usuario.bodega_id = bodega.idBodega WHERE usuario.nombre_usuario = ? and usuario.contrasenha = ?" ;
+    String lista_usuario = "SELECT usuario.idUsuario,usuario.nombre,usuario.apellido,usuario.run,usuario.nombre_usuario, perfil_usuario.descripcion_perfil, bodega.nombre_bodega FROM usuario JOIN perfil_usuario ON perfil_usuario.idPerfil_usuario = usuario.perfil_id JOIN bodega ON usuario.bodega_id = bodega.idBodega";
     String id_usuario = "SELECT COUNT(idUsuario) FROM usuario";
     Connection conexion;
     
@@ -21,19 +22,17 @@ public class UsuarioDAO {
         ResultSet rs;
         List<Usuario> lista = new ArrayList();
         try {
-            ps = conexion.prepareStatement("SELECT usuario.idUsuario,usuario.nombre,usuario.apellido,usuario.rut,usuario.nombre_usuario, usuario.contrasenha, usuario.perfil_id, perfil_usuario.descripcion_perfil FROM usuario JOIN perfil_usuario ON perfil_usuario.idPerfil_usuario = usuario.perfil_id");
+            ps = conexion.prepareStatement(lista_usuario);
             rs = ps.executeQuery();
             while (rs.next()){
                 int id = rs.getInt("usuario.idUsuario");
                 String nombre = rs.getString("usuario.nombre");
                 String apellido = rs.getString("usuario.apellido");
-                String rut = rs.getString("usuario.rut");
+                String rut = rs.getString("usuario.run");
                 String nombre_usuario = rs.getString("usuario.nombre_usuario");
-                String contrasenha = rs.getString("usuario.contrasenha");
-                int perfil = rs.getInt("usuario.perfil_id");
-                int perfil_id = rs.getInt("usuario.perfil_id");
                 String cargo = rs.getString("perfil_usuario.descripcion_perfil");
-                Usuario usuario = new Usuario(id, perfil, nombre, apellido, rut, nombre_usuario, contrasenha, perfil_id, cargo);
+                String bodega = rs.getString("bodega.nombre_bodega");
+                Usuario usuario = new Usuario(id, nombre, apellido, rut, nombre_usuario, bodega, cargo);
                 lista.add(usuario); 
             }
             ps.close();
@@ -69,12 +68,13 @@ public class UsuarioDAO {
         try {
             ps = conexion.prepareStatement(insertar_usuario);
             ps.setInt(1,id);
-            ps.setString(2,usuario.getNombre());
-            ps.setString(3,usuario.getApellido());
-            ps.setString(4,usuario.getRut());
-            ps.setString(5,usuario.getNombre_usuario());
-            ps.setString(6,usuario.getContrasenha());
-            ps.setInt(7, usuario.getPerfil_id());
+            ps.setString(2,usuario.getNombre_usuario());
+            ps.setString(3,usuario.getContrasenha());
+            ps.setString(4,usuario.getNombre());
+            ps.setString(5,usuario.getApellido());
+            ps.setString(6,usuario.getRut());
+            ps.setInt(7, usuario.getBodega_id());
+            ps.setInt(8, usuario.getPerfil_id());
             ps.execute();
             ps.close();
             return true;
@@ -95,10 +95,11 @@ public class UsuarioDAO {
             while(rs.next()){
                 usuario.setNombre(rs.getString("usuario.nombre"));
                 usuario.setApellido(rs.getString("usuario.apellido"));
-                usuario.setRut(rs.getString("usuario.rut"));
+                usuario.setRut(rs.getString("usuario.run"));
                 usuario.setNombre_usuario(rs.getString("usuario.nombre_usuario"));
                 usuario.setContrasenha(rs.getString("usuario.contrasenha"));
                 usuario.setDescripcion_perfil(rs.getString("perfil_usuario.descripcion_perfil"));
+                usuario.setUnombre_bodega(rs.getString("bodega.nombre_bodega"));
             }
             return usuario;
         } catch (SQLException e) {

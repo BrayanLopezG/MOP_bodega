@@ -39,11 +39,11 @@
                                     <label>Repetir Contraseña:</label>
                                     <input class="form-control" id="txtcontra2" name="txtcontra2" type="password" placeholder="Repetir Contraseña">                         
                                     <label>Cargo:</label>
-                                    <select name="perfilU" class="custom-select">
+                                    <select name="perfil" class="custom-select">
                                         <option selected> Seleccionar </option>
-                                        <option value="1">Administrador</option>
-                                        <option value="2">Bienes</option>
-                                        <option value="3">Prevención de Riesgo</option>
+                                        <c:forEach var="perfil" items="${perfil}">
+                                            <option value="<c:out value="${perfil.idperfil}"></c:out>"><c:out value="${perfil.descripcion_perfil}"></c:out></option>
+                                        </c:forEach>
                                     </select>
                                 </div>
                                 <div class="col-6">
@@ -54,6 +54,13 @@
                                     <input class="form-control" id="txtapellido" name="txtapellido" type="text" placeholder="Ingresar Apellido del Funcionario">
                                     <label>RUN:</label>
                                     <input class="form-control" id="txtrut" name="txtrut" type="text" placeholder="Ingresar RUN del Funcionario">
+                                    <label>Bodega</label>
+                                    <select name="bodega" class="custom-select">
+                                        <option selected> Seleccionar </option>
+                                        <c:forEach var="bodega" items="${bodega}">
+                                            <option value="<c:out value="${bodega.id_bodega}"></c:out>"><c:out value="${bodega.nombre_bodega}"></c:out></option>
+                                        </c:forEach>
+                                    </select>
                                 </div>
                             </div>
                         </div>

@@ -24,8 +24,6 @@ public class Validar extends HttpServlet {
             throws ServletException, IOException {
        
     }
-
-
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

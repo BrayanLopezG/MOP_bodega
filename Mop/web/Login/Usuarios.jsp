@@ -29,6 +29,7 @@
                         <th>Nombre</th>
                         <th>Usuario</th>
                         <th>Cargo</th>
+                        <th>Bodega</th>
                         <th>Configuracion</th>
                     </tr>
                 </thead>
@@ -39,6 +40,7 @@
                             <td><c:out value="${usuario.nombre}"></c:out> <c:out value="${usuario.apellido}"></c:out></td>
                             <td><c:out value="${usuario.nombre_usuario}"></c:out></td>
                             <td><c:out value="${usuario.descripcion_perfil}"></c:out></td>
+                            <td><c:out value="${usuario.unombre_bodega}"></c:out></td>
                             <td>
                                 <a href="Controlador?menu=eliminarusaurio&id=${usuario.idusuario}" role="button" class="btn btn-outline-danger">Eliminar</a>
                             </td>

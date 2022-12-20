@@ -70,7 +70,7 @@
             </nav>
         </header>
         <div class="container">
-            <div class="m-4" style="height: 650px">
+            <div class="m-4" style="height: 700px; width: 1000px;">
                 <iframe name="bodega" style="height: 100%; width: 100%; border: none;"></iframe>
             </div>
         </div>

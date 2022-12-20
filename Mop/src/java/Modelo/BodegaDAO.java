@@ -10,7 +10,7 @@ import java.util.List;
 
 public class BodegaDAO {
     String Auto_ID = "SELECT COUNT(idBodega) FROM bodega";
-    String Lista_bodega = "SELECT idBodega,nombre_bodega,direccion_bodega,usuario_id FROM bodega";
+    String Lista_bodega = "SELECT idBodega,nombre_bodega,direccion_bodega FROM bodega";
     Connection conexion;
     
     public BodegaDAO(){
@@ -46,25 +46,13 @@ public class BodegaDAO {
                 int id =  rs.getInt(1);
                 String nombre = rs.getString(2);
                 String direccion = rs.getString(3);
-                int usuario = rs.getInt(4);
-                Bodega bodega = new Bodega(id, usuario, nombre, direccion);
+                Bodega bodega = new Bodega(id, nombre, direccion);
                 lista.add(bodega);
             }
             ps.close();
             rs.close();
             return lista;
         } catch (SQLException e) {
-            System.out.println(e.toString());
-            return null;
-        }
-    }
-    public List<Bodega> Usuariosbodega(){
-        PreparedStatement ps;
-        ResultSet rs;
-        List<Bodega> lista = new ArrayList();
-        try {
-            return lista;
-        } catch (Exception e) {
             System.out.println(e.toString());
             return null;
         }

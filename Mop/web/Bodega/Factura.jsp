@@ -23,7 +23,7 @@
                 <div class="card-header">
                     <div class="d-flex justify-content-between">
                         <h3>Nueva Factura</h3>
-                        <img src="img/vialidad.jpg" alt="Logo" style="width: 80px;">
+                        <img src="img/vialidad.jpg" alt="Logo" style="width: 70px;">
                     </div>
                 </div>
                 <div class="card-body">
@@ -74,6 +74,8 @@
                                     </div>
                                     <label>Adjuntar Factura</label>
                                     <input type="file" class="form-control-file border" id="factura" name="factura">
+                                    <label>Adjuntar Orden de Compra</label>
+                                    <input type="file" class="form-control-file border" id="ordencompra" name="ordencompra">
                                     <br>
                                     <button type="submit" class="btn btn-outline-primary">Siguiente</button>
                                 </form>

@@ -6,6 +6,8 @@ import Modelo.Factura;
 import Modelo.FacturaDAO;
 import Modelo.Medida;
 import Modelo.MedidaDAO;
+import Modelo.PerfilUsuario;
+import Modelo.PerfilUsuarioDAO;
 import Modelo.Producto;
 import Modelo.ProductoDAO;
 import Modelo.Proveedor;
@@ -33,15 +35,16 @@ public class Controlador extends HttpServlet {
     ProductoDAO prdao = new ProductoDAO();
     BodegaDAO bdao = new BodegaDAO();
     MedidaDAO mdao = new MedidaDAO();
+    PerfilUsuarioDAO perfdao = new PerfilUsuarioDAO();
     Bodega bode = new Bodega();
     Medida medi = new Medida();
+    PerfilUsuario perfu = new PerfilUsuario();
     Usuario usua = new Usuario();
     Producto pro = new Producto();
     Factura fact = new Factura();
     Proveedor proveedor = new Proveedor();
     InputStream inputStreamfactura;
     InputStream inputStreamorden;
-    String cargo = "";
     int idf = 0;
     int idp = 0;
 
@@ -49,7 +52,6 @@ public class Controlador extends HttpServlet {
             throws ServletException, IOException {
         String menu = request.getParameter("menu");
         if (menu.equals("principal")) {
-            cargo = (String) request.getAttribute("cargo");
             request.getRequestDispatcher("principal.jsp").forward(request, response);
         } else if (menu.equals("ingreso")) {
             request.getRequestDispatcher("Bodega/Factura.jsp").forward(request, response);
@@ -63,12 +65,12 @@ public class Controlador extends HttpServlet {
             String ordencompra = request.getParameter("txtcompra");
             String fecha = request.getParameter("txtfecha");
             Part facturapdf = request.getPart("factura");
-            Part ordenpdf = request.getPart("ordenpdf");
+            Part ordenpdf = request.getPart("ordencompra");
             String codigo = request.getParameter("txtid");
-            if (facturapdf.getSize() > 0 && ordenpdf.getSize() > 0) {
+            if (facturapdf.getSize() > 0 & ordenpdf.getSize() > 0) {
                 inputStreamfactura = facturapdf.getInputStream();
                 inputStreamorden = ordenpdf.getInputStream();
-                fact = new Factura(0, 0, numerofactura, ordencompra, fecha, inputStreamfactura,inputStreamorden);
+                fact = new Factura(0, 0, numerofactura, ordencompra, fecha, inputStreamfactura, inputStreamorden);
                 fdao.nuevaFactura(fact, codigo);
             } else {
                 System.out.println("Error carga de archivo");
@@ -131,6 +133,10 @@ public class Controlador extends HttpServlet {
         } else if (menu.equals("consulta")) {
             request.getRequestDispatcher("Consulta/ListaProducto.jsp").forward(request, response);
         } else if (menu.equals("usuario")) {
+            List<Bodega> listabodega = bdao.listaBodega();
+            List<PerfilUsuario> listaperfil = perfdao.listarPerfil();
+            request.setAttribute("bodega", listabodega);
+            request.setAttribute("perfil", listaperfil);
             request.getRequestDispatcher("Login/Registrar.jsp").forward(request, response);
         } else if (menu.equals("guardar")) {
             String nombre = request.getParameter("txtnombre");
@@ -139,9 +145,10 @@ public class Controlador extends HttpServlet {
             String usuario = request.getParameter("txtusuario");
             String contrasenha1 = request.getParameter("txtcontra1");
             String contrasenha2 = request.getParameter("txtcontra2");
-            int cargo = Integer.parseInt(request.getParameter("perfilU"));
+            int perfil = Integer.parseInt(request.getParameter("perfil"));
+            int bodega = Integer.parseInt(request.getParameter("bodega"));
             if (contrasenha1.equals(contrasenha2)) {
-                usua = new Usuario(0, cargo, nombre, apellido, run, usuario, contrasenha1);
+                usua = new Usuario(0, bodega, perfil, nombre, apellido, run, usuario, contrasenha1);
                 udao.insertarUsuario(usua);
                 request.getRequestDispatcher("Login/Registrar.jsp").forward(request, response);
             } else {

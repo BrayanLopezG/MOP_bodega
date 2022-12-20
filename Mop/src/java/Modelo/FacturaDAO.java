@@ -8,7 +8,7 @@ import java.util.List;
 public class FacturaDAO {
     String Auto_ID = "SELECT COUNT(idFactura) FROM factura";
     String ID_provedor = "SELECT idProveedor FROM proveedor WHERE rut_proveedor = ?";
-    String nueva_factura = "INSERT INTO factura (idFactura,nro_factura,orden_compra,fecha_factura,archivo_factura,proveedor_id) VALUES(?,?,?,?,?,?)";
+    String nueva_factura = "INSERT INTO factura (idFactura,nro_factura,orden_compra,fecha_factura,archivo_factura,archivo_oc,proveedor_id) VALUES(?,?,?,?,?,?,?)";
     String filtro_factura = "SELECT idFactura, nro_factura, orden_compra FROM factura WHERE orden_compra = ?";
     String lista_factura = "SELECT * FROM factura";
 
