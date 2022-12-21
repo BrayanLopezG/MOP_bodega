@@ -138,8 +138,8 @@ public final class principal_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                </div>\r\n");
       out.write("            </nav>\r\n");
       out.write("        </header>\r\n");
-      out.write("        <div class=\"container\">\r\n");
-      out.write("            <div class=\"m-4\" style=\"height: 700px; width: 1000px;\">\r\n");
+      out.write("        <div class=\"container-fluid\">\r\n");
+      out.write("            <div class=\"mx-2 my-2\" style=\"height: 700px;\">\r\n");
       out.write("                <iframe name=\"bodega\" style=\"height: 100%; width: 100%; border: none;\"></iframe>\r\n");
       out.write("            </div>\r\n");
       out.write("        </div>\r\n");

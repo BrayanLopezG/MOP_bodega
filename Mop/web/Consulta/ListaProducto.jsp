@@ -24,7 +24,7 @@
                 <h1>Bodega</h1>
             </div>
             <div class="d-flex justify-content-center">
-                <form class="form-inline" action="Controlador?menu=buscarproducto" method="POST">
+                <form class="form-inline" action="Controlador?menu=buscarproductobodega" method="POST">
                     <div class="input-group mb-3">
                         <input type="search" id="txtbuscar" name="txtbuscar" class="form-control" placeholder="Buscar Producto">
                         <div class="input-group-append">

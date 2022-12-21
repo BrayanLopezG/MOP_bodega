@@ -117,7 +117,61 @@ public class Controlador extends HttpServlet {
             request.setAttribute("medida", listamedida);
             request.getRequestDispatcher("Bodega/Producto.jsp").forward(request, response);
         } else if (menu.equals("salida")) {
+            idu = Integer.parseInt(request.getParameter("id"));
+            usua = udao.filtroUsuario(idu);
+            int perfil = usua.getPerfil_id();
+            List<Producto> listaproducto;
+            String departamento;
+            if (perfil == 0) {
+                listaproducto = prdao.listaproductoAdmin();
+            } else if (perfil == 1) {
+                departamento = perfdao.Perfil(perfil);
+                listaproducto = prdao.listaproductoDepto(departamento);
+            } else {
+                departamento = perfdao.Perfil(perfil);
+                listaproducto = prdao.listaproductoDepto(departamento);
+            }
+            request.setAttribute("producto", listaproducto);
+            request.setAttribute("usua", usua);
             request.getRequestDispatcher("Bodega/Solicitud.jsp").forward(request, response);
+        } else if (menu.equals("buscarproducto")) {
+            String buscar = request.getParameter("txtbuscarproducto");
+            int perfil = usua.getPerfil_id();
+            List<Producto> listaproducto;
+            String departamento;
+            if (perfil == 0) {
+                listaproducto = prdao.buscarproductoAdmin(buscar);
+            } else if (perfil == 1) {
+                departamento = perfdao.Perfil(perfil);
+                listaproducto = prdao.buscarproductoDepto(buscar, departamento);
+            } else {
+                departamento = perfdao.Perfil(perfil);
+                listaproducto = prdao.buscarproductoDepto(buscar, departamento);
+            }
+            request.setAttribute("producto", listaproducto);
+            request.setAttribute("usua", usua);
+            request.getRequestDispatcher("Bodega/Solicitud.jsp").forward(request, response);
+        } else if (menu.equals("productoseleccionado")) {
+            int codigo = Integer.parseInt(request.getParameter("id"));
+            List<Producto> producto = prdao.productoSeleccionado(codigo);
+            int perfil = usua.getPerfil_id();
+            List<Producto> listaproducto;
+            String departamento;
+            if (perfil == 0) {
+                listaproducto = prdao.listaproductoAdmin();
+            } else if (perfil == 1) {
+                departamento = perfdao.Perfil(perfil);
+                listaproducto = prdao.listaproductoDepto(departamento);
+            } else {
+                departamento = perfdao.Perfil(perfil);
+                listaproducto = prdao.listaproductoDepto(departamento);
+            }
+            request.setAttribute("usua", usua);
+            request.setAttribute("seleccionado", producto);
+            request.setAttribute("producto", listaproducto);
+            request.getRequestDispatcher("Bodega/Solicitud.jsp").forward(request, response);
+        } else if (menu.equals("pedido")) {
+
         } else if (menu.equals("proveedor")) {
             List<Proveedor> listaproveedor = pdao.listaProveedor();
             request.setAttribute("lista", listaproveedor);
@@ -141,7 +195,6 @@ public class Controlador extends HttpServlet {
             int id = Integer.parseInt(request.getParameter("id"));
             usua = udao.filtroUsuario(id);
             int perfil = usua.getPerfil_id();
-            System.out.println(perfil);
             List<Producto> listaproducto;
             String departamento;
             if (perfil == 0) {
@@ -175,6 +228,8 @@ public class Controlador extends HttpServlet {
             if (contrasenha1.equals(contrasenha2)) {
                 usua = new Usuario(0, bodega, perfil, nombre, apellido, run, usuario, contrasenha1);
                 udao.insertarUsuario(usua);
+                List<Usuario> listausuario = udao.listaUsuario();
+                request.setAttribute("listar", listausuario);
                 request.getRequestDispatcher("Login/Usuarios.jsp").forward(request, response);
             } else {
                 System.out.println("Error contraseña incorrecta");

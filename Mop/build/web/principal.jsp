@@ -76,8 +76,8 @@
                 </div>
             </nav>
         </header>
-        <div class="container">
-            <div class="m-4" style="height: 700px; width: 1000px;">
+        <div class="container-fluid">
+            <div class="mx-2 my-2" style="height: 700px;">
                 <iframe name="bodega" style="height: 100%; width: 100%; border: none;"></iframe>
             </div>
         </div>

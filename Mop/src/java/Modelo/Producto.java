@@ -6,6 +6,14 @@ public class Producto extends Factura{
     int idproducto,facturaid,medida_id,bodegaid;
     String descripcion,cantidad,departamento,pnombre_bodega,pdireccion_bodega,pdescripcion_medida;
 
+    public Producto(int idproducto, String descripcion, String cantidad, String pnombre_bodega, String pdescripcion_medida) {
+        this.idproducto = idproducto;
+        this.descripcion = descripcion;
+        this.cantidad = cantidad;
+        this.pnombre_bodega = pnombre_bodega;
+        this.pdescripcion_medida = pdescripcion_medida;
+    }
+
     public Producto(String descripcion, String cantidad, String pnombre_bodega, String pdescripcion_medida) {
         this.descripcion = descripcion;
         this.cantidad = cantidad;

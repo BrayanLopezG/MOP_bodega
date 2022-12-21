@@ -108,7 +108,8 @@ public class ProveedorDAO {
         ResultSet rs;
         List<Proveedor> lista = new ArrayList();
         try {
-            ps = conexion.prepareStatement("SELECT * FROM proveedor WHERE rut_proveedor = "+rut);
+            ps = conexion.prepareStatement("SELECT * FROM proveedor WHERE rut_proveedor = ?");
+            ps.setString(1, rut);
             rs = ps.executeQuery();
             while(rs.next()){
                 int id = rs.getInt(1);

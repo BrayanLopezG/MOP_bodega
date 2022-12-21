@@ -3449,3 +3449,555 @@
 16:52:33,116 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
 16:52:47,864 INFO  [stdout] (http-/127.0.0.1:8080-3) 0
 16:53:40,072 INFO  [stdout] (http-/127.0.0.1:8080-3) 0
+16:53:51,070 ERROR [org.jboss.remoting.remote.connection] (Remoting "desktop-to536at:MANAGEMENT" read-1) JBREM000200: Remote connection failed: java.io.IOException: Se ha forzado la interrupción de una conexión existente por el host remoto
+16:55:08,475 INFO  [org.jboss.web] (ServerService Thread Pool -- 1518) JBAS018224: Borrar el registro del contexto web: /Mop
+16:55:08,631 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 159ms
+16:55:08,643 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-11) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+16:55:08,910 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-7) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+16:55:08,928 INFO  [org.jboss.web] (ServerService Thread Pool -- 1540) JBAS018210: Registrar el contexto web: /Mop
+16:55:09,241 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
+16:58:39,760 INFO  [stdout] (http-/127.0.0.1:8080-4) 0
+16:59:28,032 INFO  [stdout] (http-/127.0.0.1:8080-4) 0
+17:00:26,244 INFO  [stdout] (http-/127.0.0.1:8080-4) 0
+17:17:48,532 ERROR [org.jboss.remoting.remote.connection] (Remoting "desktop-to536at:MANAGEMENT" read-1) JBREM000200: Remote connection failed: java.io.IOException: Se ha forzado la interrupción de una conexión existente por el host remoto
+08:15:14,127 INFO  [org.jboss.modules] (main) JBoss Modules version 1.2.0.Final-redhat-1
+08:15:16,202 INFO  [org.jboss.msc] (main) JBoss MSC version 1.0.4.GA-redhat-1
+08:15:16,359 INFO  [org.jboss.as] (MSC service thread 1-6) JBAS015899: JBoss EAP 6.1.0.GA (AS 7.2.0.Final-redhat-8) iniciando
+08:15:16,371 DEBUG [org.jboss.as.config] (MSC service thread 1-6) Propiedades del sistema configuradas:
+	awt.toolkit = sun.awt.windows.WToolkit
+	file.encoding = Cp1252
+	file.encoding.pkg = sun.io
+	file.separator = \
+	java.awt.graphicsenv = sun.awt.Win32GraphicsEnvironment
+	java.awt.printerjob = sun.awt.windows.WPrinterJob
+	java.class.path = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\jboss-modules.jar
+	java.class.version = 51.0
+	java.endorsed.dirs = C:\Program Files\Java\jdk1.7.0_80\jre\lib\endorsed
+	java.ext.dirs = C:\Program Files\Java\jdk1.7.0_80\jre\lib\ext;C:\Windows\Sun\Java\lib\ext
+	java.home = C:\Program Files\Java\jdk1.7.0_80\jre
+	java.io.tmpdir = C:\Users\usuario\AppData\Local\Temp\
+	java.library.path = C:\Program Files\Java\jdk1.7.0_80\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Git\cmd;"C:\Program Files\Java\jdk1.7.0_80\bin;C:\Program Files\Java\jdk1.7.0_80\bin;";C:\Users\usuario\AppData\Local\Microsoft\WindowsApps;;.
+	java.runtime.name = Java(TM) SE Runtime Environment
+	java.runtime.version = 1.7.0_80-b15
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 1.7
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Oracle Corporation
+	java.vendor.url = http://java.oracle.com/
+	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+	java.version = 1.7.0_80
+	java.vm.info = mixed mode
+	java.vm.name = Java HotSpot(TM) 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 1.7
+	java.vm.vendor = Oracle Corporation
+	java.vm.version = 24.80-b11
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
+	javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
+	javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
+	javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
+	javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
+	javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
+	javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
+	javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
+	javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
+	jboss.home.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1
+	jboss.host.name = desktop-to536at
+	jboss.modules.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\modules
+	jboss.node.name = desktop-to536at
+	jboss.qualified.host.name = desktop-to536at
+	jboss.server.base.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone
+	jboss.server.config.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\configuration
+	jboss.server.data.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\data
+	jboss.server.deploy.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\data\content
+	jboss.server.log.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\log
+	jboss.server.name = desktop-to536at
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\tmp
+	line.separator = 
+
+	logging.configuration = file:C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone/configuration/logging.properties
+	module.path = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\modules
+	org.jboss.boot.log.file = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\log\server.log
+	org.jboss.resolver.warning = true
+	org.xml.sax.driver = __redirected.__XMLReaderFactory
+	os.arch = amd64
+	os.name = Windows 8.1
+	os.version = 6.3
+	path.separator = ;
+	program.name = standalone.bat
+	sun.arch.data.model = 64
+	sun.boot.class.path = C:\Program Files\Java\jdk1.7.0_80\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_80\jre\classes
+	sun.boot.library.path = C:\Program Files\Java\jdk1.7.0_80\jre\bin
+	sun.cpu.endian = little
+	sun.cpu.isalist = amd64
+	sun.desktop = windows
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\jboss-modules.jar -mp C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\modules -jaxpmodule javax.xml.jaxp-provider org.jboss.as.standalone -Djboss.home.dir=C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = Cp1252
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = 
+	user.country = CL
+	user.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\bin
+	user.home = C:\Users\usuario
+	user.language = es
+	user.name = usuario
+	user.script = 
+	user.timezone = America/Santiago
+	user.variant = 
+08:15:16,372 DEBUG [org.jboss.as.config] (MSC service thread 1-6) Argumentos de VM: -XX:+TieredCompilation -XX:+UseCompressedOops -Dprogram.name=standalone.bat -Xms128m -Xmx512m -XX:MaxPermSize=256m -Dorg.jboss.boot.log.file=C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\log\server.log -Dlogging.configuration=file:C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone/configuration/logging.properties 
+08:15:21,255 INFO  [org.xnio] (MSC service thread 1-16) XNIO Version 3.0.7.GA-redhat-1
+08:15:21,255 INFO  [org.jboss.as.server] (Controller Boot Thread) JBAS015888: Creando el servicio de administración http utilizando el enlace de socket (management-http) 
+08:15:21,261 INFO  [org.xnio.nio] (MSC service thread 1-16) XNIO NIO Implementation Version 3.0.7.GA-redhat-1
+08:15:21,267 INFO  [org.jboss.remoting] (MSC service thread 1-16) JBoss Remoting version 3.2.16.GA-redhat-1
+08:15:21,471 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 42) JBAS013171: Activando el sub-sistema de seguridad
+08:15:21,471 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 29) JBAS010280: Activando el sub-sistema Infinispan.
+08:15:21,473 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 35) JBAS012605: Se activaron las siguientes implementaciones JSF: [main, 1.2]
+08:15:21,800 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 37) JBAS011800: Activando el sub-sistema de nombrado
+08:15:21,822 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 46) JBAS015537: Activando WebServices Extension
+08:15:21,840 INFO  [org.jboss.as.security] (MSC service thread 1-9) JBAS013170: Versión PicketBox actual=4.0.17.Final-redhat-1
+08:15:21,868 INFO  [org.jboss.as.connector.logging] (MSC service thread 1-7) JBAS010408: Iniciando JCA sub-sistema (IronJacamar 1.0.17.Final-redhat-1)
+08:15:22,638 INFO  [org.jboss.as.naming] (MSC service thread 1-12) JBAS011802: Iniciando el servicio de nombrado
+08:15:22,660 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-16) JBAS015400: Sesión de correo enlazada [java:jboss/mail/Default]
+08:15:22,687 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 25) JBAS010403: Implementación del controlador que cumple con los requerimientos de JDBC class org.h2.Driver (versión 1.3)
+08:15:23,147 INFO  [org.apache.coyote.http11] (MSC service thread 1-11) JBWEB003001: Coyote HTTP/1.1 initializing on : http-/127.0.0.1:8080
+08:15:23,162 INFO  [org.apache.coyote.http11] (MSC service thread 1-11) JBWEB003000: Coyote HTTP/1.1 starting on: http-/127.0.0.1:8080
+08:15:23,416 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-9) JBAS010400: Fuente de datos enlazados [java:jboss/datasources/ExampleDS]
+08:15:23,699 INFO  [org.jboss.ws.common.management] (MSC service thread 1-1) JBWS022052: Starting JBoss Web Services - Stack CXF Server 4.1.3.Final-redhat-3
+08:15:23,838 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-2) JBAS015012: Inició FileSystemDeploymentService para el directorio C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\deployments
+08:15:23,871 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-10) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+08:15:23,896 INFO  [org.jboss.as.remoting] (MSC service thread 1-13) JBAS017100: Escuchando en 127.0.0.1:9999
+08:15:23,896 INFO  [org.jboss.as.remoting] (MSC service thread 1-4) JBAS017100: Escuchando en 127.0.0.1:4447
+08:15:25,203 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-1) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+08:15:25,491 INFO  [org.jboss.web] (ServerService Thread Pool -- 73) JBAS018210: Registrar el contexto web: /Mop
+08:15:25,881 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 26) JBAS018559: Implementado "Mop.war" (runtime-name : "Mop.war")
+08:15:25,977 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015961: Interfaz de administración http escuchando en http://127.0.0.1:9990/management
+08:15:25,977 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015951: Consola de administración escuchando en http://127.0.0.1:9990
+08:15:25,977 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015874: JBoss EAP 6.1.0.GA (AS 7.2.0.Final-redhat-8) inició en 21954ms - Inició 321 de 378 servicios (56 servicios son pasivos o por demanda)
+08:17:06,163 INFO  [org.jboss.web] (ServerService Thread Pool -- 76) JBAS018224: Borrar el registro del contexto web: /Mop
+08:17:06,428 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-9) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 265ms
+08:17:06,428 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+08:17:06,614 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-9) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+08:17:06,614 INFO  [org.jboss.web] (ServerService Thread Pool -- 101) JBAS018210: Registrar el contexto web: /Mop
+08:17:06,817 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
+08:34:54,093 INFO  [org.jboss.web] (ServerService Thread Pool -- 103) JBAS018224: Borrar el registro del contexto web: /Mop
+08:34:54,138 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 48ms
+08:34:54,139 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-13) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+08:34:54,320 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-13) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+08:34:54,327 INFO  [org.jboss.web] (ServerService Thread Pool -- 129) JBAS018210: Registrar el contexto web: /Mop
+08:34:54,461 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
+08:37:19,573 INFO  [org.jboss.web] (ServerService Thread Pool -- 130) JBAS018224: Borrar el registro del contexto web: /Mop
+08:37:19,618 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 47ms
+08:37:19,621 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-8) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+08:37:19,861 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-8) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+08:37:19,871 INFO  [org.jboss.web] (ServerService Thread Pool -- 158) JBAS018210: Registrar el contexto web: /Mop
+08:37:20,684 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
+08:38:40,751 INFO  [org.jboss.web] (ServerService Thread Pool -- 160) JBAS018224: Borrar el registro del contexto web: /Mop
+08:38:40,789 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-7) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 39ms
+08:38:40,790 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-14) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+08:38:40,969 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-16) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+08:38:40,975 INFO  [org.jboss.web] (ServerService Thread Pool -- 183) JBAS018210: Registrar el contexto web: /Mop
+08:38:41,097 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
+08:39:11,133 INFO  [org.jboss.web] (ServerService Thread Pool -- 185) JBAS018224: Borrar el registro del contexto web: /Mop
+08:39:11,167 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-16) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 36ms
+08:39:11,168 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+08:39:11,298 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-14) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+08:39:11,306 INFO  [org.jboss.web] (ServerService Thread Pool -- 207) JBAS018210: Registrar el contexto web: /Mop
+08:39:11,406 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
+08:40:11,448 INFO  [org.jboss.web] (ServerService Thread Pool -- 210) JBAS018224: Borrar el registro del contexto web: /Mop
+08:40:11,549 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 102ms
+08:40:11,549 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+08:40:11,694 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-10) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+08:40:11,702 INFO  [org.jboss.web] (ServerService Thread Pool -- 237) JBAS018210: Registrar el contexto web: /Mop
+08:40:12,135 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
+08:41:57,227 INFO  [org.jboss.web] (ServerService Thread Pool -- 239) JBAS018224: Borrar el registro del contexto web: /Mop
+08:41:57,265 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 41ms
+08:41:57,266 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-13) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+08:41:57,385 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-10) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+08:41:57,392 INFO  [org.jboss.web] (ServerService Thread Pool -- 244) JBAS018210: Registrar el contexto web: /Mop
+08:41:57,760 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
+08:42:17,783 INFO  [org.jboss.web] (ServerService Thread Pool -- 266) JBAS018224: Borrar el registro del contexto web: /Mop
+08:42:17,821 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-9) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 40ms
+08:42:17,822 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-16) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+08:42:17,961 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-4) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+08:42:17,966 INFO  [org.jboss.web] (ServerService Thread Pool -- 290) JBAS018210: Registrar el contexto web: /Mop
+08:42:18,324 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
+08:42:58,355 INFO  [org.jboss.web] (ServerService Thread Pool -- 291) JBAS018224: Borrar el registro del contexto web: /Mop
+08:42:58,399 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-11) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 47ms
+08:42:58,400 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+08:42:58,619 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-7) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+08:42:58,623 INFO  [org.jboss.web] (ServerService Thread Pool -- 309) JBAS018210: Registrar el contexto web: /Mop
+08:42:58,738 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
+08:44:53,816 INFO  [org.jboss.web] (ServerService Thread Pool -- 323) JBAS018224: Borrar el registro del contexto web: /Mop
+08:44:53,846 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 32ms
+08:44:53,847 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-8) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+08:44:53,967 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-14) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+08:44:53,972 INFO  [org.jboss.web] (ServerService Thread Pool -- 342) JBAS018210: Registrar el contexto web: /Mop
+08:44:54,598 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
+08:45:44,636 INFO  [org.jboss.web] (ServerService Thread Pool -- 345) JBAS018224: Borrar el registro del contexto web: /Mop
+08:45:44,671 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 36ms
+08:45:44,671 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-12) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+08:45:45,799 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-16) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+08:45:45,803 INFO  [org.jboss.web] (ServerService Thread Pool -- 355) JBAS018210: Registrar el contexto web: /Mop
+08:45:45,962 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
+08:46:26,003 INFO  [org.jboss.web] (ServerService Thread Pool -- 377) JBAS018224: Borrar el registro del contexto web: /Mop
+08:46:26,032 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-11) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 30ms
+08:46:26,033 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+08:46:26,166 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-2) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+08:46:26,172 INFO  [org.jboss.web] (ServerService Thread Pool -- 399) JBAS018210: Registrar el contexto web: /Mop
+08:46:26,538 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
+09:49:24,063 INFO  [org.jboss.web] (ServerService Thread Pool -- 400) JBAS018224: Borrar el registro del contexto web: /Mop
+09:49:24,092 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 30ms
+09:49:24,092 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-16) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+09:49:24,220 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-11) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+09:49:24,225 INFO  [org.jboss.web] (ServerService Thread Pool -- 413) JBAS018210: Registrar el contexto web: /Mop
+09:49:24,309 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
+09:53:19,461 INFO  [org.jboss.web] (ServerService Thread Pool -- 422) JBAS018224: Borrar el registro del contexto web: /Mop
+09:53:19,495 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-9) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 36ms
+09:53:19,495 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-8) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+09:53:19,623 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-15) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+09:53:19,627 INFO  [org.jboss.web] (ServerService Thread Pool -- 434) JBAS018210: Registrar el contexto web: /Mop
+09:53:19,997 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
+10:33:56,529 INFO  [org.jboss.web] (ServerService Thread Pool -- 445) JBAS018224: Borrar el registro del contexto web: /Mop
+10:33:56,559 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 32ms
+10:33:56,559 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-13) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+10:33:56,751 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-16) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+10:33:56,755 INFO  [org.jboss.web] (ServerService Thread Pool -- 453) JBAS018210: Registrar el contexto web: /Mop
+10:33:57,143 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
+10:35:17,204 INFO  [org.jboss.web] (ServerService Thread Pool -- 468) JBAS018224: Borrar el registro del contexto web: /Mop
+10:35:17,242 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-8) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 39ms
+10:35:17,242 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-9) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+10:35:17,373 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-15) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+10:35:17,378 INFO  [org.jboss.web] (ServerService Thread Pool -- 473) JBAS018210: Registrar el contexto web: /Mop
+10:35:17,931 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
+11:13:04,273 INFO  [org.jboss.web] (ServerService Thread Pool -- 491) JBAS018224: Borrar el registro del contexto web: /Mop
+11:13:04,299 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 28ms
+11:13:04,300 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-8) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+11:13:04,538 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-16) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+11:13:04,542 INFO  [org.jboss.web] (ServerService Thread Pool -- 505) JBAS018210: Registrar el contexto web: /Mop
+11:13:04,638 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
+11:13:30,154 ERROR [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/Mop].[jsp]] (http-/127.0.0.1:8080-1) JBWEB000236: Servlet.service() for servlet jsp threw exception: javax.servlet.jsp.JspTagException: Don't know how to iterate over supplied "items" in &lt;forEach&gt;
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.toForEachIterator(ForEachSupport.java:312) [jboss-jstl-api_1.2_spec-1.0.3.Final-redhat-2.jar:1.0.3.Final-redhat-2]
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.supportedTypeForEachIterator(ForEachSupport.java:276) [jboss-jstl-api_1.2_spec-1.0.3.Final-redhat-2.jar:1.0.3.Final-redhat-2]
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.prepare(ForEachSupport.java:193) [jboss-jstl-api_1.2_spec-1.0.3.Final-redhat-2.jar:1.0.3.Final-redhat-2]
+	at javax.servlet.jsp.jstl.core.LoopTagSupport.doStartTag(LoopTagSupport.java:291) [jboss-jstl-api_1.2_spec-1.0.3.Final-redhat-2.jar:1.0.3.Final-redhat-2]
+	at org.apache.jsp.Bodega.Solicitud_jsp._jspx_meth_c_005fforEach_005f0(Solicitud_jsp.java:156)
+	at org.apache.jsp.Bodega.Solicitud_jsp._jspService(Solicitud_jsp.java:86)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:69) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:365) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:309) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:242) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:295) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:214) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:832) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:620) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:553) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:482) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at Controlador.Controlador.processRequest(Controlador.java:170) [classes:]
+	at Controlador.Controlador.doGet(Controlador.java:245) [classes:]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:734) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:295) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:214) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:230) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:149) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.jboss.as.web.security.SecurityContextAssociationValve.invoke(SecurityContextAssociationValve.java:169) [jboss-as-web-7.2.0.Final-redhat-8.jar:7.2.0.Final-redhat-8]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:145) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:97) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:102) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:336) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:856) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:653) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:920) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at java.lang.Thread.run(Thread.java:745) [rt.jar:1.7.0_80]
+
+11:13:30,285 ERROR [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/Mop].[Controlador]] (http-/127.0.0.1:8080-1) JBWEB000236: Servlet.service() for servlet Controlador threw exception: javax.servlet.jsp.JspTagException: Don't know how to iterate over supplied "items" in &lt;forEach&gt;
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.toForEachIterator(ForEachSupport.java:312) [jboss-jstl-api_1.2_spec-1.0.3.Final-redhat-2.jar:1.0.3.Final-redhat-2]
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.supportedTypeForEachIterator(ForEachSupport.java:276) [jboss-jstl-api_1.2_spec-1.0.3.Final-redhat-2.jar:1.0.3.Final-redhat-2]
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.prepare(ForEachSupport.java:193) [jboss-jstl-api_1.2_spec-1.0.3.Final-redhat-2.jar:1.0.3.Final-redhat-2]
+	at javax.servlet.jsp.jstl.core.LoopTagSupport.doStartTag(LoopTagSupport.java:291) [jboss-jstl-api_1.2_spec-1.0.3.Final-redhat-2.jar:1.0.3.Final-redhat-2]
+	at org.apache.jsp.Bodega.Solicitud_jsp._jspx_meth_c_005fforEach_005f0(Solicitud_jsp.java:156)
+	at org.apache.jsp.Bodega.Solicitud_jsp._jspService(Solicitud_jsp.java:86)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:69) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:365) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:309) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:242) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:295) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:214) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:832) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:620) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:553) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:482) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at Controlador.Controlador.processRequest(Controlador.java:170) [classes:]
+	at Controlador.Controlador.doGet(Controlador.java:245) [classes:]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:734) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:295) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:214) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:230) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:149) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.jboss.as.web.security.SecurityContextAssociationValve.invoke(SecurityContextAssociationValve.java:169) [jboss-as-web-7.2.0.Final-redhat-8.jar:7.2.0.Final-redhat-8]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:145) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:97) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:102) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:336) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:856) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:653) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:920) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at java.lang.Thread.run(Thread.java:745) [rt.jar:1.7.0_80]
+
+11:14:29,694 INFO  [org.jboss.web] (ServerService Thread Pool -- 514) JBAS018224: Borrar el registro del contexto web: /Mop
+11:14:29,742 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-16) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 49ms
+11:14:29,742 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-13) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+11:14:29,880 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-6) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+11:14:29,887 INFO  [org.jboss.web] (ServerService Thread Pool -- 542) JBAS018210: Registrar el contexto web: /Mop
+11:14:30,426 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
+11:14:41,523 ERROR [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/Mop].[jsp]] (http-/127.0.0.1:8080-2) JBWEB000236: Servlet.service() for servlet jsp threw exception: javax.servlet.jsp.JspTagException: Don't know how to iterate over supplied "items" in &lt;forEach&gt;
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.toForEachIterator(ForEachSupport.java:312) [jboss-jstl-api_1.2_spec-1.0.3.Final-redhat-2.jar:1.0.3.Final-redhat-2]
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.supportedTypeForEachIterator(ForEachSupport.java:276) [jboss-jstl-api_1.2_spec-1.0.3.Final-redhat-2.jar:1.0.3.Final-redhat-2]
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.prepare(ForEachSupport.java:193) [jboss-jstl-api_1.2_spec-1.0.3.Final-redhat-2.jar:1.0.3.Final-redhat-2]
+	at javax.servlet.jsp.jstl.core.LoopTagSupport.doStartTag(LoopTagSupport.java:291) [jboss-jstl-api_1.2_spec-1.0.3.Final-redhat-2.jar:1.0.3.Final-redhat-2]
+	at org.apache.jsp.Bodega.Solicitud_jsp._jspx_meth_c_005fforEach_005f0(Solicitud_jsp.java:156)
+	at org.apache.jsp.Bodega.Solicitud_jsp._jspService(Solicitud_jsp.java:86)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:69) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:365) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:309) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:242) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:295) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:214) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:832) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:620) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:553) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:482) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at Controlador.Controlador.processRequest(Controlador.java:170) [classes:]
+	at Controlador.Controlador.doGet(Controlador.java:245) [classes:]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:734) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:295) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:214) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:230) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:149) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.jboss.as.web.security.SecurityContextAssociationValve.invoke(SecurityContextAssociationValve.java:169) [jboss-as-web-7.2.0.Final-redhat-8.jar:7.2.0.Final-redhat-8]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:145) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:97) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:102) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:336) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:856) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:653) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:920) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at java.lang.Thread.run(Thread.java:745) [rt.jar:1.7.0_80]
+
+11:14:41,667 ERROR [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/Mop].[Controlador]] (http-/127.0.0.1:8080-2) JBWEB000236: Servlet.service() for servlet Controlador threw exception: javax.servlet.jsp.JspTagException: Don't know how to iterate over supplied "items" in &lt;forEach&gt;
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.toForEachIterator(ForEachSupport.java:312) [jboss-jstl-api_1.2_spec-1.0.3.Final-redhat-2.jar:1.0.3.Final-redhat-2]
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.supportedTypeForEachIterator(ForEachSupport.java:276) [jboss-jstl-api_1.2_spec-1.0.3.Final-redhat-2.jar:1.0.3.Final-redhat-2]
+	at org.apache.taglibs.standard.tag.common.core.ForEachSupport.prepare(ForEachSupport.java:193) [jboss-jstl-api_1.2_spec-1.0.3.Final-redhat-2.jar:1.0.3.Final-redhat-2]
+	at javax.servlet.jsp.jstl.core.LoopTagSupport.doStartTag(LoopTagSupport.java:291) [jboss-jstl-api_1.2_spec-1.0.3.Final-redhat-2.jar:1.0.3.Final-redhat-2]
+	at org.apache.jsp.Bodega.Solicitud_jsp._jspx_meth_c_005fforEach_005f0(Solicitud_jsp.java:156)
+	at org.apache.jsp.Bodega.Solicitud_jsp._jspService(Solicitud_jsp.java:86)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:69) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:365) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:309) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:242) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:295) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:214) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:832) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:620) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:553) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:482) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at Controlador.Controlador.processRequest(Controlador.java:170) [classes:]
+	at Controlador.Controlador.doGet(Controlador.java:245) [classes:]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:734) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:295) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:214) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:230) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:149) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.jboss.as.web.security.SecurityContextAssociationValve.invoke(SecurityContextAssociationValve.java:169) [jboss-as-web-7.2.0.Final-redhat-8.jar:7.2.0.Final-redhat-8]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:145) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:97) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:102) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:336) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:856) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:653) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:920) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at java.lang.Thread.run(Thread.java:745) [rt.jar:1.7.0_80]
+
+11:16:30,548 INFO  [org.jboss.web] (ServerService Thread Pool -- 543) JBAS018224: Borrar el registro del contexto web: /Mop
+11:16:30,572 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 25ms
+11:16:30,572 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-13) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+11:16:30,724 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-5) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+11:16:30,734 INFO  [org.jboss.web] (ServerService Thread Pool -- 548) JBAS018210: Registrar el contexto web: /Mop
+11:16:30,831 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
+12:49:54,900 INFO  [org.jboss.web] (ServerService Thread Pool -- 566) JBAS018224: Borrar el registro del contexto web: /Mop
+12:49:54,931 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-10) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 31ms
+12:49:54,931 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-15) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+12:49:56,259 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-5) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+12:49:56,259 INFO  [org.jboss.web] (ServerService Thread Pool -- 589) JBAS018210: Registrar el contexto web: /Mop
+12:49:56,618 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
+12:50:04,195 ERROR [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/Mop].[jsp]] (http-/127.0.0.1:8080-1) JBWEB000236: Servlet.service() for servlet jsp threw exception: javax.el.MethodNotFoundException: Method getDescripcion not found
+	at javax.el.BeanELResolver.findMethod(BeanELResolver.java:715) [jboss-el-api_2.2_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at javax.el.BeanELResolver.invoke(BeanELResolver.java:466) [jboss-el-api_2.2_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at org.apache.jasper.el.JasperELResolver.invoke(JasperELResolver.java:135) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.el.parser.AstValue.getValue(AstValue.java:156) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.el.ValueExpressionImpl.getValue(ValueExpressionImpl.java:189) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate(PageContextImpl.java:958) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.jsp.Bodega.Solicitud_jsp._jspService(Solicitud_jsp.java:87)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:69) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:365) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:309) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:242) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:295) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:214) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:832) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:620) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:553) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:482) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at Controlador.Controlador.processRequest(Controlador.java:172) [classes:]
+	at Controlador.Controlador.doGet(Controlador.java:250) [classes:]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:734) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:295) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:214) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:230) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:149) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.jboss.as.web.security.SecurityContextAssociationValve.invoke(SecurityContextAssociationValve.java:169) [jboss-as-web-7.2.0.Final-redhat-8.jar:7.2.0.Final-redhat-8]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:145) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:97) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:102) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:336) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:856) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:653) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:920) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at java.lang.Thread.run(Thread.java:745) [rt.jar:1.7.0_80]
+
+12:50:04,206 ERROR [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/Mop].[Controlador]] (http-/127.0.0.1:8080-1) JBWEB000236: Servlet.service() for servlet Controlador threw exception: javax.el.MethodNotFoundException: Method getDescripcion not found
+	at javax.el.BeanELResolver.findMethod(BeanELResolver.java:715) [jboss-el-api_2.2_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at javax.el.BeanELResolver.invoke(BeanELResolver.java:466) [jboss-el-api_2.2_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at org.apache.jasper.el.JasperELResolver.invoke(JasperELResolver.java:135) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.el.parser.AstValue.getValue(AstValue.java:156) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.el.ValueExpressionImpl.getValue(ValueExpressionImpl.java:189) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate(PageContextImpl.java:958) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.jsp.Bodega.Solicitud_jsp._jspService(Solicitud_jsp.java:87)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:69) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:365) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:309) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:242) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:295) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:214) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:832) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:620) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:553) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:482) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at Controlador.Controlador.processRequest(Controlador.java:172) [classes:]
+	at Controlador.Controlador.doGet(Controlador.java:250) [classes:]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:734) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:295) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:214) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:230) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:149) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.jboss.as.web.security.SecurityContextAssociationValve.invoke(SecurityContextAssociationValve.java:169) [jboss-as-web-7.2.0.Final-redhat-8.jar:7.2.0.Final-redhat-8]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:145) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:97) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:102) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:336) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:856) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:653) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:920) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at java.lang.Thread.run(Thread.java:745) [rt.jar:1.7.0_80]
+
+12:50:51,758 INFO  [org.jboss.web] (ServerService Thread Pool -- 591) JBAS018224: Borrar el registro del contexto web: /Mop
+12:50:51,773 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-10) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 26ms
+12:50:51,773 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+12:50:51,898 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-13) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+12:50:51,898 INFO  [org.jboss.web] (ServerService Thread Pool -- 611) JBAS018210: Registrar el contexto web: /Mop
+12:50:52,367 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
+12:53:17,741 INFO  [org.jboss.web] (ServerService Thread Pool -- 615) JBAS018224: Borrar el registro del contexto web: /Mop
+12:53:17,757 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 24ms
+12:53:17,772 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+12:53:17,866 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-16) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+12:53:17,866 INFO  [org.jboss.web] (ServerService Thread Pool -- 629) JBAS018210: Registrar el contexto web: /Mop
+12:53:18,038 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
+12:56:33,476 INFO  [org.jboss.web] (ServerService Thread Pool -- 637) JBAS018224: Borrar el registro del contexto web: /Mop
+12:56:33,507 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-16) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 30ms
+12:56:33,507 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+12:56:33,632 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-14) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+12:56:33,632 INFO  [org.jboss.web] (ServerService Thread Pool -- 646) JBAS018210: Registrar el contexto web: /Mop
+12:56:34,663 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
+12:58:49,860 INFO  [org.jboss.web] (ServerService Thread Pool -- 660) JBAS018224: Borrar el registro del contexto web: /Mop
+12:58:49,902 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-13) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 42ms
+12:58:49,902 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-9) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+12:58:50,024 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-10) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+12:58:50,028 INFO  [org.jboss.web] (ServerService Thread Pool -- 664) JBAS018210: Registrar el contexto web: /Mop
+12:58:50,466 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
+12:59:25,525 INFO  [org.jboss.web] (ServerService Thread Pool -- 685) JBAS018224: Borrar el registro del contexto web: /Mop
+12:59:25,541 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 27ms
+12:59:25,541 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+12:59:25,744 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-7) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+12:59:25,744 INFO  [org.jboss.web] (ServerService Thread Pool -- 703) JBAS018210: Registrar el contexto web: /Mop
+12:59:26,103 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
+13:00:41,255 INFO  [org.jboss.web] (ServerService Thread Pool -- 708) JBAS018224: Borrar el registro del contexto web: /Mop
+13:00:41,293 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 35ms
+13:00:41,294 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-16) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+13:00:41,434 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-1) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+13:00:41,438 INFO  [org.jboss.web] (ServerService Thread Pool -- 722) JBAS018210: Registrar el contexto web: /Mop
+13:00:42,055 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
+13:01:12,132 INFO  [org.jboss.web] (ServerService Thread Pool -- 732) JBAS018224: Borrar el registro del contexto web: /Mop
+13:01:12,154 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-16) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 23ms
+13:01:12,155 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+13:01:12,268 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-13) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+13:01:12,273 INFO  [org.jboss.web] (ServerService Thread Pool -- 745) JBAS018210: Registrar el contexto web: /Mop
+13:01:12,630 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
+13:01:42,713 INFO  [org.jboss.web] (ServerService Thread Pool -- 755) JBAS018224: Borrar el registro del contexto web: /Mop
+13:01:42,738 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-8) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 26ms
+13:01:42,738 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-14) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+13:01:42,864 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-11) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+13:01:42,867 INFO  [org.jboss.web] (ServerService Thread Pool -- 768) JBAS018210: Registrar el contexto web: /Mop
+13:01:43,027 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
+13:02:53,211 INFO  [org.jboss.web] (ServerService Thread Pool -- 778) JBAS018224: Borrar el registro del contexto web: /Mop
+13:02:53,241 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-16) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 31ms
+13:02:53,241 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-9) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+13:02:53,458 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-4) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+13:02:53,474 INFO  [org.jboss.web] (ServerService Thread Pool -- 796) JBAS018210: Registrar el contexto web: /Mop
+13:02:53,568 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
+13:04:43,792 INFO  [org.jboss.web] (ServerService Thread Pool -- 800) JBAS018224: Borrar el registro del contexto web: /Mop
+13:04:43,808 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 23ms
+13:04:43,808 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-7) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+13:04:43,933 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-9) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+13:04:43,933 INFO  [org.jboss.web] (ServerService Thread Pool -- 822) JBAS018210: Registrar el contexto web: /Mop
+13:04:44,011 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
+13:05:14,099 INFO  [org.jboss.web] (ServerService Thread Pool -- 824) JBAS018224: Borrar el registro del contexto web: /Mop
+13:05:14,114 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-16) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 24ms
+13:05:14,114 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-11) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+13:05:14,239 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-11) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+13:05:14,239 INFO  [org.jboss.web] (ServerService Thread Pool -- 845) JBAS018210: Registrar el contexto web: /Mop
+13:05:14,333 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
+13:07:59,784 INFO  [org.jboss.web] (ServerService Thread Pool -- 849) JBAS018224: Borrar el registro del contexto web: /Mop
+13:07:59,815 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 29ms
+13:07:59,815 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+13:07:59,940 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-3) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+13:07:59,940 INFO  [org.jboss.web] (ServerService Thread Pool -- 851) JBAS018210: Registrar el contexto web: /Mop
+13:08:00,456 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
+13:09:10,628 INFO  [org.jboss.web] (ServerService Thread Pool -- 871) JBAS018224: Borrar el registro del contexto web: /Mop
+13:09:10,644 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-7) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 23ms
+13:09:10,644 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+13:09:10,769 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-6) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+13:09:10,769 INFO  [org.jboss.web] (ServerService Thread Pool -- 883) JBAS018210: Registrar el contexto web: /Mop
+13:09:10,862 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
+13:09:48,231 INFO  [stdout] (http-/127.0.0.1:8080-1) com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1

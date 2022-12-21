@@ -4,6 +4,7 @@
     Author     : usuario
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -25,16 +26,28 @@
                             <h4 style="text-align: center;">Solicitud</h4>
                         </div>
                         <div class="card-body">
-                            <label>Descripcion</label>
-                            <input class="form-control" id="txtproducto" name="txtproducto">
-                            <label>Medida</label>
-                            <input class="form-control" id="txtmedida" name="txtmedida">
-                            <label>Cantidad</label>
-                            <input class="form-control" id="txtcantidad" name="txtcantidad">
-                            <label>Stock</label>
-                            <input class="form-control" id="txtstock" name="txtstock">
-                            <label>Bodega</label>
-                            <input class="form-control" id="txtbodega" name="txtbodega">
+                            <c:forEach var="Pseleccionado" items="${seleccionado}">
+                                <label>Descripcion</label>
+                                <input class="form-control" id="txtproducto" name="txtproducto" value="${Pseleccionado.descripcion}">
+                                <label>Medida</label>
+                                <input class="form-control" id="txtmedida" name="txtmedida" value="${Pseleccionado.pdescripcion_medida}">
+                                <label>Bodega</label>
+                                <input class="form-control" id="txtbodega" name="txtbodega" value="${Pseleccionado.pnombre_bodega}">
+                                <br>
+                                <div class="d-flex justify-content-between">
+                                    <label style="margin-left: 25px;">Cantidad</label>
+                                    <label style="margin-right: 40px;">Stock</label>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <input class="form-control" id="txtcantidad" name="txtcantidad">
+                                    <input style="margin-left: 10px;" class="form-control" id="txtstock" name="txtstock" value="${Pseleccionado.cantidad}">
+                                </div>
+                            </c:forEach>
+                        </div>
+                        <div class="card-footer">
+                            <div class="d-flex justify-content-center">
+                                <button type="submit" class="btn btn-outline-primary">Solicitar</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -42,7 +55,7 @@
                     <div class="d-flex justify-content-center">
                         <form class="form-inline" action="Controlador?menu=buscarproducto" method="POST">
                             <div class="input-group mb-3">
-                                <input type="search" id="txtbuscar" name="txtbuscar" class="sm-form-control" placeholder="Buscar">
+                                <input type="search" id="txtbuscar" name="txtbuscarproducto" class="sm-form-control" placeholder="Buscar">
                                 <div class="input-group-append">
                                     <input class="btn btn-outline-success" type="submit"  value="Buscar">
                                 </div>
@@ -56,12 +69,21 @@
                                 <th>Medida</th>
                                 <th>Cantidad</th>
                                 <th>Bodega</th>
+                                <th>Opcion</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-
-                            </tr>
+                            <c:forEach var="producto" items="${producto}">
+                                <tr>
+                                    <td><c:out value="${producto.descripcion}"></c:out></td>
+                                    <td><c:out value="${producto.pdescripcion_medida}"></c:out></td>
+                                    <td><c:out value="${producto.cantidad}"></c:out></td>
+                                    <td><c:out value="${producto.pnombre_bodega}"></c:out></td>
+                                        <td>
+                                            <a href="Controlador?menu=productoseleccionado&id=<c:out value="${producto.idproducto}"></c:out>" class="btn btn-outline-info">Seleccionar</a>
+                                    </td>
+                                </tr>
+                            </c:forEach>
                         </tbody>
                     </table>
                 </div>
