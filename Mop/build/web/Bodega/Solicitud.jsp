@@ -19,39 +19,134 @@
     </head>
     <body>
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-4">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4 style="text-align: center;">Solicitud</h4>
-                        </div>
-                        <div class="card-body">
-                            <c:forEach var="Pseleccionado" items="${seleccionado}">
-                                <label>Descripcion</label>
-                                <input class="form-control" id="txtproducto" name="txtproducto" value="${Pseleccionado.descripcion}">
-                                <label>Medida</label>
-                                <input class="form-control" id="txtmedida" name="txtmedida" value="${Pseleccionado.pdescripcion_medida}">
-                                <label>Bodega</label>
-                                <input class="form-control" id="txtbodega" name="txtbodega" value="${Pseleccionado.pnombre_bodega}">
-                                <br>
-                                <div class="d-flex justify-content-between">
-                                    <label style="margin-left: 25px;">Cantidad</label>
-                                    <label style="margin-right: 40px;">Stock</label>
+            <div class="card">
+                <div class="card-header">
+                    <div class="d-flex justify-content-between">
+                        <h3>Solicitud</h3>
+                        <img src="img/vialidad.jpg" alt="Logo" style="width: 70px;">
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form action="Controlador?menu=pedido" method="POST">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <label>RUN</label>
+                                        <input class="form-control" id="txtrun" name="txtrun" value="${solicitud.getRun()}" type="text">
+                                    </div>
+                                    <div class="col-3">
+                                        <label>Nombre</label>
+                                        <input class="form-control" id="txtdestinatario" name="txtdestinatario" value="${solicitud.getNombre()}" type="text">
+                                    </div>
+                                    <div class="col-3">
+                                        <label>Provincia</label>
+                                        <select class="custom-select" id="provincia" name="provincia">
+                                            <c:forEach var="provincia" items="${provincia}">
+                                                <option value="<c:out value="${provincia.provinciaid}"></c:out>"><c:out value="${provincia.nom_provincia}"></c:out></option>
+                                            </c:forEach>
+                                        </select>
+                                    </div>
+                                    <div class="col-2">
+                                        <label>Bodega</label>
+                                        <input class="form-control" id="txtbodega" name="txtbodega" value="${seleccionado.getPnombre_bodega()}" disabled>
+                                    </div>
+                                    <div class="col-2">
+                                        <label>Responsable</label>
+                                        <input class="form-control" id="txtusuario" name="txtusuario" value="${usua.getNombre_usuario()}" disabled>
+                                    </div>
                                 </div>
-                                <div class="d-flex justify-content-between">
-                                    <input class="form-control" id="txtcantidad" name="txtcantidad">
-                                    <input style="margin-left: 10px;" class="form-control" id="txtstock" name="txtstock" value="${Pseleccionado.cantidad}">
-                                </div>
-                            </c:forEach>
-                        </div>
-                        <div class="card-footer">
-                            <div class="d-flex justify-content-center">
-                                <button type="submit" class="btn btn-outline-primary">Solicitar</button>
                             </div>
+                            <div class="col-2">
+                                <br>
+                                <label>Producto</label>
+                                <input class="form-control" id="txtproducto" name="txtproducto" value="${seleccionado.getDescripcion()}" disabled>
+                            </div>
+                            <div class="col-2">
+                                <br>
+                                <label>Medida</label>
+                                <input class="form-control" id="txtmedida" name="txtmedida" value="${seleccionado.getPdescripcion_medida()}" disabled>
+                            </div>
+                            <div class="col-1">
+                                <br>
+                                <label>Stock</label>
+                                <input class="form-control" value="${seleccionado.getCantidad()}" disabled>
+                            </div>
+                            <div class="col-1">
+                                <br>
+                                <label>Cantidad</label>
+                                <input class="form-control" id="txtvalor" name="txtvalor" type="number">
+                            </div>
+                            <div class="col-2">
+                                <br>
+                                <div class="col_one_third col_last c-azul">
+                                    <label>Fecha Solicitud</label>
+                                    <input class="form-control" id="txtfecha" name="txtfecha" type="date">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <br>
+                                <label>Finalizar Registro</label>
+                                <button type="submit" class="btn btn-outline-success">Agregar +</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer">
+                    <div  class="d-flex justify-content-end">
+                        <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#detalle">Mostrar Detalle</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="detalle">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 style="text-align: center;">Detalle Solicitud</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Item</th>
+                                        <th>Codigo</th>
+                                        <th>Producto</th>
+                                        <th>Medida</th>
+                                        <th>Cantidad</th>
+                                        <th>Destinatario</th>
+                                        <th>Run</th>
+                                        <th>Opciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <c:forEach var="pedido" items="${pedido}">
+                                        <tr>
+                                            <td><c:out value="${pedido.idsolicitud}"></c:out></td>
+                                            <td><c:out value="${pedido.producto}"></c:out></td>
+                                            <td><c:out value="${pedido.descripcionproducto}"></c:out></td>
+                                            <td><c:out value="${pedido.descripcionmedida}"></c:out></td>
+                                            <td><c:out value="${pedido.cantidad}"></c:out></td>
+                                            <td><c:out value="${pedido.nombre}"></c:out></td>
+                                            <td><c:out value="${pedido.run}"></c:out></td>
+                                                <td>
+                                                    <a href="" class="btn btn-outline-danger">Quitar</a>
+                                                </td>
+                                            </tr>
+                                    </c:forEach>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="Controlador?menu=generarsolicitud" class="btn btn-outline-success">Generar Solicitud</a>
+                            <button style="margin-left: 10px;" type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-8">
+            </div>
+            <br>
+            <div class="card">
+                <div class="card-body">
                     <div class="d-flex justify-content-center">
                         <form class="form-inline" action="Controlador?menu=buscarproducto" method="POST">
                             <div class="input-group mb-3">
@@ -67,8 +162,9 @@
                             <tr>
                                 <th>Producto</th>
                                 <th>Medida</th>
-                                <th>Cantidad</th>
+                                <th>Stock</th>
                                 <th>Bodega</th>
+                                <th>Orden de Compra</th>
                                 <th>Opcion</th>
                             </tr>
                         </thead>
@@ -79,15 +175,16 @@
                                     <td><c:out value="${producto.pdescripcion_medida}"></c:out></td>
                                     <td><c:out value="${producto.cantidad}"></c:out></td>
                                     <td><c:out value="${producto.pnombre_bodega}"></c:out></td>
+                                    <td><c:out value="${producto.orden_compra}"></c:out></td>
                                         <td>
                                             <a href="Controlador?menu=productoseleccionado&id=<c:out value="${producto.idproducto}"></c:out>" class="btn btn-outline-info">Seleccionar</a>
-                                    </td>
-                                </tr>
+                                        </td>
+                                    </tr>
                             </c:forEach>
                         </tbody>
                     </table>
                 </div>
             </div>
-        </div>       
+        </div>
     </body>
 </html>

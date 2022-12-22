@@ -1,27 +1,28 @@
 package Modelo;
 
 public class Solicitud {
-    int idsolicitud,usuario,producto,provincia;
-    String run,nombre,descripcion_solicitud,cantidad,nro_solicitud;
-    String descipcionproducto,descripcionmedida,descripcionbodega,descripcionprovincia;
+    int idsolicitud,usuario,producto,provincia,cantidad;
+    String nombre,run,fecha,nro_solicitud;
+    String descripcionproducto,descripcionmedida,descripcionbodega,descripcionprovincia,nom_usuario;
 
     public Solicitud() {
     }
 
-    public Solicitud(int idsolicitud, int usuario, int producto, int provincia, String run, String nombre, String descripcion_solicitud, String cantidad, String nro_solicitud, String descipcionproducto, String descripcionmedida, String descripcionbodega, String descripcionprovincia) {
+    public Solicitud(int idsolicitud, int usuario, int producto, int provincia, int cantidad, String nombre, String run, String fecha, String nro_solicitud, String descripcionproducto, String descripcionmedida, String descripcionbodega, String descripcionprovincia, String nom_usuario) {
         this.idsolicitud = idsolicitud;
         this.usuario = usuario;
         this.producto = producto;
         this.provincia = provincia;
-        this.run = run;
-        this.nombre = nombre;
-        this.descripcion_solicitud = descripcion_solicitud;
         this.cantidad = cantidad;
+        this.nombre = nombre;
+        this.run = run;
+        this.fecha = fecha;
         this.nro_solicitud = nro_solicitud;
-        this.descipcionproducto = descipcionproducto;
+        this.descripcionproducto = descripcionproducto;
         this.descripcionmedida = descripcionmedida;
         this.descripcionbodega = descripcionbodega;
         this.descripcionprovincia = descripcionprovincia;
+        this.nom_usuario = nom_usuario;
     }
 
     public int getIdsolicitud() {
@@ -56,12 +57,12 @@ public class Solicitud {
         this.provincia = provincia;
     }
 
-    public String getRun() {
-        return run;
+    public int getCantidad() {
+        return cantidad;
     }
 
-    public void setRun(String run) {
-        this.run = run;
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
     }
 
     public String getNombre() {
@@ -72,20 +73,20 @@ public class Solicitud {
         this.nombre = nombre;
     }
 
-    public String getDescripcion_solicitud() {
-        return descripcion_solicitud;
+    public String getRun() {
+        return run;
     }
 
-    public void setDescripcion_solicitud(String descripcion_solicitud) {
-        this.descripcion_solicitud = descripcion_solicitud;
+    public void setRun(String run) {
+        this.run = run;
     }
 
-    public String getCantidad() {
-        return cantidad;
+    public String getFecha() {
+        return fecha;
     }
 
-    public void setCantidad(String cantidad) {
-        this.cantidad = cantidad;
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
     }
 
     public String getNro_solicitud() {
@@ -96,12 +97,12 @@ public class Solicitud {
         this.nro_solicitud = nro_solicitud;
     }
 
-    public String getDescipcionproducto() {
-        return descipcionproducto;
+    public String getDescripcionproducto() {
+        return descripcionproducto;
     }
 
-    public void setDescipcionproducto(String descipcionproducto) {
-        this.descipcionproducto = descipcionproducto;
+    public void setDescripcionproducto(String descripcionproducto) {
+        this.descripcionproducto = descripcionproducto;
     }
 
     public String getDescripcionmedida() {
@@ -127,4 +128,13 @@ public class Solicitud {
     public void setDescripcionprovincia(String descripcionprovincia) {
         this.descripcionprovincia = descripcionprovincia;
     }
+
+    public String getNom_usuario() {
+        return nom_usuario;
+    }
+
+    public void setNom_usuario(String nom_usuario) {
+        this.nom_usuario = nom_usuario;
+    }
+
 }

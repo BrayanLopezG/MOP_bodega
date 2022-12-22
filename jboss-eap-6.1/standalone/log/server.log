@@ -4001,3 +4001,182 @@
 13:09:10,769 INFO  [org.jboss.web] (ServerService Thread Pool -- 883) JBAS018210: Registrar el contexto web: /Mop
 13:09:10,862 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
 13:09:48,231 INFO  [stdout] (http-/127.0.0.1:8080-1) com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+16:25:54,195 INFO  [org.jboss.web] (ServerService Thread Pool -- 896) JBAS018224: Borrar el registro del contexto web: /Mop
+16:25:54,226 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-15) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 29ms
+16:25:54,226 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-12) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+16:25:54,336 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-10) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+16:25:54,351 INFO  [org.jboss.web] (ServerService Thread Pool -- 913) JBAS018210: Registrar el contexto web: /Mop
+16:25:55,036 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
+16:30:12,724 ERROR [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/Mop].[Controlador]] (http-/127.0.0.1:8080-1) JBWEB000236: Servlet.service() for servlet Controlador threw exception: java.lang.NumberFormatException: null
+	at java.lang.Integer.parseInt(Integer.java:454) [rt.jar:1.7.0_80]
+	at java.lang.Integer.parseInt(Integer.java:527) [rt.jar:1.7.0_80]
+	at Controlador.Controlador.processRequest(Controlador.java:91) [classes:]
+	at Controlador.Controlador.doPost(Controlador.java:257) [classes:]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:754) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:295) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:214) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:230) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:149) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.jboss.as.web.security.SecurityContextAssociationValve.invoke(SecurityContextAssociationValve.java:169) [jboss-as-web-7.2.0.Final-redhat-8.jar:7.2.0.Final-redhat-8]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:145) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:97) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:102) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:336) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:856) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:653) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:920) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at java.lang.Thread.run(Thread.java:745) [rt.jar:1.7.0_80]
+
+16:34:51,193 INFO  [org.jboss.web] (ServerService Thread Pool -- 917) JBAS018224: Borrar el registro del contexto web: /Mop
+16:34:51,224 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-11) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 26ms
+16:34:51,224 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+16:34:51,583 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-9) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+16:34:51,583 INFO  [org.jboss.web] (ServerService Thread Pool -- 926) JBAS018210: Registrar el contexto web: /Mop
+16:34:51,724 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
+16:35:29,519 INFO  [stdout] (http-/127.0.0.1:8080-3) com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'departamento' in 'field list'
+16:35:29,520 INFO  [stdout] (http-/127.0.0.1:8080-3) com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'producto.departamento' in 'field list'
+16:39:37,337 INFO  [org.jboss.web] (ServerService Thread Pool -- 940) JBAS018224: Borrar el registro del contexto web: /Mop
+16:39:37,384 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-8) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 40ms
+16:39:37,384 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-10) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
+16:39:37,493 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-14) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+16:39:37,493 INFO  [org.jboss.web] (ServerService Thread Pool -- 964) JBAS018210: Registrar el contexto web: /Mop
+16:39:37,603 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
+16:40:22,102 INFO  [stdout] (http-/127.0.0.1:8080-3) com.mysql.jdbc.JDBC4ResultSet@2ecfff92
+16:40:26,456 INFO  [stdout] (http-/127.0.0.1:8080-3) com.mysql.jdbc.JDBC4ResultSet@5485a8fc
+16:40:26,456 INFO  [stdout] (http-/127.0.0.1:8080-3) com.mysql.jdbc.JDBC4ResultSet@5485a8fc
+16:40:36,996 INFO  [stdout] (http-/127.0.0.1:8080-3) com.mysql.jdbc.JDBC4ResultSet@14d8c165
+16:40:43,145 INFO  [stdout] (http-/127.0.0.1:8080-3) com.mysql.jdbc.JDBC4ResultSet@2be67253
+16:40:43,146 INFO  [stdout] (http-/127.0.0.1:8080-3) com.mysql.jdbc.JDBC4ResultSet@2be67253
+16:40:53,293 INFO  [stdout] (http-/127.0.0.1:8080-3) com.mysql.jdbc.JDBC4ResultSet@752a723c
+16:40:53,293 INFO  [stdout] (http-/127.0.0.1:8080-3) com.mysql.jdbc.JDBC4ResultSet@752a723c
+16:40:53,293 INFO  [stdout] (http-/127.0.0.1:8080-3) com.mysql.jdbc.JDBC4ResultSet@752a723c
+16:42:29,458 INFO  [stdout] (http-/127.0.0.1:8080-3) com.mysql.jdbc.JDBC4ResultSet@4fd9dbdf
+16:42:37,223 INFO  [stdout] (http-/127.0.0.1:8080-3) com.mysql.jdbc.JDBC4ResultSet@2ebbd725
+16:42:37,224 INFO  [stdout] (http-/127.0.0.1:8080-3) com.mysql.jdbc.JDBC4ResultSet@2ebbd725
+16:42:45,809 INFO  [stdout] (http-/127.0.0.1:8080-3) com.mysql.jdbc.JDBC4ResultSet@2df05750
+16:42:45,809 INFO  [stdout] (http-/127.0.0.1:8080-3) com.mysql.jdbc.JDBC4ResultSet@2df05750
+16:42:45,809 INFO  [stdout] (http-/127.0.0.1:8080-3) com.mysql.jdbc.JDBC4ResultSet@2df05750
+16:42:46,995 INFO  [stdout] (http-/127.0.0.1:8080-3) com.mysql.jdbc.JDBC4ResultSet@3cfcf56
+16:42:46,996 INFO  [stdout] (http-/127.0.0.1:8080-3) com.mysql.jdbc.JDBC4ResultSet@3cfcf56
+16:42:47,596 INFO  [stdout] (http-/127.0.0.1:8080-3) com.mysql.jdbc.JDBC4ResultSet@d348ca7
+16:43:01,123 INFO  [stdout] (http-/127.0.0.1:8080-3) com.mysql.jdbc.JDBC4ResultSet@32dece49
+16:43:01,123 INFO  [stdout] (http-/127.0.0.1:8080-3) com.mysql.jdbc.JDBC4ResultSet@32dece49
+16:43:03,663 INFO  [stdout] (http-/127.0.0.1:8080-3) com.mysql.jdbc.JDBC4ResultSet@66f37c19
+16:43:10,448 INFO  [stdout] (http-/127.0.0.1:8080-3) com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '5' for key 'PRIMARY'
+16:43:10,449 INFO  [stdout] (http-/127.0.0.1:8080-3) com.mysql.jdbc.JDBC4ResultSet@4dee50d0
+16:43:33,527 INFO  [stdout] (http-/127.0.0.1:8080-3) com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '5' for key 'PRIMARY'
+16:43:33,529 INFO  [stdout] (http-/127.0.0.1:8080-3) com.mysql.jdbc.JDBC4ResultSet@69779ace
+16:44:21,038 INFO  [stdout] (http-/127.0.0.1:8080-3) com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '5' for key 'PRIMARY'
+16:45:26,733 INFO  [stdout] (http-/127.0.0.1:8080-3) com.mysql.jdbc.JDBC4ResultSet@3ef3a230
+16:45:35,727 INFO  [stdout] (http-/127.0.0.1:8080-3) com.mysql.jdbc.JDBC4ResultSet@2b351a3a
+16:45:35,727 INFO  [stdout] (http-/127.0.0.1:8080-3) com.mysql.jdbc.JDBC4ResultSet@2b351a3a
+16:52:07,420 ERROR [org.jboss.remoting.remote.connection] (Remoting "desktop-to536at:MANAGEMENT" read-1) JBREM000200: Remote connection failed: java.io.IOException: Se ha forzado la interrupción de una conexión existente por el host remoto
+09:27:43,589 INFO  [org.jboss.modules] (main) JBoss Modules version 1.2.0.Final-redhat-1
+09:27:44,132 INFO  [org.jboss.msc] (main) JBoss MSC version 1.0.4.GA-redhat-1
+09:27:44,236 INFO  [org.jboss.as] (MSC service thread 1-7) JBAS015899: JBoss EAP 6.1.0.GA (AS 7.2.0.Final-redhat-8) iniciando
+09:27:44,245 DEBUG [org.jboss.as.config] (MSC service thread 1-7) Propiedades del sistema configuradas:
+	awt.toolkit = sun.awt.windows.WToolkit
+	file.encoding = Cp1252
+	file.encoding.pkg = sun.io
+	file.separator = \
+	java.awt.graphicsenv = sun.awt.Win32GraphicsEnvironment
+	java.awt.printerjob = sun.awt.windows.WPrinterJob
+	java.class.path = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\jboss-modules.jar
+	java.class.version = 51.0
+	java.endorsed.dirs = C:\Program Files\Java\jdk1.7.0_80\jre\lib\endorsed
+	java.ext.dirs = C:\Program Files\Java\jdk1.7.0_80\jre\lib\ext;C:\Windows\Sun\Java\lib\ext
+	java.home = C:\Program Files\Java\jdk1.7.0_80\jre
+	java.io.tmpdir = C:\Users\usuario\AppData\Local\Temp\
+	java.library.path = C:\Program Files\Java\jdk1.7.0_80\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Git\cmd;"C:\Program Files\Java\jdk1.7.0_80\bin;C:\Program Files\Java\jdk1.7.0_80\bin;";C:\Users\usuario\AppData\Local\Microsoft\WindowsApps;;.
+	java.runtime.name = Java(TM) SE Runtime Environment
+	java.runtime.version = 1.7.0_80-b15
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 1.7
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Oracle Corporation
+	java.vendor.url = http://java.oracle.com/
+	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+	java.version = 1.7.0_80
+	java.vm.info = mixed mode
+	java.vm.name = Java HotSpot(TM) 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 1.7
+	java.vm.vendor = Oracle Corporation
+	java.vm.version = 24.80-b11
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
+	javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
+	javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
+	javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
+	javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
+	javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
+	javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
+	javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
+	javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
+	jboss.home.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1
+	jboss.host.name = desktop-to536at
+	jboss.modules.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\modules
+	jboss.node.name = desktop-to536at
+	jboss.qualified.host.name = desktop-to536at
+	jboss.server.base.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone
+	jboss.server.config.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\configuration
+	jboss.server.data.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\data
+	jboss.server.deploy.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\data\content
+	jboss.server.log.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\log
+	jboss.server.name = desktop-to536at
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\tmp
+	line.separator = 
+
+	logging.configuration = file:C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone/configuration/logging.properties
+	module.path = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\modules
+	org.jboss.boot.log.file = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\log\server.log
+	org.jboss.resolver.warning = true
+	org.xml.sax.driver = __redirected.__XMLReaderFactory
+	os.arch = amd64
+	os.name = Windows 8.1
+	os.version = 6.3
+	path.separator = ;
+	program.name = standalone.bat
+	sun.arch.data.model = 64
+	sun.boot.class.path = C:\Program Files\Java\jdk1.7.0_80\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_80\jre\classes
+	sun.boot.library.path = C:\Program Files\Java\jdk1.7.0_80\jre\bin
+	sun.cpu.endian = little
+	sun.cpu.isalist = amd64
+	sun.desktop = windows
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\jboss-modules.jar -mp C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\modules -jaxpmodule javax.xml.jaxp-provider org.jboss.as.standalone -Djboss.home.dir=C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = Cp1252
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = 
+	user.country = CL
+	user.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\bin
+	user.home = C:\Users\usuario
+	user.language = es
+	user.name = usuario
+	user.script = 
+	user.timezone = America/Santiago
+	user.variant = 
+09:27:44,247 DEBUG [org.jboss.as.config] (MSC service thread 1-7) Argumentos de VM: -XX:+TieredCompilation -XX:+UseCompressedOops -Dprogram.name=standalone.bat -Xms128m -Xmx512m -XX:MaxPermSize=256m -Dorg.jboss.boot.log.file=C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\log\server.log -Dlogging.configuration=file:C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone/configuration/logging.properties 
+09:27:47,277 INFO  [org.xnio] (MSC service thread 1-10) XNIO Version 3.0.7.GA-redhat-1
+09:27:47,278 INFO  [org.jboss.as.server] (Controller Boot Thread) JBAS015888: Creando el servicio de administración http utilizando el enlace de socket (management-http) 
+09:27:47,301 INFO  [org.xnio.nio] (MSC service thread 1-10) XNIO NIO Implementation Version 3.0.7.GA-redhat-1
+09:27:47,306 INFO  [org.jboss.remoting] (MSC service thread 1-10) JBoss Remoting version 3.2.16.GA-redhat-1
+09:27:47,348 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 29) JBAS010280: Activando el sub-sistema Infinispan.
+09:27:47,351 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 42) JBAS013171: Activando el sub-sistema de seguridad
+09:27:47,363 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 46) JBAS015537: Activando WebServices Extension
+09:27:47,363 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 35) JBAS012605: Se activaron las siguientes implementaciones JSF: [main, 1.2]
+09:27:47,375 INFO  [org.jboss.as.security] (MSC service thread 1-3) JBAS013170: Versión PicketBox actual=4.0.17.Final-redhat-1
+09:27:47,383 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 37) JBAS011800: Activando el sub-sistema de nombrado
+09:27:47,389 INFO  [org.jboss.as.connector.logging] (MSC service thread 1-16) JBAS010408: Iniciando JCA sub-sistema (IronJacamar 1.0.17.Final-redhat-1)
+09:27:47,703 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 25) JBAS010403: Implementación del controlador que cumple con los requerimientos de JDBC class org.h2.Driver (versión 1.3)
+09:27:47,849 INFO  [org.apache.coyote.http11] (MSC service thread 1-3) JBWEB003001: Coyote HTTP/1.1 initializing on : http-/127.0.0.1:8080
+09:27:47,853 INFO  [org.apache.coyote.http11] (MSC service thread 1-3) JBWEB003000: Coyote HTTP/1.1 starting on: http-/127.0.0.1:8080
+09:27:47,854 INFO  [org.jboss.as.naming] (MSC service thread 1-8) JBAS011802: Iniciando el servicio de nombrado
+09:27:47,862 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-4) JBAS015400: Sesión de correo enlazada [java:jboss/mail/Default]
+09:27:48,282 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-6) JBAS010400: Fuente de datos enlazados [java:jboss/datasources/ExampleDS]
+09:27:48,683 INFO  [org.jboss.ws.common.management] (MSC service thread 1-15) JBWS022052: Starting JBoss Web Services - Stack CXF Server 4.1.3.Final-redhat-3

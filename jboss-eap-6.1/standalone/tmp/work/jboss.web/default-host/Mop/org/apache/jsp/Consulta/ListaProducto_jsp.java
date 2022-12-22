@@ -79,7 +79,7 @@ public final class ListaProducto_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("                <h1>Bodega</h1>\r\n");
       out.write("            </div>\r\n");
       out.write("            <div class=\"d-flex justify-content-center\">\r\n");
-      out.write("                <form class=\"form-inline\" action=\"Controlador?menu=buscarproducto\" method=\"POST\">\r\n");
+      out.write("                <form class=\"form-inline\" action=\"Controlador?menu=buscarproductobodega\" method=\"POST\">\r\n");
       out.write("                    <div class=\"input-group mb-3\">\r\n");
       out.write("                        <input type=\"search\" id=\"txtbuscar\" name=\"txtbuscar\" class=\"form-control\" placeholder=\"Buscar Producto\">\r\n");
       out.write("                        <div class=\"input-group-append\">\r\n");
