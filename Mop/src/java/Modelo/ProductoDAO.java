@@ -6,8 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductoDAO {
-
     String Auto_ID = "SELECT COUNT(idProducto) FROM producto";
+    String buscar_producto = "SELECT * FROM producto WHERE idProducto = ?";
+    String actualizar_stock = "UPDATE producto set cantidad = ? WHERE idProducto = ?";
     String producto_factura = "SELECT producto.idProducto, producto.descripcion, producto.cantidad, producto.departamento, factura.orden_compra, bodega.nombre_bodega, tipo_medida.descripcion_medida FROM producto JOIN factura ON producto.factura_id = factura.idFactura JOIN bodega ON producto.bodega_id = bodega.idBodega JOIN tipo_medida ON producto.tipo_medida_id = tipo_medida.idTipo_medida WHERE factura_id = ?";
     String agregar_producto = "INSERT INTO producto(idProducto,descripcion,cantidad,departamento,factura_id,bodega_id,tipo_medida_id) VALUES(?,?,?,?,?,?,?)";
     String borrar_producto = "DELETE FROM producto WHERE idProducto = ?";
@@ -263,6 +264,47 @@ public class ProductoDAO {
             ps.executeUpdate();
         } catch (SQLException e) {
             System.out.println(e.toString());
+        }
+    }
+    public Producto buscar(int id){
+        PreparedStatement ps;
+        ResultSet rs;
+        Producto producto = null;
+        try {
+            ps = conexion.prepareStatement(buscar_producto);
+            ps.setInt(1,id);
+            rs = ps.executeQuery();
+            while (rs.next()){
+                int idproducto = rs.getInt(1);
+                String nombre = rs.getString(2);
+                String cantidad =  rs.getString(3);
+                String departamento = rs.getString(4);
+                int medida = rs.getInt(5);
+                int factura = rs.getInt(6);
+                int bodega = rs.getInt(7);
+                producto = new Producto(idproducto, factura, medida, bodega, departamento, cantidad, departamento);
+            }
+            ps.close();
+            rs.close();
+            return producto;
+        } catch (SQLException e) {
+            System.out.println(e.toString());
+            return null;
+        }
+    }
+    public int actuaizarStock(int id, int cantidad){
+        PreparedStatement ps;
+        int ac = 0;
+        try {
+            ps = conexion.prepareStatement(actualizar_stock);
+            ps.setInt(1, cantidad);
+            ps.setInt(2, id);
+            ps.executeUpdate();
+            ps.close();
+            return ac;
+        } catch (SQLException e) {
+            System.out.println(e.toString());
+            return ac;
         }
     }
 }

@@ -130,7 +130,7 @@
                                             <td><c:out value="${pedido.nombre}"></c:out></td>
                                             <td><c:out value="${pedido.run}"></c:out></td>
                                                 <td>
-                                                    <a href="" class="btn btn-outline-danger">Quitar</a>
+                                                    <a href="Controlador?menu=quitarpedido&idpedido=<c:out value="${pedido.idsolicitud}"></c:out>" class="btn btn-outline-danger">Quitar</a>
                                                 </td>
                                             </tr>
                                     </c:forEach>

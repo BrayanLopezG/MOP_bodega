@@ -35,6 +35,7 @@ import javax.servlet.http.Part;
 @WebServlet(name = "Controlador", urlPatterns = "/Controlador")
 @MultipartConfig(maxFileSize = 16177215)
 public class Controlador extends HttpServlet {
+
     SolicitudDAO solidao = new SolicitudDAO();
     UsuarioDAO udao = new UsuarioDAO();
     FacturaDAO fdao = new FacturaDAO();
@@ -59,7 +60,7 @@ public class Controlador extends HttpServlet {
     int idf = 0;
     int idp = 0;
     int idu = 0;
-    
+
     int item;
     int idprodu;
     int idprov;
@@ -73,7 +74,7 @@ public class Controlador extends HttpServlet {
     String run_destinatario;
     String destinatario;
     String nom_bodega;
-    
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String menu = request.getParameter("menu");
@@ -217,7 +218,7 @@ public class Controlador extends HttpServlet {
             run_destinatario = request.getParameter("txtrun");
             destinatario = request.getParameter("txtdestinatario");
             fecha_soli = request.getParameter("txtfecha");
-            nro_soli = "00000000"+(solidao.Auto_ID_S()+ 1);
+            nro_soli = "00000000" + (solidao.Auto_ID_S() + 1);
             nom_bodega = pro.getPnombre_bodega();
             solicitud = new Solicitud();
             solicitud.setIdsolicitud(item);
@@ -253,7 +254,18 @@ public class Controlador extends HttpServlet {
             request.setAttribute("solicitud", solicitud);
             request.setAttribute("pedido", listasolicitud);
             request.getRequestDispatcher("Bodega/Solicitud.jsp").forward(request, response);
-        } else if (menu.equals("generarsolicitud")){
+        } else if (menu.equals("generarsolicitud")) {
+            //Actualizar STOCK
+            for (int i = 0; i < listasolicitud.size(); i ++){
+                Producto temp;
+                int cantidad = listasolicitud.get(i).getCantidad();
+                int idproducto = listasolicitud.get(1).getProducto();
+                temp = prdao.buscar(idproducto);
+                int cant_final = Integer.parseInt(temp.getCantidad()) - cantidad;
+                prdao.actuaizarStock(idproducto,cant_final);
+            }
+            //Agregar Solicitud
+            solicitud.setIdsolicitud(solidao.Auto_ID_S() + 1);
             solicitud.setNro_solicitud(nro_soli);
             solicitud.setNombre(destinatario);
             solicitud.setRun(run_destinatario);
@@ -261,8 +273,67 @@ public class Controlador extends HttpServlet {
             solicitud.setProvincia(idprov);
             solicitud.setUsuario(idusua);
             solidao.guardarSolicitud(solicitud);
-        } 
-        else if (menu.equals("proveedor")) {
+            int idsoli = solicitud.getIdsolicitud();
+            //Agregar Detalle Solicitud
+            for (int i = 0; i < listasolicitud.size(); i++) {
+                solicitud = new Solicitud();
+                solicitud.setIdsolicitud(idsoli);
+                solicitud.setProducto(listasolicitud.get(i).getProducto());
+                solicitud.setCantidad(listasolicitud.get(i).getCantidad());
+                solidao.guardarDetallesolicitud(solicitud);
+            }
+            // Listas para Provincia
+            List<Provincia> provincia = provindao.provincias();
+            // Lista de Producto en base al Perfil del usuario
+            usua = udao.filtroUsuario(idu);
+            int perfil = usua.getPerfil_id();
+            List<Producto> listaproducto;
+            String departamento;
+            if (perfil == 0) {
+                listaproducto = prdao.listaproductoAdmin();
+            } else if (perfil == 1) {
+                departamento = perfdao.Perfil(perfil);
+                listaproducto = prdao.listaproductoDepto(departamento);
+            } else {
+                departamento = perfdao.Perfil(perfil);
+                listaproducto = prdao.listaproductoDepto(departamento);
+            }
+            //Mostrar listas en WEB
+            request.setAttribute("provincia", provincia);
+            request.setAttribute("producto", listaproducto);
+            request.setAttribute("usua", usua);
+            request.setAttribute("solicitud", solicitud);
+            request.setAttribute("pedido", listasolicitud);
+            request.getRequestDispatcher("Bodega/Solicitud.jsp").forward(request, response);
+        } else if (menu.equals("quitarpedido")) {
+            int idpedido = Integer.parseInt(request.getParameter("idpedido"));
+            for (int i = 0; i < listasolicitud.size(); i++) {
+                if (listasolicitud.get(i).getIdsolicitud() == idpedido){
+                    listasolicitud.remove(i);
+                }
+            }
+            List<Provincia> provincia = provindao.provincias();
+            usua = udao.filtroUsuario(idu);
+            int perfil = usua.getPerfil_id();
+            List<Producto> listaproducto;
+            String departamento;
+            if (perfil == 0) {
+                listaproducto = prdao.listaproductoAdmin();
+            } else if (perfil == 1) {
+                departamento = perfdao.Perfil(perfil);
+                listaproducto = prdao.listaproductoDepto(departamento);
+            } else {
+                departamento = perfdao.Perfil(perfil);
+                listaproducto = prdao.listaproductoDepto(departamento);
+            }
+            listasolicitud = new ArrayList();
+            request.setAttribute("provincia", provincia);
+            request.setAttribute("producto", listaproducto);
+            request.setAttribute("usua", usua);
+            request.setAttribute("solicitud", solicitud);
+            request.setAttribute("pedido", listasolicitud);
+            request.getRequestDispatcher("Bodega/Solicitud.jsp").forward(request, response);
+        } else if (menu.equals("proveedor")) {
             List<Proveedor> listaproveedor = pdao.listaProveedor();
             request.setAttribute("lista", listaproveedor);
             request.getRequestDispatcher("Proveedor/Proveedor.jsp").forward(request, response);
@@ -299,6 +370,7 @@ public class Controlador extends HttpServlet {
             request.setAttribute("producto", listaproducto);
             request.getRequestDispatcher("Consulta/ListaProducto.jsp").forward(request, response);
         } else if (menu.equals("consultasolicitud")) {
+            
             request.getRequestDispatcher("Consulta/ListaSolicitud.jsp").forward(request, response);
         } else if (menu.equals("usuario")) {
             List<Bodega> listabodega = bdao.listaBodega();
