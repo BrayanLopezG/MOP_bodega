@@ -81,6 +81,7 @@
                                 <br>
                                 <div class="col_one_third col_last c-azul">
                                     <label>Fecha Solicitud</label>
+                                    <br>
                                     <input class="form-control" id="txtfecha" name="txtfecha" type="date">
                                 </div>
                             </div>
@@ -170,16 +171,18 @@
                         </thead>
                         <tbody>
                             <c:forEach var="producto" items="${producto}">
-                                <tr>
-                                    <td><c:out value="${producto.descripcion}"></c:out></td>
-                                    <td><c:out value="${producto.pdescripcion_medida}"></c:out></td>
-                                    <td><c:out value="${producto.cantidad}"></c:out></td>
-                                    <td><c:out value="${producto.pnombre_bodega}"></c:out></td>
-                                    <td><c:out value="${producto.orden_compra}"></c:out></td>
-                                        <td>
-                                            <a href="Controlador?menu=productoseleccionado&id=<c:out value="${producto.idproducto}"></c:out>" class="btn btn-outline-info">Seleccionar</a>
-                                        </td>
-                                    </tr>
+                                <c:if test="${producto.cantidad > 0}">
+                                    <tr>
+                                        <td><c:out value="${producto.descripcion}"></c:out></td>
+                                        <td><c:out value="${producto.pdescripcion_medida}"></c:out></td>
+                                        <td><c:out value="${producto.cantidad}"></c:out></td>
+                                        <td><c:out value="${producto.pnombre_bodega}"></c:out></td>
+                                        <td><c:out value="${producto.orden_compra}"></c:out></td>
+                                            <td>
+                                                <a href="Controlador?menu=productoseleccionado&id=<c:out value="${producto.idproducto}"></c:out>" class="btn btn-outline-info">Seleccionar</a>
+                                            </td>
+                                        </tr>
+                                </c:if>
                             </c:forEach>
                         </tbody>
                     </table>

@@ -4,11 +4,21 @@ public class Solicitud {
     int idsolicitud,usuario,producto,provincia,cantidad;
     String nombre,run,fecha,nro_solicitud;
     String descripcionproducto,descripcionmedida,descripcionbodega,descripcionprovincia,nom_usuario;
+    String usuario_nombre,usuario_apellido,usuario_run;
 
-    public Solicitud() {
+    public Solicitud(String nombre, String run, String fecha, String nro_solicitud, String descripcionbodega, String descripcionprovincia, String usuario_nombre, String usuario_apellido, String usuario_run) {
+        this.nombre = nombre;
+        this.run = run;
+        this.fecha = fecha;
+        this.nro_solicitud = nro_solicitud;
+        this.descripcionbodega = descripcionbodega;
+        this.descripcionprovincia = descripcionprovincia;
+        this.usuario_nombre = usuario_nombre;
+        this.usuario_apellido = usuario_apellido;
+        this.usuario_run = usuario_run;
     }
 
-    public Solicitud(int idsolicitud, int usuario, int producto, int provincia, int cantidad, String nombre, String run, String fecha, String nro_solicitud, String descripcionproducto, String descripcionmedida, String descripcionbodega, String descripcionprovincia, String nom_usuario) {
+    public Solicitud(int idsolicitud, int usuario, int producto, int provincia, int cantidad, String nombre, String run, String fecha, String nro_solicitud, String descripcionproducto, String descripcionmedida, String descripcionbodega, String descripcionprovincia, String nom_usuario, String usuario_nombre, String usuario_apellido, String usuario_run) {
         this.idsolicitud = idsolicitud;
         this.usuario = usuario;
         this.producto = producto;
@@ -23,6 +33,50 @@ public class Solicitud {
         this.descripcionbodega = descripcionbodega;
         this.descripcionprovincia = descripcionprovincia;
         this.nom_usuario = nom_usuario;
+        this.usuario_nombre = usuario_nombre;
+        this.usuario_apellido = usuario_apellido;
+        this.usuario_run = usuario_run;
+    }
+
+    public Solicitud(int cantidad, String descripcionproducto, String descripcionmedida) {
+        this.cantidad = cantidad;
+        this.descripcionproducto = descripcionproducto;
+        this.descripcionmedida = descripcionmedida;
+    }
+
+    public Solicitud(int idsolicitud, String nombre, String run, String fecha, String nro_solicitud) {
+        this.idsolicitud = idsolicitud;
+        this.nombre = nombre;
+        this.run = run;
+        this.fecha = fecha;
+        this.nro_solicitud = nro_solicitud;
+    }
+
+    public Solicitud() {
+    }
+
+    public String getUsuario_nombre() {
+        return usuario_nombre;
+    }
+
+    public void setUsuario_nombre(String usuario_nombre) {
+        this.usuario_nombre = usuario_nombre;
+    }
+
+    public String getUsuario_apellido() {
+        return usuario_apellido;
+    }
+
+    public void setUsuario_apellido(String usuario_apellido) {
+        this.usuario_apellido = usuario_apellido;
+    }
+
+    public String getUsuario_run() {
+        return usuario_run;
+    }
+
+    public void setUsuario_run(String usuario_run) {
+        this.usuario_run = usuario_run;
     }
 
     public int getIdsolicitud() {

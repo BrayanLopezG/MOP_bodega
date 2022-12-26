@@ -20,8 +20,6 @@ import Modelo.Usuario;
 import Modelo.UsuarioDAO;
 import java.io.IOException;
 import java.io.InputStream;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import javax.servlet.ServletException;
@@ -35,7 +33,7 @@ import javax.servlet.http.Part;
 @WebServlet(name = "Controlador", urlPatterns = "/Controlador")
 @MultipartConfig(maxFileSize = 16177215)
 public class Controlador extends HttpServlet {
-
+    
     SolicitudDAO solidao = new SolicitudDAO();
     UsuarioDAO udao = new UsuarioDAO();
     FacturaDAO fdao = new FacturaDAO();
@@ -60,7 +58,7 @@ public class Controlador extends HttpServlet {
     int idf = 0;
     int idp = 0;
     int idu = 0;
-
+    
     int item;
     int idprodu;
     int idprov;
@@ -74,7 +72,7 @@ public class Controlador extends HttpServlet {
     String run_destinatario;
     String destinatario;
     String nom_bodega;
-
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String menu = request.getParameter("menu");
@@ -255,15 +253,6 @@ public class Controlador extends HttpServlet {
             request.setAttribute("pedido", listasolicitud);
             request.getRequestDispatcher("Bodega/Solicitud.jsp").forward(request, response);
         } else if (menu.equals("generarsolicitud")) {
-            //Actualizar STOCK
-            for (int i = 0; i < listasolicitud.size(); i ++){
-                Producto temp;
-                int cantidad = listasolicitud.get(i).getCantidad();
-                int idproducto = listasolicitud.get(1).getProducto();
-                temp = prdao.buscar(idproducto);
-                int cant_final = Integer.parseInt(temp.getCantidad()) - cantidad;
-                prdao.actuaizarStock(idproducto,cant_final);
-            }
             //Agregar Solicitud
             solicitud.setIdsolicitud(solidao.Auto_ID_S() + 1);
             solicitud.setNro_solicitud(nro_soli);
@@ -273,6 +262,15 @@ public class Controlador extends HttpServlet {
             solicitud.setProvincia(idprov);
             solicitud.setUsuario(idusua);
             solidao.guardarSolicitud(solicitud);
+            //Actualizar STOCK
+            for (int i = 0; i < listasolicitud.size(); i++) {
+                Producto temp;
+                int cantidad = listasolicitud.get(i).getCantidad();
+                int idproducto = listasolicitud.get(i).getProducto();
+                temp = prdao.buscar(idproducto);
+                int cant_final = Integer.parseInt(temp.getCantidad()) - cantidad;
+                prdao.actuaizarStock(idproducto, cant_final);
+            }
             int idsoli = solicitud.getIdsolicitud();
             //Agregar Detalle Solicitud
             for (int i = 0; i < listasolicitud.size(); i++) {
@@ -298,6 +296,8 @@ public class Controlador extends HttpServlet {
                 departamento = perfdao.Perfil(perfil);
                 listaproducto = prdao.listaproductoDepto(departamento);
             }
+            //Limpiar la lista para nueva solicitud
+            listasolicitud = new ArrayList();
             //Mostrar listas en WEB
             request.setAttribute("provincia", provincia);
             request.setAttribute("producto", listaproducto);
@@ -308,7 +308,7 @@ public class Controlador extends HttpServlet {
         } else if (menu.equals("quitarpedido")) {
             int idpedido = Integer.parseInt(request.getParameter("idpedido"));
             for (int i = 0; i < listasolicitud.size(); i++) {
-                if (listasolicitud.get(i).getIdsolicitud() == idpedido){
+                if (listasolicitud.get(i).getIdsolicitud() == idpedido) {
                     listasolicitud.remove(i);
                 }
             }
@@ -326,7 +326,6 @@ public class Controlador extends HttpServlet {
                 departamento = perfdao.Perfil(perfil);
                 listaproducto = prdao.listaproductoDepto(departamento);
             }
-            listasolicitud = new ArrayList();
             request.setAttribute("provincia", provincia);
             request.setAttribute("producto", listaproducto);
             request.setAttribute("usua", usua);
@@ -369,8 +368,60 @@ public class Controlador extends HttpServlet {
             }
             request.setAttribute("producto", listaproducto);
             request.getRequestDispatcher("Consulta/ListaProducto.jsp").forward(request, response);
-        } else if (menu.equals("consultasolicitud")) {
+        } else if (menu.equals("buscarproductobodega")) {
+            String buscar = request.getParameter("txtbuscar");
+            int perfil = usua.getPerfil_id();
+            List<Producto> listaproducto;
+            String departamento;
+            if (perfil == 0) {
+                listaproducto = prdao.buscarproductoAdmin(buscar);
+            } else if (perfil == 1) {
+                departamento = perfdao.Perfil(perfil);
+                listaproducto = prdao.buscarproductoDepto(buscar, departamento);
+            } else {
+                departamento = perfdao.Perfil(perfil);
+                listaproducto = prdao.buscarproductoDepto(buscar, departamento);
+            }
+            request.setAttribute("producto", listaproducto);
+            request.getRequestDispatcher("Consulta/ListaProducto.jsp").forward(request, response);
+        } else if (menu.equals("detalleproducto")) {
             
+        } else if (menu.equals("consultasolicitud")) {
+            int id = Integer.parseInt(request.getParameter("id"));
+            usua = udao.filtroUsuario(id);
+            int perfil = usua.getPerfil_id();
+            String departamento;
+            List<Solicitud> solicitudes;
+            if (perfil == 0) {
+                solicitudes = solidao.listasolicitudAdmin();
+            } else if (perfil == 1) {
+                departamento = perfdao.Perfil(perfil);
+                solicitudes = solidao.listasolicitudDepto(departamento);
+            } else {
+                departamento = perfdao.Perfil(perfil);
+                solicitudes = solidao.listasolicitudDepto(departamento);
+            }
+            request.setAttribute("listasolicitudes", solicitudes);
+            request.getRequestDispatcher("Consulta/ListaSolicitud.jsp").forward(request, response);
+        } else if (menu.equals("detallesolicitud")) {
+            int id = Integer.parseInt(request.getParameter("solicitud"));
+            List<Solicitud> detallesolicitud = solidao.detalleSolicitud(id);
+            solicitud = solidao.detalleSolicitudParticipante(id);
+            int perfil = usua.getPerfil_id();
+            String departamento;
+            List<Solicitud> solicitudes;
+            if (perfil == 0) {
+                solicitudes = solidao.listasolicitudAdmin();
+            } else if (perfil == 1) {
+                departamento = perfdao.Perfil(perfil);
+                solicitudes = solidao.listasolicitudDepto(departamento);
+            } else {
+                departamento = perfdao.Perfil(perfil);
+                solicitudes = solidao.listasolicitudDepto(departamento);
+            }
+            request.setAttribute("participantes", solicitud);
+            request.setAttribute("listasolicitudes", solicitudes);
+            request.setAttribute("detalle", detallesolicitud);
             request.getRequestDispatcher("Consulta/ListaSolicitud.jsp").forward(request, response);
         } else if (menu.equals("usuario")) {
             List<Bodega> listabodega = bdao.listaBodega();
@@ -405,21 +456,21 @@ public class Controlador extends HttpServlet {
             request.getRequestDispatcher("Login/Usuarios.jsp").forward(request, response);
         }
     }
-
+    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-
+        
     }
-
+    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
         //doGet(request, response);
     }
-
+    
     @Override
     public String getServletInfo() {
         return "Short description";

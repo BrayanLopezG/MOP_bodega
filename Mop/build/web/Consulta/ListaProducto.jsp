@@ -52,7 +52,7 @@
                                 <td><c:out value="${productos.cantidad}"></c:out></td>
                                 <td><c:out value="${productos.pnombre_bodega}"></c:out></td>
                                     <td>
-                                        <a href="Controlador?menu=detalleproducto&nom=" class="btn btn-outline-info">Ver Detalle</a>
+                                        <a href="Controlador?menu=detalleproducto&nom=<c:out value="${productos.descripcion}"></c:out>" class="btn btn-outline-info">Ver Detalle</a>
                                     </td>
                                 </tr>
                         </c:forEach>
