@@ -128,11 +128,25 @@ public final class ListaSolicitud_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${participantes.getDescripcionprovincia()}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write("</label>\n");
       out.write("                            <br>\n");
-      out.write("                            <label>Productos Solicitados</label>\n");
-      out.write("                            ");
+      out.write("                            <div class=\"dropdown-divider\"></div>\n");
+      out.write("                            <h4>Productos Solicitados</h4>\n");
+      out.write("                            <div class=\"dropdown-divider\"></div>\n");
+      out.write("                            <table class=\"table\">\n");
+      out.write("                                <thead>\n");
+      out.write("                                    <tr>\n");
+      out.write("                                        <th>Producto</th>\n");
+      out.write("                                        <th>Medida</th>\n");
+      out.write("                                        <th>Cantidad</th>\n");
+      out.write("                                    </tr>\n");
+      out.write("                                </thead>\n");
+      out.write("                                <tbody>\n");
+      out.write("                                    ");
       if (_jspx_meth_c_005fforEach_005f1(_jspx_page_context))
         return;
       out.write("\n");
+      out.write("                                </tbody>\n");
+      out.write("                            </table>\n");
+      out.write("                            <div class=\"dropdown-divider\"></div>\n");
       out.write("                            <label>RUN Responsable: ");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${participantes.getUsuario_run()}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write("</label>\n");
@@ -151,7 +165,7 @@ public final class ListaSolicitud_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("                        <div class=\"card-footer\">\n");
       out.write("                            <div class=\"d-flex justify-content-center\">\n");
       out.write("                                <a href=\"Controlador?menu=pdf&solicitud=");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${participantes.getNro_solicitud()}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${participantes.getIdsolicitud()}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write("\" class=\"btn btn-outline-info\">Generar PDF</a>\n");
       out.write("                            </div>\n");
       out.write("                        </div>\n");
@@ -338,28 +352,31 @@ public final class ListaSolicitud_jsp extends org.apache.jasper.runtime.HttpJspB
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_005fforEach_005f1 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvar_005fitems.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_005fforEach_005f1.setPageContext(_jspx_page_context);
     _jspx_th_c_005fforEach_005f1.setParent(null);
-    // /Consulta/ListaSolicitud.jsp(73,28) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
-    _jspx_th_c_005fforEach_005f1.setVar("detalleS");
-    // /Consulta/ListaSolicitud.jsp(73,28) name = items type = javax.el.ValueExpression reqTime = true required = false fragment = false deferredValue = true deferredMethod = false expectedTypeName = java.lang.Object methodSignature = null 
-    _jspx_th_c_005fforEach_005f1.setItems(new org.apache.jasper.el.JspValueExpression("/Consulta/ListaSolicitud.jsp(73,28) '${detalle}'",_el_expressionfactory.createValueExpression(_jspx_page_context.getELContext(),"${detalle}",java.lang.Object.class)).getValue(_jspx_page_context.getELContext()));
+    // /Consulta/ListaSolicitud.jsp(84,36) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
+    _jspx_th_c_005fforEach_005f1.setVar("detalleSoli");
+    // /Consulta/ListaSolicitud.jsp(84,36) name = items type = javax.el.ValueExpression reqTime = true required = false fragment = false deferredValue = true deferredMethod = false expectedTypeName = java.lang.Object methodSignature = null 
+    _jspx_th_c_005fforEach_005f1.setItems(new org.apache.jasper.el.JspValueExpression("/Consulta/ListaSolicitud.jsp(84,36) '${detalle}'",_el_expressionfactory.createValueExpression(_jspx_page_context.getELContext(),"${detalle}",java.lang.Object.class)).getValue(_jspx_page_context.getELContext()));
     int[] _jspx_push_body_count_c_005fforEach_005f1 = new int[] { 0 };
     try {
       int _jspx_eval_c_005fforEach_005f1 = _jspx_th_c_005fforEach_005f1.doStartTag();
       if (_jspx_eval_c_005fforEach_005f1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
           out.write("\n");
-          out.write("                                <label>Producto: ");
+          out.write("                                        <tr>\n");
+          out.write("                                            <td>");
           if (_jspx_meth_c_005fout_005f5(_jspx_th_c_005fforEach_005f1, _jspx_page_context, _jspx_push_body_count_c_005fforEach_005f1))
             return true;
-          out.write(" Cantidad: ");
+          out.write("</td>\n");
+          out.write("                                            <td>");
           if (_jspx_meth_c_005fout_005f6(_jspx_th_c_005fforEach_005f1, _jspx_page_context, _jspx_push_body_count_c_005fforEach_005f1))
             return true;
-          out.write(" Medida: ");
+          out.write("</td>\n");
+          out.write("                                            <td>");
           if (_jspx_meth_c_005fout_005f7(_jspx_th_c_005fforEach_005f1, _jspx_page_context, _jspx_push_body_count_c_005fforEach_005f1))
             return true;
-          out.write("</label>\n");
-          out.write("                                    <br>\n");
-          out.write("                            ");
+          out.write("</td>\n");
+          out.write("                                        </tr>\n");
+          out.write("                                    ");
           int evalDoAfterBody = _jspx_th_c_005fforEach_005f1.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;
@@ -387,8 +404,8 @@ public final class ListaSolicitud_jsp extends org.apache.jasper.runtime.HttpJspB
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_005fout_005f5 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_005fout_005f5.setPageContext(_jspx_page_context);
     _jspx_th_c_005fout_005f5.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fforEach_005f1);
-    // /Consulta/ListaSolicitud.jsp(74,49) name = value type = null reqTime = true required = true fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
-    _jspx_th_c_005fout_005f5.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${detalleS.descripcionproducto}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
+    // /Consulta/ListaSolicitud.jsp(86,48) name = value type = null reqTime = true required = true fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
+    _jspx_th_c_005fout_005f5.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${detalleSoli.descripcionproducto}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
     int _jspx_eval_c_005fout_005f5 = _jspx_th_c_005fout_005f5.doStartTag();
     if (_jspx_th_c_005fout_005f5.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.reuse(_jspx_th_c_005fout_005f5);
@@ -406,8 +423,8 @@ public final class ListaSolicitud_jsp extends org.apache.jasper.runtime.HttpJspB
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_005fout_005f6 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_005fout_005f6.setPageContext(_jspx_page_context);
     _jspx_th_c_005fout_005f6.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fforEach_005f1);
-    // /Consulta/ListaSolicitud.jsp(74,115) name = value type = null reqTime = true required = true fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
-    _jspx_th_c_005fout_005f6.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${detalleS.cantidad}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
+    // /Consulta/ListaSolicitud.jsp(87,48) name = value type = null reqTime = true required = true fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
+    _jspx_th_c_005fout_005f6.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${detalleSoli.descripcionmedida}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
     int _jspx_eval_c_005fout_005f6 = _jspx_th_c_005fout_005f6.doStartTag();
     if (_jspx_th_c_005fout_005f6.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.reuse(_jspx_th_c_005fout_005f6);
@@ -425,8 +442,8 @@ public final class ListaSolicitud_jsp extends org.apache.jasper.runtime.HttpJspB
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_005fout_005f7 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_005fout_005f7.setPageContext(_jspx_page_context);
     _jspx_th_c_005fout_005f7.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fforEach_005f1);
-    // /Consulta/ListaSolicitud.jsp(74,168) name = value type = null reqTime = true required = true fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
-    _jspx_th_c_005fout_005f7.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${detalleS.descripcionmedida}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
+    // /Consulta/ListaSolicitud.jsp(88,48) name = value type = null reqTime = true required = true fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
+    _jspx_th_c_005fout_005f7.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${detalleSoli.cantidad}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
     int _jspx_eval_c_005fout_005f7 = _jspx_th_c_005fout_005f7.doStartTag();
     if (_jspx_th_c_005fout_005f7.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.reuse(_jspx_th_c_005fout_005f7);

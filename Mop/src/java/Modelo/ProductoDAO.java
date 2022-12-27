@@ -292,7 +292,7 @@ public class ProductoDAO {
             return null;
         }
     }
-    public int actuaizarStock(int id, int cantidad){
+    public int actualizarStock(int id, int cantidad){
         PreparedStatement ps;
         int ac = 0;
         try {

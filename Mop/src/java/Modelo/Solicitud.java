@@ -6,7 +6,8 @@ public class Solicitud {
     String descripcionproducto,descripcionmedida,descripcionbodega,descripcionprovincia,nom_usuario;
     String usuario_nombre,usuario_apellido,usuario_run;
 
-    public Solicitud(String nombre, String run, String fecha, String nro_solicitud, String descripcionbodega, String descripcionprovincia, String usuario_nombre, String usuario_apellido, String usuario_run) {
+    public Solicitud(int idsolicitud,String nombre, String run, String fecha, String nro_solicitud, String descripcionbodega, String descripcionprovincia, String usuario_nombre, String usuario_apellido, String usuario_run) {
+        this.idsolicitud = idsolicitud;
         this.nombre = nombre;
         this.run = run;
         this.fecha = fecha;

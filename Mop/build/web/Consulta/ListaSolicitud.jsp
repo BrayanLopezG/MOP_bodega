@@ -69,11 +69,28 @@
                             <br>
                             <label>Provincia: ${participantes.getDescripcionprovincia()}</label>
                             <br>
-                            <label>Productos Solicitados</label>
-                            <c:forEach var="detalleS" items="${detalle}">
-                                <label>Producto: <c:out value="${detalleS.descripcionproducto}"></c:out> Cantidad: <c:out value="${detalleS.cantidad}"></c:out> Medida: <c:out value="${detalleS.descripcionmedida}"></c:out></label>
-                                    <br>
-                            </c:forEach>
+                            <div class="dropdown-divider"></div>
+                            <h4>Productos Solicitados</h4>
+                            <div class="dropdown-divider"></div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Producto</th>
+                                        <th>Medida</th>
+                                        <th>Cantidad</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <c:forEach var="detalleSoli" items="${detalle}">
+                                        <tr>
+                                            <td><c:out value="${detalleSoli.descripcionproducto}"></c:out></td>
+                                            <td><c:out value="${detalleSoli.descripcionmedida}"></c:out></td>
+                                            <td><c:out value="${detalleSoli.cantidad}"></c:out></td>
+                                        </tr>
+                                    </c:forEach>
+                                </tbody>
+                            </table>
+                            <div class="dropdown-divider"></div>
                             <label>RUN Responsable: ${participantes.getUsuario_run()}</label>
                             <br>
                             <label>Responsable: ${participantes.getUsuario_nombre()} ${participantes.getUsuario_apellido()}</label>
@@ -83,7 +100,7 @@
                         </div>
                         <div class="card-footer">
                             <div class="d-flex justify-content-center">
-                                <a href="Controlador?menu=pdf&solicitud=${participantes.getNro_solicitud()}" class="btn btn-outline-info">Generar PDF</a>
+                                <a href="Controlador?menu=pdf&solicitud=${participantes.getIdsolicitud()}" class="btn btn-outline-info">Generar PDF</a>
                             </div>
                         </div>
                     </div>

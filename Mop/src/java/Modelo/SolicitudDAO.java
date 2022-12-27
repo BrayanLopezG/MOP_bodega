@@ -13,7 +13,7 @@ public class SolicitudDAO {
     String lista_solicitud_admin = "SELECT idSolicitud, nro_solicitud, nombre, run, fecha_solicitud FROM solicitud";
     String lista_solicitud_depto = "SELECT DISTINCT idSolicitud, nro_solicitud, nombre, run, fecha_solicitud FROM solicitud JOIN detalle_solicitud ON solicitud.idSolicitud = detalle_solicitud.solicitudid JOIN producto ON detalle_solicitud.productoid = producto.idProducto WHERE producto.departamento = ?";
     String detalle_soli = "SELECT producto.descripcion, detalle_solicitud.cantidad, tipo_medida.descripcion_medida FROM detalle_solicitud JOIN producto ON detalle_solicitud.productoid = producto.idProducto JOIN tipo_medida ON producto.tipo_medida_id = tipo_medida.idTipo_medida WHERE solicitudid = ?";
-    String detalle_soli_participante = "SELECT solicitud.nro_solicitud,solicitud.nombre, solicitud.run, solicitud.fecha_solicitud, provincia.nombre_provincia, usuario.nombre, usuario.apellido, usuario.run, bodega.nombre_bodega FROM solicitud JOIN provincia ON provincia.idProvincia = solicitud.provincia_id JOIN usuario ON usuario.idUsuario = solicitud.usuario_id JOIN bodega ON usuario.bodegaid = bodega.idBodega WHERE solicitud.idSolicitud = ?";
+    String detalle_soli_participante = "SELECT solicitud.idSolicitud, solicitud.nro_solicitud,solicitud.nombre, solicitud.run, solicitud.fecha_solicitud, provincia.nombre_provincia, usuario.nombre, usuario.apellido, usuario.run, bodega.nombre_bodega FROM solicitud JOIN provincia ON provincia.idProvincia = solicitud.provincia_id JOIN usuario ON usuario.idUsuario = solicitud.usuario_id JOIN bodega ON usuario.bodegaid = bodega.idBodega WHERE solicitud.idSolicitud = ?";
     Connection conexion;
 
     public SolicitudDAO() {
@@ -172,16 +172,17 @@ public class SolicitudDAO {
             ps.setInt(1, idsolicitud);
             rs = ps.executeQuery();
             while (rs.next()){
-                String solicitud = rs.getString(1);
-                String nombre = rs.getString(2);
-                String run = rs.getString(3);
-                String fecha = rs.getString(4);
-                String provincia = rs.getString(5);
-                String nombre_usuario = rs.getString(6);
-                String apellido_usuario = rs.getString(7);
-                String run_usuario = rs.getString(8);
-                String bodega = rs.getString(9);
-                detallesoli = new Solicitud(nombre, run, fecha, solicitud, bodega, provincia, nombre_usuario, apellido_usuario, run_usuario);
+                int id = rs.getInt(1);
+                String solicitud = rs.getString(2);
+                String nombre = rs.getString(3);
+                String run = rs.getString(4);
+                String fecha = rs.getString(5);
+                String provincia = rs.getString(6);
+                String nombre_usuario = rs.getString(7);
+                String apellido_usuario = rs.getString(8);
+                String run_usuario = rs.getString(9);
+                String bodega = rs.getString(10);
+                detallesoli = new Solicitud(id,nombre, run, fecha, solicitud, bodega, provincia, nombre_usuario, apellido_usuario, run_usuario);
             }
             return detallesoli;
         } catch (SQLException e) {
