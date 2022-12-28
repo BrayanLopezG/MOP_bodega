@@ -83,7 +83,7 @@
     </body>
     <footer>
         <div>
-            <span class="badge badge-pill badge-light float-right">v1.15.06</span>
+            <span class="badge badge-pill badge-light float-right">v1.15.10</span>
         </div>
     </footer>
 </html>

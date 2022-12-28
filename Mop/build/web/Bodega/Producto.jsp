@@ -42,25 +42,11 @@
                                     </div>
                                     <div class="col-4">
                                         <p>Seleccionar Departamento</p>
-                                        <c:choose>
-                                            <c:when test="${usua.getPerfil_id() == 0}">
-                                                <select id="departamento" name="departamento" class="custom-select">
-                                                    <option>Seleccionar</option>
-                                                    <option value="Bienes">Bienes</option>
-                                                    <option value="Prevencion de Riesgo">Prevencion de Riesgo</option>
-                                                </select>
-                                            </c:when>
-                                            <c:when test="${usua.getPerfil_id() == 1}">
-                                                <select id="departamento" name="departamento" class="custom-select">
-                                                    <option value="Bienes">Bienes</option>
-                                                </select>
-                                            </c:when>
-                                            <c:otherwise>
-                                                <select id="departamento" name="departamento" class="custom-select">
-                                                    <option value="Prevencion de Riesgo">Prevencion de Riesgo</option>
-                                                </select>
-                                            </c:otherwise>
-                                        </c:choose>
+                                        <select id="departamento" name="departamento" class="custom-select">
+                                            <c:forEach var="perfil" items="${perfil}">
+                                                <option><c:out value="${perfil.descripcion_perfil}"></c:out></option>
+                                            </c:forEach>
+                                        </select> 
                                     </div>
                                     <div class="col-4">
                                         <p>Orden de compra</p>
@@ -75,11 +61,16 @@
                                     </div>
                                     <div class="col-3">
                                         <p>Seleccionar Medida</p>
-                                        <select id="medida" name="medida" class="custom-select">
-                                            <c:forEach var="medida" items="${medida}">
-                                                <option value="<c:out value="${medida.id_medida}"></c:out>"><c:out value="${medida.descripcion}"></c:out></option>
-                                            </c:forEach>
-                                        </select>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <select id="medida" name="medida" class="custom-select">
+                                                    <c:forEach var="medida" items="${medida}">
+                                                        <option value="<c:out value="${medida.id_medida}"></c:out>"><c:out value="${medida.descripcion}"></c:out></option>
+                                                    </c:forEach>
+                                                </select>
+                                            </div>
+                                            <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#nuevamedida">Agregar +</button>
+                                        </div>
                                     </div>
                                     <div class="col-3">
                                         <p>Indique la Cantidad</p>
@@ -127,6 +118,26 @@
                         </c:forEach>
                     </tbody>
                 </table>
+            </div>
+            <div class="modal fade" id="nuevamedida">
+                <form action="Controlador?menu=nuevamedida" method="POST">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 style="text-align: center;">Agregar Medida</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <label>Nueva Medida</label>
+                                <input class="form-control" id="txtmedida" name="txtmedida" type="text" placeholder="Cargo" >
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-outline-success">Guardar</Button>
+                                <button style="margin-left: 10px;" type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </body>

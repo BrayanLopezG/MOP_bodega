@@ -69,16 +69,30 @@
                                     <input class="form-control" id="txtnrofactura" name="txtnrofactura" type="text" placeholder="Ingresar Numero Factura">
                                     <label>Orden de Compra</label>
                                     <input class="form-control" id="txtcompra" name="txtcompra" type="text" placeholder="Ingresar Orden de Compra">
-                                    <div class="col_one_third col_last c-azul">
-                                        <label>Fecha Factura</label>
-                                        <input class="form-control" id="txtfecha" name="txtfecha" type="date">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="col_one_third col_last c-azul">
+                                                <label>Fecha Factura</label>
+                                                <input class="form-control" id="txtfecha" name="txtfecha" type="date">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <label>Adjuntar Factura</label>
+                                            <input type="file" class="form-control-file border" id="factura" name="factura">
+                                        </div>
                                     </div>
-                                    <label>Adjuntar Factura</label>
-                                    <input type="file" class="form-control-file border" id="factura" name="factura">
-                                    <label>Adjuntar Orden de Compra</label>
-                                    <input type="file" class="form-control-file border" id="ordencompra" name="ordencompra">
-                                    <br>
-                                    <button type="submit" class="btn btn-outline-primary">Siguiente</button>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <label>Adjuntar Orden de Compra</label>
+                                            <input type="file" class="form-control-file border" id="ordencompra" name="ordencompra">
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="float-right">
+                                                <br>
+                                                <button type="submit" class="btn btn-outline-primary">Siguiente</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </form>
                             </div>
                         </div>

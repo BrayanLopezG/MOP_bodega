@@ -728,3 +728,108 @@
 09:04:37,136 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 25) JBAS010403: Implementación del controlador que cumple con los requerimientos de JDBC class org.h2.Driver (versión 1.3)
 09:04:37,491 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-4) JBAS010400: Fuente de datos enlazados [java:jboss/datasources/ExampleDS]
 09:04:37,882 INFO  [org.jboss.ws.common.management] (MSC service thread 1-6) JBWS022052: Starting JBoss Web Services - Stack CXF Server 4.1.3.Final-redhat-3
+08:14:36,011 INFO  [org.jboss.modules] (main) JBoss Modules version 1.2.0.Final-redhat-1
+08:14:36,118 INFO  [org.jboss.msc] (main) JBoss MSC version 1.0.4.GA-redhat-1
+08:14:36,160 INFO  [org.jboss.as] (MSC service thread 1-7) JBAS015899: JBoss EAP 6.1.0.GA (AS 7.2.0.Final-redhat-8) iniciando
+08:14:36,166 DEBUG [org.jboss.as.config] (MSC service thread 1-7) Propiedades del sistema configuradas:
+	awt.toolkit = sun.awt.windows.WToolkit
+	file.encoding = Cp1252
+	file.encoding.pkg = sun.io
+	file.separator = \
+	java.awt.graphicsenv = sun.awt.Win32GraphicsEnvironment
+	java.awt.printerjob = sun.awt.windows.WPrinterJob
+	java.class.path = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\jboss-modules.jar
+	java.class.version = 51.0
+	java.endorsed.dirs = C:\Program Files\Java\jdk1.7.0_80\jre\lib\endorsed
+	java.ext.dirs = C:\Program Files\Java\jdk1.7.0_80\jre\lib\ext;C:\Windows\Sun\Java\lib\ext
+	java.home = C:\Program Files\Java\jdk1.7.0_80\jre
+	java.io.tmpdir = C:\Users\usuario\AppData\Local\Temp\
+	java.library.path = C:\Program Files\Java\jdk1.7.0_80\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Git\cmd;"C:\Program Files\Java\jdk1.7.0_80\bin;C:\Program Files\Java\jdk1.7.0_80\bin;";C:\Users\usuario\AppData\Local\Microsoft\WindowsApps;;.
+	java.runtime.name = Java(TM) SE Runtime Environment
+	java.runtime.version = 1.7.0_80-b15
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 1.7
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Oracle Corporation
+	java.vendor.url = http://java.oracle.com/
+	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+	java.version = 1.7.0_80
+	java.vm.info = mixed mode
+	java.vm.name = Java HotSpot(TM) 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 1.7
+	java.vm.vendor = Oracle Corporation
+	java.vm.version = 24.80-b11
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
+	javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
+	javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
+	javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
+	javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
+	javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
+	javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
+	javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
+	javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
+	jboss.home.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1
+	jboss.host.name = desktop-to536at
+	jboss.modules.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\modules
+	jboss.node.name = desktop-to536at
+	jboss.qualified.host.name = desktop-to536at
+	jboss.server.base.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone
+	jboss.server.config.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\configuration
+	jboss.server.data.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\data
+	jboss.server.deploy.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\data\content
+	jboss.server.log.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\log
+	jboss.server.name = desktop-to536at
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\tmp
+	line.separator = 
+
+	logging.configuration = file:C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone/configuration/logging.properties
+	module.path = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\modules
+	org.jboss.boot.log.file = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\log\server.log
+	org.jboss.resolver.warning = true
+	org.xml.sax.driver = __redirected.__XMLReaderFactory
+	os.arch = amd64
+	os.name = Windows 8.1
+	os.version = 6.3
+	path.separator = ;
+	program.name = standalone.bat
+	sun.arch.data.model = 64
+	sun.boot.class.path = C:\Program Files\Java\jdk1.7.0_80\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_80\jre\classes
+	sun.boot.library.path = C:\Program Files\Java\jdk1.7.0_80\jre\bin
+	sun.cpu.endian = little
+	sun.cpu.isalist = amd64
+	sun.desktop = windows
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\jboss-modules.jar -mp C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\modules -jaxpmodule javax.xml.jaxp-provider org.jboss.as.standalone -Djboss.home.dir=C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = Cp1252
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = 
+	user.country = CL
+	user.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\bin
+	user.home = C:\Users\usuario
+	user.language = es
+	user.name = usuario
+	user.script = 
+	user.timezone = America/Santiago
+	user.variant = 
+08:14:36,167 DEBUG [org.jboss.as.config] (MSC service thread 1-7) Argumentos de VM: -XX:+TieredCompilation -XX:+UseCompressedOops -Dprogram.name=standalone.bat -Xms128m -Xmx512m -XX:MaxPermSize=256m -Dorg.jboss.boot.log.file=C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\log\server.log -Dlogging.configuration=file:C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone/configuration/logging.properties 
+08:14:36,891 INFO  [org.xnio] (MSC service thread 1-4) XNIO Version 3.0.7.GA-redhat-1
+08:14:36,894 INFO  [org.jboss.as.server] (Controller Boot Thread) JBAS015888: Creando el servicio de administración http utilizando el enlace de socket (management-http) 
+08:14:36,898 INFO  [org.xnio.nio] (MSC service thread 1-4) XNIO NIO Implementation Version 3.0.7.GA-redhat-1
+08:14:36,903 INFO  [org.jboss.remoting] (MSC service thread 1-4) JBoss Remoting version 3.2.16.GA-redhat-1
+08:14:37,186 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 29) JBAS010280: Activando el sub-sistema Infinispan.
+08:14:37,203 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 37) JBAS011800: Activando el sub-sistema de nombrado
+08:14:37,204 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 46) JBAS015537: Activando WebServices Extension
+08:14:37,210 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 35) JBAS012605: Se activaron las siguientes implementaciones JSF: [main, 1.2]
+08:14:37,211 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 42) JBAS013171: Activando el sub-sistema de seguridad
+08:14:37,223 INFO  [org.jboss.as.security] (MSC service thread 1-13) JBAS013170: Versión PicketBox actual=4.0.17.Final-redhat-1
+08:14:37,251 INFO  [org.jboss.as.connector.logging] (MSC service thread 1-10) JBAS010408: Iniciando JCA sub-sistema (IronJacamar 1.0.17.Final-redhat-1)
+08:14:37,328 INFO  [org.jboss.as.naming] (MSC service thread 1-6) JBAS011802: Iniciando el servicio de nombrado
+08:14:37,330 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-6) JBAS015400: Sesión de correo enlazada [java:jboss/mail/Default]
+08:14:37,428 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 25) JBAS010403: Implementación del controlador que cumple con los requerimientos de JDBC class org.h2.Driver (versión 1.3)
+08:14:37,464 INFO  [org.jboss.ws.common.management] (MSC service thread 1-10) JBWS022052: Starting JBoss Web Services - Stack CXF Server 4.1.3.Final-redhat-3

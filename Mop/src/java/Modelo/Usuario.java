@@ -3,6 +3,16 @@ public class Usuario extends PerfilUsuario{
     int idusuario,bodega_id,perfil_id;
     String nombre,apellido,rut,nombre_usuario,contrasenha,unombre_bodega;
 
+    public Usuario(int idusuario, int perfil_id, String nombre, String apellido, String rut, String nombre_usuario) {
+        this.idusuario = idusuario;
+        this.perfil_id = perfil_id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.rut = rut;
+        this.nombre_usuario = nombre_usuario;
+    }
+
+
     public Usuario(int idusuario, int bodega_id, int perfil_id, String nombre, String apellido, String rut, String nombre_usuario) {
         this.idusuario = idusuario;
         this.bodega_id = bodega_id;

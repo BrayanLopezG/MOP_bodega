@@ -95,13 +95,18 @@ public final class Registrar_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                    <label>Repetir Contraseña:</label>\r\n");
       out.write("                                    <input class=\"form-control\" id=\"txtcontra2\" name=\"txtcontra2\" type=\"password\" placeholder=\"Repetir Contraseña\">                         \r\n");
       out.write("                                    <label>Cargo:</label>\r\n");
-      out.write("                                    <select name=\"perfil\" class=\"custom-select\">\r\n");
-      out.write("                                        <option selected> Seleccionar </option>\r\n");
-      out.write("                                        ");
+      out.write("                                    <div class=\"input-group mb-3\">\r\n");
+      out.write("                                        <div class=\"input-group-prepend\">\r\n");
+      out.write("                                            <select name=\"perfil\" class=\"custom-select\">\r\n");
+      out.write("                                                <option selected> Seleccionar </option>\r\n");
+      out.write("                                                ");
       if (_jspx_meth_c_005fforEach_005f0(_jspx_page_context))
         return;
       out.write("\r\n");
-      out.write("                                    </select>\r\n");
+      out.write("                                            </select>\r\n");
+      out.write("                                        </div>\r\n");
+      out.write("                                        <button type=\"button\" class=\"btn btn-outline-success\" data-toggle=\"modal\" data-target=\"#nuevoperfil\">Agregar +</button>\r\n");
+      out.write("                                    </div>\r\n");
       out.write("                                </div>\r\n");
       out.write("                                <div class=\"col-6\">\r\n");
       out.write("                                    <h3 style=\"text-align: center\">Información Personal</h3>                                    \r\n");
@@ -112,13 +117,18 @@ public final class Registrar_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                    <label>RUN:</label>\r\n");
       out.write("                                    <input class=\"form-control\" id=\"txtrut\" name=\"txtrut\" type=\"text\" placeholder=\"Ingresar RUN del Funcionario\">\r\n");
       out.write("                                    <label>Bodega</label>\r\n");
-      out.write("                                    <select name=\"bodega\" class=\"custom-select\">\r\n");
-      out.write("                                        <option selected> Seleccionar </option>\r\n");
-      out.write("                                        ");
+      out.write("                                    <div class=\"input-group mb-3\">\r\n");
+      out.write("                                        <div class=\"input-group-prepend\">\r\n");
+      out.write("                                            <select name=\"bodega\" class=\"custom-select\">\r\n");
+      out.write("                                                <option selected> Seleccionar </option>\r\n");
+      out.write("                                                ");
       if (_jspx_meth_c_005fforEach_005f1(_jspx_page_context))
         return;
       out.write("\r\n");
-      out.write("                                    </select>\r\n");
+      out.write("                                            </select>\r\n");
+      out.write("                                        </div>\r\n");
+      out.write("                                        <button type=\"button\" class=\"btn btn-outline-success\" data-toggle=\"modal\" data-target=\"#bodega\">Agregar +</button>\r\n");
+      out.write("                                    </div>\r\n");
       out.write("                                </div>\r\n");
       out.write("                            </div>\r\n");
       out.write("                        </div>\r\n");
@@ -128,7 +138,49 @@ public final class Registrar_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    </div>\r\n");
       out.write("                </div>\r\n");
       out.write("            </form>\r\n");
-      out.write("        </div>  \r\n");
+      out.write("        </div>\r\n");
+      out.write("        <div class=\"modal fade\" id=\"nuevoperfil\">\r\n");
+      out.write("            <form action=\"Controlador?menu=nuevoperfil\" method=\"POST\">\r\n");
+      out.write("                <div class=\"modal-dialog\">\r\n");
+      out.write("                    <div class=\"modal-content\">\r\n");
+      out.write("                        <div class=\"modal-header\">\r\n");
+      out.write("                            <h4 style=\"text-align: center;\">Agregar Nuevo Cargo</h4>\r\n");
+      out.write("                            <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n");
+      out.write("                        </div>\r\n");
+      out.write("                        <div class=\"modal-body\">\r\n");
+      out.write("                            <label>Nombre del Cargo</label>\r\n");
+      out.write("                            <input class=\"form-control\" id=\"txtperfil\" name=\"txtperfil\" type=\"text\" placeholder=\"Cargo\" >\r\n");
+      out.write("                        </div>\r\n");
+      out.write("                        <div class=\"modal-footer\">\r\n");
+      out.write("                            <button type=\"submit\" class=\"btn btn-outline-success\">Guardar</Button>\r\n");
+      out.write("                            <button style=\"margin-left: 10px;\" type=\"button\" class=\"btn btn-danger\" data-dismiss=\"modal\">Cerrar</button>\r\n");
+      out.write("                        </div>\r\n");
+      out.write("                    </div>\r\n");
+      out.write("                </div>\r\n");
+      out.write("            </form>\r\n");
+      out.write("        </div>\r\n");
+      out.write("        <div class=\"modal fade\" id=\"bodega\">\r\n");
+      out.write("            <form action=\"Controlador?menu=nuevabodega\" method=\"POST\">\r\n");
+      out.write("                <div class=\"modal-dialog\">\r\n");
+      out.write("                    <div class=\"modal-content\">\r\n");
+      out.write("                        <div class=\"modal-header\">\r\n");
+      out.write("                            <h4 style=\"text-align: center;\">Agregar Nueva Bodega</h4>\r\n");
+      out.write("                            <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n");
+      out.write("                        </div>\r\n");
+      out.write("                        <div class=\"modal-body\">\r\n");
+      out.write("                            <label>Nombre de la Bodega</label>\r\n");
+      out.write("                            <input class=\"form-control\" id=\"nuevabodega\" name=\"nuevabodega\" type=\"text\" placeholder=\"Bodega\">\r\n");
+      out.write("                            <label>Direccion</label>\r\n");
+      out.write("                            <input class=\"form-control\" id=\"direccion\" name=\"direccion\" type=\"text\" placeholder=\"Direccion\">\r\n");
+      out.write("                        </div>\r\n");
+      out.write("                        <div class=\"modal-footer\">\r\n");
+      out.write("                            <button type=\"submit\" class=\"btn btn-outline-success\">Guardar</Button>\r\n");
+      out.write("                            <button style=\"margin-left: 10px;\" type=\"button\" class=\"btn btn-danger\" data-dismiss=\"modal\">Cerrar</button>\r\n");
+      out.write("                        </div>\r\n");
+      out.write("                    </div>\r\n");
+      out.write("                </div>\r\n");
+      out.write("            </form>\r\n");
+      out.write("        </div>\r\n");
       out.write("    </body>\r\n");
       out.write("</html>");
     } catch (Throwable t) {
@@ -151,17 +203,17 @@ public final class Registrar_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_005fforEach_005f0 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvar_005fitems.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_005fforEach_005f0.setPageContext(_jspx_page_context);
     _jspx_th_c_005fforEach_005f0.setParent(null);
-    // /Login/Registrar.jsp(44,40) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
+    // /Login/Registrar.jsp(46,48) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
     _jspx_th_c_005fforEach_005f0.setVar("perfil");
-    // /Login/Registrar.jsp(44,40) name = items type = javax.el.ValueExpression reqTime = true required = false fragment = false deferredValue = true deferredMethod = false expectedTypeName = java.lang.Object methodSignature = null 
-    _jspx_th_c_005fforEach_005f0.setItems(new org.apache.jasper.el.JspValueExpression("/Login/Registrar.jsp(44,40) '${perfil}'",_el_expressionfactory.createValueExpression(_jspx_page_context.getELContext(),"${perfil}",java.lang.Object.class)).getValue(_jspx_page_context.getELContext()));
+    // /Login/Registrar.jsp(46,48) name = items type = javax.el.ValueExpression reqTime = true required = false fragment = false deferredValue = true deferredMethod = false expectedTypeName = java.lang.Object methodSignature = null 
+    _jspx_th_c_005fforEach_005f0.setItems(new org.apache.jasper.el.JspValueExpression("/Login/Registrar.jsp(46,48) '${perfil}'",_el_expressionfactory.createValueExpression(_jspx_page_context.getELContext(),"${perfil}",java.lang.Object.class)).getValue(_jspx_page_context.getELContext()));
     int[] _jspx_push_body_count_c_005fforEach_005f0 = new int[] { 0 };
     try {
       int _jspx_eval_c_005fforEach_005f0 = _jspx_th_c_005fforEach_005f0.doStartTag();
       if (_jspx_eval_c_005fforEach_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
           out.write("\r\n");
-          out.write("                                            <option value=\"");
+          out.write("                                                    <option value=\"");
           if (_jspx_meth_c_005fout_005f0(_jspx_th_c_005fforEach_005f0, _jspx_page_context, _jspx_push_body_count_c_005fforEach_005f0))
             return true;
           out.write('"');
@@ -169,7 +221,7 @@ public final class Registrar_jsp extends org.apache.jasper.runtime.HttpJspBase
           if (_jspx_meth_c_005fout_005f1(_jspx_th_c_005fforEach_005f0, _jspx_page_context, _jspx_push_body_count_c_005fforEach_005f0))
             return true;
           out.write("</option>\r\n");
-          out.write("                                        ");
+          out.write("                                                ");
           int evalDoAfterBody = _jspx_th_c_005fforEach_005f0.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;
@@ -197,7 +249,7 @@ public final class Registrar_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_005fout_005f0 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_005fout_005f0.setPageContext(_jspx_page_context);
     _jspx_th_c_005fout_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fforEach_005f0);
-    // /Login/Registrar.jsp(45,59) name = value type = null reqTime = true required = true fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
+    // /Login/Registrar.jsp(47,67) name = value type = null reqTime = true required = true fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
     _jspx_th_c_005fout_005f0.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${perfil.idperfil}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
     int _jspx_eval_c_005fout_005f0 = _jspx_th_c_005fout_005f0.doStartTag();
     if (_jspx_th_c_005fout_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -216,7 +268,7 @@ public final class Registrar_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_005fout_005f1 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_005fout_005f1.setPageContext(_jspx_page_context);
     _jspx_th_c_005fout_005f1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fforEach_005f0);
-    // /Login/Registrar.jsp(45,103) name = value type = null reqTime = true required = true fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
+    // /Login/Registrar.jsp(47,111) name = value type = null reqTime = true required = true fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
     _jspx_th_c_005fout_005f1.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${perfil.descripcion_perfil}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
     int _jspx_eval_c_005fout_005f1 = _jspx_th_c_005fout_005f1.doStartTag();
     if (_jspx_th_c_005fout_005f1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -235,17 +287,17 @@ public final class Registrar_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_005fforEach_005f1 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvar_005fitems.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_005fforEach_005f1.setPageContext(_jspx_page_context);
     _jspx_th_c_005fforEach_005f1.setParent(null);
-    // /Login/Registrar.jsp(60,40) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
+    // /Login/Registrar.jsp(67,48) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
     _jspx_th_c_005fforEach_005f1.setVar("bodega");
-    // /Login/Registrar.jsp(60,40) name = items type = javax.el.ValueExpression reqTime = true required = false fragment = false deferredValue = true deferredMethod = false expectedTypeName = java.lang.Object methodSignature = null 
-    _jspx_th_c_005fforEach_005f1.setItems(new org.apache.jasper.el.JspValueExpression("/Login/Registrar.jsp(60,40) '${bodega}'",_el_expressionfactory.createValueExpression(_jspx_page_context.getELContext(),"${bodega}",java.lang.Object.class)).getValue(_jspx_page_context.getELContext()));
+    // /Login/Registrar.jsp(67,48) name = items type = javax.el.ValueExpression reqTime = true required = false fragment = false deferredValue = true deferredMethod = false expectedTypeName = java.lang.Object methodSignature = null 
+    _jspx_th_c_005fforEach_005f1.setItems(new org.apache.jasper.el.JspValueExpression("/Login/Registrar.jsp(67,48) '${bodega}'",_el_expressionfactory.createValueExpression(_jspx_page_context.getELContext(),"${bodega}",java.lang.Object.class)).getValue(_jspx_page_context.getELContext()));
     int[] _jspx_push_body_count_c_005fforEach_005f1 = new int[] { 0 };
     try {
       int _jspx_eval_c_005fforEach_005f1 = _jspx_th_c_005fforEach_005f1.doStartTag();
       if (_jspx_eval_c_005fforEach_005f1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
           out.write("\r\n");
-          out.write("                                            <option value=\"");
+          out.write("                                                    <option value=\"");
           if (_jspx_meth_c_005fout_005f2(_jspx_th_c_005fforEach_005f1, _jspx_page_context, _jspx_push_body_count_c_005fforEach_005f1))
             return true;
           out.write('"');
@@ -253,7 +305,7 @@ public final class Registrar_jsp extends org.apache.jasper.runtime.HttpJspBase
           if (_jspx_meth_c_005fout_005f3(_jspx_th_c_005fforEach_005f1, _jspx_page_context, _jspx_push_body_count_c_005fforEach_005f1))
             return true;
           out.write("</option>\r\n");
-          out.write("                                        ");
+          out.write("                                                ");
           int evalDoAfterBody = _jspx_th_c_005fforEach_005f1.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;
@@ -281,7 +333,7 @@ public final class Registrar_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_005fout_005f2 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_005fout_005f2.setPageContext(_jspx_page_context);
     _jspx_th_c_005fout_005f2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fforEach_005f1);
-    // /Login/Registrar.jsp(61,59) name = value type = null reqTime = true required = true fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
+    // /Login/Registrar.jsp(68,67) name = value type = null reqTime = true required = true fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
     _jspx_th_c_005fout_005f2.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${bodega.id_bodega}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
     int _jspx_eval_c_005fout_005f2 = _jspx_th_c_005fout_005f2.doStartTag();
     if (_jspx_th_c_005fout_005f2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -300,7 +352,7 @@ public final class Registrar_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_005fout_005f3 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_005fout_005f3.setPageContext(_jspx_page_context);
     _jspx_th_c_005fout_005f3.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fforEach_005f1);
-    // /Login/Registrar.jsp(61,104) name = value type = null reqTime = true required = true fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
+    // /Login/Registrar.jsp(68,112) name = value type = null reqTime = true required = true fragment = false deferredValue = false deferredMethod = false expectedTypeName = null methodSignature = null 
     _jspx_th_c_005fout_005f3.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${bodega.nombre_bodega}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
     int _jspx_eval_c_005fout_005f3 = _jspx_th_c_005fout_005f3.doStartTag();
     if (_jspx_th_c_005fout_005f3.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {

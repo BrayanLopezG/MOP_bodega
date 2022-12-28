@@ -35,17 +35,22 @@
                                         <label>RUN</label>
                                         <input class="form-control" id="txtrun" name="txtrun" value="${solicitud.getRun()}" type="text">
                                     </div>
-                                    <div class="col-3">
+                                    <div class="col-2">
                                         <label>Nombre</label>
                                         <input class="form-control" id="txtdestinatario" name="txtdestinatario" value="${solicitud.getNombre()}" type="text">
                                     </div>
-                                    <div class="col-3">
+                                    <div class="col-4">
                                         <label>Provincia</label>
-                                        <select class="custom-select" id="provincia" name="provincia">
-                                            <c:forEach var="provincia" items="${provincia}">
-                                                <option value="<c:out value="${provincia.provinciaid}"></c:out>"><c:out value="${provincia.nom_provincia}"></c:out></option>
-                                            </c:forEach>
-                                        </select>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <select class="custom-select" id="provincia" name="provincia">
+                                                    <c:forEach var="provincia" items="${provincia}">
+                                                        <option value="<c:out value="${provincia.provinciaid}"></c:out>"><c:out value="${provincia.nom_provincia}"></c:out></option>
+                                                    </c:forEach>
+                                                </select>
+                                            </div>
+                                            <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#nuevaprovincia">Agregar +</button>
+                                        </div>
                                     </div>
                                     <div class="col-2">
                                         <label>Bodega</label>
@@ -98,6 +103,26 @@
                         <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#detalle">Mostrar Detalle</button>
                     </div>
                 </div>
+            </div>
+            <div class="modal fade" id="nuevaprovincia">
+                <form action="Controlador?menu=nuevaprovincia" method="POST">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 style="text-align: center;">Agregar Medida</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <label>Nueva Medida</label>
+                                <input class="form-control" id="txtprovincia" name="txtprovincia" type="text" placeholder="Cargo" >
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-outline-success">Guardar</Button>
+                                <button style="margin-left: 10px;" type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
             <div class="modal fade" id="detalle">
                 <div class="modal-dialog modal-xl">

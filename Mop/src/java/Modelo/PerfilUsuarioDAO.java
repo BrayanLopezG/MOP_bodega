@@ -10,6 +10,8 @@ public class PerfilUsuarioDAO {
     String all_perfil = "SELECT idPerfil_usuario, descripcion_perfil FROM perfil_usuario";
     String perfil_por_id = "SELECT descripcion_perfil FROM perfil_usuario WHERE idPerfil_usuario = ?";
     String insertar_perfil = "INSERT INTO perfil_usuario (idPerfil_usuario,descripcion_perfil)VALUES(?,?)";
+    String producto_admin_depto = "SELECT descripcion_perfil FROM perfil_usuario WHERE idPerfil_usuario > 0";
+    String producto_depto = "SELECT descripcion_perfil FROM perfil_usuario WHERE idPerfil_usuario = ?";
 
     Connection conexion;
 
@@ -57,6 +59,45 @@ public class PerfilUsuarioDAO {
             return null;
         }
     }
+    public List<PerfilUsuario> perfilproductoAdmin(){
+        PreparedStatement ps;
+        ResultSet rs;
+        List<PerfilUsuario> lista = new ArrayList();
+        try {
+            ps = conexion.prepareStatement(producto_admin_depto);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                String descripcion = rs.getString(1);
+                PerfilUsuario pusuario = new PerfilUsuario(descripcion);
+                lista.add(pusuario);
+            }
+            return lista;
+
+        } catch (SQLException e) {
+            System.out.println(e.toString());
+            return null;
+        }
+    }
+    public List<PerfilUsuario> perfilproductoDepto(int idperfil){
+        PreparedStatement ps;
+        ResultSet rs;
+        List<PerfilUsuario> lista = new ArrayList();
+        try {
+            ps = conexion.prepareStatement(producto_depto);
+            ps.setInt(1, idperfil);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                String descripcion = rs.getString(1);
+                PerfilUsuario pusuario = new PerfilUsuario(descripcion);
+                lista.add(pusuario);
+            }
+            return lista;
+
+        } catch (SQLException e) {
+            System.out.println(e.toString());
+            return null;
+        }
+    }
 
     public String Perfil(int id) {
         PreparedStatement ps;
@@ -91,5 +132,5 @@ public class PerfilUsuarioDAO {
             return false;
         }
     }
-
+    
 }

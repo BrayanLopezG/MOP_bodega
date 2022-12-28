@@ -49,7 +49,7 @@ import javax.servlet.http.Part;
 @WebServlet(name = "Controlador", urlPatterns = "/Controlador")
 @MultipartConfig
 public class Controlador extends HttpServlet {
-    
+
     SolicitudDAO solidao = new SolicitudDAO();
     UsuarioDAO udao = new UsuarioDAO();
     FacturaDAO fdao = new FacturaDAO();
@@ -72,7 +72,7 @@ public class Controlador extends HttpServlet {
     List<Solicitud> listasolicitud = new ArrayList();
     InputStream inputStreamfactura = null;
     InputStream inputStreamorden = null;
-    int idf = 0;    
+    int idf = 0;
     int idp = 0;
     int idu = 0;
     // Atributos Solicitud
@@ -89,7 +89,7 @@ public class Controlador extends HttpServlet {
     String run_destinatario;
     String destinatario;
     String nom_bodega;
-    
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, DocumentException {
         String menu = request.getParameter("menu");
@@ -120,10 +120,20 @@ public class Controlador extends HttpServlet {
                 System.out.println("Error carga de archivo");
             }
             fact = fdao.filtroFactura(ordencompra);
+            usua = udao.filtroUsuario(idu);
+            int idperfil = usua.getPerfil_id();
+            List<PerfilUsuario> listaperfil;
+            String producto_depto = perfdao.Perfil(idperfil);
+            if (producto_depto.equals("Administrador")) {
+                listaperfil = perfdao.perfilproductoAdmin();
+            } else {
+                listaperfil = perfdao.perfilproductoDepto(idperfil);
+            }
             List<Bodega> listabodega = bdao.listaBodega();
             List<Medida> listamedida = mdao.listaMedida();
             request.setAttribute("factura", fact);
             request.setAttribute("usua", usua);
+            request.setAttribute("perfil", listaperfil);
             request.setAttribute("bodega", listabodega);
             request.setAttribute("medida", listamedida);
             request.getRequestDispatcher("Bodega/Producto.jsp").forward(request, response);
@@ -137,8 +147,18 @@ public class Controlador extends HttpServlet {
             pro = new Producto(0, idf, idmedida, idbodega, descripcion, cantidad, departamento);
             prdao.agregarProducto(pro);
             List<Producto> listaproducto = prdao.listaproductofactura(idf);
+            usua = udao.filtroUsuario(idu);
+            int idperfil = usua.getPerfil_id();
+            List<PerfilUsuario> listaperfil;
+            String producto_depto = perfdao.Perfil(idperfil);
+            if (producto_depto.equals("Administrador")) {
+                listaperfil = perfdao.perfilproductoAdmin();
+            } else {
+                listaperfil = perfdao.perfilproductoDepto(idperfil);
+            }
             request.setAttribute("factura", fact);
             request.setAttribute("usua", usua);
+            request.setAttribute("perfil", listaperfil);
             request.setAttribute("listar", listaproducto);
             List<Bodega> listabodega = bdao.listaBodega();
             List<Medida> listamedida = mdao.listaMedida();
@@ -157,21 +177,30 @@ public class Controlador extends HttpServlet {
             request.setAttribute("bodega", listabodega);
             request.setAttribute("medida", listamedida);
             request.getRequestDispatcher("Bodega/Producto.jsp").forward(request, response);
+        } else if (menu.equals("nuevamedida")) {
+            String medida = request.getParameter("txtmedida");
+            medi = new Medida(0, medida);
+            mdao.Insertar(medi);
+            List<Producto> listaproducto = prdao.listaproductofactura(idf);
+            request.setAttribute("factura", fact);
+            request.setAttribute("usua", usua);
+            request.setAttribute("listar", listaproducto);
+            List<Bodega> listabodega = bdao.listaBodega();
+            List<Medida> listamedida = mdao.listaMedida();
+            request.setAttribute("bodega", listabodega);
+            request.setAttribute("medida", listamedida);
+            request.getRequestDispatcher("Bodega/Producto.jsp").forward(request, response);
         } else if (menu.equals("salida")) {
             List<Provincia> provincia = provindao.provincias();
             idu = Integer.parseInt(request.getParameter("id"));
             usua = udao.filtroUsuario(idu);
-            int perfil = usua.getPerfil_id();
+            int idperfil = usua.getPerfil_id();
             List<Producto> listaproducto;
-            String departamento;
-            if (perfil == 0) {
-                listaproducto = prdao.listaproductoAdmin();
-            } else if (perfil == 1) {
-                departamento = perfdao.Perfil(perfil);
-                listaproducto = prdao.listaproductoDepto(departamento);
+            String departamento = perfdao.Perfil(idperfil);
+            if (departamento.equals("Administrador")) {
+                listaproducto = prdao.productosAdmin();
             } else {
-                departamento = perfdao.Perfil(perfil);
-                listaproducto = prdao.listaproductoDepto(departamento);
+                listaproducto = prdao.productosDepto(departamento);
             }
             request.setAttribute("provincia", provincia);
             request.setAttribute("producto", listaproducto);
@@ -180,16 +209,13 @@ public class Controlador extends HttpServlet {
         } else if (menu.equals("buscarproducto")) {
             List<Provincia> provincia = provindao.provincias();
             String buscar = request.getParameter("txtbuscarproducto");
-            int perfil = usua.getPerfil_id();
+            usua = udao.filtroUsuario(idu);
+            int idperfil = usua.getPerfil_id();
             List<Producto> listaproducto;
-            String departamento;
-            if (perfil == 0) {
+            String departamento = perfdao.Perfil(idperfil);
+            if (departamento.equals("Administrador")) {
                 listaproducto = prdao.buscarproductoAdmin(buscar);
-            } else if (perfil == 1) {
-                departamento = perfdao.Perfil(perfil);
-                listaproducto = prdao.buscarproductoDepto(buscar, departamento);
             } else {
-                departamento = perfdao.Perfil(perfil);
                 listaproducto = prdao.buscarproductoDepto(buscar, departamento);
             }
             request.setAttribute("provincia", provincia);
@@ -202,17 +228,14 @@ public class Controlador extends HttpServlet {
             int codigo = Integer.parseInt(request.getParameter("id"));
             pro = prdao.productoSeleccionado(codigo);
             List<Provincia> provincia = provindao.provincias();
-            int perfil = usua.getPerfil_id();
+            usua = udao.filtroUsuario(idu);
+            int idperfil = usua.getPerfil_id();
             List<Producto> listaproducto;
-            String departamento;
-            if (perfil == 0) {
-                listaproducto = prdao.listaproductoAdmin();
-            } else if (perfil == 1) {
-                departamento = perfdao.Perfil(perfil);
-                listaproducto = prdao.listaproductoDepto(departamento);
+            String departamento = perfdao.Perfil(idperfil);
+            if (departamento.equals("Administrador")) {
+                listaproducto = prdao.productosAdmin();
             } else {
-                departamento = perfdao.Perfil(perfil);
-                listaproducto = prdao.listaproductoDepto(departamento);
+                listaproducto = prdao.productosDepto(departamento);
             }
             request.setAttribute("usua", usua);
             request.setAttribute("solicitud", solicitud);
@@ -233,7 +256,7 @@ public class Controlador extends HttpServlet {
             run_destinatario = request.getParameter("txtrun");
             destinatario = request.getParameter("txtdestinatario");
             fecha_soli = request.getParameter("txtfecha");
-            nro_soli = "00000000" + (solidao.Auto_ID_S() + 1);
+            nro_soli = "000" + (solidao.Auto_ID_S() + 1);
             nom_bodega = pro.getPnombre_bodega();
             solicitud = new Solicitud();
             solicitud.setIdsolicitud(item);
@@ -251,17 +274,13 @@ public class Controlador extends HttpServlet {
             listasolicitud.add(solicitud);
             List<Provincia> provincia = provindao.provincias();
             usua = udao.filtroUsuario(idu);
-            int perfil = usua.getPerfil_id();
+            int idperfil = usua.getPerfil_id();
             List<Producto> listaproducto;
-            String departamento;
-            if (perfil == 0) {
-                listaproducto = prdao.listaproductoAdmin();
-            } else if (perfil == 1) {
-                departamento = perfdao.Perfil(perfil);
-                listaproducto = prdao.listaproductoDepto(departamento);
+            String departamento = perfdao.Perfil(idperfil);
+            if (departamento.equals("Administrador")) {
+                listaproducto = prdao.productosAdmin();
             } else {
-                departamento = perfdao.Perfil(perfil);
-                listaproducto = prdao.listaproductoDepto(departamento);
+                listaproducto = prdao.productosDepto(departamento);
             }
             request.setAttribute("provincia", provincia);
             request.setAttribute("producto", listaproducto);
@@ -300,22 +319,61 @@ public class Controlador extends HttpServlet {
             // Listas para Provincia
             List<Provincia> provincia = provindao.provincias();
             //Generar PDF
+            OutputStream out = response.getOutputStream();
             List<Solicitud> listapdf = solidao.detalleSolicitud(idsoli);
             solicitud = solidao.detalleSolicitudParticipante(idsoli);
-            pdf.generarPDF(listapdf, solicitud);
+            Document documento = new Document();
+            PdfWriter.getInstance(documento, out);
+            Image logo = Image.getInstance("C:\\Users\\usuario\\Desktop\\MOP_bodega\\Mop\\build\\web\\img\\vialidad.jpg");
+            logo.scaleToFit(80, 100);
+            logo.setAlignment(Chunk.ALIGN_RIGHT);
+            Paragraph datos = new Paragraph();
+            datos.setFont(FontFactory.getFont("Calibri", 18, Font.BOLD, BaseColor.BLACK));
+            datos.setAlignment(Paragraph.ALIGN_CENTER);
+            datos.add("Solicitud Salida de Producto \n\n");
+            datos.setAlignment(Paragraph.ALIGN_LEFT);
+            datos.setFont(FontFactory.getFont("Calibri", 12));
+            datos.add("Número de Solicitud: " + solicitud.getNro_solicitud() + "\n");
+            datos.add("RUN: " + solicitud.getRun() + "\n");
+            datos.add("Nombre: " + solicitud.getNombre() + "\n");
+            datos.add("Provincia: " + solicitud.getDescripcionprovincia() + "\n");
+            datos.add("Fecha Emitida: " + solicitud.getFecha() + "\n");
+            datos.add("Bodega: " + solicitud.getDescripcionbodega() + "\n\n\n");
+            documento.open();
+            documento.add(logo);
+            documento.add(datos);
+            PdfPTable tabla = new PdfPTable(3);
+            tabla.setWidthPercentage(100);
+            PdfPCell producto = new PdfPCell(new Phrase("Producto"));
+            producto.setBackgroundColor(BaseColor.BLUE);
+            PdfPCell cantidad = new PdfPCell(new Phrase("Cantidad"));
+            cantidad.setBackgroundColor(BaseColor.BLUE);
+            PdfPCell medida = new PdfPCell(new Phrase("Medida"));
+            medida.setBackgroundColor(BaseColor.BLUE);
+            tabla.addCell(producto);
+            tabla.addCell(cantidad);
+            tabla.addCell(medida);
+            for (int i = 0; i < listapdf.size(); i++) {
+                tabla.addCell(listapdf.get(i).getDescripcionproducto());
+                tabla.addCell(String.valueOf(listapdf.get(i).getCantidad()));
+                tabla.addCell(listapdf.get(i).getDescripcionmedida());
+            }
+            documento.add(tabla);
+            Paragraph firmar = new Paragraph();
+            firmar.add("\n\n\n");
+            firmar.add("__________________________                                                    ________________________" + "\n");
+            firmar.add("              " + solicitud.getUsuario_nombre() + " " + solicitud.getUsuario_apellido() + "                                                                                " + solicitud.getNombre());
+            documento.add(firmar);
+            documento.close();
             // Lista de Producto en base al Perfil del usuario
             usua = udao.filtroUsuario(idu);
-            int perfil = usua.getPerfil_id();
+            int idperfil = usua.getPerfil_id();
             List<Producto> listaproducto;
-            String departamento;
-            if (perfil == 0) {
-                listaproducto = prdao.listaproductoAdmin();
-            } else if (perfil == 1) {
-                departamento = perfdao.Perfil(perfil);
-                listaproducto = prdao.listaproductoDepto(departamento);
+            String departamento = perfdao.Perfil(idperfil);
+            if (departamento.equals("Administrador")) {
+                listaproducto = prdao.productosAdmin();
             } else {
-                departamento = perfdao.Perfil(perfil);
-                listaproducto = prdao.listaproductoDepto(departamento);
+                listaproducto = prdao.productosDepto(departamento);
             }
             //Limpiar la lista para nueva solicitud
             item = 0;
@@ -336,17 +394,33 @@ public class Controlador extends HttpServlet {
             }
             List<Provincia> provincia = provindao.provincias();
             usua = udao.filtroUsuario(idu);
-            int perfil = usua.getPerfil_id();
+            int idperfil = usua.getPerfil_id();
             List<Producto> listaproducto;
-            String departamento;
-            if (perfil == 0) {
-                listaproducto = prdao.listaproductoAdmin();
-            } else if (perfil == 1) {
-                departamento = perfdao.Perfil(perfil);
-                listaproducto = prdao.listaproductoDepto(departamento);
+            String departamento = perfdao.Perfil(idperfil);
+            if (departamento.equals("Administrador")) {
+                listaproducto = prdao.productosAdmin();
             } else {
-                departamento = perfdao.Perfil(perfil);
-                listaproducto = prdao.listaproductoDepto(departamento);
+                listaproducto = prdao.productosDepto(departamento);
+            }
+            request.setAttribute("provincia", provincia);
+            request.setAttribute("producto", listaproducto);
+            request.setAttribute("usua", usua);
+            request.setAttribute("solicitud", solicitud);
+            request.setAttribute("pedido", listasolicitud);
+            request.getRequestDispatcher("Bodega/Solicitud.jsp").forward(request, response);
+        } else if (menu.equals("nuevaprovincia")) {
+            String nom_provincia = request.getParameter("txtprovincia");
+            provin = new Provincia(0, nom_provincia);
+            provindao.Insertar(provin);
+            List<Provincia> provincia = provindao.provincias();
+            usua = udao.filtroUsuario(idu);
+            int idperfil = usua.getPerfil_id();
+            List<Producto> listaproducto;
+            String departamento = perfdao.Perfil(idperfil);
+            if (departamento.equals("Administrador")) {
+                listaproducto = prdao.productosAdmin();
+            } else {
+                listaproducto = prdao.productosDepto(departamento);
             }
             request.setAttribute("provincia", provincia);
             request.setAttribute("producto", listaproducto);
@@ -374,53 +448,42 @@ public class Controlador extends HttpServlet {
             request.setAttribute("lista", listaproveedor);
             request.getRequestDispatcher("Proveedor/Proveedor.jsp").forward(request, response);
         } else if (menu.equals("consultaproducto")) {
-            int id = Integer.parseInt(request.getParameter("id"));
-            usua = udao.filtroUsuario(id);
-            int perfil = usua.getPerfil_id();
+            idu = Integer.parseInt(request.getParameter("id"));
+            usua = udao.filtroUsuario(idu);
+            int idperfil = usua.getPerfil_id();
             List<Producto> listaproducto;
-            String departamento;
-            if (perfil == 0) {
+            String departamento = perfdao.Perfil(idperfil);
+            if (departamento.equals("Administrador")) {
                 listaproducto = prdao.productosAdmin();
-            } else if (perfil == 1) {
-                departamento = perfdao.Perfil(perfil);
-                listaproducto = prdao.productosDepto(departamento);
             } else {
-                departamento = perfdao.Perfil(perfil);
                 listaproducto = prdao.productosDepto(departamento);
             }
             request.setAttribute("producto", listaproducto);
             request.getRequestDispatcher("Consulta/ListaProducto.jsp").forward(request, response);
         } else if (menu.equals("buscarproductobodega")) {
             String buscar = request.getParameter("txtbuscar");
-            int perfil = usua.getPerfil_id();
+            usua = udao.filtroUsuario(idu);
+            int idperfil = usua.getPerfil_id();
             List<Producto> listaproducto;
-            String departamento;
-            if (perfil == 0) {
+            String departamento = perfdao.Perfil(idperfil);
+            if (departamento.equals("Administrador")) {
                 listaproducto = prdao.buscarproductoAdmin(buscar);
-            } else if (perfil == 1) {
-                departamento = perfdao.Perfil(perfil);
-                listaproducto = prdao.buscarproductoDepto(buscar, departamento);
             } else {
-                departamento = perfdao.Perfil(perfil);
                 listaproducto = prdao.buscarproductoDepto(buscar, departamento);
             }
             request.setAttribute("producto", listaproducto);
             request.getRequestDispatcher("Consulta/ListaProducto.jsp").forward(request, response);
         } else if (menu.equals("detalleproducto")) {
-            
+
         } else if (menu.equals("consultasolicitud")) {
-            int id = Integer.parseInt(request.getParameter("id"));
-            usua = udao.filtroUsuario(id);
+            idu = Integer.parseInt(request.getParameter("id"));
+            usua = udao.filtroUsuario(idu);
             int perfil = usua.getPerfil_id();
-            String departamento;
+            String departamento = perfdao.Perfil(perfil);
             List<Solicitud> solicitudes;
-            if (perfil == 0) {
+            if (departamento.equals("Administrador")) {
                 solicitudes = solidao.listasolicitudAdmin();
-            } else if (perfil == 1) {
-                departamento = perfdao.Perfil(perfil);
-                solicitudes = solidao.listasolicitudDepto(departamento);
             } else {
-                departamento = perfdao.Perfil(perfil);
                 solicitudes = solidao.listasolicitudDepto(departamento);
             }
             request.setAttribute("listasolicitudes", solicitudes);
@@ -429,16 +492,13 @@ public class Controlador extends HttpServlet {
             int id = Integer.parseInt(request.getParameter("solicitud"));
             List<Solicitud> detallesolicitud = solidao.detalleSolicitud(id);
             solicitud = solidao.detalleSolicitudParticipante(id);
+            usua = udao.filtroUsuario(idu);
             int perfil = usua.getPerfil_id();
-            String departamento;
+            String departamento = perfdao.Perfil(perfil);
             List<Solicitud> solicitudes;
-            if (perfil == 0) {
+            if (departamento.equals("Administrador")) {
                 solicitudes = solidao.listasolicitudAdmin();
-            } else if (perfil == 1) {
-                departamento = perfdao.Perfil(perfil);
-                solicitudes = solidao.listasolicitudDepto(departamento);
             } else {
-                departamento = perfdao.Perfil(perfil);
                 solicitudes = solidao.listasolicitudDepto(departamento);
             }
             request.setAttribute("participantes", solicitud);
@@ -452,7 +512,7 @@ public class Controlador extends HttpServlet {
             solicitud = solidao.detalleSolicitudParticipante(idsoli);
             Document documento = new Document();
             PdfWriter.getInstance(documento, out);
-            Image logo = Image.getInstance("C:\\Users\\Brayan\\Desktop\\MOP_bodega\\Mop\\build\\web\\img\\vialidad.jpg");
+            Image logo = Image.getInstance("C:\\Users\\usuario\\Desktop\\MOP_bodega\\Mop\\build\\web\\img\\vialidad.jpg");
             logo.scaleToFit(80, 100);
             logo.setAlignment(Chunk.ALIGN_RIGHT);
             Paragraph datos = new Paragraph();
@@ -493,16 +553,13 @@ public class Controlador extends HttpServlet {
             firmar.add("              " + solicitud.getUsuario_nombre() + " " + solicitud.getUsuario_apellido() + "                                                                                " + solicitud.getNombre());
             documento.add(firmar);
             documento.close();
+            usua = udao.filtroUsuario(idu);
             int perfil = usua.getPerfil_id();
-            String departamento;
+            String departamento = perfdao.Perfil(perfil);
             List<Solicitud> solicitudes;
-            if (perfil == 0) {
+            if (departamento.equals("Administrador")) {
                 solicitudes = solidao.listasolicitudAdmin();
-            } else if (perfil == 1) {
-                departamento = perfdao.Perfil(perfil);
-                solicitudes = solidao.listasolicitudDepto(departamento);
             } else {
-                departamento = perfdao.Perfil(perfil);
                 solicitudes = solidao.listasolicitudDepto(departamento);
             }
             request.setAttribute("participantes", solicitud);
@@ -561,7 +618,7 @@ public class Controlador extends HttpServlet {
             request.getRequestDispatcher("Login/Usuarios.jsp").forward(request, response);
         }
     }
-    
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -570,9 +627,9 @@ public class Controlador extends HttpServlet {
         } catch (DocumentException ex) {
             Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
     }
-    
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -583,7 +640,7 @@ public class Controlador extends HttpServlet {
             Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
+
     @Override
     public String getServletInfo() {
         return "Short description";
