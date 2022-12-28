@@ -11,6 +11,7 @@ import java.util.List;
 public class BodegaDAO {
     String Auto_ID = "SELECT COUNT(idBodega) FROM bodega";
     String Lista_bodega = "SELECT idBodega,nombre_bodega,direccion_bodega FROM bodega";
+    String agregar_bodega = "INSERT INTO bodega (idBodega,nombre_bodega,direccion_bodega) VALUES(?,?,?)";
     Connection conexion;
     
     public BodegaDAO(){
@@ -55,6 +56,21 @@ public class BodegaDAO {
         } catch (SQLException e) {
             System.out.println(e.toString());
             return null;
+        }
+    }
+    public boolean Insertar(Bodega bodega) {
+        PreparedStatement ps;
+        int id = AutoID() + 1;
+        try {
+            ps = conexion.prepareStatement(agregar_bodega);
+            ps.setInt(1,id);
+            ps.setString(2, bodega.getNombre_bodega());
+            ps.setString(3, bodega.getDireccion_bodega());
+            ps.execute();
+            return true;
+        } catch (SQLException e) {
+            System.out.println(e.toString());
+            return false;
         }
     }
 }

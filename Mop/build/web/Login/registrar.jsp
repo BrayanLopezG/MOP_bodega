@@ -39,12 +39,17 @@
                                     <label>Repetir Contraseña:</label>
                                     <input class="form-control" id="txtcontra2" name="txtcontra2" type="password" placeholder="Repetir Contraseña">                         
                                     <label>Cargo:</label>
-                                    <select name="perfil" class="custom-select">
-                                        <option selected> Seleccionar </option>
-                                        <c:forEach var="perfil" items="${perfil}">
-                                            <option value="<c:out value="${perfil.idperfil}"></c:out>"><c:out value="${perfil.descripcion_perfil}"></c:out></option>
-                                        </c:forEach>
-                                    </select>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <select name="perfil" class="custom-select">
+                                                <option selected> Seleccionar </option>
+                                                <c:forEach var="perfil" items="${perfil}">
+                                                    <option value="<c:out value="${perfil.idperfil}"></c:out>"><c:out value="${perfil.descripcion_perfil}"></c:out></option>
+                                                </c:forEach>
+                                            </select>
+                                        </div>
+                                        <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#nuevoperfil">Agregar +</button>
+                                    </div>
                                 </div>
                                 <div class="col-6">
                                     <h3 style="text-align: center">Información Personal</h3>                                    
@@ -55,12 +60,17 @@
                                     <label>RUN:</label>
                                     <input class="form-control" id="txtrut" name="txtrut" type="text" placeholder="Ingresar RUN del Funcionario">
                                     <label>Bodega</label>
-                                    <select name="bodega" class="custom-select">
-                                        <option selected> Seleccionar </option>
-                                        <c:forEach var="bodega" items="${bodega}">
-                                            <option value="<c:out value="${bodega.id_bodega}"></c:out>"><c:out value="${bodega.nombre_bodega}"></c:out></option>
-                                        </c:forEach>
-                                    </select>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <select name="bodega" class="custom-select">
+                                                <option selected> Seleccionar </option>
+                                                <c:forEach var="bodega" items="${bodega}">
+                                                    <option value="<c:out value="${bodega.id_bodega}"></c:out>"><c:out value="${bodega.nombre_bodega}"></c:out></option>
+                                                </c:forEach>
+                                            </select>
+                                        </div>
+                                        <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#bodega">Agregar +</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -70,6 +80,48 @@
                     </div>
                 </div>
             </form>
-        </div>  
+        </div>
+        <div class="modal fade" id="nuevoperfil">
+            <form action="Controlador?menu=nuevoperfil" method="POST">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 style="text-align: center;">Agregar Nuevo Cargo</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <label>Nombre del Cargo</label>
+                            <input class="form-control" id="txtperfil" name="txtperfil" type="text" placeholder="Cargo" >
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-outline-success">Guardar</Button>
+                            <button style="margin-left: 10px;" type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal fade" id="bodega">
+            <form action="Controlador?menu=nuevabodega" method="POST">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 style="text-align: center;">Agregar Nueva Bodega</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <label>Nombre de la Bodega</label>
+                            <input class="form-control" id="nuevabodega" name="nuevabodega" type="text" placeholder="Bodega">
+                            <label>Direccion</label>
+                            <input class="form-control" id="direccion" name="direccion" type="text" placeholder="Direccion">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-outline-success">Guardar</Button>
+                            <button style="margin-left: 10px;" type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
     </body>
 </html>

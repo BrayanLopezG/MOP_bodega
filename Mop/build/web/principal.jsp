@@ -5,7 +5,6 @@
 --%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page import="Modelo.UsuarioDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -82,4 +81,9 @@
             </div>
         </div>
     </body>
+    <footer>
+        <div>
+            <span class="badge badge-pill badge-light float-right">v1.15.06</span>
+        </div>
+    </footer>
 </html>

@@ -30,7 +30,7 @@ public class PDF {
         try {
             String ruta = System.getProperty("user.home");
             PdfWriter.getInstance(documento, new FileOutputStream(ruta + "/Desktop/Solicitud-" + solicitud.getNro_solicitud() + ".pdf"));
-            Image logo = Image.getInstance("C:\\Users\\usuario\\Desktop\\MOP_bodega\\Mop\\build\\web\\img\\vialidad.jpg");
+            Image logo = Image.getInstance("C:\\Users\\Brayan\\Desktop\\MOP_bodega\\Mop\\build\\web\\img\\vialidad.jpg");
             logo.scaleToFit(80,100);
             logo.setAlignment(Chunk.ALIGN_RIGHT);
             Paragraph datos = new Paragraph();

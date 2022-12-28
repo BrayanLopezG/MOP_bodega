@@ -49,7 +49,7 @@ import javax.servlet.http.Part;
 @WebServlet(name = "Controlador", urlPatterns = "/Controlador")
 @MultipartConfig
 public class Controlador extends HttpServlet {
-
+    
     SolicitudDAO solidao = new SolicitudDAO();
     UsuarioDAO udao = new UsuarioDAO();
     FacturaDAO fdao = new FacturaDAO();
@@ -72,10 +72,10 @@ public class Controlador extends HttpServlet {
     List<Solicitud> listasolicitud = new ArrayList();
     InputStream inputStreamfactura = null;
     InputStream inputStreamorden = null;
-    int idf = 0; 
+    int idf = 0;    
     int idp = 0;
     int idu = 0;
-
+    // Atributos Solicitud
     int item;
     int idprodu;
     int idprov;
@@ -89,7 +89,7 @@ public class Controlador extends HttpServlet {
     String run_destinatario;
     String destinatario;
     String nom_bodega;
-
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, DocumentException {
         String menu = request.getParameter("menu");
@@ -407,7 +407,7 @@ public class Controlador extends HttpServlet {
             request.setAttribute("producto", listaproducto);
             request.getRequestDispatcher("Consulta/ListaProducto.jsp").forward(request, response);
         } else if (menu.equals("detalleproducto")) {
-
+            
         } else if (menu.equals("consultasolicitud")) {
             int id = Integer.parseInt(request.getParameter("id"));
             usua = udao.filtroUsuario(id);
@@ -451,22 +451,22 @@ public class Controlador extends HttpServlet {
             List<Solicitud> detallesolicitud = solidao.detalleSolicitud(idsoli);
             solicitud = solidao.detalleSolicitudParticipante(idsoli);
             Document documento = new Document();
-            PdfWriter.getInstance(documento,out);
-            Image logo = Image.getInstance("C:\\Users\\usuario\\Desktop\\MOP_bodega\\Mop\\build\\web\\img\\vialidad.jpg");
-            logo.scaleToFit(80,100);
+            PdfWriter.getInstance(documento, out);
+            Image logo = Image.getInstance("C:\\Users\\Brayan\\Desktop\\MOP_bodega\\Mop\\build\\web\\img\\vialidad.jpg");
+            logo.scaleToFit(80, 100);
             logo.setAlignment(Chunk.ALIGN_RIGHT);
             Paragraph datos = new Paragraph();
-            datos.setFont(FontFactory.getFont("Calibri",18,Font.BOLD,BaseColor.BLACK));
+            datos.setFont(FontFactory.getFont("Calibri", 18, Font.BOLD, BaseColor.BLACK));
             datos.setAlignment(Paragraph.ALIGN_CENTER);
             datos.add("Solicitud Salida de Producto \n\n");
             datos.setAlignment(Paragraph.ALIGN_LEFT);
-            datos.setFont(FontFactory.getFont("Calibri",12));
-            datos.add("Número de Solicitud: "+solicitud.getNro_solicitud()+"\n");
-            datos.add("RUN: "+solicitud.getRun()+"\n");
-            datos.add("Nombre: "+solicitud.getNombre()+"\n");
-            datos.add("Provincia: "+solicitud.getDescripcionprovincia()+"\n");
-            datos.add("Fecha Emitida: "+solicitud.getFecha()+"\n");
-            datos.add("Bodega: "+solicitud.getDescripcionbodega()+"\n\n\n");
+            datos.setFont(FontFactory.getFont("Calibri", 12));
+            datos.add("Número de Solicitud: " + solicitud.getNro_solicitud() + "\n");
+            datos.add("RUN: " + solicitud.getRun() + "\n");
+            datos.add("Nombre: " + solicitud.getNombre() + "\n");
+            datos.add("Provincia: " + solicitud.getDescripcionprovincia() + "\n");
+            datos.add("Fecha Emitida: " + solicitud.getFecha() + "\n");
+            datos.add("Bodega: " + solicitud.getDescripcionbodega() + "\n\n\n");
             documento.open();
             documento.add(logo);
             documento.add(datos);
@@ -489,8 +489,8 @@ public class Controlador extends HttpServlet {
             documento.add(tabla);
             Paragraph firmar = new Paragraph();
             firmar.add("\n\n\n");
-            firmar.add("__________________________                                                    ________________________"+"\n");
-            firmar.add("              "+solicitud.getUsuario_nombre()+" "+solicitud.getUsuario_apellido()+"                                                                                "+solicitud.getNombre());
+            firmar.add("__________________________                                                    ________________________" + "\n");
+            firmar.add("              " + solicitud.getUsuario_nombre() + " " + solicitud.getUsuario_apellido() + "                                                                                " + solicitud.getNombre());
             documento.add(firmar);
             documento.close();
             int perfil = usua.getPerfil_id();
@@ -533,6 +533,25 @@ public class Controlador extends HttpServlet {
             } else {
                 System.out.println("Error contraseña incorrecta");
             }
+        } else if (menu.equals("nuevoperfil")) {
+            String nuevoperfil = request.getParameter("txtperfil");
+            perfu = new PerfilUsuario(0, nuevoperfil);
+            perfdao.Insertar(perfu);
+            List<Bodega> listabodega = bdao.listaBodega();
+            List<PerfilUsuario> listaperfil = perfdao.listarPerfil();
+            request.setAttribute("bodega", listabodega);
+            request.setAttribute("perfil", listaperfil);
+            request.getRequestDispatcher("Login/Registrar.jsp").forward(request, response);
+        } else if (menu.equals("nuevabodega")) {
+            String nombre = request.getParameter("nuevabodega");
+            String direccion = request.getParameter("direccion");
+            bode = new Bodega(0, nombre, direccion);
+            bdao.Insertar(bode);
+            List<Bodega> listabodega = bdao.listaBodega();
+            List<PerfilUsuario> listaperfil = perfdao.listarPerfil();
+            request.setAttribute("bodega", listabodega);
+            request.setAttribute("perfil", listaperfil);
+            request.getRequestDispatcher("Login/Registrar.jsp").forward(request, response);
         } else if (menu.equals("listausuario")) {
             List<Usuario> listausuario = udao.listaUsuario();
             request.setAttribute("listar", listausuario);
@@ -542,7 +561,7 @@ public class Controlador extends HttpServlet {
             request.getRequestDispatcher("Login/Usuarios.jsp").forward(request, response);
         }
     }
-
+    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -551,9 +570,9 @@ public class Controlador extends HttpServlet {
         } catch (DocumentException ex) {
             Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
         }
-
+        
     }
-
+    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -564,7 +583,7 @@ public class Controlador extends HttpServlet {
             Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
+    
     @Override
     public String getServletInfo() {
         return "Short description";
