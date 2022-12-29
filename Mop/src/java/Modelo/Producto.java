@@ -144,8 +144,8 @@ public class Producto extends Factura{
         this.pdescripcion_medida = pdescripcion_medida;
     }
 
-    public Producto(int idproducto, String descripcion, String cantidad, String departamento, String pnombre_bodega, String pdireccion_bodega, String pdescripcion_medida, int id_factura, int proveedor_id, String nro_factura, String orden_compra, String fecha_factura, InputStream facturapdf, InputStream orden_comprapdf) {
-        super(id_factura, proveedor_id, nro_factura, orden_compra, fecha_factura, facturapdf, orden_comprapdf);
+    public Producto(int idproducto, String descripcion, String cantidad, String departamento, String pnombre_bodega, String pdireccion_bodega, String pdescripcion_medida, int id_factura, int proveedor_id, String nro_factura, String orden_compra, String fecha_factura) {
+        super(id_factura, proveedor_id, nro_factura, orden_compra, fecha_factura);
         this.idproducto = idproducto;
         this.descripcion = descripcion;
         this.cantidad = cantidad;

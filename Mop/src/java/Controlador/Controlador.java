@@ -1,6 +1,6 @@
 package Controlador;
 
-import Conexion.PDF;
+import Conexion.Archivos;
 import Modelo.Bodega;
 import Modelo.BodegaDAO;
 import Modelo.Factura;
@@ -20,12 +20,10 @@ import Modelo.SolicitudDAO;
 import Modelo.Usuario;
 import Modelo.UsuarioDAO;
 import com.itextpdf.text.BaseColor;
-import com.itextpdf.text.Chunk;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Font;
 import com.itextpdf.text.FontFactory;
-import com.itextpdf.text.Image;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.Phrase;
 import com.itextpdf.text.pdf.PdfPCell;
@@ -68,7 +66,7 @@ public class Controlador extends HttpServlet {
     Factura fact = new Factura();
     Proveedor proveedor = new Proveedor();
     Solicitud solicitud = new Solicitud();
-    PDF pdf = new PDF();
+    Archivos archivo = new Archivos();
     List<Solicitud> listasolicitud = new ArrayList();
     InputStream inputStreamfactura = null;
     InputStream inputStreamorden = null;
@@ -89,6 +87,7 @@ public class Controlador extends HttpServlet {
     String run_destinatario;
     String destinatario;
     String nom_bodega;
+    String[] extens = {".pdf"};
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, DocumentException {
@@ -101,8 +100,8 @@ public class Controlador extends HttpServlet {
             request.getRequestDispatcher("Bodega/Factura.jsp").forward(request, response);
         } else if (menu.equals("listarproveedor")) {
             String filtro = request.getParameter("txtrut");
-            List<Proveedor> listaproveedor = pdao.filtroRutProveedor(filtro);
-            request.setAttribute("lista", listaproveedor);
+            proveedor = pdao.filtroRutProveedor(filtro);
+            request.setAttribute("proveedor", proveedor);
             request.getRequestDispatcher("Bodega/Factura.jsp").forward(request, response);
         } else if (menu.equalsIgnoreCase("nuevafactura")) {
             String numerofactura = request.getParameter("txtnrofactura");
@@ -110,15 +109,13 @@ public class Controlador extends HttpServlet {
             String fecha = request.getParameter("txtfecha");
             Part facturapdf = request.getPart("factura");
             Part ordenpdf = request.getPart("ordencompra");
-            String codigo = request.getParameter("txtid");
-            if (facturapdf.getSize() > 0 & ordenpdf.getSize() > 0) {
-                inputStreamfactura = facturapdf.getInputStream();
-                inputStreamorden = ordenpdf.getInputStream();
-                fact = new Factura(0, 0, numerofactura, ordencompra, fecha, inputStreamfactura, inputStreamorden);
-                fdao.nuevaFactura(fact, codigo);
-            } else {
-                System.out.println("Error carga de archivo");
-            }
+            int codigo = proveedor.getId_proveedor();
+            String rut_proveedor = proveedor.getRut_proveedor();
+            String ruta = archivo.VerificarCarpetaProveedor(rut_proveedor, fecha);
+            archivo.GuardarArchivo(facturapdf, ruta);
+            archivo.GuardarArchivo(ordenpdf, ruta);
+            fact = new Factura(0, 0, numerofactura, ordencompra, numerofactura);
+            fdao.nuevaFactura(fact, rut_proveedor);
             fact = fdao.filtroFactura(ordencompra);
             usua = udao.filtroUsuario(idu);
             int idperfil = usua.getPerfil_id();
@@ -198,9 +195,9 @@ public class Controlador extends HttpServlet {
             List<Producto> listaproducto;
             String departamento = perfdao.Perfil(idperfil);
             if (departamento.equals("Administrador")) {
-                listaproducto = prdao.productosAdmin();
+                listaproducto = prdao.listaproductoAdmin();
             } else {
-                listaproducto = prdao.productosDepto(departamento);
+                listaproducto = prdao.listaproductoDepto(departamento);
             }
             request.setAttribute("provincia", provincia);
             request.setAttribute("producto", listaproducto);
@@ -233,9 +230,9 @@ public class Controlador extends HttpServlet {
             List<Producto> listaproducto;
             String departamento = perfdao.Perfil(idperfil);
             if (departamento.equals("Administrador")) {
-                listaproducto = prdao.productosAdmin();
+                listaproducto = prdao.listaproductoAdmin();
             } else {
-                listaproducto = prdao.productosDepto(departamento);
+                listaproducto = prdao.listaproductoDepto(departamento);
             }
             request.setAttribute("usua", usua);
             request.setAttribute("solicitud", solicitud);
@@ -322,11 +319,9 @@ public class Controlador extends HttpServlet {
             OutputStream out = response.getOutputStream();
             List<Solicitud> listapdf = solidao.detalleSolicitud(idsoli);
             solicitud = solidao.detalleSolicitudParticipante(idsoli);
+            archivo.generarPDF(listapdf, solicitud);
             Document documento = new Document();
             PdfWriter.getInstance(documento, out);
-            Image logo = Image.getInstance("C:\\Users\\usuario\\Desktop\\MOP_bodega\\Mop\\build\\web\\img\\vialidad.jpg");
-            logo.scaleToFit(80, 100);
-            logo.setAlignment(Chunk.ALIGN_RIGHT);
             Paragraph datos = new Paragraph();
             datos.setFont(FontFactory.getFont("Calibri", 18, Font.BOLD, BaseColor.BLACK));
             datos.setAlignment(Paragraph.ALIGN_CENTER);
@@ -340,7 +335,6 @@ public class Controlador extends HttpServlet {
             datos.add("Fecha Emitida: " + solicitud.getFecha() + "\n");
             datos.add("Bodega: " + solicitud.getDescripcionbodega() + "\n\n\n");
             documento.open();
-            documento.add(logo);
             documento.add(datos);
             PdfPTable tabla = new PdfPTable(3);
             tabla.setWidthPercentage(100);
@@ -384,7 +378,6 @@ public class Controlador extends HttpServlet {
             request.setAttribute("usua", usua);
             request.setAttribute("solicitud", solicitud);
             request.setAttribute("pedido", listasolicitud);
-            request.getRequestDispatcher("Bodega/Solicitud.jsp").forward(request, response);
         } else if (menu.equals("quitarpedido")) {
             int idpedido = Integer.parseInt(request.getParameter("idpedido"));
             for (int i = 0; i < listasolicitud.size(); i++) {
@@ -501,6 +494,7 @@ public class Controlador extends HttpServlet {
             } else {
                 solicitudes = solidao.listasolicitudDepto(departamento);
             }
+            archivo.generarPDF(detallesolicitud, solicitud);
             request.setAttribute("participantes", solicitud);
             request.setAttribute("listasolicitudes", solicitudes);
             request.setAttribute("detalle", detallesolicitud);
@@ -512,9 +506,6 @@ public class Controlador extends HttpServlet {
             solicitud = solidao.detalleSolicitudParticipante(idsoli);
             Document documento = new Document();
             PdfWriter.getInstance(documento, out);
-            Image logo = Image.getInstance("C:\\Users\\usuario\\Desktop\\MOP_bodega\\Mop\\build\\web\\img\\vialidad.jpg");
-            logo.scaleToFit(80, 100);
-            logo.setAlignment(Chunk.ALIGN_RIGHT);
             Paragraph datos = new Paragraph();
             datos.setFont(FontFactory.getFont("Calibri", 18, Font.BOLD, BaseColor.BLACK));
             datos.setAlignment(Paragraph.ALIGN_CENTER);
@@ -528,7 +519,6 @@ public class Controlador extends HttpServlet {
             datos.add("Fecha Emitida: " + solicitud.getFecha() + "\n");
             datos.add("Bodega: " + solicitud.getDescripcionbodega() + "\n\n\n");
             documento.open();
-            documento.add(logo);
             documento.add(datos);
             PdfPTable tabla = new PdfPTable(3);
             tabla.setWidthPercentage(100);
@@ -565,7 +555,6 @@ public class Controlador extends HttpServlet {
             request.setAttribute("participantes", solicitud);
             request.setAttribute("listasolicitudes", solicitudes);
             request.setAttribute("detalle", detallesolicitud);
-            request.getRequestDispatcher("Consulta/ListaSolicitud.jsp").forward(request, response);
         } else if (menu.equals("usuario")) {
             List<Bodega> listabodega = bdao.listaBodega();
             List<PerfilUsuario> listaperfil = perfdao.listarPerfil();

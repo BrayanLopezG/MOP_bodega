@@ -46,17 +46,15 @@
                                 </form>
                             </div>
                             <div class="form-group">
-                                <c:forEach var="proveedor" items="${lista}">
                                     <h3>Informacion Proveedor</h3>
                                     <label>Codigo Proveedor</label>
-                                    <input class="form-control" id="txtid" name="txtid" value="<c:out value="${proveedor.id_proveedor}"/>" disabled>
+                                    <input class="form-control" id="txtid" name="txtid" value="${proveedor.getId_proveedor()}" disabled>
                                     <label>Nombre</label>
-                                    <input class="form-control" id="txtnombre" name="txtnombre" value="<c:out value="${proveedor.nombre_proveedor}"/>" disabled>
+                                    <input class="form-control" id="txtnombre" name="txtnombre" value="${proveedor.getNombre_proveedor()}" disabled>
                                     <label>Telefono</label>
-                                    <input class="form-control" id="txttelefono" name="txttelefono" value="<c:out value="${proveedor.telefono_proveedor}"/>" disabled>
+                                    <input class="form-control" id="txttelefono" name="txttelefono" value="${proveedor.getTelefono_proveedor()}" disabled>
                                     <label>Direccion</label>
-                                    <input class="form-control" id="txtdireccion" name="txtdireccion" value="<c:out value="${proveedor.direccion_proveedor}"/>" disabled>
-                                </c:forEach>
+                                    <input class="form-control" id="txtdireccion" name="txtdireccion" value="${proveedor.getDireccion_proveedor()}" disabled>
                             </div>
                         </div>
                         <div class="col-6">

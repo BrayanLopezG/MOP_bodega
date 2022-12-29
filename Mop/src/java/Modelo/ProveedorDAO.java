@@ -103,12 +103,12 @@ public class ProveedorDAO {
             return null;
         }
     }
-    public List<Proveedor> filtroRutProveedor(String rut){
+    public Proveedor filtroRutProveedor(String rut){
         PreparedStatement ps;
         ResultSet rs;
-        List<Proveedor> lista = new ArrayList();
+        Proveedor proveedor = null;
         try {
-            ps = conexion.prepareStatement("SELECT * FROM proveedor WHERE rut_proveedor = ?");
+            ps = conexion.prepareStatement("SELECT idProveedor,rut_proveedor,nombre_proveedor, telefono_proveedor, direccion_proveedor FROM proveedor WHERE rut_proveedor = ?");
             ps.setString(1, rut);
             rs = ps.executeQuery();
             while(rs.next()){
@@ -117,12 +117,11 @@ public class ProveedorDAO {
                 String nombre = rs.getString(3);
                 String telefono = rs.getString(4);
                 String direccion = rs.getString(5);
-                Proveedor proveedor = new Proveedor(id, rut_proveedor, nombre, telefono, direccion);
-                lista.add(proveedor);
+                proveedor = new Proveedor(id, rut_proveedor, nombre, telefono, direccion);
             }
             ps.close();
             rs.close();
-            return lista;
+            return proveedor;
         } catch (SQLException e) {
             System.out.println(e.toString());
             return null;

@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jboss-web>
-  <context-root>/Mop</context-root>
+  <context-root>/Bodega</context-root>
 </jboss-web>

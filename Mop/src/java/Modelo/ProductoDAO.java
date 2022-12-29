@@ -75,7 +75,6 @@ public class ProductoDAO {
             ps.setInt(1, idfactura);
             rs = ps.executeQuery();
             while (rs.next()) {
-                System.out.println(rs);
                 int idpro = rs.getInt(1);
                 String descripcion = rs.getString(2);
                 String cantidad = rs.getString(3);

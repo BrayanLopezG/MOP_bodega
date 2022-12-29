@@ -8,7 +8,7 @@ import java.util.List;
 public class FacturaDAO {
     String Auto_ID = "SELECT COUNT(idFactura) FROM factura";
     String ID_provedor = "SELECT idProveedor FROM proveedor WHERE rut_proveedor = ?";
-    String nueva_factura = "INSERT INTO factura (idFactura,nro_factura,orden_compra,fecha_factura,archivo_factura,archivo_oc,proveedor_id) VALUES(?,?,?,?,?,?,?)";
+    String nueva_factura = "INSERT INTO factura (idFactura,nro_factura,orden_compra,fecha_factura) VALUES(?,?,?,?,?)";
     String filtro_factura = "SELECT idFactura, nro_factura, orden_compra FROM factura WHERE orden_compra = ?";
     String lista_factura = "SELECT * FROM factura";
 
@@ -67,10 +67,8 @@ public class FacturaDAO {
                 String nro_factura = rs.getString(2);
                 String orden_compra = rs.getString(3);
                 String fecha = rs.getString(4);
-                byte[] archivo_factura = rs.getBytes(5);
-                byte[] archivo_orden = rs.getBytes(6);
                 int proveedor = rs.getInt(7);
-                Factura factura = new Factura(id, proveedor, nro_factura, orden_compra, fecha, archivo_factura,archivo_orden);
+                Factura factura = new Factura(id, proveedor, nro_factura, orden_compra, fecha);
                 lista.add(factura);
             }
             return lista;
@@ -111,9 +109,7 @@ public class FacturaDAO {
             ps.setString(2, factura.getNro_factura());
             ps.setString(3, factura.getOrden_compra());
             ps.setString(4, factura.getFecha_factura());
-            ps.setBlob(5, factura.getFacturapdf());
-            ps.setBlob(6, factura.getOrden_comprapdf());
-            ps.setInt(7, id_proveedor);
+            ps.setInt(5, id_proveedor);
             ps.execute();
             ps.close();
             return true;

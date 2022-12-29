@@ -37,8 +37,6 @@ CREATE TABLE IF NOT EXISTS `MOP`.`Factura` (
   `nro_factura` VARCHAR(45) NOT NULL,
   `orden_compra` VARCHAR(45) NOT NULL,
   `fecha_factura` DATE NOT NULL,
-  `archivo_factura` MEDIUMBLOB NOT NULL,
-  `archivo_oc` MEDIUMBLOB NOT NULL,
   `proveedor_id` INT NOT NULL,
   PRIMARY KEY (`idFactura`),
   INDEX `proveedor_id_idx` (`proveedor_id` ASC),

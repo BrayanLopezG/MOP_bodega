@@ -1,279 +1,20 @@
-09:13:48,174 INFO  [org.jboss.modules] (main) JBoss Modules version 1.2.0.Final-redhat-1
-09:13:48,878 INFO  [org.jboss.msc] (main) JBoss MSC version 1.0.4.GA-redhat-1
-09:13:48,988 INFO  [org.jboss.as] (MSC service thread 1-6) JBAS015899: JBoss EAP 6.1.0.GA (AS 7.2.0.Final-redhat-8) iniciando
-09:13:48,998 DEBUG [org.jboss.as.config] (MSC service thread 1-6) Propiedades del sistema configuradas:
-	awt.toolkit = sun.awt.windows.WToolkit
-	file.encoding = Cp1252
-	file.encoding.pkg = sun.io
-	file.separator = \
-	java.awt.graphicsenv = sun.awt.Win32GraphicsEnvironment
-	java.awt.printerjob = sun.awt.windows.WPrinterJob
-	java.class.path = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\jboss-modules.jar
-	java.class.version = 51.0
-	java.endorsed.dirs = C:\Program Files\Java\jdk1.7.0_80\jre\lib\endorsed
-	java.ext.dirs = C:\Program Files\Java\jdk1.7.0_80\jre\lib\ext;C:\Windows\Sun\Java\lib\ext
-	java.home = C:\Program Files\Java\jdk1.7.0_80\jre
-	java.io.tmpdir = C:\Users\usuario\AppData\Local\Temp\
-	java.library.path = C:\Program Files\Java\jdk1.7.0_80\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Git\cmd;"C:\Program Files\Java\jdk1.7.0_80\bin;C:\Program Files\Java\jdk1.7.0_80\bin;";C:\Users\usuario\AppData\Local\Microsoft\WindowsApps;;.
-	java.runtime.name = Java(TM) SE Runtime Environment
-	java.runtime.version = 1.7.0_80-b15
-	java.specification.name = Java Platform API Specification
-	java.specification.vendor = Oracle Corporation
-	java.specification.version = 1.7
-	java.util.logging.manager = org.jboss.logmanager.LogManager
-	java.vendor = Oracle Corporation
-	java.vendor.url = http://java.oracle.com/
-	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
-	java.version = 1.7.0_80
-	java.vm.info = mixed mode
-	java.vm.name = Java HotSpot(TM) 64-Bit Server VM
-	java.vm.specification.name = Java Virtual Machine Specification
-	java.vm.specification.vendor = Oracle Corporation
-	java.vm.specification.version = 1.7
-	java.vm.vendor = Oracle Corporation
-	java.vm.version = 24.80-b11
-	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
-	javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
-	javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
-	javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
-	javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
-	javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
-	javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
-	javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
-	javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
-	javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
-	jboss.home.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1
-	jboss.host.name = desktop-to536at
-	jboss.modules.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\modules
-	jboss.node.name = desktop-to536at
-	jboss.qualified.host.name = desktop-to536at
-	jboss.server.base.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone
-	jboss.server.config.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\configuration
-	jboss.server.data.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\data
-	jboss.server.deploy.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\data\content
-	jboss.server.log.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\log
-	jboss.server.name = desktop-to536at
-	jboss.server.persist.config = true
-	jboss.server.temp.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\tmp
-	line.separator = 
-
-	logging.configuration = file:C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone/configuration/logging.properties
-	module.path = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\modules
-	org.jboss.boot.log.file = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\log\server.log
-	org.jboss.resolver.warning = true
-	org.xml.sax.driver = __redirected.__XMLReaderFactory
-	os.arch = amd64
-	os.name = Windows 8.1
-	os.version = 6.3
-	path.separator = ;
-	program.name = standalone.bat
-	sun.arch.data.model = 64
-	sun.boot.class.path = C:\Program Files\Java\jdk1.7.0_80\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_80\jre\classes
-	sun.boot.library.path = C:\Program Files\Java\jdk1.7.0_80\jre\bin
-	sun.cpu.endian = little
-	sun.cpu.isalist = amd64
-	sun.desktop = windows
-	sun.io.unicode.encoding = UnicodeLittle
-	sun.java.command = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\jboss-modules.jar -mp C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\modules -jaxpmodule javax.xml.jaxp-provider org.jboss.as.standalone -Djboss.home.dir=C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1
-	sun.java.launcher = SUN_STANDARD
-	sun.jnu.encoding = Cp1252
-	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
-	sun.os.patch.level = 
-	user.country = CL
-	user.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\bin
-	user.home = C:\Users\usuario
-	user.language = es
-	user.name = usuario
-	user.script = 
-	user.timezone = America/Santiago
-	user.variant = 
-09:13:48,999 DEBUG [org.jboss.as.config] (MSC service thread 1-6) Argumentos de VM: -XX:+TieredCompilation -XX:+UseCompressedOops -Dprogram.name=standalone.bat -Xms128m -Xmx512m -XX:MaxPermSize=256m -Dorg.jboss.boot.log.file=C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\log\server.log -Dlogging.configuration=file:C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone/configuration/logging.properties 
-09:13:52,279 INFO  [org.jboss.as.server] (Controller Boot Thread) JBAS015888: Creando el servicio de administración http utilizando el enlace de socket (management-http) 
-09:13:52,287 INFO  [org.xnio] (MSC service thread 1-12) XNIO Version 3.0.7.GA-redhat-1
-09:13:52,293 INFO  [org.xnio.nio] (MSC service thread 1-12) XNIO NIO Implementation Version 3.0.7.GA-redhat-1
-09:13:52,299 INFO  [org.jboss.remoting] (MSC service thread 1-12) JBoss Remoting version 3.2.16.GA-redhat-1
-09:13:52,364 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 29) JBAS010280: Activando el sub-sistema Infinispan.
-09:13:52,369 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 42) JBAS013171: Activando el sub-sistema de seguridad
-09:13:52,380 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 37) JBAS011800: Activando el sub-sistema de nombrado
-09:13:52,380 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 46) JBAS015537: Activando WebServices Extension
-09:13:52,386 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 35) JBAS012605: Se activaron las siguientes implementaciones JSF: [main, 1.2]
-09:13:52,390 INFO  [org.jboss.as.security] (MSC service thread 1-14) JBAS013170: Versión PicketBox actual=4.0.17.Final-redhat-1
-09:13:52,415 INFO  [org.jboss.as.connector.logging] (MSC service thread 1-4) JBAS010408: Iniciando JCA sub-sistema (IronJacamar 1.0.17.Final-redhat-1)
-09:13:52,762 INFO  [org.jboss.as.naming] (MSC service thread 1-9) JBAS011802: Iniciando el servicio de nombrado
-09:13:52,764 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-2) JBAS015400: Sesión de correo enlazada [java:jboss/mail/Default]
-09:13:53,034 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 25) JBAS010403: Implementación del controlador que cumple con los requerimientos de JDBC class org.h2.Driver (versión 1.3)
-09:13:53,489 INFO  [org.apache.coyote.http11] (MSC service thread 1-6) JBWEB003001: Coyote HTTP/1.1 initializing on : http-/127.0.0.1:8080
-09:13:53,494 INFO  [org.apache.coyote.http11] (MSC service thread 1-6) JBWEB003000: Coyote HTTP/1.1 starting on: http-/127.0.0.1:8080
-09:13:53,733 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-15) JBAS010400: Fuente de datos enlazados [java:jboss/datasources/ExampleDS]
-09:13:54,172 INFO  [org.jboss.ws.common.management] (MSC service thread 1-10) JBWS022052: Starting JBoss Web Services - Stack CXF Server 4.1.3.Final-redhat-3
-09:13:54,425 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-15) JBAS015012: Inició FileSystemDeploymentService para el directorio C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\deployments
-09:13:54,502 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-8) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
-09:13:54,513 INFO  [org.jboss.as.remoting] (MSC service thread 1-14) JBAS017100: Escuchando en 127.0.0.1:4447
-09:13:54,513 INFO  [org.jboss.as.remoting] (MSC service thread 1-3) JBAS017100: Escuchando en 127.0.0.1:9999
-09:13:55,173 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-15) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
-09:13:55,266 INFO  [org.jboss.web] (ServerService Thread Pool -- 74) JBAS018210: Registrar el contexto web: /Mop
-09:13:55,455 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 26) JBAS018559: Implementado "Mop.war" (runtime-name : "Mop.war")
-09:13:55,655 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015961: Interfaz de administración http escuchando en http://127.0.0.1:9990/management
-09:13:55,656 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015951: Consola de administración escuchando en http://127.0.0.1:9990
-09:13:55,657 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015874: JBoss EAP 6.1.0.GA (AS 7.2.0.Final-redhat-8) inició en 8600ms - Inició 321 de 378 servicios (56 servicios son pasivos o por demanda)
-09:14:35,540 INFO  [org.jboss.web] (ServerService Thread Pool -- 76) JBAS018224: Borrar el registro del contexto web: /Mop
-09:14:35,875 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 339ms
-09:14:35,876 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
-09:14:36,064 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-15) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
-09:14:36,071 INFO  [org.jboss.web] (ServerService Thread Pool -- 81) JBAS018210: Registrar el contexto web: /Mop
-09:14:36,299 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
-09:22:06,722 INFO  [org.jboss.web] (ServerService Thread Pool -- 103) JBAS018224: Borrar el registro del contexto web: /Mop
-09:22:06,761 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-11) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 43ms
-09:22:06,762 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-15) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
-09:22:06,946 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-7) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
-09:22:06,952 INFO  [org.jboss.web] (ServerService Thread Pool -- 106) JBAS018210: Registrar el contexto web: /Mop
-09:22:07,064 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
-09:22:57,123 INFO  [org.jboss.web] (ServerService Thread Pool -- 130) JBAS018224: Borrar el registro del contexto web: /Mop
-09:22:57,159 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-15) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 40ms
-09:22:57,160 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-15) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
-09:22:57,463 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-8) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
-09:22:57,468 INFO  [org.jboss.web] (ServerService Thread Pool -- 155) JBAS018210: Registrar el contexto web: /Mop
-09:22:57,561 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
-09:29:42,917 INFO  [org.jboss.web] (ServerService Thread Pool -- 156) JBAS018224: Borrar el registro del contexto web: /Mop
-09:29:42,960 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 45ms
-09:29:42,961 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-7) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
-09:29:43,146 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-14) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
-09:29:43,151 INFO  [org.jboss.web] (ServerService Thread Pool -- 159) JBAS018210: Registrar el contexto web: /Mop
-09:29:43,337 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
-09:31:48,446 INFO  [org.jboss.web] (ServerService Thread Pool -- 179) JBAS018224: Borrar el registro del contexto web: /Mop
-09:31:48,478 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 33ms
-09:31:48,478 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
-09:31:48,620 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-14) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
-09:31:48,626 INFO  [org.jboss.web] (ServerService Thread Pool -- 189) JBAS018210: Registrar el contexto web: /Mop
-09:31:48,792 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
-09:34:12,584 ERROR [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/Mop].[Controlador]] (http-/127.0.0.1:8080-1) JBWEB000236: Servlet.service() for servlet Controlador threw exception: java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
-	at java.util.ArrayList.rangeCheck(ArrayList.java:635) [rt.jar:1.7.0_80]
-	at java.util.ArrayList.get(ArrayList.java:411) [rt.jar:1.7.0_80]
-	at Controlador.Controlador.processRequest(Controlador.java:260) [classes:]
-	at Controlador.Controlador.doGet(Controlador.java:442) [classes:]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:734) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:295) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:214) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:230) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:149) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.jboss.as.web.security.SecurityContextAssociationValve.invoke(SecurityContextAssociationValve.java:169) [jboss-as-web-7.2.0.Final-redhat-8.jar:7.2.0.Final-redhat-8]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:145) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:97) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:102) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:336) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:856) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:653) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:920) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at java.lang.Thread.run(Thread.java:745) [rt.jar:1.7.0_80]
-
-09:35:54,026 INFO  [org.jboss.web] (ServerService Thread Pool -- 200) JBAS018224: Borrar el registro del contexto web: /Mop
-09:35:54,063 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 41ms
-09:35:54,064 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-16) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
-09:35:54,198 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-10) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
-09:35:54,203 INFO  [org.jboss.web] (ServerService Thread Pool -- 214) JBAS018210: Registrar el contexto web: /Mop
-09:35:54,295 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
-10:09:08,280 INFO  [org.jboss.web] (ServerService Thread Pool -- 226) JBAS018224: Borrar el registro del contexto web: /Mop
-10:09:08,311 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 25ms
-10:09:08,311 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-13) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
-10:09:08,420 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-3) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
-10:09:08,436 INFO  [org.jboss.web] (ServerService Thread Pool -- 229) JBAS018210: Registrar el contexto web: /Mop
-10:09:08,530 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
-10:09:53,647 INFO  [org.jboss.web] (ServerService Thread Pool -- 246) JBAS018224: Borrar el registro del contexto web: /Mop
-10:09:53,678 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 27ms
-10:09:53,678 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
-10:09:53,819 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-12) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
-10:09:53,819 INFO  [org.jboss.web] (ServerService Thread Pool -- 268) JBAS018210: Registrar el contexto web: /Mop
-10:09:54,303 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
-10:10:24,379 INFO  [org.jboss.web] (ServerService Thread Pool -- 269) JBAS018224: Borrar el registro del contexto web: /Mop
-10:10:24,410 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-11) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 26ms
-10:10:24,410 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-13) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
-10:10:25,129 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-15) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
-10:10:25,144 INFO  [org.jboss.web] (ServerService Thread Pool -- 286) JBAS018210: Registrar el contexto web: /Mop
-10:10:25,269 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
-10:12:20,545 INFO  [org.jboss.web] (ServerService Thread Pool -- 291) JBAS018224: Borrar el registro del contexto web: /Mop
-10:12:20,576 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-7) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 29ms
-10:12:20,576 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
-10:12:20,733 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-14) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
-10:12:20,733 INFO  [org.jboss.web] (ServerService Thread Pool -- 301) JBAS018210: Registrar el contexto web: /Mop
-10:12:21,108 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
-10:14:26,457 INFO  [org.jboss.web] (ServerService Thread Pool -- 314) JBAS018224: Borrar el registro del contexto web: /Mop
-10:14:26,473 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 27ms
-10:14:26,473 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
-10:14:26,613 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-11) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
-10:14:26,613 INFO  [org.jboss.web] (ServerService Thread Pool -- 332) JBAS018210: Registrar el contexto web: /Mop
-10:14:27,176 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
-10:14:39,004 ERROR [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/Mop].[Controlador]] (http-/127.0.0.1:8080-1) JBWEB000236: Servlet.service() for servlet Controlador threw exception: java.lang.NullPointerException
-	at Controlador.Controlador.processRequest(Controlador.java:410) [classes:]
-	at Controlador.Controlador.doGet(Controlador.java:462) [classes:]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:734) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:295) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:214) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:230) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:149) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.jboss.as.web.security.SecurityContextAssociationValve.invoke(SecurityContextAssociationValve.java:169) [jboss-as-web-7.2.0.Final-redhat-8.jar:7.2.0.Final-redhat-8]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:145) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:97) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:102) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:336) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:856) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:653) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:920) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at java.lang.Thread.run(Thread.java:745) [rt.jar:1.7.0_80]
-
-10:15:02,265 INFO  [org.jboss.web] (ServerService Thread Pool -- 338) JBAS018224: Borrar el registro del contexto web: /Mop
-10:15:02,296 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-16) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 26ms
-10:15:02,296 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-7) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
-10:15:02,671 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-4) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
-10:15:02,686 INFO  [org.jboss.web] (ServerService Thread Pool -- 360) JBAS018210: Registrar el contexto web: /Mop
-10:15:03,015 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
-10:16:33,248 INFO  [org.jboss.web] (ServerService Thread Pool -- 362) JBAS018224: Borrar el registro del contexto web: /Mop
-10:16:33,279 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 26ms
-10:16:33,279 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-10) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
-10:16:33,388 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-11) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
-10:16:33,388 INFO  [org.jboss.web] (ServerService Thread Pool -- 379) JBAS018210: Registrar el contexto web: /Mop
-10:16:33,513 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
-10:17:23,623 INFO  [org.jboss.web] (ServerService Thread Pool -- 385) JBAS018224: Borrar el registro del contexto web: /Mop
-10:17:23,654 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 28ms
-10:17:23,654 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-10) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
-10:17:23,779 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-6) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
-10:17:23,779 INFO  [org.jboss.web] (ServerService Thread Pool -- 401) JBAS018210: Registrar el contexto web: /Mop
-10:17:24,419 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
-11:34:00,748 INFO  [org.jboss.web] (ServerService Thread Pool -- 407) JBAS018224: Borrar el registro del contexto web: /Mop
-11:34:00,779 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-10) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 32ms
-11:34:00,779 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
-11:34:01,719 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-3) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
-11:34:01,723 INFO  [org.jboss.web] (ServerService Thread Pool -- 408) JBAS018210: Registrar el contexto web: /Mop
-11:34:01,828 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
-11:35:17,152 INFO  [org.jboss.web] (ServerService Thread Pool -- 430) JBAS018224: Borrar el registro del contexto web: /Mop
-11:35:17,177 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-16) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 26ms
-11:35:17,178 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-10) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
-11:35:17,292 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-2) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
-11:35:17,296 INFO  [org.jboss.web] (ServerService Thread Pool -- 447) JBAS018210: Registrar el contexto web: /Mop
-11:35:17,419 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
-11:35:24,757 ERROR [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/Mop].[jsp]] (http-/127.0.0.1:8080-3) JBWEB000236: Servlet.service() for servlet jsp threw exception: javax.el.MethodNotFoundException: Method getUsuario_Apellido not found
-	at javax.el.BeanELResolver.findMethod(BeanELResolver.java:715) [jboss-el-api_2.2_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
-	at javax.el.BeanELResolver.invoke(BeanELResolver.java:466) [jboss-el-api_2.2_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
-	at org.apache.jasper.el.JasperELResolver.invoke(JasperELResolver.java:135) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.el.parser.AstValue.getValue(AstValue.java:156) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.el.ValueExpressionImpl.getValue(ValueExpressionImpl.java:189) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate(PageContextImpl.java:958) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.jsp.Consulta.ListaSolicitud_jsp._jspService(ListaSolicitud_jsp.java:144)
-	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:69) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
-	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:365) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:309) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:242) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:295) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:214) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:832) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:620) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:553) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+12:08:27,624 INFO  [org.jboss.web] (ServerService Thread Pool -- 145) JBAS018224: Borrar el registro del contexto web: /Bodega
+12:08:27,670 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-13) JBAS015877: Se detuvo la implementaciónBodega.war (runtime-name: Bodega.war) en 45ms
+12:08:27,670 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-15) JBAS015876: Iniciando la implementación de Bodega.war" (runtime-name: "Bodega.war")
+12:08:27,903 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-16) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+12:08:27,911 INFO  [org.jboss.web] (ServerService Thread Pool -- 176) JBAS018210: Registrar el contexto web: /Bodega
+12:08:28,005 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Bodega.war" con la implementación "Bodega.war"
+12:10:03,242 INFO  [org.jboss.web] (ServerService Thread Pool -- 177) JBAS018224: Borrar el registro del contexto web: /Bodega
+12:10:03,273 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015877: Se detuvo la implementaciónBodega.war (runtime-name: Bodega.war) en 31ms
+12:10:03,273 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015876: Iniciando la implementación de Bodega.war" (runtime-name: "Bodega.war")
+12:10:03,763 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-14) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+12:10:03,771 INFO  [org.jboss.web] (ServerService Thread Pool -- 211) JBAS018210: Registrar el contexto web: /Bodega
+12:10:03,835 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Bodega.war" con la implementación "Bodega.war"
+12:10:16,076 ERROR [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/Bodega].[Controlador]] (http-/127.0.0.1:8080-2) JBWEB000236: Servlet.service() for servlet Controlador threw exception: java.lang.IllegalStateException: JBWEB000232: Cannot forward after response has been committed
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:492) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
 	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:482) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at Controlador.Controlador.processRequest(Controlador.java:425) [classes:]
-	at Controlador.Controlador.doGet(Controlador.java:463) [classes:]
+	at Controlador.Controlador.processRequest(Controlador.java:556) [classes:]
+	at Controlador.Controlador.doGet(Controlador.java:614) [classes:]
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:734) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:295) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
@@ -290,28 +31,23 @@
 	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:920) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
 	at java.lang.Thread.run(Thread.java:745) [rt.jar:1.7.0_80]
 
-11:35:24,997 ERROR [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/Mop].[Controlador]] (http-/127.0.0.1:8080-3) JBWEB000236: Servlet.service() for servlet Controlador threw exception: javax.el.MethodNotFoundException: Method getUsuario_Apellido not found
-	at javax.el.BeanELResolver.findMethod(BeanELResolver.java:715) [jboss-el-api_2.2_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
-	at javax.el.BeanELResolver.invoke(BeanELResolver.java:466) [jboss-el-api_2.2_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
-	at org.apache.jasper.el.JasperELResolver.invoke(JasperELResolver.java:135) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.el.parser.AstValue.getValue(AstValue.java:156) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.el.ValueExpressionImpl.getValue(ValueExpressionImpl.java:189) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate(PageContextImpl.java:958) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.jsp.Consulta.ListaSolicitud_jsp._jspService(ListaSolicitud_jsp.java:144)
-	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:69) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
-	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:365) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:309) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:242) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:295) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:214) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:832) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:620) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:553) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+12:13:29,267 INFO  [org.jboss.web] (ServerService Thread Pool -- 213) JBAS018224: Borrar el registro del contexto web: /Bodega
+12:13:29,298 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-11) JBAS015877: Se detuvo la implementaciónBodega.war (runtime-name: Bodega.war) en 43ms
+12:13:29,298 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-12) JBAS015876: Iniciando la implementación de Bodega.war" (runtime-name: "Bodega.war")
+12:13:29,535 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-1) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+12:13:29,539 INFO  [org.jboss.web] (ServerService Thread Pool -- 237) JBAS018210: Registrar el contexto web: /Bodega
+12:13:29,749 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Bodega.war" con la implementación "Bodega.war"
+12:13:34,841 INFO  [org.jboss.web] (ServerService Thread Pool -- 237) JBAS018224: Borrar el registro del contexto web: /Bodega
+12:13:34,872 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-12) JBAS015877: Se detuvo la implementaciónBodega.war (runtime-name: Bodega.war) en 32ms
+12:13:34,872 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-10) JBAS015876: Iniciando la implementación de Bodega.war" (runtime-name: "Bodega.war")
+12:13:35,060 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-8) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+12:13:35,060 INFO  [org.jboss.web] (ServerService Thread Pool -- 217) JBAS018210: Registrar el contexto web: /Bodega
+12:13:35,153 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Bodega.war" con la implementación "Bodega.war"
+12:13:45,898 ERROR [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/Bodega].[Controlador]] (http-/127.0.0.1:8080-3) JBWEB000236: Servlet.service() for servlet Controlador threw exception: java.lang.IllegalStateException: JBWEB000232: Cannot forward after response has been committed
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:492) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
 	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:482) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at Controlador.Controlador.processRequest(Controlador.java:425) [classes:]
-	at Controlador.Controlador.doGet(Controlador.java:463) [classes:]
+	at Controlador.Controlador.processRequest(Controlador.java:556) [classes:]
+	at Controlador.Controlador.doGet(Controlador.java:614) [classes:]
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:734) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:295) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
@@ -328,39 +64,11 @@
 	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:920) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
 	at java.lang.Thread.run(Thread.java:745) [rt.jar:1.7.0_80]
 
-11:35:42,469 INFO  [org.jboss.web] (ServerService Thread Pool -- 452) JBAS018224: Borrar el registro del contexto web: /Mop
-11:35:42,495 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-15) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 27ms
-11:35:42,496 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
-11:35:42,647 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-1) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
-11:35:42,651 INFO  [org.jboss.web] (ServerService Thread Pool -- 473) JBAS018210: Registrar el contexto web: /Mop
-11:35:42,810 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
-11:35:53,508 ERROR [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/Mop].[jsp]] (http-/127.0.0.1:8080-2) JBWEB000236: Servlet.service() for servlet jsp threw exception: java.lang.NumberFormatException: For input string: "descripcion"
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65) [rt.jar:1.7.0_80]
-	at java.lang.Integer.parseInt(Integer.java:492) [rt.jar:1.7.0_80]
-	at java.lang.Integer.parseInt(Integer.java:527) [rt.jar:1.7.0_80]
-	at javax.el.ListELResolver.toInteger(ListELResolver.java:407) [jboss-el-api_2.2_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
-	at javax.el.ListELResolver.getValue(ListELResolver.java:199) [jboss-el-api_2.2_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
-	at org.apache.jasper.el.JasperELResolver.getValue(JasperELResolver.java:100) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.el.parser.AstValue.getValue(AstValue.java:166) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.el.ValueExpressionImpl.getValue(ValueExpressionImpl.java:189) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate(PageContextImpl.java:958) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.jsp.Consulta.ListaProducto_jsp._jspx_meth_c_005fout_005f4(ListaProducto_jsp.java:272)
-	at org.apache.jsp.Consulta.ListaProducto_jsp._jspx_meth_c_005fforEach_005f0(ListaProducto_jsp.java:162)
-	at org.apache.jsp.Consulta.ListaProducto_jsp._jspService(ListaProducto_jsp.java:104)
-	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:69) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
-	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:365) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:309) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:242) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:295) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:214) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:832) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:620) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:553) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+12:14:31,142 ERROR [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/Bodega].[Controlador]] (http-/127.0.0.1:8080-3) JBWEB000236: Servlet.service() for servlet Controlador threw exception: java.lang.IllegalStateException: JBWEB000232: Cannot forward after response has been committed
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:492) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
 	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:482) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at Controlador.Controlador.processRequest(Controlador.java:370) [classes:]
-	at Controlador.Controlador.doGet(Controlador.java:463) [classes:]
+	at Controlador.Controlador.processRequest(Controlador.java:556) [classes:]
+	at Controlador.Controlador.doGet(Controlador.java:614) [classes:]
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:734) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:295) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
@@ -377,33 +85,249 @@
 	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:920) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
 	at java.lang.Thread.run(Thread.java:745) [rt.jar:1.7.0_80]
 
-11:35:53,799 ERROR [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/Mop].[Controlador]] (http-/127.0.0.1:8080-2) JBWEB000236: Servlet.service() for servlet Controlador threw exception: java.lang.NumberFormatException: For input string: "descripcion"
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65) [rt.jar:1.7.0_80]
-	at java.lang.Integer.parseInt(Integer.java:492) [rt.jar:1.7.0_80]
-	at java.lang.Integer.parseInt(Integer.java:527) [rt.jar:1.7.0_80]
-	at javax.el.ListELResolver.toInteger(ListELResolver.java:407) [jboss-el-api_2.2_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
-	at javax.el.ListELResolver.getValue(ListELResolver.java:199) [jboss-el-api_2.2_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
-	at org.apache.jasper.el.JasperELResolver.getValue(JasperELResolver.java:100) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.el.parser.AstValue.getValue(AstValue.java:166) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.el.ValueExpressionImpl.getValue(ValueExpressionImpl.java:189) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate(PageContextImpl.java:958) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.jsp.Consulta.ListaProducto_jsp._jspx_meth_c_005fout_005f4(ListaProducto_jsp.java:272)
-	at org.apache.jsp.Consulta.ListaProducto_jsp._jspx_meth_c_005fforEach_005f0(ListaProducto_jsp.java:162)
-	at org.apache.jsp.Consulta.ListaProducto_jsp._jspService(ListaProducto_jsp.java:104)
-	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:69) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
-	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:365) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:309) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:242) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:295) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:214) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:832) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:620) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:553) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+12:16:45,565 INFO  [org.jboss.web] (ServerService Thread Pool -- 243) JBAS018224: Borrar el registro del contexto web: /Bodega
+12:16:45,596 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-13) JBAS015877: Se detuvo la implementaciónBodega.war (runtime-name: Bodega.war) en 28ms
+12:16:45,596 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-11) JBAS015876: Iniciando la implementación de Bodega.war" (runtime-name: "Bodega.war")
+12:16:45,862 WARN  [org.jboss.modules] (MSC service thread 1-14) Failed to define class Controlador.Validar in Module "deployment.Bodega.war:main" from Service Module Loader: java.lang.ClassFormatError: Extra bytes at the end of class file Controlador/Validar
+	at java.lang.ClassLoader.defineClass1(Native Method) [rt.jar:1.7.0_80]
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800) [rt.jar:1.7.0_80]
+	at org.jboss.modules.ModuleClassLoader.doDefineOrLoadClass(ModuleClassLoader.java:344) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ModuleClassLoader.defineClass(ModuleClassLoader.java:422) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ModuleClassLoader.loadClassLocal(ModuleClassLoader.java:260) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ModuleClassLoader$1.loadClassLocal(ModuleClassLoader.java:75) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.Module.loadModuleClass(Module.java:526) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ModuleClassLoader.findClass(ModuleClassLoader.java:188) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassUnchecked(ConcurrentClassLoader.java:444) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassChecked(ConcurrentClassLoader.java:432) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClass(ConcurrentClassLoader.java:374) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ConcurrentClassLoader.loadClass(ConcurrentClassLoader.java:119) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at java.lang.Class.forName0(Native Method) [rt.jar:1.7.0_80]
+	at java.lang.Class.forName(Class.java:278) [rt.jar:1.7.0_80]
+	at org.jboss.as.server.deployment.reflect.DeploymentClassIndex.classIndex(DeploymentClassIndex.java:54)
+	at org.jboss.as.ee.component.deployers.InterceptorAnnotationProcessor.processComponentConfig(InterceptorAnnotationProcessor.java:85) [jboss-as-ee-7.2.0.Final-redhat-8.jar:7.2.0.Final-redhat-8]
+	at org.jboss.as.ee.component.deployers.InterceptorAnnotationProcessor.deploy(InterceptorAnnotationProcessor.java:77) [jboss-as-ee-7.2.0.Final-redhat-8.jar:7.2.0.Final-redhat-8]
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:120)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_80]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_80]
+	at java.lang.Thread.run(Thread.java:745) [rt.jar:1.7.0_80]
+
+12:16:45,862 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-14) MSC000001: Failed to start service jboss.deployment.unit."Bodega.war".POST_MODULE: org.jboss.msc.service.StartException in service jboss.deployment.unit."Bodega.war".POST_MODULE: JBAS018733: Error al procesar la fase POST_MODULE de deployment "Bodega.war"
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:127) [jboss-as-server-7.2.0.Final-redhat-8.jar:7.2.0.Final-redhat-8]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811) [jboss-msc-1.0.4.GA-redhat-1.jar:1.0.4.GA-redhat-1]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746) [jboss-msc-1.0.4.GA-redhat-1.jar:1.0.4.GA-redhat-1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_80]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_80]
+	at java.lang.Thread.run(Thread.java:745) [rt.jar:1.7.0_80]
+Caused by: java.lang.ClassFormatError: Extra bytes at the end of class file Controlador/Validar
+	at java.lang.ClassLoader.defineClass1(Native Method) [rt.jar:1.7.0_80]
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800) [rt.jar:1.7.0_80]
+	at org.jboss.modules.ModuleClassLoader.doDefineOrLoadClass(ModuleClassLoader.java:344) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ModuleClassLoader.defineClass(ModuleClassLoader.java:422) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ModuleClassLoader.loadClassLocal(ModuleClassLoader.java:260) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ModuleClassLoader$1.loadClassLocal(ModuleClassLoader.java:75) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.Module.loadModuleClass(Module.java:526) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ModuleClassLoader.findClass(ModuleClassLoader.java:188) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassUnchecked(ConcurrentClassLoader.java:444) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassChecked(ConcurrentClassLoader.java:432) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClass(ConcurrentClassLoader.java:374) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ConcurrentClassLoader.loadClass(ConcurrentClassLoader.java:119) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at java.lang.Class.forName0(Native Method) [rt.jar:1.7.0_80]
+	at java.lang.Class.forName(Class.java:278) [rt.jar:1.7.0_80]
+	at org.jboss.as.server.deployment.reflect.DeploymentClassIndex.classIndex(DeploymentClassIndex.java:54) [jboss-as-server-7.2.0.Final-redhat-8.jar:7.2.0.Final-redhat-8]
+	at org.jboss.as.ee.component.deployers.InterceptorAnnotationProcessor.processComponentConfig(InterceptorAnnotationProcessor.java:85)
+	at org.jboss.as.ee.component.deployers.InterceptorAnnotationProcessor.deploy(InterceptorAnnotationProcessor.java:77)
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:120) [jboss-as-server-7.2.0.Final-redhat-8.jar:7.2.0.Final-redhat-8]
+	... 5 more
+
+12:16:45,893 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015877: Se detuvo la implementaciónBodega.war (runtime-name: Bodega.war) en 22ms
+12:16:45,893 ERROR [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS015863: El reemplazo de la implementación "Bodega.war" por la implementación "Bodega.war" se deshizo con el siguiente mensaje de fallo: 
+{"JBAS014671: Servicios fallidos" => {"jboss.deployment.unit.\"Bodega.war\".POST_MODULE" => "org.jboss.msc.service.StartException in service jboss.deployment.unit.\"Bodega.war\".POST_MODULE: JBAS018733: Error al procesar la fase POST_MODULE de deployment \"Bodega.war\"
+    Caused by: java.lang.ClassFormatError: Extra bytes at the end of class file Controlador/Validar"}}
+12:16:45,893 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-15) JBAS015876: Iniciando la implementación de Bodega.war" (runtime-name: "Bodega.war")
+12:16:46,049 WARN  [org.jboss.modules] (MSC service thread 1-15) Failed to define class Controlador.Validar in Module "deployment.Bodega.war:main" from Service Module Loader: java.lang.ClassFormatError: Extra bytes at the end of class file Controlador/Validar
+	at java.lang.ClassLoader.defineClass1(Native Method) [rt.jar:1.7.0_80]
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800) [rt.jar:1.7.0_80]
+	at org.jboss.modules.ModuleClassLoader.doDefineOrLoadClass(ModuleClassLoader.java:344) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ModuleClassLoader.defineClass(ModuleClassLoader.java:422) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ModuleClassLoader.loadClassLocal(ModuleClassLoader.java:260) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ModuleClassLoader$1.loadClassLocal(ModuleClassLoader.java:75) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.Module.loadModuleClass(Module.java:526) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ModuleClassLoader.findClass(ModuleClassLoader.java:188) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassUnchecked(ConcurrentClassLoader.java:444) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassChecked(ConcurrentClassLoader.java:432) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClass(ConcurrentClassLoader.java:374) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ConcurrentClassLoader.loadClass(ConcurrentClassLoader.java:119) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at java.lang.Class.forName0(Native Method) [rt.jar:1.7.0_80]
+	at java.lang.Class.forName(Class.java:278) [rt.jar:1.7.0_80]
+	at org.jboss.as.server.deployment.reflect.DeploymentClassIndex.classIndex(DeploymentClassIndex.java:54)
+	at org.jboss.as.ee.component.deployers.InterceptorAnnotationProcessor.processComponentConfig(InterceptorAnnotationProcessor.java:85) [jboss-as-ee-7.2.0.Final-redhat-8.jar:7.2.0.Final-redhat-8]
+	at org.jboss.as.ee.component.deployers.InterceptorAnnotationProcessor.deploy(InterceptorAnnotationProcessor.java:77) [jboss-as-ee-7.2.0.Final-redhat-8.jar:7.2.0.Final-redhat-8]
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:120)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_80]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_80]
+	at java.lang.Thread.run(Thread.java:745) [rt.jar:1.7.0_80]
+
+12:16:46,049 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-15) MSC000001: Failed to start service jboss.deployment.unit."Bodega.war".POST_MODULE: org.jboss.msc.service.StartException in service jboss.deployment.unit."Bodega.war".POST_MODULE: JBAS018733: Error al procesar la fase POST_MODULE de deployment "Bodega.war"
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:127) [jboss-as-server-7.2.0.Final-redhat-8.jar:7.2.0.Final-redhat-8]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811) [jboss-msc-1.0.4.GA-redhat-1.jar:1.0.4.GA-redhat-1]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746) [jboss-msc-1.0.4.GA-redhat-1.jar:1.0.4.GA-redhat-1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_80]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_80]
+	at java.lang.Thread.run(Thread.java:745) [rt.jar:1.7.0_80]
+Caused by: java.lang.ClassFormatError: Extra bytes at the end of class file Controlador/Validar
+	at java.lang.ClassLoader.defineClass1(Native Method) [rt.jar:1.7.0_80]
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800) [rt.jar:1.7.0_80]
+	at org.jboss.modules.ModuleClassLoader.doDefineOrLoadClass(ModuleClassLoader.java:344) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ModuleClassLoader.defineClass(ModuleClassLoader.java:422) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ModuleClassLoader.loadClassLocal(ModuleClassLoader.java:260) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ModuleClassLoader$1.loadClassLocal(ModuleClassLoader.java:75) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.Module.loadModuleClass(Module.java:526) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ModuleClassLoader.findClass(ModuleClassLoader.java:188) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassUnchecked(ConcurrentClassLoader.java:444) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassChecked(ConcurrentClassLoader.java:432) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClass(ConcurrentClassLoader.java:374) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ConcurrentClassLoader.loadClass(ConcurrentClassLoader.java:119) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at java.lang.Class.forName0(Native Method) [rt.jar:1.7.0_80]
+	at java.lang.Class.forName(Class.java:278) [rt.jar:1.7.0_80]
+	at org.jboss.as.server.deployment.reflect.DeploymentClassIndex.classIndex(DeploymentClassIndex.java:54) [jboss-as-server-7.2.0.Final-redhat-8.jar:7.2.0.Final-redhat-8]
+	at org.jboss.as.ee.component.deployers.InterceptorAnnotationProcessor.processComponentConfig(InterceptorAnnotationProcessor.java:85)
+	at org.jboss.as.ee.component.deployers.InterceptorAnnotationProcessor.deploy(InterceptorAnnotationProcessor.java:77)
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:120) [jboss-as-server-7.2.0.Final-redhat-8.jar:7.2.0.Final-redhat-8]
+	... 5 more
+
+12:16:46,065 INFO  [org.jboss.as.controller] (DeploymentScanner-threads - 1) JBAS014774: Reporte del estatus del servicio
+JBAS014777: Servicios que no lograron iniciar:      service jboss.deployment.unit."Bodega.war".POST_MODULE: org.jboss.msc.service.StartException in service jboss.deployment.unit."Bodega.war".POST_MODULE: JBAS018733: Error al procesar la fase POST_MODULE de deployment "Bodega.war"
+
+12:16:56,109 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-9) JBAS015877: Se detuvo la implementaciónBodega.war (runtime-name: Bodega.war) en 21ms
+12:16:56,109 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-14) JBAS015876: Iniciando la implementación de Bodega.war" (runtime-name: "Bodega.war")
+12:16:56,281 WARN  [org.jboss.modules] (MSC service thread 1-14) Failed to define class Controlador.Validar in Module "deployment.Bodega.war:main" from Service Module Loader: java.lang.ClassFormatError: Extra bytes at the end of class file Controlador/Validar
+	at java.lang.ClassLoader.defineClass1(Native Method) [rt.jar:1.7.0_80]
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800) [rt.jar:1.7.0_80]
+	at org.jboss.modules.ModuleClassLoader.doDefineOrLoadClass(ModuleClassLoader.java:344) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ModuleClassLoader.defineClass(ModuleClassLoader.java:422) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ModuleClassLoader.loadClassLocal(ModuleClassLoader.java:260) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ModuleClassLoader$1.loadClassLocal(ModuleClassLoader.java:75) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.Module.loadModuleClass(Module.java:526) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ModuleClassLoader.findClass(ModuleClassLoader.java:188) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassUnchecked(ConcurrentClassLoader.java:444) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassChecked(ConcurrentClassLoader.java:432) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClass(ConcurrentClassLoader.java:374) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ConcurrentClassLoader.loadClass(ConcurrentClassLoader.java:119) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at java.lang.Class.forName0(Native Method) [rt.jar:1.7.0_80]
+	at java.lang.Class.forName(Class.java:278) [rt.jar:1.7.0_80]
+	at org.jboss.as.server.deployment.reflect.DeploymentClassIndex.classIndex(DeploymentClassIndex.java:54)
+	at org.jboss.as.ee.component.deployers.InterceptorAnnotationProcessor.processComponentConfig(InterceptorAnnotationProcessor.java:85) [jboss-as-ee-7.2.0.Final-redhat-8.jar:7.2.0.Final-redhat-8]
+	at org.jboss.as.ee.component.deployers.InterceptorAnnotationProcessor.deploy(InterceptorAnnotationProcessor.java:77) [jboss-as-ee-7.2.0.Final-redhat-8.jar:7.2.0.Final-redhat-8]
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:120)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_80]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_80]
+	at java.lang.Thread.run(Thread.java:745) [rt.jar:1.7.0_80]
+
+12:16:56,281 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-14) MSC000001: Failed to start service jboss.deployment.unit."Bodega.war".POST_MODULE: org.jboss.msc.service.StartException in service jboss.deployment.unit."Bodega.war".POST_MODULE: JBAS018733: Error al procesar la fase POST_MODULE de deployment "Bodega.war"
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:127) [jboss-as-server-7.2.0.Final-redhat-8.jar:7.2.0.Final-redhat-8]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811) [jboss-msc-1.0.4.GA-redhat-1.jar:1.0.4.GA-redhat-1]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746) [jboss-msc-1.0.4.GA-redhat-1.jar:1.0.4.GA-redhat-1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_80]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_80]
+	at java.lang.Thread.run(Thread.java:745) [rt.jar:1.7.0_80]
+Caused by: java.lang.ClassFormatError: Extra bytes at the end of class file Controlador/Validar
+	at java.lang.ClassLoader.defineClass1(Native Method) [rt.jar:1.7.0_80]
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800) [rt.jar:1.7.0_80]
+	at org.jboss.modules.ModuleClassLoader.doDefineOrLoadClass(ModuleClassLoader.java:344) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ModuleClassLoader.defineClass(ModuleClassLoader.java:422) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ModuleClassLoader.loadClassLocal(ModuleClassLoader.java:260) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ModuleClassLoader$1.loadClassLocal(ModuleClassLoader.java:75) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.Module.loadModuleClass(Module.java:526) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ModuleClassLoader.findClass(ModuleClassLoader.java:188) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassUnchecked(ConcurrentClassLoader.java:444) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassChecked(ConcurrentClassLoader.java:432) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClass(ConcurrentClassLoader.java:374) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ConcurrentClassLoader.loadClass(ConcurrentClassLoader.java:119) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at java.lang.Class.forName0(Native Method) [rt.jar:1.7.0_80]
+	at java.lang.Class.forName(Class.java:278) [rt.jar:1.7.0_80]
+	at org.jboss.as.server.deployment.reflect.DeploymentClassIndex.classIndex(DeploymentClassIndex.java:54) [jboss-as-server-7.2.0.Final-redhat-8.jar:7.2.0.Final-redhat-8]
+	at org.jboss.as.ee.component.deployers.InterceptorAnnotationProcessor.processComponentConfig(InterceptorAnnotationProcessor.java:85)
+	at org.jboss.as.ee.component.deployers.InterceptorAnnotationProcessor.deploy(InterceptorAnnotationProcessor.java:77)
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:120) [jboss-as-server-7.2.0.Final-redhat-8.jar:7.2.0.Final-redhat-8]
+	... 5 more
+
+12:16:56,312 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) JBAS015877: Se detuvo la implementaciónBodega.war (runtime-name: Bodega.war) en 20ms
+12:16:56,312 ERROR [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS015863: El reemplazo de la implementación "Bodega.war" por la implementación "Bodega.war" se deshizo con el siguiente mensaje de fallo: 
+{"JBAS014671: Servicios fallidos" => {"jboss.deployment.unit.\"Bodega.war\".POST_MODULE" => "org.jboss.msc.service.StartException in service jboss.deployment.unit.\"Bodega.war\".POST_MODULE: JBAS018733: Error al procesar la fase POST_MODULE de deployment \"Bodega.war\"
+    Caused by: java.lang.ClassFormatError: Extra bytes at the end of class file Controlador/Validar"}}
+12:16:56,312 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-12) JBAS015876: Iniciando la implementación de Bodega.war" (runtime-name: "Bodega.war")
+12:16:56,468 WARN  [org.jboss.modules] (MSC service thread 1-13) Failed to define class Controlador.Validar in Module "deployment.Bodega.war:main" from Service Module Loader: java.lang.ClassFormatError: Extra bytes at the end of class file Controlador/Validar
+	at java.lang.ClassLoader.defineClass1(Native Method) [rt.jar:1.7.0_80]
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800) [rt.jar:1.7.0_80]
+	at org.jboss.modules.ModuleClassLoader.doDefineOrLoadClass(ModuleClassLoader.java:344) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ModuleClassLoader.defineClass(ModuleClassLoader.java:422) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ModuleClassLoader.loadClassLocal(ModuleClassLoader.java:260) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ModuleClassLoader$1.loadClassLocal(ModuleClassLoader.java:75) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.Module.loadModuleClass(Module.java:526) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ModuleClassLoader.findClass(ModuleClassLoader.java:188) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassUnchecked(ConcurrentClassLoader.java:444) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassChecked(ConcurrentClassLoader.java:432) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClass(ConcurrentClassLoader.java:374) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ConcurrentClassLoader.loadClass(ConcurrentClassLoader.java:119) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at java.lang.Class.forName0(Native Method) [rt.jar:1.7.0_80]
+	at java.lang.Class.forName(Class.java:278) [rt.jar:1.7.0_80]
+	at org.jboss.as.server.deployment.reflect.DeploymentClassIndex.classIndex(DeploymentClassIndex.java:54)
+	at org.jboss.as.ee.component.deployers.InterceptorAnnotationProcessor.processComponentConfig(InterceptorAnnotationProcessor.java:85) [jboss-as-ee-7.2.0.Final-redhat-8.jar:7.2.0.Final-redhat-8]
+	at org.jboss.as.ee.component.deployers.InterceptorAnnotationProcessor.deploy(InterceptorAnnotationProcessor.java:77) [jboss-as-ee-7.2.0.Final-redhat-8.jar:7.2.0.Final-redhat-8]
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:120)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_80]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_80]
+	at java.lang.Thread.run(Thread.java:745) [rt.jar:1.7.0_80]
+
+12:16:56,484 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-13) MSC000001: Failed to start service jboss.deployment.unit."Bodega.war".POST_MODULE: org.jboss.msc.service.StartException in service jboss.deployment.unit."Bodega.war".POST_MODULE: JBAS018733: Error al procesar la fase POST_MODULE de deployment "Bodega.war"
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:127) [jboss-as-server-7.2.0.Final-redhat-8.jar:7.2.0.Final-redhat-8]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811) [jboss-msc-1.0.4.GA-redhat-1.jar:1.0.4.GA-redhat-1]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746) [jboss-msc-1.0.4.GA-redhat-1.jar:1.0.4.GA-redhat-1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_80]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_80]
+	at java.lang.Thread.run(Thread.java:745) [rt.jar:1.7.0_80]
+Caused by: java.lang.ClassFormatError: Extra bytes at the end of class file Controlador/Validar
+	at java.lang.ClassLoader.defineClass1(Native Method) [rt.jar:1.7.0_80]
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800) [rt.jar:1.7.0_80]
+	at org.jboss.modules.ModuleClassLoader.doDefineOrLoadClass(ModuleClassLoader.java:344) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ModuleClassLoader.defineClass(ModuleClassLoader.java:422) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ModuleClassLoader.loadClassLocal(ModuleClassLoader.java:260) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ModuleClassLoader$1.loadClassLocal(ModuleClassLoader.java:75) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.Module.loadModuleClass(Module.java:526) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ModuleClassLoader.findClass(ModuleClassLoader.java:188) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassUnchecked(ConcurrentClassLoader.java:444) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassChecked(ConcurrentClassLoader.java:432) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClass(ConcurrentClassLoader.java:374) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at org.jboss.modules.ConcurrentClassLoader.loadClass(ConcurrentClassLoader.java:119) [jboss-modules.jar:1.2.0.Final-redhat-1]
+	at java.lang.Class.forName0(Native Method) [rt.jar:1.7.0_80]
+	at java.lang.Class.forName(Class.java:278) [rt.jar:1.7.0_80]
+	at org.jboss.as.server.deployment.reflect.DeploymentClassIndex.classIndex(DeploymentClassIndex.java:54) [jboss-as-server-7.2.0.Final-redhat-8.jar:7.2.0.Final-redhat-8]
+	at org.jboss.as.ee.component.deployers.InterceptorAnnotationProcessor.processComponentConfig(InterceptorAnnotationProcessor.java:85)
+	at org.jboss.as.ee.component.deployers.InterceptorAnnotationProcessor.deploy(InterceptorAnnotationProcessor.java:77)
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:120) [jboss-as-server-7.2.0.Final-redhat-8.jar:7.2.0.Final-redhat-8]
+	... 5 more
+
+12:16:56,547 INFO  [org.jboss.as.controller] (DeploymentScanner-threads - 1) JBAS014774: Reporte del estatus del servicio
+JBAS014777: Servicios que no lograron iniciar:      service jboss.deployment.unit."Bodega.war".POST_MODULE: org.jboss.msc.service.StartException in service jboss.deployment.unit."Bodega.war".POST_MODULE: JBAS018733: Error al procesar la fase POST_MODULE de deployment "Bodega.war"
+
+12:17:06,593 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) JBAS015877: Se detuvo la implementaciónBodega.war (runtime-name: Bodega.war) en 20ms
+12:17:06,609 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-11) JBAS015876: Iniciando la implementación de Bodega.war" (runtime-name: "Bodega.war")
+12:17:06,781 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-16) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+12:17:06,781 INFO  [org.jboss.web] (ServerService Thread Pool -- 288) JBAS018210: Registrar el contexto web: /Bodega
+12:17:07,171 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Bodega.war" con la implementación "Bodega.war"
+12:17:16,910 ERROR [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/Bodega].[Controlador]] (http-/127.0.0.1:8080-3) JBWEB000236: Servlet.service() for servlet Controlador threw exception: java.lang.IllegalStateException: JBWEB000232: Cannot forward after response has been committed
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:492) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
 	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:482) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at Controlador.Controlador.processRequest(Controlador.java:370) [classes:]
-	at Controlador.Controlador.doGet(Controlador.java:463) [classes:]
+	at Controlador.Controlador.processRequest(Controlador.java:556) [classes:]
+	at Controlador.Controlador.doGet(Controlador.java:614) [classes:]
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:734) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:295) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
@@ -420,33 +344,17 @@
 	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:920) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
 	at java.lang.Thread.run(Thread.java:745) [rt.jar:1.7.0_80]
 
-11:35:57,243 ERROR [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/Mop].[jsp]] (http-/127.0.0.1:8080-3) JBWEB000236: Servlet.service() for servlet jsp threw exception: java.lang.NumberFormatException: For input string: "descripcion"
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65) [rt.jar:1.7.0_80]
-	at java.lang.Integer.parseInt(Integer.java:492) [rt.jar:1.7.0_80]
-	at java.lang.Integer.parseInt(Integer.java:527) [rt.jar:1.7.0_80]
-	at javax.el.ListELResolver.toInteger(ListELResolver.java:407) [jboss-el-api_2.2_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
-	at javax.el.ListELResolver.getValue(ListELResolver.java:199) [jboss-el-api_2.2_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
-	at org.apache.jasper.el.JasperELResolver.getValue(JasperELResolver.java:100) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.el.parser.AstValue.getValue(AstValue.java:166) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.el.ValueExpressionImpl.getValue(ValueExpressionImpl.java:189) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate(PageContextImpl.java:958) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.jsp.Consulta.ListaProducto_jsp._jspx_meth_c_005fout_005f4(ListaProducto_jsp.java:272)
-	at org.apache.jsp.Consulta.ListaProducto_jsp._jspx_meth_c_005fforEach_005f0(ListaProducto_jsp.java:162)
-	at org.apache.jsp.Consulta.ListaProducto_jsp._jspService(ListaProducto_jsp.java:104)
-	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:69) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
-	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:365) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:309) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:242) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:295) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:214) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:832) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:620) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:553) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+12:24:12,880 INFO  [org.jboss.web] (ServerService Thread Pool -- 295) JBAS018224: Borrar el registro del contexto web: /Bodega
+12:24:12,907 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-9) JBAS015877: Se detuvo la implementaciónBodega.war (runtime-name: Bodega.war) en 29ms
+12:24:12,908 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-11) JBAS015876: Iniciando la implementación de Bodega.war" (runtime-name: "Bodega.war")
+12:24:13,577 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-14) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+12:24:13,583 INFO  [org.jboss.web] (ServerService Thread Pool -- 317) JBAS018210: Registrar el contexto web: /Bodega
+12:24:13,729 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Bodega.war" con la implementación "Bodega.war"
+12:24:23,854 ERROR [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/Bodega].[Controlador]] (http-/127.0.0.1:8080-2) JBWEB000236: Servlet.service() for servlet Controlador threw exception: java.lang.IllegalStateException: JBWEB000232: Cannot forward after response has been committed
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:492) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
 	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:482) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at Controlador.Controlador.processRequest(Controlador.java:370) [classes:]
-	at Controlador.Controlador.doGet(Controlador.java:463) [classes:]
+	at Controlador.Controlador.processRequest(Controlador.java:556) [classes:]
+	at Controlador.Controlador.doGet(Controlador.java:614) [classes:]
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:734) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:295) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
@@ -463,33 +371,17 @@
 	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:920) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
 	at java.lang.Thread.run(Thread.java:745) [rt.jar:1.7.0_80]
 
-11:35:57,300 ERROR [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/Mop].[Controlador]] (http-/127.0.0.1:8080-3) JBWEB000236: Servlet.service() for servlet Controlador threw exception: java.lang.NumberFormatException: For input string: "descripcion"
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65) [rt.jar:1.7.0_80]
-	at java.lang.Integer.parseInt(Integer.java:492) [rt.jar:1.7.0_80]
-	at java.lang.Integer.parseInt(Integer.java:527) [rt.jar:1.7.0_80]
-	at javax.el.ListELResolver.toInteger(ListELResolver.java:407) [jboss-el-api_2.2_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
-	at javax.el.ListELResolver.getValue(ListELResolver.java:199) [jboss-el-api_2.2_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
-	at org.apache.jasper.el.JasperELResolver.getValue(JasperELResolver.java:100) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.el.parser.AstValue.getValue(AstValue.java:166) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.el.ValueExpressionImpl.getValue(ValueExpressionImpl.java:189) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate(PageContextImpl.java:958) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.jsp.Consulta.ListaProducto_jsp._jspx_meth_c_005fout_005f4(ListaProducto_jsp.java:272)
-	at org.apache.jsp.Consulta.ListaProducto_jsp._jspx_meth_c_005fforEach_005f0(ListaProducto_jsp.java:162)
-	at org.apache.jsp.Consulta.ListaProducto_jsp._jspService(ListaProducto_jsp.java:104)
-	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:69) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
-	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:365) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:309) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:242) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:295) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:214) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:832) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:620) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:553) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+12:26:24,044 INFO  [org.jboss.web] (ServerService Thread Pool -- 320) JBAS018224: Borrar el registro del contexto web: /Bodega
+12:26:24,081 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-7) JBAS015877: Se detuvo la implementaciónBodega.war (runtime-name: Bodega.war) en 39ms
+12:26:24,082 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-15) JBAS015876: Iniciando la implementación de Bodega.war" (runtime-name: "Bodega.war")
+12:26:24,274 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-15) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+12:26:24,278 INFO  [org.jboss.web] (ServerService Thread Pool -- 321) JBAS018210: Registrar el contexto web: /Bodega
+12:26:24,728 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Bodega.war" con la implementación "Bodega.war"
+12:26:34,107 ERROR [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/Bodega].[Controlador]] (http-/127.0.0.1:8080-2) JBWEB000236: Servlet.service() for servlet Controlador threw exception: java.lang.IllegalStateException: JBWEB000232: Cannot forward after response has been committed
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:492) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
 	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:482) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at Controlador.Controlador.processRequest(Controlador.java:370) [classes:]
-	at Controlador.Controlador.doGet(Controlador.java:463) [classes:]
+	at Controlador.Controlador.processRequest(Controlador.java:556) [classes:]
+	at Controlador.Controlador.doGet(Controlador.java:614) [classes:]
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:734) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:295) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
@@ -506,33 +398,11 @@
 	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:920) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
 	at java.lang.Thread.run(Thread.java:745) [rt.jar:1.7.0_80]
 
-11:39:22,020 ERROR [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/Mop].[jsp]] (http-/127.0.0.1:8080-3) JBWEB000236: Servlet.service() for servlet jsp threw exception: java.lang.NumberFormatException: For input string: "descripcion"
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65) [rt.jar:1.7.0_80]
-	at java.lang.Integer.parseInt(Integer.java:492) [rt.jar:1.7.0_80]
-	at java.lang.Integer.parseInt(Integer.java:527) [rt.jar:1.7.0_80]
-	at javax.el.ListELResolver.toInteger(ListELResolver.java:407) [jboss-el-api_2.2_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
-	at javax.el.ListELResolver.getValue(ListELResolver.java:199) [jboss-el-api_2.2_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
-	at org.apache.jasper.el.JasperELResolver.getValue(JasperELResolver.java:100) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.el.parser.AstValue.getValue(AstValue.java:166) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.el.ValueExpressionImpl.getValue(ValueExpressionImpl.java:189) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate(PageContextImpl.java:958) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.jsp.Consulta.ListaProducto_jsp._jspx_meth_c_005fout_005f4(ListaProducto_jsp.java:272)
-	at org.apache.jsp.Consulta.ListaProducto_jsp._jspx_meth_c_005fforEach_005f0(ListaProducto_jsp.java:162)
-	at org.apache.jsp.Consulta.ListaProducto_jsp._jspService(ListaProducto_jsp.java:104)
-	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:69) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
-	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:365) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:309) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:242) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:295) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:214) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:832) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:620) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:553) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+12:27:34,213 ERROR [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/Bodega].[Controlador]] (http-/127.0.0.1:8080-2) JBWEB000236: Servlet.service() for servlet Controlador threw exception: java.lang.IllegalStateException: JBWEB000232: Cannot forward after response has been committed
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:492) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
 	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:482) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at Controlador.Controlador.processRequest(Controlador.java:370) [classes:]
-	at Controlador.Controlador.doGet(Controlador.java:463) [classes:]
+	at Controlador.Controlador.processRequest(Controlador.java:556) [classes:]
+	at Controlador.Controlador.doGet(Controlador.java:614) [classes:]
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:734) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:295) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
@@ -549,33 +419,18 @@
 	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:920) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
 	at java.lang.Thread.run(Thread.java:745) [rt.jar:1.7.0_80]
 
-11:39:22,308 ERROR [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/Mop].[Controlador]] (http-/127.0.0.1:8080-3) JBWEB000236: Servlet.service() for servlet Controlador threw exception: java.lang.NumberFormatException: For input string: "descripcion"
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65) [rt.jar:1.7.0_80]
-	at java.lang.Integer.parseInt(Integer.java:492) [rt.jar:1.7.0_80]
-	at java.lang.Integer.parseInt(Integer.java:527) [rt.jar:1.7.0_80]
-	at javax.el.ListELResolver.toInteger(ListELResolver.java:407) [jboss-el-api_2.2_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
-	at javax.el.ListELResolver.getValue(ListELResolver.java:199) [jboss-el-api_2.2_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
-	at org.apache.jasper.el.JasperELResolver.getValue(JasperELResolver.java:100) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.el.parser.AstValue.getValue(AstValue.java:166) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.el.ValueExpressionImpl.getValue(ValueExpressionImpl.java:189) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate(PageContextImpl.java:958) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.jsp.Consulta.ListaProducto_jsp._jspx_meth_c_005fout_005f4(ListaProducto_jsp.java:272)
-	at org.apache.jsp.Consulta.ListaProducto_jsp._jspx_meth_c_005fforEach_005f0(ListaProducto_jsp.java:162)
-	at org.apache.jsp.Consulta.ListaProducto_jsp._jspService(ListaProducto_jsp.java:104)
-	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:69) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
-	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:365) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:309) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:242) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:295) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:214) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:832) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:620) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:553) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+12:31:50,470 INFO  [org.jboss.web] (ServerService Thread Pool -- 343) JBAS018224: Borrar el registro del contexto web: /Bodega
+12:31:50,502 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015877: Se detuvo la implementaciónBodega.war (runtime-name: Bodega.war) en 33ms
+12:31:50,503 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-11) JBAS015876: Iniciando la implementación de Bodega.war" (runtime-name: "Bodega.war")
+12:31:50,701 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-15) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+12:31:50,706 INFO  [org.jboss.web] (ServerService Thread Pool -- 357) JBAS018210: Registrar el contexto web: /Bodega
+12:31:50,793 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Bodega.war" con la implementación "Bodega.war"
+12:31:58,193 INFO  [stdout] (http-/127.0.0.1:8080-2) C:\Users\usuario\opt\Bodega\Salida\Salida
+12:31:58,347 ERROR [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/Bodega].[Controlador]] (http-/127.0.0.1:8080-2) JBWEB000236: Servlet.service() for servlet Controlador threw exception: java.lang.IllegalStateException: JBWEB000232: Cannot forward after response has been committed
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:492) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
 	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:482) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
-	at Controlador.Controlador.processRequest(Controlador.java:370) [classes:]
-	at Controlador.Controlador.doGet(Controlador.java:463) [classes:]
+	at Controlador.Controlador.processRequest(Controlador.java:556) [classes:]
+	at Controlador.Controlador.doGet(Controlador.java:614) [classes:]
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:734) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:295) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
@@ -592,244 +447,218 @@
 	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:920) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
 	at java.lang.Thread.run(Thread.java:745) [rt.jar:1.7.0_80]
 
-11:39:43,347 INFO  [org.jboss.web] (ServerService Thread Pool -- 476) JBAS018224: Borrar el registro del contexto web: /Mop
-11:39:43,372 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-9) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 27ms
-11:39:43,372 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
-11:39:43,500 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-4) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
-11:39:43,502 INFO  [org.jboss.web] (ServerService Thread Pool -- 500) JBAS018210: Registrar el contexto web: /Mop
-11:39:43,675 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
-12:23:49,167 INFO  [org.jboss.web] (ServerService Thread Pool -- 501) JBAS018224: Borrar el registro del contexto web: /Mop
-12:23:49,277 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-8) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 114ms
-12:23:49,278 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
-12:23:49,662 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-5) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
-12:23:49,674 INFO  [org.jboss.web] (ServerService Thread Pool -- 504) JBAS018210: Registrar el contexto web: /Mop
-12:23:50,432 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
-12:28:33,864 INFO  [stdout] (http-/127.0.0.1:8080-3) com.mysql.jdbc.JDBC4ResultSet@3d79d9fd
-12:29:04,233 INFO  [stdout] (http-/127.0.0.1:8080-3) com.mysql.jdbc.JDBC4ResultSet@693e599e
-12:29:04,233 INFO  [stdout] (http-/127.0.0.1:8080-3) com.mysql.jdbc.JDBC4ResultSet@693e599e
-12:29:09,603 INFO  [stdout] (http-/127.0.0.1:8080-3) com.mysql.jdbc.JDBC4ResultSet@6980598b
-12:29:09,827 INFO  [stdout] (http-/127.0.0.1:8080-3) com.mysql.jdbc.JDBC4ResultSet@25a3a129
-12:31:26,681 INFO  [stdout] (http-/127.0.0.1:8080-3) com.mysql.jdbc.MysqlDataTruncation: Data truncation: Incorrect date value: '' for column 'fecha_solicitud' at row 1
-12:31:26,721 INFO  [stdout] (http-/127.0.0.1:8080-3) com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`mop`.`detalle_solicitud`, CONSTRAINT `solicitudid` FOREIGN KEY (`solicitudid`) REFERENCES `solicitud` (`idSolicitud`) ON DELETE NO ACTION ON UPDATE NO ACTION)
-12:41:15,225 ERROR [org.jboss.remoting.remote.connection] (Remoting "desktop-to536at:MANAGEMENT" read-1) JBREM000200: Remote connection failed: java.io.IOException: Se ha forzado la interrupción de una conexión existente por el host remoto
-16:41:54,669 INFO  [org.jboss.web] (ServerService Thread Pool -- 526) JBAS018224: Borrar el registro del contexto web: /Mop
-16:41:54,804 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-15) JBAS015877: Se detuvo la implementaciónMop.war (runtime-name: Mop.war) en 140ms
-16:41:54,805 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-7) JBAS015876: Iniciando la implementación de Mop.war" (runtime-name: "Mop.war")
-16:41:55,256 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-15) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
-16:41:55,280 INFO  [org.jboss.web] (ServerService Thread Pool -- 540) JBAS018210: Registrar el contexto web: /Mop
-16:41:55,596 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Mop.war" con la implementación "Mop.war"
-17:13:27,397 INFO  [stdout] (http-/127.0.0.1:8080-1) Error carga de archivo
-17:16:16,518 ERROR [org.jboss.remoting.remote.connection] (Remoting "desktop-to536at:MANAGEMENT" read-1) JBREM000200: Remote connection failed: java.io.IOException: Se ha forzado la interrupción de una conexión existente por el host remoto
-09:04:32,386 INFO  [org.jboss.modules] (main) JBoss Modules version 1.2.0.Final-redhat-1
-09:04:32,993 INFO  [org.jboss.msc] (main) JBoss MSC version 1.0.4.GA-redhat-1
-09:04:33,093 INFO  [org.jboss.as] (MSC service thread 1-6) JBAS015899: JBoss EAP 6.1.0.GA (AS 7.2.0.Final-redhat-8) iniciando
-09:04:33,104 DEBUG [org.jboss.as.config] (MSC service thread 1-6) Propiedades del sistema configuradas:
-	awt.toolkit = sun.awt.windows.WToolkit
-	file.encoding = Cp1252
-	file.encoding.pkg = sun.io
-	file.separator = \
-	java.awt.graphicsenv = sun.awt.Win32GraphicsEnvironment
-	java.awt.printerjob = sun.awt.windows.WPrinterJob
-	java.class.path = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\jboss-modules.jar
-	java.class.version = 51.0
-	java.endorsed.dirs = C:\Program Files\Java\jdk1.7.0_80\jre\lib\endorsed
-	java.ext.dirs = C:\Program Files\Java\jdk1.7.0_80\jre\lib\ext;C:\Windows\Sun\Java\lib\ext
-	java.home = C:\Program Files\Java\jdk1.7.0_80\jre
-	java.io.tmpdir = C:\Users\usuario\AppData\Local\Temp\
-	java.library.path = C:\Program Files\Java\jdk1.7.0_80\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Git\cmd;"C:\Program Files\Java\jdk1.7.0_80\bin;C:\Program Files\Java\jdk1.7.0_80\bin;";C:\Users\usuario\AppData\Local\Microsoft\WindowsApps;;.
-	java.runtime.name = Java(TM) SE Runtime Environment
-	java.runtime.version = 1.7.0_80-b15
-	java.specification.name = Java Platform API Specification
-	java.specification.vendor = Oracle Corporation
-	java.specification.version = 1.7
-	java.util.logging.manager = org.jboss.logmanager.LogManager
-	java.vendor = Oracle Corporation
-	java.vendor.url = http://java.oracle.com/
-	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
-	java.version = 1.7.0_80
-	java.vm.info = mixed mode
-	java.vm.name = Java HotSpot(TM) 64-Bit Server VM
-	java.vm.specification.name = Java Virtual Machine Specification
-	java.vm.specification.vendor = Oracle Corporation
-	java.vm.specification.version = 1.7
-	java.vm.vendor = Oracle Corporation
-	java.vm.version = 24.80-b11
-	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
-	javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
-	javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
-	javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
-	javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
-	javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
-	javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
-	javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
-	javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
-	javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
-	jboss.home.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1
-	jboss.host.name = desktop-to536at
-	jboss.modules.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\modules
-	jboss.node.name = desktop-to536at
-	jboss.qualified.host.name = desktop-to536at
-	jboss.server.base.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone
-	jboss.server.config.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\configuration
-	jboss.server.data.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\data
-	jboss.server.deploy.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\data\content
-	jboss.server.log.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\log
-	jboss.server.name = desktop-to536at
-	jboss.server.persist.config = true
-	jboss.server.temp.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\tmp
-	line.separator = 
+12:32:52,512 ERROR [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/Bodega].[Controlador]] (http-/127.0.0.1:8080-2) JBWEB000236: Servlet.service() for servlet Controlador threw exception: java.lang.IllegalStateException: JBWEB000232: Cannot forward after response has been committed
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:492) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:482) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at Controlador.Controlador.processRequest(Controlador.java:556) [classes:]
+	at Controlador.Controlador.doGet(Controlador.java:614) [classes:]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:734) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:295) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:214) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:230) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:149) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.jboss.as.web.security.SecurityContextAssociationValve.invoke(SecurityContextAssociationValve.java:169) [jboss-as-web-7.2.0.Final-redhat-8.jar:7.2.0.Final-redhat-8]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:145) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:97) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:102) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:336) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:856) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:653) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:920) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at java.lang.Thread.run(Thread.java:745) [rt.jar:1.7.0_80]
 
-	logging.configuration = file:C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone/configuration/logging.properties
-	module.path = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\modules
-	org.jboss.boot.log.file = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\log\server.log
-	org.jboss.resolver.warning = true
-	org.xml.sax.driver = __redirected.__XMLReaderFactory
-	os.arch = amd64
-	os.name = Windows 8.1
-	os.version = 6.3
-	path.separator = ;
-	program.name = standalone.bat
-	sun.arch.data.model = 64
-	sun.boot.class.path = C:\Program Files\Java\jdk1.7.0_80\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_80\jre\classes
-	sun.boot.library.path = C:\Program Files\Java\jdk1.7.0_80\jre\bin
-	sun.cpu.endian = little
-	sun.cpu.isalist = amd64
-	sun.desktop = windows
-	sun.io.unicode.encoding = UnicodeLittle
-	sun.java.command = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\jboss-modules.jar -mp C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\modules -jaxpmodule javax.xml.jaxp-provider org.jboss.as.standalone -Djboss.home.dir=C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1
-	sun.java.launcher = SUN_STANDARD
-	sun.jnu.encoding = Cp1252
-	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
-	sun.os.patch.level = 
-	user.country = CL
-	user.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\bin
-	user.home = C:\Users\usuario
-	user.language = es
-	user.name = usuario
-	user.script = 
-	user.timezone = America/Santiago
-	user.variant = 
-09:04:33,106 DEBUG [org.jboss.as.config] (MSC service thread 1-6) Argumentos de VM: -XX:+TieredCompilation -XX:+UseCompressedOops -Dprogram.name=standalone.bat -Xms128m -Xmx512m -XX:MaxPermSize=256m -Dorg.jboss.boot.log.file=C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\log\server.log -Dlogging.configuration=file:C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone/configuration/logging.properties 
-09:04:36,241 INFO  [org.jboss.as.server] (Controller Boot Thread) JBAS015888: Creando el servicio de administración http utilizando el enlace de socket (management-http) 
-09:04:36,243 INFO  [org.xnio] (MSC service thread 1-12) XNIO Version 3.0.7.GA-redhat-1
-09:04:36,310 INFO  [org.xnio.nio] (MSC service thread 1-12) XNIO NIO Implementation Version 3.0.7.GA-redhat-1
-09:04:36,320 INFO  [org.jboss.remoting] (MSC service thread 1-12) JBoss Remoting version 3.2.16.GA-redhat-1
-09:04:36,379 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 42) JBAS013171: Activando el sub-sistema de seguridad
-09:04:36,390 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 29) JBAS010280: Activando el sub-sistema Infinispan.
-09:04:36,404 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 37) JBAS011800: Activando el sub-sistema de nombrado
-09:04:36,411 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 46) JBAS015537: Activando WebServices Extension
-09:04:36,414 INFO  [org.jboss.as.security] (MSC service thread 1-9) JBAS013170: Versión PicketBox actual=4.0.17.Final-redhat-1
-09:04:36,434 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 35) JBAS012605: Se activaron las siguientes implementaciones JSF: [main, 1.2]
-09:04:36,542 INFO  [org.jboss.as.connector.logging] (MSC service thread 1-8) JBAS010408: Iniciando JCA sub-sistema (IronJacamar 1.0.17.Final-redhat-1)
-09:04:36,924 INFO  [org.jboss.as.naming] (MSC service thread 1-5) JBAS011802: Iniciando el servicio de nombrado
-09:04:36,928 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-5) JBAS015400: Sesión de correo enlazada [java:jboss/mail/Default]
-09:04:37,042 INFO  [org.apache.coyote.http11] (MSC service thread 1-4) JBWEB003001: Coyote HTTP/1.1 initializing on : http-/127.0.0.1:8080
-09:04:37,045 INFO  [org.apache.coyote.http11] (MSC service thread 1-4) JBWEB003000: Coyote HTTP/1.1 starting on: http-/127.0.0.1:8080
-09:04:37,136 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 25) JBAS010403: Implementación del controlador que cumple con los requerimientos de JDBC class org.h2.Driver (versión 1.3)
-09:04:37,491 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-4) JBAS010400: Fuente de datos enlazados [java:jboss/datasources/ExampleDS]
-09:04:37,882 INFO  [org.jboss.ws.common.management] (MSC service thread 1-6) JBWS022052: Starting JBoss Web Services - Stack CXF Server 4.1.3.Final-redhat-3
-08:14:36,011 INFO  [org.jboss.modules] (main) JBoss Modules version 1.2.0.Final-redhat-1
-08:14:36,118 INFO  [org.jboss.msc] (main) JBoss MSC version 1.0.4.GA-redhat-1
-08:14:36,160 INFO  [org.jboss.as] (MSC service thread 1-7) JBAS015899: JBoss EAP 6.1.0.GA (AS 7.2.0.Final-redhat-8) iniciando
-08:14:36,166 DEBUG [org.jboss.as.config] (MSC service thread 1-7) Propiedades del sistema configuradas:
-	awt.toolkit = sun.awt.windows.WToolkit
-	file.encoding = Cp1252
-	file.encoding.pkg = sun.io
-	file.separator = \
-	java.awt.graphicsenv = sun.awt.Win32GraphicsEnvironment
-	java.awt.printerjob = sun.awt.windows.WPrinterJob
-	java.class.path = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\jboss-modules.jar
-	java.class.version = 51.0
-	java.endorsed.dirs = C:\Program Files\Java\jdk1.7.0_80\jre\lib\endorsed
-	java.ext.dirs = C:\Program Files\Java\jdk1.7.0_80\jre\lib\ext;C:\Windows\Sun\Java\lib\ext
-	java.home = C:\Program Files\Java\jdk1.7.0_80\jre
-	java.io.tmpdir = C:\Users\usuario\AppData\Local\Temp\
-	java.library.path = C:\Program Files\Java\jdk1.7.0_80\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Git\cmd;"C:\Program Files\Java\jdk1.7.0_80\bin;C:\Program Files\Java\jdk1.7.0_80\bin;";C:\Users\usuario\AppData\Local\Microsoft\WindowsApps;;.
-	java.runtime.name = Java(TM) SE Runtime Environment
-	java.runtime.version = 1.7.0_80-b15
-	java.specification.name = Java Platform API Specification
-	java.specification.vendor = Oracle Corporation
-	java.specification.version = 1.7
-	java.util.logging.manager = org.jboss.logmanager.LogManager
-	java.vendor = Oracle Corporation
-	java.vendor.url = http://java.oracle.com/
-	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
-	java.version = 1.7.0_80
-	java.vm.info = mixed mode
-	java.vm.name = Java HotSpot(TM) 64-Bit Server VM
-	java.vm.specification.name = Java Virtual Machine Specification
-	java.vm.specification.vendor = Oracle Corporation
-	java.vm.specification.version = 1.7
-	java.vm.vendor = Oracle Corporation
-	java.vm.version = 24.80-b11
-	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
-	javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
-	javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
-	javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
-	javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
-	javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
-	javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
-	javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
-	javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
-	javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
-	jboss.home.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1
-	jboss.host.name = desktop-to536at
-	jboss.modules.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\modules
-	jboss.node.name = desktop-to536at
-	jboss.qualified.host.name = desktop-to536at
-	jboss.server.base.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone
-	jboss.server.config.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\configuration
-	jboss.server.data.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\data
-	jboss.server.deploy.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\data\content
-	jboss.server.log.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\log
-	jboss.server.name = desktop-to536at
-	jboss.server.persist.config = true
-	jboss.server.temp.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\tmp
-	line.separator = 
+12:33:07,092 ERROR [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/Bodega].[Controlador]] (http-/127.0.0.1:8080-2) JBWEB000236: Servlet.service() for servlet Controlador threw exception: java.lang.IllegalStateException: JBWEB000232: Cannot forward after response has been committed
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:492) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:482) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at Controlador.Controlador.processRequest(Controlador.java:556) [classes:]
+	at Controlador.Controlador.doGet(Controlador.java:614) [classes:]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:734) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:295) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:214) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:230) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:149) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.jboss.as.web.security.SecurityContextAssociationValve.invoke(SecurityContextAssociationValve.java:169) [jboss-as-web-7.2.0.Final-redhat-8.jar:7.2.0.Final-redhat-8]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:145) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:97) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:102) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:336) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:856) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:653) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:920) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at java.lang.Thread.run(Thread.java:745) [rt.jar:1.7.0_80]
 
-	logging.configuration = file:C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone/configuration/logging.properties
-	module.path = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\modules
-	org.jboss.boot.log.file = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\log\server.log
-	org.jboss.resolver.warning = true
-	org.xml.sax.driver = __redirected.__XMLReaderFactory
-	os.arch = amd64
-	os.name = Windows 8.1
-	os.version = 6.3
-	path.separator = ;
-	program.name = standalone.bat
-	sun.arch.data.model = 64
-	sun.boot.class.path = C:\Program Files\Java\jdk1.7.0_80\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_80\jre\classes
-	sun.boot.library.path = C:\Program Files\Java\jdk1.7.0_80\jre\bin
-	sun.cpu.endian = little
-	sun.cpu.isalist = amd64
-	sun.desktop = windows
-	sun.io.unicode.encoding = UnicodeLittle
-	sun.java.command = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\jboss-modules.jar -mp C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\modules -jaxpmodule javax.xml.jaxp-provider org.jboss.as.standalone -Djboss.home.dir=C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1
-	sun.java.launcher = SUN_STANDARD
-	sun.jnu.encoding = Cp1252
-	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
-	sun.os.patch.level = 
-	user.country = CL
-	user.dir = C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\bin
-	user.home = C:\Users\usuario
-	user.language = es
-	user.name = usuario
-	user.script = 
-	user.timezone = America/Santiago
-	user.variant = 
-08:14:36,167 DEBUG [org.jboss.as.config] (MSC service thread 1-7) Argumentos de VM: -XX:+TieredCompilation -XX:+UseCompressedOops -Dprogram.name=standalone.bat -Xms128m -Xmx512m -XX:MaxPermSize=256m -Dorg.jboss.boot.log.file=C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone\log\server.log -Dlogging.configuration=file:C:\Users\usuario\Desktop\MOP_bodega\jboss-eap-6.1\standalone/configuration/logging.properties 
-08:14:36,891 INFO  [org.xnio] (MSC service thread 1-4) XNIO Version 3.0.7.GA-redhat-1
-08:14:36,894 INFO  [org.jboss.as.server] (Controller Boot Thread) JBAS015888: Creando el servicio de administración http utilizando el enlace de socket (management-http) 
-08:14:36,898 INFO  [org.xnio.nio] (MSC service thread 1-4) XNIO NIO Implementation Version 3.0.7.GA-redhat-1
-08:14:36,903 INFO  [org.jboss.remoting] (MSC service thread 1-4) JBoss Remoting version 3.2.16.GA-redhat-1
-08:14:37,186 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 29) JBAS010280: Activando el sub-sistema Infinispan.
-08:14:37,203 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 37) JBAS011800: Activando el sub-sistema de nombrado
-08:14:37,204 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 46) JBAS015537: Activando WebServices Extension
-08:14:37,210 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 35) JBAS012605: Se activaron las siguientes implementaciones JSF: [main, 1.2]
-08:14:37,211 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 42) JBAS013171: Activando el sub-sistema de seguridad
-08:14:37,223 INFO  [org.jboss.as.security] (MSC service thread 1-13) JBAS013170: Versión PicketBox actual=4.0.17.Final-redhat-1
-08:14:37,251 INFO  [org.jboss.as.connector.logging] (MSC service thread 1-10) JBAS010408: Iniciando JCA sub-sistema (IronJacamar 1.0.17.Final-redhat-1)
-08:14:37,328 INFO  [org.jboss.as.naming] (MSC service thread 1-6) JBAS011802: Iniciando el servicio de nombrado
-08:14:37,330 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-6) JBAS015400: Sesión de correo enlazada [java:jboss/mail/Default]
-08:14:37,428 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 25) JBAS010403: Implementación del controlador que cumple con los requerimientos de JDBC class org.h2.Driver (versión 1.3)
-08:14:37,464 INFO  [org.jboss.ws.common.management] (MSC service thread 1-10) JBWS022052: Starting JBoss Web Services - Stack CXF Server 4.1.3.Final-redhat-3
+12:34:38,982 ERROR [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/Bodega].[Controlador]] (http-/127.0.0.1:8080-2) JBWEB000236: Servlet.service() for servlet Controlador threw exception: java.lang.IllegalStateException: JBWEB000232: Cannot forward after response has been committed
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:492) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:482) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at Controlador.Controlador.processRequest(Controlador.java:556) [classes:]
+	at Controlador.Controlador.doGet(Controlador.java:614) [classes:]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:734) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:295) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:214) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:230) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:149) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.jboss.as.web.security.SecurityContextAssociationValve.invoke(SecurityContextAssociationValve.java:169) [jboss-as-web-7.2.0.Final-redhat-8.jar:7.2.0.Final-redhat-8]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:145) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:97) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:102) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:336) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:856) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:653) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:920) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at java.lang.Thread.run(Thread.java:745) [rt.jar:1.7.0_80]
+
+12:37:41,619 INFO  [org.jboss.web] (ServerService Thread Pool -- 367) JBAS018224: Borrar el registro del contexto web: /Bodega
+12:37:41,650 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) JBAS015877: Se detuvo la implementaciónBodega.war (runtime-name: Bodega.war) en 31ms
+12:37:41,650 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015876: Iniciando la implementación de Bodega.war" (runtime-name: "Bodega.war")
+12:37:41,869 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-3) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+12:37:41,869 INFO  [org.jboss.web] (ServerService Thread Pool -- 379) JBAS018210: Registrar el contexto web: /Bodega
+12:37:41,941 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Bodega.war" con la implementación "Bodega.war"
+12:37:49,840 ERROR [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/Bodega].[Controlador]] (http-/127.0.0.1:8080-2) JBWEB000236: Servlet.service() for servlet Controlador threw exception: java.lang.IllegalStateException: JBWEB000232: Cannot forward after response has been committed
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:492) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:482) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at Controlador.Controlador.processRequest(Controlador.java:555) [classes:]
+	at Controlador.Controlador.doGet(Controlador.java:613) [classes:]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:734) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:295) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:214) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:230) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:149) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.jboss.as.web.security.SecurityContextAssociationValve.invoke(SecurityContextAssociationValve.java:169) [jboss-as-web-7.2.0.Final-redhat-8.jar:7.2.0.Final-redhat-8]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:145) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:97) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:102) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:336) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:856) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:653) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:920) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at java.lang.Thread.run(Thread.java:745) [rt.jar:1.7.0_80]
+
+12:37:56,698 ERROR [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/Bodega].[Controlador]] (http-/127.0.0.1:8080-2) JBWEB000236: Servlet.service() for servlet Controlador threw exception: java.lang.IllegalStateException: JBWEB000232: Cannot forward after response has been committed
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:492) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:482) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at Controlador.Controlador.processRequest(Controlador.java:555) [classes:]
+	at Controlador.Controlador.doGet(Controlador.java:613) [classes:]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:734) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:295) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:214) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:230) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:149) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.jboss.as.web.security.SecurityContextAssociationValve.invoke(SecurityContextAssociationValve.java:169) [jboss-as-web-7.2.0.Final-redhat-8.jar:7.2.0.Final-redhat-8]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:145) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:97) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:102) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:336) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:856) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:653) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:920) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at java.lang.Thread.run(Thread.java:745) [rt.jar:1.7.0_80]
+
+12:38:11,986 INFO  [org.jboss.web] (ServerService Thread Pool -- 393) JBAS018224: Borrar el registro del contexto web: /Bodega
+12:38:12,017 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) JBAS015877: Se detuvo la implementaciónBodega.war (runtime-name: Bodega.war) en 26ms
+12:38:12,017 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) JBAS015876: Iniciando la implementación de Bodega.war" (runtime-name: "Bodega.war")
+12:38:12,215 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-10) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+12:38:12,218 INFO  [org.jboss.web] (ServerService Thread Pool -- 398) JBAS018210: Registrar el contexto web: /Bodega
+12:38:12,565 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Bodega.war" con la implementación "Bodega.war"
+12:39:02,655 INFO  [org.jboss.web] (ServerService Thread Pool -- 416) JBAS018224: Borrar el registro del contexto web: /Bodega
+12:39:02,686 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015877: Se detuvo la implementaciónBodega.war (runtime-name: Bodega.war) en 26ms
+12:39:02,686 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015876: Iniciando la implementación de Bodega.war" (runtime-name: "Bodega.war")
+12:39:02,858 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-9) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+12:39:02,873 INFO  [org.jboss.web] (ServerService Thread Pool -- 416) JBAS018210: Registrar el contexto web: /Bodega
+12:39:02,967 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Bodega.war" con la implementación "Bodega.war"
+12:39:53,088 INFO  [org.jboss.web] (ServerService Thread Pool -- 441) JBAS018224: Borrar el registro del contexto web: /Bodega
+12:39:53,119 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-9) JBAS015877: Se detuvo la implementaciónBodega.war (runtime-name: Bodega.war) en 36ms
+12:39:53,119 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-8) JBAS015876: Iniciando la implementación de Bodega.war" (runtime-name: "Bodega.war")
+12:39:54,078 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-9) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+12:39:54,078 INFO  [org.jboss.web] (ServerService Thread Pool -- 463) JBAS018210: Registrar el contexto web: /Bodega
+12:39:54,458 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018565: Se reemplazó la implementación "Bodega.war" con la implementación "Bodega.war"
+12:40:59,652 INFO  [org.jboss.web] (ServerService Thread Pool -- 464) JBAS018224: Borrar el registro del contexto web: /Bodega
+12:40:59,684 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-7) JBAS015877: Se detuvo la implementaciónBodega.war (runtime-name: Bodega.war) en 31ms
+12:40:59,684 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) JBAS015876: Iniciando la implementación de Bodega.war" (runtime-name: "Bodega.war")
+12:40:59,871 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-10) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+12:40:59,887 INFO  [org.jboss.web] (ServerService Thread Pool -- 485) JBAS018210: Registrar el contexto web: /Bodega
+12:40:59,949 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Bodega.war" con la implementación "Bodega.war"
+12:42:36,550 ERROR [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/Bodega].[Controlador]] (http-/127.0.0.1:8080-2) JBWEB000236: Servlet.service() for servlet Controlador threw exception: java.lang.IllegalStateException: JBWEB000232: Cannot forward after response has been committed
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:492) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:482) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at Controlador.Controlador.processRequest(Controlador.java:378) [classes:]
+	at Controlador.Controlador.doGet(Controlador.java:613) [classes:]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:734) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:847) [jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-1.jar:1.0.2.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:295) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:214) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:230) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:149) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.jboss.as.web.security.SecurityContextAssociationValve.invoke(SecurityContextAssociationValve.java:169) [jboss-as-web-7.2.0.Final-redhat-8.jar:7.2.0.Final-redhat-8]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:145) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:97) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:102) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:336) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:856) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:653) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:920) [jbossweb-7.2.0.Final-redhat-1.jar:7.2.0.Final-redhat-1]
+	at java.lang.Thread.run(Thread.java:745) [rt.jar:1.7.0_80]
+
+12:45:35,569 INFO  [org.jboss.web] (ServerService Thread Pool -- 487) JBAS018224: Borrar el registro del contexto web: /Bodega
+12:45:35,609 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) JBAS015877: Se detuvo la implementaciónBodega.war (runtime-name: Bodega.war) en 41ms
+12:45:35,610 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-7) JBAS015876: Iniciando la implementación de Bodega.war" (runtime-name: "Bodega.war")
+12:45:36,139 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-7) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+12:45:36,144 INFO  [org.jboss.web] (ServerService Thread Pool -- 506) JBAS018210: Registrar el contexto web: /Bodega
+12:45:36,709 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Bodega.war" con la implementación "Bodega.war"
+12:48:22,106 INFO  [org.jboss.web] (ServerService Thread Pool -- 514) JBAS018224: Borrar el registro del contexto web: /Bodega
+12:48:22,136 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-11) JBAS015877: Se detuvo la implementaciónBodega.war (runtime-name: Bodega.war) en 30ms
+12:48:22,136 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-9) JBAS015876: Iniciando la implementación de Bodega.war" (runtime-name: "Bodega.war")
+12:48:22,319 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-1) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+12:48:22,331 INFO  [org.jboss.web] (ServerService Thread Pool -- 534) JBAS018210: Registrar el contexto web: /Bodega
+12:48:22,864 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Bodega.war" con la implementación "Bodega.war"
+12:49:38,035 INFO  [org.jboss.web] (ServerService Thread Pool -- 539) JBAS018224: Borrar el registro del contexto web: /Bodega
+12:49:38,063 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015877: Se detuvo la implementaciónBodega.war (runtime-name: Bodega.war) en 29ms
+12:49:38,063 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) JBAS015876: Iniciando la implementación de Bodega.war" (runtime-name: "Bodega.war")
+12:49:38,279 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-9) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+12:49:38,284 INFO  [org.jboss.web] (ServerService Thread Pool -- 557) JBAS018210: Registrar el contexto web: /Bodega
+12:49:39,010 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Bodega.war" con la implementación "Bodega.war"
+12:55:14,808 INFO  [org.jboss.web] (ServerService Thread Pool -- 562) JBAS018224: Borrar el registro del contexto web: /Bodega
+12:55:14,852 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) JBAS015877: Se detuvo la implementaciónBodega.war (runtime-name: Bodega.war) en 46ms
+12:55:14,853 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015876: Iniciando la implementación de Bodega.war" (runtime-name: "Bodega.war")
+12:55:15,042 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-10) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+12:55:15,046 INFO  [org.jboss.web] (ServerService Thread Pool -- 576) JBAS018210: Registrar el contexto web: /Bodega
+12:55:15,387 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Bodega.war" con la implementación "Bodega.war"
+12:55:27,497 INFO  [stdout] (http-/127.0.0.1:8080-2) C:\Users\usuario\opt\Bodega\Salida\Salida
+12:56:40,530 INFO  [stdout] (http-/127.0.0.1:8080-2) C:\Users\usuario\opt\Bodega\Salida\Salida
+12:58:35,868 INFO  [org.jboss.web] (ServerService Thread Pool -- 585) JBAS018224: Borrar el registro del contexto web: /Bodega
+12:58:35,898 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) JBAS015877: Se detuvo la implementaciónBodega.war (runtime-name: Bodega.war) en 31ms
+12:58:35,898 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-11) JBAS015876: Iniciando la implementación de Bodega.war" (runtime-name: "Bodega.war")
+12:58:36,099 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-11) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+12:58:36,103 INFO  [org.jboss.web] (ServerService Thread Pool -- 593) JBAS018210: Registrar el contexto web: /Bodega
+12:58:36,229 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Bodega.war" con la implementación "Bodega.war"
+12:58:50,396 INFO  [stdout] (http-/127.0.0.1:8080-2) C:\Users\usuario\opt\Bodega
+13:00:28,991 INFO  [stdout] (http-/127.0.0.1:8080-2) C:\Users\usuario\opt\Bodega
+13:00:50,360 INFO  [stdout] (http-/127.0.0.1:8080-2) C:\Users\usuario\opt\Bodega
+13:01:35,164 INFO  [stdout] (http-/127.0.0.1:8080-2) C:\Users\usuario\opt\Bodega
+13:02:35,088 INFO  [stdout] (http-/127.0.0.1:8080-2) C:\Users\usuario\opt\Bodega
+13:03:37,764 INFO  [stdout] (http-/127.0.0.1:8080-2) C:\Users\usuario\opt\Bodega
+13:07:17,336 INFO  [org.jboss.web] (ServerService Thread Pool -- 607) JBAS018224: Borrar el registro del contexto web: /Bodega
+13:07:17,375 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-9) JBAS015877: Se detuvo la implementaciónBodega.war (runtime-name: Bodega.war) en 39ms
+13:07:17,375 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) JBAS015876: Iniciando la implementación de Bodega.war" (runtime-name: "Bodega.war")
+13:07:17,734 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-1) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+13:07:17,737 INFO  [org.jboss.web] (ServerService Thread Pool -- 628) JBAS018210: Registrar el contexto web: /Bodega
+13:07:17,823 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Bodega.war" con la implementación "Bodega.war"
+13:07:30,803 INFO  [stdout] (http-/127.0.0.1:8080-2) C:\Users\usuario\opt\Bodega\Salida
+13:10:08,184 INFO  [org.jboss.web] (ServerService Thread Pool -- 631) JBAS018224: Borrar el registro del contexto web: /Bodega
+13:10:08,212 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015877: Se detuvo la implementaciónBodega.war (runtime-name: Bodega.war) en 29ms
+13:10:08,212 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-13) JBAS015876: Iniciando la implementación de Bodega.war" (runtime-name: "Bodega.war")
+13:10:08,396 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-6) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+13:10:08,400 INFO  [org.jboss.web] (ServerService Thread Pool -- 656) JBAS018210: Registrar el contexto web: /Bodega
+13:10:08,490 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Bodega.war" con la implementación "Bodega.war"
+13:10:33,963 INFO  [org.jboss.web] (ServerService Thread Pool -- 657) JBAS018224: Borrar el registro del contexto web: /Bodega
+13:10:34,004 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015877: Se detuvo la implementaciónBodega.war (runtime-name: Bodega.war) en 43ms
+13:10:34,005 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-10) JBAS015876: Iniciando la implementación de Bodega.war" (runtime-name: "Bodega.war")
+13:10:34,200 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-2) JBAS010404: Implementación de controladro que no cumple con los requerimientos de JDBC class com.mysql.jdbc.Driver (versión 5.1)
+13:10:34,203 INFO  [org.jboss.web] (ServerService Thread Pool -- 672) JBAS018210: Registrar el contexto web: /Bodega
+13:10:34,284 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS018565: Se reemplazó la implementación "Bodega.war" con la implementación "Bodega.war"
+13:10:37,951 INFO  [stdout] (http-/127.0.0.1:8080-2) C:\Users\usuario\opt\Bodega\Salida
+13:10:56,924 INFO  [stdout] (http-/127.0.0.1:8080-2) C:\Users\usuario\opt\Bodega\Salida
