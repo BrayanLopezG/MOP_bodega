@@ -114,7 +114,7 @@ public class Controlador extends HttpServlet {
             String ruta = archivo.VerificarCarpetaProveedor(rut_proveedor, fecha);
             archivo.GuardarArchivo(facturapdf, ruta);
             archivo.GuardarArchivo(ordenpdf, ruta);
-            fact = new Factura(0, 0, numerofactura, ordencompra, numerofactura);
+            fact = new Factura(0, codigo, numerofactura, ordencompra, fecha);
             fdao.nuevaFactura(fact, rut_proveedor);
             fact = fdao.filtroFactura(ordencompra);
             usua = udao.filtroUsuario(idu);

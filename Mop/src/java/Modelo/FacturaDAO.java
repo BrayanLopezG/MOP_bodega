@@ -8,7 +8,7 @@ import java.util.List;
 public class FacturaDAO {
     String Auto_ID = "SELECT COUNT(idFactura) FROM factura";
     String ID_provedor = "SELECT idProveedor FROM proveedor WHERE rut_proveedor = ?";
-    String nueva_factura = "INSERT INTO factura (idFactura,nro_factura,orden_compra,fecha_factura) VALUES(?,?,?,?,?)";
+    String nueva_factura = "INSERT INTO factura (idFactura,nro_factura,orden_compra,fecha_factura,proveedor_id) VALUES(?,?,?,?,?)";
     String filtro_factura = "SELECT idFactura, nro_factura, orden_compra FROM factura WHERE orden_compra = ?";
     String lista_factura = "SELECT * FROM factura";
 
@@ -18,6 +18,8 @@ public class FacturaDAO {
         Conexion con = new Conexion();
         conexion = con.getConexion();
     }
+    /* Genera el auto incremetable del producto
+     */
     public int AutoID(){
         PreparedStatement ps;
         ResultSet rs;
@@ -36,6 +38,8 @@ public class FacturaDAO {
             return id;
         } 
     }
+    /* Funcion para obtener el id del proveedor
+     */
     public int ID_proveedor(String rut){
         PreparedStatement ps;
         ResultSet rs;
@@ -55,6 +59,9 @@ public class FacturaDAO {
             return id;
         }
     }
+    /* Funcion para listar las facturas.
+    No se utiliza se puede usar para una nueva actualizacion
+    */
     public List<Factura> listaFactura(){
         PreparedStatement ps;
         ResultSet rs;

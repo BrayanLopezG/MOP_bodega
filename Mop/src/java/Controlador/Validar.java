@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 
 public class Validar extends HttpServlet {
 
-    UsuarioDAO usauriodao = new UsuarioDAO();
+    UsuarioDAO usuariodao = new UsuarioDAO();
     Usuario usuario = null;
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -36,7 +36,7 @@ public class Validar extends HttpServlet {
         if(accion.equalsIgnoreCase("ingresar")){
             String user = request.getParameter("txtusuario");
             String pass = request.getParameter("txtcontra");
-            usuario = usauriodao.validar(user, pass);
+            usuario = usuariodao.validar(user, pass);
             if(usuario.getNombre_usuario() != null){
                 request.setAttribute("usuario", usuario);
                 request.getRequestDispatcher("Controlador?menu=principal").forward(request, response);

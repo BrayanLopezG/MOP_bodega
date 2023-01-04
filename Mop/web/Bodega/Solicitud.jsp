@@ -109,12 +109,12 @@
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h4 style="text-align: center;">Agregar Medida</h4>
+                                <h4 style="text-align: center;">Agregar Provincia</h4>
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                             </div>
                             <div class="modal-body">
-                                <label>Nueva Medida</label>
-                                <input class="form-control" id="txtprovincia" name="txtprovincia" type="text" placeholder="Cargo" >
+                                <label>Nueva Provincia</label>
+                                <input class="form-control" id="txtprovincia" name="txtprovincia" type="text" placeholder="Provincia" >
                             </div>
                             <div class="modal-footer">
                                 <button type="submit" class="btn btn-outline-success">Guardar</Button>

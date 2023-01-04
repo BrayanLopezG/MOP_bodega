@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductoDAO {
+
     String Auto_ID = "SELECT COUNT(idProducto) FROM producto";
     String buscar_producto = "SELECT * FROM producto WHERE idProducto = ?";
     String actualizar_stock = "UPDATE producto set cantidad = ? WHERE idProducto = ?";
@@ -23,6 +24,8 @@ public class ProductoDAO {
         Conexion con = new Conexion();
         conexion = con.getConexion();
     }
+    /* Genera el auto incremetable del producto
+     */
 
     public int AutoID() {
         PreparedStatement ps;
@@ -42,6 +45,10 @@ public class ProductoDAO {
             return id;
         }
     }
+    /* Lista los producto almacenados, por el departamento para que se esta tenga el filtro
+     para cada usuario segun su perfil esta suma la cantidad por producto para mostrar la cantidad
+     maxima almacenada en la bodega.
+     */
 
     public List<Producto> productosDepto(String depto) {
         PreparedStatement ps;
@@ -65,6 +72,8 @@ public class ProductoDAO {
             return null;
         }
     }
+    /* Lista los producto almacenados, por factura 
+     */
 
     public List listaproductofactura(int idfactura) {
         PreparedStatement ps;
@@ -79,10 +88,10 @@ public class ProductoDAO {
                 String descripcion = rs.getString(2);
                 String cantidad = rs.getString(3);
                 String departamento = rs.getString(4);
-                String bodega = rs.getString(5);
-                String medida = rs.getString(6);
-                String ordencompra = rs.getString(7);
-                Producto producto = new Producto(idpro, descripcion, cantidad, bodega, medida, departamento, ordencompra);
+                String ordencompra = rs.getString(5);
+                String bodega = rs.getString(6);
+                String medida = rs.getString(7);
+                Producto producto = new Producto(idpro, descripcion, cantidad, departamento, bodega, medida, ordencompra);
                 lista.add(producto);
             }
             return lista;
@@ -91,6 +100,9 @@ public class ProductoDAO {
             return null;
         }
     }
+    /* Lista de productos para el administrador en el apartado de consulta
+     esta suma toda la cantidad por producto para obtener la cantidad total en la bodega
+     */
 
     public List<Producto> productosAdmin() {
         PreparedStatement ps;
@@ -113,7 +125,9 @@ public class ProductoDAO {
             return null;
         }
     }
-
+     /* Funcion funcion listar los productos en solicitud esta tomara los productos
+    segun el perfil del usuario
+     */
     public List<Producto> listaproductoDepto(String depto) {
         PreparedStatement ps;
         ResultSet rs;
@@ -138,7 +152,9 @@ public class ProductoDAO {
             return null;
         }
     }
-
+     /* Funcion funcion listar los productos en solicitud esta tomara los productos
+    para el usuario administrador
+     */
     public List<Producto> listaproductoAdmin() {
         PreparedStatement ps;
         ResultSet rs;
@@ -162,7 +178,9 @@ public class ProductoDAO {
             return null;
         }
     }
-
+    /* Funcion para buscar productos esta mostrara todos los producto, como tambien
+    filtrara segun la frase escrita
+    */
     public List<Producto> buscarproductoAdmin(String filtro) {
         PreparedStatement ps;
         ResultSet rs;
@@ -177,7 +195,7 @@ public class ProductoDAO {
                 String cantidad = rs.getString(4);
                 String bodega = rs.getString(5);
                 String orden_compra = rs.getString(6);
-                Producto producto = new Producto(id, nom_producto, cantidad, bodega, medida,orden_compra);
+                Producto producto = new Producto(id, nom_producto, cantidad, bodega, medida, orden_compra);
                 lista.add(producto);
             }
             return lista;
@@ -186,6 +204,9 @@ public class ProductoDAO {
             return null;
         }
     }
+    /* Funcion de buscar producto filtrados por departamento, los busca por nombre en caso de saber el nombre completo
+     los filtra por la frase escrita
+     */
 
     public List<Producto> buscarproductoDepto(String filtro, String depto) {
         PreparedStatement ps;
@@ -211,7 +232,10 @@ public class ProductoDAO {
             return null;
         }
     }
-    public Producto productoSeleccionado(int idproducto){
+
+    /* Funcion para seleccionar el producto para añadirlo a lista para hacer carrito de compra.
+     */
+    public Producto productoSeleccionado(int idproducto) {
         PreparedStatement ps;
         ResultSet rs;
         Producto producto = null;
@@ -219,7 +243,7 @@ public class ProductoDAO {
             ps = conexion.prepareStatement(lista_producto_id);
             ps.setInt(1, idproducto);
             rs = ps.executeQuery();
-            while (rs.next()){
+            while (rs.next()) {
                 int id = rs.getInt(1);
                 String descripcion = rs.getString(2);
                 String medida = rs.getString(3);
@@ -233,7 +257,8 @@ public class ProductoDAO {
             return null;
         }
     }
-
+    /* Funcion funcion para agregar producto
+     */
     public boolean agregarProducto(Producto producto) {
         PreparedStatement ps;
         int id = AutoID() + 1;
@@ -254,7 +279,8 @@ public class ProductoDAO {
             return false;
         }
     }
-
+    /* Funcion funcion para eliminar producto
+     */
     public void eliminarProducto(int idproducto) {
         PreparedStatement ps;
         try {
@@ -265,18 +291,21 @@ public class ProductoDAO {
             System.out.println(e.toString());
         }
     }
-    public Producto buscar(int id){
+    /* Funcion funcion para buscar producto 
+       creo que no se esta utilizando 
+     */
+    public Producto buscar(int id) {
         PreparedStatement ps;
         ResultSet rs;
         Producto producto = null;
         try {
             ps = conexion.prepareStatement(buscar_producto);
-            ps.setInt(1,id);
+            ps.setInt(1, id);
             rs = ps.executeQuery();
-            while (rs.next()){
+            while (rs.next()) {
                 int idproducto = rs.getInt(1);
                 String nombre = rs.getString(2);
-                String cantidad =  rs.getString(3);
+                String cantidad = rs.getString(3);
                 String departamento = rs.getString(4);
                 int medida = rs.getInt(5);
                 int factura = rs.getInt(6);
@@ -291,7 +320,9 @@ public class ProductoDAO {
             return null;
         }
     }
-    public int actualizarStock(int id, int cantidad){
+    /* Funcion funcion para actualizar el stock del producto
+     */
+    public int actualizarStock(int id, int cantidad) {
         PreparedStatement ps;
         int ac = 0;
         try {

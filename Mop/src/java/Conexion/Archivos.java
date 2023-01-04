@@ -31,7 +31,11 @@ public class Archivos {
 
     public Archivos() {
     }
-
+    
+    /* Verifica la ruta para almarcenar factura y orden de compra
+     En caso de que la ruta no exista se creara, los directorios para generar la ruta.
+     todo esto lo hace la Funcion VerificarCarpetaProveedor
+     */
     public String VerificarCarpetaProveedor(String rut, String fecha) {
         String ruta = System.getProperty("user.home");
         File file = new File(ruta + File.separator + "opt");
@@ -50,29 +54,52 @@ public class Archivos {
                         if (file.exists()) {
                             ruta = file.getAbsolutePath();
                             file = new File(ruta + File.separator + "Adjuntos");
-                            ruta = (file.getAbsolutePath()+File.separator);
+                            ruta = (file.getAbsolutePath() + File.separator);
                             System.out.println(ruta);
                         } else {
                             file.mkdir();
                             ruta = file.getAbsolutePath();
                             file = new File(ruta + File.separator + "Adjuntos");
-                            ruta = (file.getAbsolutePath()+File.separator);
+                            ruta = (file.getAbsolutePath() + File.separator);
                             System.out.println(ruta);
                         }
                     } else {
                         file.mkdir();
                         ruta = file.getAbsolutePath();
                         file = new File(ruta + File.separator + fecha);
+                        file.mkdir();
+                        ruta = file.getAbsolutePath();
+                        file = new File(ruta + File.separator + "Adjuntos");
+                        file.mkdir();
+                        ruta = (file.getAbsolutePath() + File.separator);
                     }
                 } else {
                     file.mkdir();
                     ruta = file.getAbsolutePath();
                     file = new File(ruta + File.separator + rut);
+                    ruta = file.getAbsolutePath();
+                    file.mkdir();
+                    file = new File(ruta + File.separator + fecha);
+                    file.mkdir();
+                    ruta = file.getAbsolutePath();
+                    file = new File(ruta + File.separator + "Adjuntos");
+                    file.mkdir();
+                    ruta = (file.getAbsolutePath() + File.separator);
                 }
             } else {
                 file.mkdir();
                 ruta = file.getAbsolutePath();
                 file = new File(ruta + File.separator + "Proveedor");
+                file.mkdir();
+                file = new File(ruta + File.separator + rut);
+                ruta = file.getAbsolutePath();
+                file.mkdir();
+                file = new File(ruta + File.separator + fecha);
+                file.mkdir();
+                ruta = file.getAbsolutePath();
+                file = new File(ruta + File.separator + "Adjuntos");
+                file.mkdir();
+                ruta = (file.getAbsolutePath() + File.separator);
             }
         } else {
             file.mkdir();
@@ -91,9 +118,14 @@ public class Archivos {
             ruta = file.getAbsolutePath();
             file = new File(ruta + File.separator + "Adjuntos");
             file.mkdir();
+            ruta = (file.getAbsolutePath() + File.separator);
         }
         return ruta;
     }
+    /* Verifica la ruta para almarcenar Salida producto  de bodega
+     En caso de que la ruta no exista se creara los directorios, para generar la ruta.
+     Todo esto lo hace la funcion VerificarCarpetaSalida
+     */
 
     public String VerificarCarpetaSalida() {
         String ruta = System.getProperty("user.home");
@@ -112,8 +144,9 @@ public class Archivos {
                 }
             } else {
                 file.mkdir();
-                ruta = file.getAbsolutePath();
-                file = new File(ruta + File.separator + "Bodega");
+                file = new File(ruta + File.separator + "Salida");
+                file.mkdir();
+                ruta = (file.getAbsolutePath() + File.separator);
             }
         } else {
             file.mkdir();
@@ -127,6 +160,10 @@ public class Archivos {
         }
         return ruta;
     }
+    /* Se genera el PDF con todos los productos seleccionados y tendra tanto la informacion
+     del destinatario, como de la persona responsable de la salida esta tendra el nombre
+     de Salida-(codigo de salida) ejemplo: Salida-0001.
+     */
 
     public void generarPDF(List<Solicitud> lista, Solicitud solicitud) {
         String ruta = VerificarCarpetaSalida();
@@ -176,24 +213,20 @@ public class Archivos {
             System.out.println(e.toString());
         }
     }
-    public void GuardarArchivo(Part part,String ruta){
+    /* Esta funcion verificara que se subio un archivo
+     como tambien guardara en la ruta creada o verificada de la funcion VerificarCarpetaSalida
+     */
+
+    public void GuardarArchivo(Part part, String ruta) {
         try {
             Path path = Paths.get(part.getName());
             String filename = path.getFileName().toString();
             InputStream input = part.getInputStream();
-            if (input != null){
-                File file = new File(ruta,filename+".pdf");
-                Files.copy(input,file.toPath());
+            if (input != null) {
+                File file = new File(ruta, filename + ".pdf");
+                Files.copy(input, file.toPath());
             }
         } catch (IOException e) {
         }
-    }
-    public boolean Extension(String filename,String[] exten){
-        for(String et : exten){
-            if(filename.toLowerCase().endsWith(et)){
-                return true;
-            }
-        }
-        return false;
     }
 }

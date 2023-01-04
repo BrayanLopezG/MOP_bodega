@@ -23,7 +23,7 @@
             <div class="card">
                 <div class="card-header">
                     <div class="d-flex justify-content-between">
-                        <h3>Nueva Factura</h3>
+                        <h3>Agregar Productos</h3>
                         <img src="img/vialidad.jpg" alt="Logo" style="width: 80px;">
                     </div>
                 </div>
@@ -84,40 +84,41 @@
                             </div>
                         </div>
                     </form>
-                </div>
-                <br>
-            </div>
-            <div>
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th>Codigo</th>
-                            <th>Descripcion</th>
-                            <th>Orden de Compra</th>
-                            <th>Cantidad</th>
-                            <th>Bodega</th>
-                            <th>Medida</th>
-                            <th>Departamento</th>
-                            <th>Opciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <c:forEach var="producto" items="${listar}">
+                    <div class="dropdown-divider"></div>
+                    <table class="table table-hover">
+                        <thead>
                             <tr>
-                                <td><c:out value="${producto.idproducto}"></c:out></td>
-                                <td><c:out value="${producto.descripcion}"></c:out></td>
-                                <td><c:out value="${producto.orden_compra}"></c:out></td>
-                                <td><c:out value="${producto.cantidad}"></c:out></td>
-                                <td><c:out value="${producto.pnombre_bodega}"></c:out></td>
-                                <td><c:out value="${producto.pdescripcion_medida}"></c:out></td>
-                                <td><c:out value="${producto.departamento}"></c:out></td>
-                                    <td>
-                                        <a href="Controlador?menu=eliminar&id=${producto.idproducto}" class="btn btn-outline-danger">Quitar</a>
-                                </td>
+                                <th>Codigo</th>
+                                <th>Descripcion</th>
+                                <th>Orden de Compra</th>
+                                <th>Cantidad</th>
+                                <th>Bodega</th>
+                                <th>Medida</th>
+                                <th>Departamento</th>
+                                <th>Opciones</th>
                             </tr>
-                        </c:forEach>
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            <c:forEach var="producto" items="${listar}">
+                                <tr>
+                                    <td><c:out value="${producto.idproducto}"></c:out></td>
+                                    <td><c:out value="${producto.descripcion}"></c:out></td>
+                                    <td><c:out value="${producto.orden_compra}"></c:out></td>
+                                    <td><c:out value="${producto.cantidad}"></c:out></td>
+                                    <td><c:out value="${producto.pnombre_bodega}"></c:out></td>
+                                    <td><c:out value="${producto.pdescripcion_medida}"></c:out></td>
+                                    <td><c:out value="${producto.departamento}"></c:out></td>
+                                        <td>
+                                            <a href="Controlador?menu=eliminar&id=${producto.idproducto}" class="btn btn-outline-danger">Quitar</a>
+                                    </td>
+                                </tr>
+                            </c:forEach>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer">
+                    <a href="Controlador?menu=consultaproducto&id=${usua.getIdusuario()}" class="btn btn-outline-primary float-right">Finalizar</a>
+                </div>                     
             </div>
             <div class="modal fade" id="nuevamedida">
                 <form action="Controlador?menu=nuevamedida" method="POST">
