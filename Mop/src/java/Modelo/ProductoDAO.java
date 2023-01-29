@@ -13,8 +13,9 @@ public class ProductoDAO {
     String producto_factura = "SELECT producto.idProducto, producto.descripcion, producto.cantidad, producto.departamento, factura.orden_compra, bodega.nombre_bodega, tipo_medida.descripcion_medida FROM producto JOIN factura ON producto.factura_id = factura.idFactura JOIN bodega ON producto.bodega_id = bodega.idBodega JOIN tipo_medida ON producto.tipo_medida_id = tipo_medida.idTipo_medida WHERE factura_id = ?";
     String agregar_producto = "INSERT INTO producto(idProducto,descripcion,cantidad,departamento,factura_id,bodega_id,tipo_medida_id) VALUES(?,?,?,?,?,?,?)";
     String borrar_producto = "DELETE FROM producto WHERE idProducto = ?";
-    String productos_departamentos = "SELECT producto.descripcion, tipo_medida.descripcion_medida,sum(producto.cantidad),bodega.nombre_bodega FROM producto JOIN tipo_medida ON producto.tipo_medida_id = tipo_medida.idTipo_medida JOIN bodega ON producto.bodega_id = bodega.idBodega WHERE producto.departamento = ? GROUP BY producto.descripcion,tipo_medida.descripcion_medida,bodega.nombre_bodega";
-    String productos_admin = "SELECT producto.descripcion, tipo_medida.descripcion_medida,sum(producto.cantidad),bodega.nombre_bodega FROM producto JOIN tipo_medida ON producto.tipo_medida_id = tipo_medida.idTipo_medida JOIN bodega ON producto.bodega_id = bodega.idBodega GROUP BY producto.descripcion,tipo_medida.descripcion_medida,bodega.nombre_bodega";
+    String productos_departamentos = "SELECT producto.descripcion, tipo_medida.descripcion_medida,sum(producto.cantidad),producto.departamento,bodega.nombre_bodega FROM producto JOIN tipo_medida ON producto.tipo_medida_id = tipo_medida.idTipo_medida JOIN bodega ON producto.bodega_id = bodega.idBodega WHERE producto.departamento = ? GROUP BY producto.descripcion,tipo_medida.descripcion_medida,bodega.nombre_bodega";
+    String productos_admin = "SELECT producto.descripcion, tipo_medida.descripcion_medida,sum(producto.cantidad), producto.departamento,bodega.nombre_bodega FROM producto JOIN tipo_medida ON producto.tipo_medida_id = tipo_medida.idTipo_medida JOIN bodega ON producto.bodega_id = bodega.idBodega GROUP BY producto.descripcion,tipo_medida.descripcion_medida,bodega.nombre_bodega";
+    String detalle_producto = "SELECT producto.idProducto, producto.descripcion, producto.cantidad, producto.departamento, tipo_medida.descripcion_medida, factura.nro_factura, factura.orden_compra, bodega.nombre_bodega FROM producto JOIN tipo_medida ON producto.tipo_medida_id = tipo_medida.idTipo_medida JOIN factura ON producto.factura_id = factura.idFactura JOIN bodega ON producto.bodega_id = bodega.idBodega WHERE producto.descripcion = ? and tipo_medida.descripcion_medida = ?";
     String lista_producto_departamento = "SELECT producto.idProducto, producto.descripcion, tipo_medida.descripcion_medida, producto.cantidad,bodega.nombre_bodega,factura.orden_compra FROM producto JOIN tipo_medida ON producto.tipo_medida_id = tipo_medida.idTipo_medida JOIN bodega ON producto.bodega_id = bodega.idBodega JOIN factura ON producto.factura_id = factura.idFactura WHERE producto.departamento = ?";
     String lista_producto_admin = "SELECT producto.idProducto, producto.descripcion, tipo_medida.descripcion_medida, producto.cantidad,bodega.nombre_bodega,factura.orden_compra FROM producto JOIN tipo_medida ON producto.tipo_medida_id = tipo_medida.idTipo_medida JOIN bodega ON producto.bodega_id = bodega.idBodega JOIN factura ON producto.factura_id = factura.idFactura";
     String lista_producto_id = "SELECT producto.idProducto, producto.descripcion, tipo_medida.descripcion_medida, producto.cantidad,bodega.nombre_bodega FROM producto JOIN tipo_medida ON producto.tipo_medida_id = tipo_medida.idTipo_medida JOIN bodega ON producto.bodega_id = bodega.idBodega WHERE producto.idProducto = ?";
@@ -62,8 +63,38 @@ public class ProductoDAO {
                 String descripcion = rs.getString(1);
                 String medida = rs.getString(2);
                 String cantidad = rs.getString(3);
-                String bodega = rs.getString(4);
-                Producto producto = new Producto(descripcion, cantidad, bodega, medida);
+                String departemento = rs.getString(4);
+                String bodega = rs.getString(5);
+                Producto producto = new Producto(descripcion, cantidad, bodega, departemento, medida);
+                lista.add(producto);
+            }
+            return lista;
+        } catch (SQLException e) {
+            System.out.println(e.toString());
+            return null;
+        }
+    }
+    /* Lista el detalle del producto por el nombre
+    */
+    public List<Producto> detalleProducto(String nom_producto, String nom_medida){
+        PreparedStatement ps;
+        ResultSet rs;
+        List<Producto> lista = new ArrayList();
+        try {
+            ps = conexion.prepareStatement(detalle_producto);
+            ps.setString(1, nom_producto);
+            ps.setString(2, nom_medida);
+            rs = ps.executeQuery();
+            while (rs.next()){
+                int id_producto = rs.getInt(1);
+                String nombre = rs.getString(2);
+                String cantidad = rs.getString(3);
+                String departamento = rs.getString(4);
+                String medida = rs.getString(5);
+                String factura = rs.getString(6);
+                String orden_compra = rs.getString(7);
+                String bodega = rs.getString(8);
+                Producto producto = new Producto(id_producto, nombre, cantidad, departamento, bodega, medida, orden_compra, factura);
                 lista.add(producto);
             }
             return lista;
@@ -115,8 +146,9 @@ public class ProductoDAO {
                 String descripcion = rs.getString(1);
                 String medida = rs.getString(2);
                 String cantidad = rs.getString(3);
-                String bodega = rs.getString(4);
-                Producto producto = new Producto(descripcion, cantidad, bodega, medida);
+                String departamento = rs.getString(4);
+                String bodega = rs.getString(5);
+                Producto producto = new Producto(descripcion, cantidad, bodega, departamento, medida);
                 lista.add(producto);
             }
             return lista;
@@ -179,23 +211,25 @@ public class ProductoDAO {
         }
     }
     /* Funcion para buscar productos esta mostrara todos los producto, como tambien
-    filtrara segun la frase escrita
+    filtrara segun la frase escrita.
+    Este es exclusivo del modulo solicitud
     */
     public List<Producto> buscarproductoAdmin(String filtro) {
         PreparedStatement ps;
         ResultSet rs;
         List<Producto> lista = new ArrayList();
         try {
-            ps = conexion.prepareStatement("SELECT producto.idProducto, producto.descripcion, tipo_medida.descripcion_medida, producto.cantidad,bodega.nombre_bodega, factura.orden_compra FROM producto JOIN tipo_medida ON producto.tipo_medida_id = tipo_medida.idTipo_medida JOIN bodega ON producto.bodega_id = bodega.idBodega JOIN factura ON producto.factura_id = factura.idFactura WHERE producto.descripcion LIKE '%" + filtro + "%'");
+            ps = conexion.prepareStatement("SELECT producto.idProducto, producto.descripcion, tipo_medida.descripcion_medida, producto.cantidad, producto.departamento, bodega.nombre_bodega, factura.orden_compra FROM producto JOIN tipo_medida ON producto.tipo_medida_id = tipo_medida.idTipo_medida JOIN bodega ON producto.bodega_id = bodega.idBodega JOIN factura ON producto.factura_id = factura.idFactura WHERE producto.descripcion LIKE '%" + filtro + "%'");
             rs = ps.executeQuery();
             while (rs.next()) {
                 int id = rs.getInt(1);
                 String nom_producto = rs.getString(2);
                 String medida = rs.getString(3);
                 String cantidad = rs.getString(4);
-                String bodega = rs.getString(5);
-                String orden_compra = rs.getString(6);
-                Producto producto = new Producto(id, nom_producto, cantidad, bodega, medida, orden_compra);
+                String departamento = rs.getString(5);
+                String bodega = rs.getString(6);
+                String orden_compra = rs.getString(7);
+                Producto producto = new Producto(id, nom_producto, cantidad, departamento, bodega, medida, orden_compra);
                 lista.add(producto);
             }
             return lista;
@@ -205,7 +239,8 @@ public class ProductoDAO {
         }
     }
     /* Funcion de buscar producto filtrados por departamento, los busca por nombre en caso de saber el nombre completo
-     los filtra por la frase escrita
+     los filtra por la frase escrita.
+     Este es exclusivo del modulo solicitud
      */
 
     public List<Producto> buscarproductoDepto(String filtro, String depto) {
@@ -213,7 +248,7 @@ public class ProductoDAO {
         ResultSet rs;
         List<Producto> lista = new ArrayList();
         try {
-            ps = conexion.prepareStatement("SELECT producto.idProducto, producto.descripcion, tipo_medida.descripcion_medida, producto.cantidad,bodega.nombre_bodega, factura.orden_compra FROM producto JOIN tipo_medida ON producto.tipo_medida_id = tipo_medida.idTipo_medida JOIN bodega ON producto.bodega_id = bodega.idBodega JOIN factura ON producto.factura_id = factura.idFactura WHERE producto.departamento = ? AND producto.descripcion LIKE '%" + filtro + "%'");
+            ps = conexion.prepareStatement("SELECT producto.idProducto, producto.descripcion, tipo_medida.descripcion_medida, producto.cantidad, producto.departamento, bodega.nombre_bodega, factura.orden_compra FROM producto JOIN tipo_medida ON producto.tipo_medida_id = tipo_medida.idTipo_medida JOIN bodega ON producto.bodega_id = bodega.idBodega JOIN factura ON producto.factura_id = factura.idFactura WHERE producto.departamento = ? AND producto.descripcion LIKE '%" + filtro + "%'");
             ps.setString(1, depto);
             rs = ps.executeQuery();
             while (rs.next()) {
@@ -221,9 +256,10 @@ public class ProductoDAO {
                 String nom_producto = rs.getString(2);
                 String medida = rs.getString(3);
                 String cantidad = rs.getString(4);
-                String bodega = rs.getString(5);
-                String orden_compra = rs.getString(6);
-                Producto producto = new Producto(id, nom_producto, cantidad, bodega, medida, orden_compra);
+                String departamento = rs.getString(5);
+                String bodega = rs.getString(6);
+                String orden_compra = rs.getString(7);
+                Producto producto = new Producto(id, nom_producto, cantidad, departamento, bodega, medida, orden_compra);
                 lista.add(producto);
             }
             return lista;

@@ -20,44 +20,57 @@
     </head>
     <body>
         <div class="container-fluid">
-            <div class="d-flex justify-content-center">
-                <h1>Bodega</h1>
-            </div>
-            <div class="d-flex justify-content-center">
-                <form class="form-inline" action="Controlador?menu=buscarproductobodega" method="POST">
-                    <div class="input-group mb-3">
-                        <input type="search" id="txtbuscar" name="txtbuscar" class="form-control" placeholder="Buscar Producto">
-                        <div class="input-group-append">
-                            <input class="btn btn-outline-success" type="submit"  value="Buscar">
-                        </div>
+            <div class="card">
+                <div class="card-header">
+                    <div class="d-flex justify-content-center">
+                        <h1>Bodega</h1>
                     </div>
-                </form>
-            </div>
-            <div>
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th>Producto</th>
-                            <th>Medida</th>
-                            <th>Cantidad</th>
-                            <th>Bodega</th>
-                            <th>Opciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <c:forEach var="productos" items="${producto}">
-                            <tr>
-                                <td><c:out value="${productos.descripcion}"></c:out></td>
-                                <td><c:out value="${productos.pdescripcion_medida}"></c:out></td>
-                                <td><c:out value="${productos.cantidad}"></c:out></td>
-                                <td><c:out value="${productos.pnombre_bodega}"></c:out></td>
-                                    <td>
-                                        <a href="Controlador?menu=detalleproducto&nom=<c:out value="${productos.descripcion}"></c:out>" class="btn btn-outline-info">Ver Detalle</a>
-                                    </td>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex justify-content-center">
+                        <form class="form-inline" action="Controlador?menu=buscarproductobodega" method="POST">
+                            <div class="input-group mb-3">
+                                <input type="search" id="txtbuscar" name="txtbuscar" class="form-control" placeholder="Buscar Producto">
+                                <div class="input-group-append">
+                                    <input class="btn btn-outline-success" type="submit"  value="Buscar">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div>
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Producto</th>
+                                    <th>Medida</th>
+                                    <th>Cantidad</th>
+                                    <th>Departamento</th>
+                                    <th>Bodega</th>
+                                    <th>Opciones</th>
                                 </tr>
-                        </c:forEach>
-                    </tbody>
-                </table>
+                            </thead>
+                            <tbody>
+                                <c:forEach var="productos" items="${producto}">
+                                    <tr>
+                                        <td><c:out value="${productos.descripcion}"></c:out></td>
+                                        <td><c:out value="${productos.pdescripcion_medida}"></c:out></td>
+                                        <td><c:out value="${productos.cantidad}"></c:out></td>
+                                        <td><c:out value="${productos.departamento}"></c:out></td>
+                                        <td><c:out value="${productos.pnombre_bodega}"></c:out></td>
+                                            <td>
+                                                <a href="Controlador?menu=detalleproducto&nom=<c:out value="${productos.descripcion}"></c:out>&medi=<c:out value="${productos.pdescripcion_medida}"></c:out>" class="btn btn-outline-info">Ver Detalle</a>
+                                            </td>
+                                        </tr>
+                                </c:forEach>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="d-flex justify-content-center">
+                        <a href="Controlador?menu=generarinforme" class="btn btn-outline-info">Generar Informe</a>
+                    </div>
+                </div>
             </div>
         </div>
     </body>

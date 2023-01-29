@@ -3,12 +3,6 @@
     Created on : 06-12-2022, 01:05:07 PM
     Author     : usuario
 --%>
-
-<%@page import="java.util.Iterator"%>
-<%@page import="java.util.List"%>
-<%@page import="Modelo.Proveedor"%>
-<%@page import="Modelo.ProveedorDAO"%>
-<%@page import="Conexion.Conexion"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
@@ -84,5 +78,7 @@
             </div>
         </div>
     </body>
-
+    <script>
+        
+    </script>
 </html>

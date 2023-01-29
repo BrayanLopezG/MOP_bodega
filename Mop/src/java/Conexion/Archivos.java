@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Conexion;
 
 import Modelo.Solicitud;
@@ -213,10 +208,6 @@ public class Archivos {
             System.out.println(e.toString());
         }
     }
-    /* Esta funcion verificara que se subio un archivo
-     como tambien guardara en la ruta creada o verificada de la funcion VerificarCarpetaSalida
-     */
-
     public void GuardarArchivo(Part part, String ruta) {
         try {
             Path path = Paths.get(part.getName());
@@ -227,6 +218,7 @@ public class Archivos {
                 Files.copy(input, file.toPath());
             }
         } catch (IOException e) {
+            System.out.println(e.toString());
         }
     }
 }

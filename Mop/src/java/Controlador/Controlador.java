@@ -68,11 +68,15 @@ public class Controlador extends HttpServlet {
     Solicitud solicitud = new Solicitud();
     Archivos archivo = new Archivos();
     List<Solicitud> listasolicitud = new ArrayList();
+    List<Producto> productos = new ArrayList();
+    List<Producto> detalleproducto = new ArrayList();
     InputStream inputStreamfactura = null;
     InputStream inputStreamorden = null;
     int idf = 0;
     int idp = 0;
     int idu = 0;
+    // Contador de informe
+    int contador = 0;
     // Atributos Solicitud
     int item;
     int idprodu;
@@ -444,30 +448,117 @@ public class Controlador extends HttpServlet {
             idu = Integer.parseInt(request.getParameter("id"));
             usua = udao.filtroUsuario(idu);
             int idperfil = usua.getPerfil_id();
-            List<Producto> listaproducto;
             String departamento = perfdao.Perfil(idperfil);
             if (departamento.equals("Administrador")) {
-                listaproducto = prdao.productosAdmin();
+                productos = prdao.productosAdmin();
             } else {
-                listaproducto = prdao.productosDepto(departamento);
+                productos = prdao.productosDepto(departamento);
             }
-            request.setAttribute("producto", listaproducto);
+            request.setAttribute("producto", productos);
             request.getRequestDispatcher("Consulta/ListaProducto.jsp").forward(request, response);
         } else if (menu.equals("buscarproductobodega")) {
             String buscar = request.getParameter("txtbuscar");
             usua = udao.filtroUsuario(idu);
             int idperfil = usua.getPerfil_id();
-            List<Producto> listaproducto;
             String departamento = perfdao.Perfil(idperfil);
             if (departamento.equals("Administrador")) {
-                listaproducto = prdao.buscarproductoAdmin(buscar);
+                productos = prdao.buscarproductoAdmin(buscar);
             } else {
-                listaproducto = prdao.buscarproductoDepto(buscar, departamento);
+                productos = prdao.buscarproductoDepto(buscar, departamento);
             }
-            request.setAttribute("producto", listaproducto);
+            request.setAttribute("producto", productos);
             request.getRequestDispatcher("Consulta/ListaProducto.jsp").forward(request, response);
         } else if (menu.equals("detalleproducto")) {
-
+            String nombre = request.getParameter("nom");
+            String medida = request.getParameter("medi");
+            detalleproducto = prdao.detalleProducto(nombre, medida);
+            request.setAttribute("producto", detalleproducto);
+            request.getRequestDispatcher("Consulta/DetalleProducto.jsp").forward(request, response);
+        } else if (menu.equals("generarinforme")) {
+            OutputStream out = response.getOutputStream();
+            Document documento = new Document();
+            PdfWriter.getInstance(documento, out);
+            Paragraph datos = new Paragraph();
+            datos.setFont(FontFactory.getFont("Calibri", 18, Font.BOLD, BaseColor.BLACK));
+            datos.setAlignment(Paragraph.ALIGN_CENTER);
+            datos.add("Informe General de Bodega \n\n");
+            documento.open();
+            documento.add(datos);
+            PdfPTable tabla = new PdfPTable(5);
+            tabla.setWidthPercentage(110);
+            PdfPCell producto = new PdfPCell(new Phrase("Producto"));
+            producto.setBackgroundColor(BaseColor.BLUE);
+            PdfPCell cantidad = new PdfPCell(new Phrase("Cantidad"));
+            cantidad.setBackgroundColor(BaseColor.BLUE);
+            PdfPCell medida = new PdfPCell(new Phrase("Medida"));
+            medida.setBackgroundColor(BaseColor.BLUE);
+            PdfPCell departamento = new PdfPCell(new Phrase("Departamento"));
+            departamento.setBackgroundColor(BaseColor.BLUE);
+            PdfPCell bodega = new PdfPCell(new Phrase("Bodega"));
+            bodega.setBackgroundColor(BaseColor.BLUE);
+            tabla.addCell(producto);
+            tabla.addCell(cantidad);
+            tabla.addCell(medida);
+            tabla.addCell(departamento);
+            tabla.addCell(bodega);
+            for (int i = 0; i < productos.size(); i++) {
+                tabla.addCell(productos.get(i).getDescripcion());
+                tabla.addCell(String.valueOf(productos.get(i).getCantidad()));
+                tabla.addCell(productos.get(i).getPdescripcion_medida());
+                tabla.addCell(productos.get(i).getDepartamento());
+                tabla.addCell(productos.get(i).getPnombre_bodega());
+            }
+            documento.add(tabla);
+            documento.close();
+            request.setAttribute("producto", productos);
+        } else if (menu.equals("generardetalle")) {
+            OutputStream out = response.getOutputStream();
+            Document documento = new Document();
+            PdfWriter.getInstance(documento, out);
+            Paragraph datos = new Paragraph();
+            datos.setFont(FontFactory.getFont("Calibri", 18, Font.BOLD, BaseColor.BLACK));
+            datos.setAlignment(Paragraph.ALIGN_CENTER);
+            datos.add("Detalle del Producto \n\n");
+            documento.open();
+            documento.add(datos);
+            PdfPTable tabla = new PdfPTable(8);
+            tabla.setWidthPercentage(100);
+            PdfPCell idproducto = new PdfPCell(new Phrase("ID"));
+            idproducto.setBackgroundColor(BaseColor.BLUE);
+            PdfPCell producto = new PdfPCell(new Phrase("Producto"));
+            producto.setBackgroundColor(BaseColor.BLUE);
+            PdfPCell cantidad = new PdfPCell(new Phrase("Cantidad"));
+            cantidad.setBackgroundColor(BaseColor.BLUE);
+            PdfPCell medida = new PdfPCell(new Phrase("Medida"));
+            medida.setBackgroundColor(BaseColor.BLUE);
+            PdfPCell departamento = new PdfPCell(new Phrase("Departamento"));
+            departamento.setBackgroundColor(BaseColor.BLUE);
+            PdfPCell bodega = new PdfPCell(new Phrase("Bodega"));
+            bodega.setBackgroundColor(BaseColor.BLUE);
+            PdfPCell factura = new PdfPCell(new Phrase("Nro. de Factura"));
+            factura.setBackgroundColor(BaseColor.BLUE);
+            PdfPCell compra = new PdfPCell(new Phrase("Orden de Compra"));
+            compra.setBackgroundColor(BaseColor.BLUE);
+            tabla.addCell(idproducto);
+            tabla.addCell(producto);
+            tabla.addCell(cantidad);
+            tabla.addCell(medida);
+            tabla.addCell(departamento);
+            tabla.addCell(bodega);
+            tabla.addCell(factura);
+            tabla.addCell(compra);
+            for (int i = 0; i < detalleproducto.size(); i++) {
+                tabla.addCell(String.valueOf(detalleproducto.get(i).getIdproducto()));
+                tabla.addCell(detalleproducto.get(i).getDescripcion());
+                tabla.addCell(String.valueOf(detalleproducto.get(i).getCantidad()));
+                tabla.addCell(detalleproducto.get(i).getPdescripcion_medida());
+                tabla.addCell(detalleproducto.get(i).getDepartamento());
+                tabla.addCell(detalleproducto.get(i).getPnombre_bodega());
+                tabla.addCell(detalleproducto.get(i).getNro_factura());
+                tabla.addCell(detalleproducto.get(i).getOrden_compra());
+            }
+            documento.add(tabla);
+            documento.close();
         } else if (menu.equals("consultasolicitud")) {
             idu = Integer.parseInt(request.getParameter("id"));
             usua = udao.filtroUsuario(idu);

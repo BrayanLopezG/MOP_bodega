@@ -76,7 +76,7 @@
             </nav>
         </header>
         <div class="container-fluid">
-            <div class="mx-2 my-2" style="height: 700px;">
+            <div class="mx-2 my-2" style="height: 1000px;">
                 <iframe name="bodega" style="height: 100%; width: 100%; border: none;"></iframe>
             </div>
         </div>
@@ -86,4 +86,5 @@
             <span class="badge badge-pill badge-light float-right">v1.15.10.05</span>
         </div>
     </footer>
+
 </html>

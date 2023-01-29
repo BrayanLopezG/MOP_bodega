@@ -4,6 +4,11 @@ public class Factura extends Proveedor{
     int id_factura,proveedor_id;
     String nro_factura,orden_compra,fecha_factura;
 
+    public Factura(String nro_factura, String orden_compra) {
+        this.nro_factura = nro_factura;
+        this.orden_compra = orden_compra;
+    }
+
     public Factura(int id_proveedor, String rut_proveedor, String nombre_proveedor, String telefono_proveedor, String direccion_proveedor) {
         super(id_proveedor, rut_proveedor, nombre_proveedor, telefono_proveedor, direccion_proveedor);
     }

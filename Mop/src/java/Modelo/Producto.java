@@ -1,10 +1,18 @@
 package Modelo;
 
-import java.io.InputStream;
-
 public class Producto extends Factura{
     int idproducto,facturaid,medida_id,bodegaid;
     String descripcion,cantidad,departamento,pnombre_bodega,pdireccion_bodega,pdescripcion_medida;
+
+    public Producto(int idproducto, String descripcion, String cantidad, String departamento, String pnombre_bodega, String pdescripcion_medida, String nro_factura, String orden_compra) {
+        super(nro_factura, orden_compra);
+        this.idproducto = idproducto;
+        this.descripcion = descripcion;
+        this.cantidad = cantidad;
+        this.departamento = departamento;
+        this.pnombre_bodega = pnombre_bodega;
+        this.pdescripcion_medida = pdescripcion_medida;
+    }
 
     public Producto(int idproducto, String descripcion, String cantidad, String pnombre_bodega, String pdescripcion_medida, String orden_compra) {
         super(orden_compra);
@@ -15,6 +23,17 @@ public class Producto extends Factura{
         this.pdescripcion_medida = pdescripcion_medida;
     }
 
+    public Producto(int idproducto, String descripcion, String cantidad, String departamento, String pnombre_bodega, String pdescripcion_medida, String orden_compra) {
+        super(orden_compra);
+        this.idproducto = idproducto;
+        this.descripcion = descripcion;
+        this.cantidad = cantidad;
+        this.departamento = departamento;
+        this.pnombre_bodega = pnombre_bodega;
+        this.pdescripcion_medida = pdescripcion_medida;
+    }
+
+
     public Producto(int idproducto, String descripcion, String cantidad, String pnombre_bodega, String pdescripcion_medida) {
         this.idproducto = idproducto;
         this.descripcion = descripcion;
@@ -23,10 +42,11 @@ public class Producto extends Factura{
         this.pdescripcion_medida = pdescripcion_medida;
     }
 
-    public Producto(String descripcion, String cantidad, String pnombre_bodega, String pdescripcion_medida) {
+    public Producto(String descripcion, String cantidad, String pnombre_bodega, String departamento, String pdescripcion_medida) {
         this.descripcion = descripcion;
         this.cantidad = cantidad;
         this.pnombre_bodega = pnombre_bodega;
+        this.departamento = departamento;
         this.pdescripcion_medida = pdescripcion_medida;
     }
 
@@ -121,16 +141,6 @@ public class Producto extends Factura{
         this.descripcion = descripcion;
         this.cantidad = cantidad;
         this.departamento = departamento;
-    }
-
-    public Producto(int idproducto, String descripcion, String cantidad, String departamento, String pnombre_bodega, String pdescripcion_medida, String orden_compra) {
-        super(orden_compra);
-        this.idproducto = idproducto;
-        this.descripcion = descripcion;
-        this.cantidad = cantidad;
-        this.departamento = departamento;
-        this.pnombre_bodega = pnombre_bodega;
-        this.pdescripcion_medida = pdescripcion_medida;
     }
 
     public Producto(int idproducto, String descripcion, String cantidad, String departamento, String pnombre_bodega, String pdireccion_bodega, String pdescripcion_medida, int id_proveedor, String rut_proveedor, String nombre_proveedor, String telefono_proveedor, String direccion_proveedor) {

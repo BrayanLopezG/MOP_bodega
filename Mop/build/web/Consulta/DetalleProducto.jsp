@@ -1,8 +1,7 @@
 <%-- 
-
-    Document   : Producto
-    Created on : 06-12-2022, 09:25:47 AM
-    Author     : usuario
+    Document   : DetalleProducto
+    Created on : 28-01-2023, 12:53:52 PM
+    Author     : Brayan
 --%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -23,43 +22,35 @@
             <div class="card">
                 <div class="card-header">
                     <div class="d-flex justify-content-center">
-                        <h1>Bodega</h1>
+                        <h4>Detalle del Producto</h4>
                     </div>
                 </div>
                 <div class="card-body">
-                    <div class="d-flex justify-content-center">
-                        <form class="form-inline" action="Controlador?menu=buscarproductobodega" method="POST">
-                            <div class="input-group mb-3">
-                                <input type="search" id="txtbuscar" name="txtbuscar" class="form-control" placeholder="Buscar Producto">
-                                <div class="input-group-append">
-                                    <input class="btn btn-outline-success" type="submit"  value="Buscar">
-                                </div>
-                            </div>
-                        </form>
-                    </div>
                     <div>
                         <table class="table table-hover">
                             <thead>
                                 <tr>
-                                    <th>Producto</th>
+                                    <th>ID</th>
+                                    <th>Nombre</th>
                                     <th>Medida</th>
                                     <th>Cantidad</th>
                                     <th>Departamento</th>
                                     <th>Bodega</th>
-                                    <th>Opciones</th>
+                                    <th>Numero de Factura</th>
+                                    <th>Orden de Compra</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <c:forEach var="productos" items="${producto}">
                                     <tr>
+                                        <td><c:out value="${productos.idproducto}"></c:out></td>
                                         <td><c:out value="${productos.descripcion}"></c:out></td>
                                         <td><c:out value="${productos.pdescripcion_medida}"></c:out></td>
                                         <td><c:out value="${productos.cantidad}"></c:out></td>
                                         <td><c:out value="${productos.departamento}"></c:out></td>
                                         <td><c:out value="${productos.pnombre_bodega}"></c:out></td>
-                                            <td>
-                                                <a href="Controlador?menu=detalleproducto&nom=<c:out value="${productos.descripcion}"></c:out>&medi=<c:out value="${productos.pdescripcion_medida}"></c:out>" class="btn btn-outline-info">Ver Detalle</a>
-                                            </td>
+                                        <td><c:out value="${productos.nro_factura}"></c:out></td>
+                                        <td><c:out value="${productos.orden_compra}"></c:out></td>
                                         </tr>
                                 </c:forEach>
                             </tbody>
@@ -68,7 +59,7 @@
                 </div>
                 <div class="card-footer">
                     <div class="d-flex justify-content-center">
-                        <a href="Controlador?menu=generarinforme" class="btn btn-outline-info">Generar Informe</a>
+                        <a href="Controlador?menu=generardetalle" class="btn btn-outline-info">Generar Informe</a>
                     </div>
                 </div>
             </div>
